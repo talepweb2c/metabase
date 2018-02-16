@@ -24,6 +24,13 @@ const thunkWithDispatchAction = ({ dispatch, getState }) => next => action => {
     return next(action);
 };
 
+const trackEvent = ({ dispatch, getState }) => next => action => {
+    if(action.type && action.type.indexOf('metabase') > -1) {
+        console.log('action!!!', action.type.split("/"))
+    }
+    return next(action)
+}
+
 const devToolsExtension = window.devToolsExtension ? window.devToolsExtension() : (f => f);
 
 export function getStore(reducers, history, intialState, enhancer = (a) => a) {
@@ -35,6 +42,7 @@ export function getStore(reducers, history, intialState, enhancer = (a) => a) {
     });
 
     const middleware = [
+        trackEvent,
         thunkWithDispatchAction,
         promise,
         ...(DEBUG ? [logger] : []),
