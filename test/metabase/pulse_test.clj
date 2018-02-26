@@ -73,6 +73,15 @@
                                       png-attachment]}
                              email)))
 
+(def ^:private csv-attachment
+  {:type :attachment, :content-type "text/csv", :file-name "Test card.csv",
+   :content java.net.URL, :description "Full results for 'Test card'", :content-id false})
+
+(def ^:private xls-attachment
+  {:type :attachment, :file-name "Test card.xlsx",
+   :content-type "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+   :content java.net.URL, :description "Full results for 'Test card'", :content-id false})
+
 ;; Basic test, 1 card, 1 recipient
 (expect
   (rasta-pulse-email)
@@ -88,6 +97,26 @@
     (email-test-setup
      (send-pulse! (retrieve-pulse pulse-id))
      (et/summarize-multipart-email #"Pulse Name"))))
+
+;; Basic test, 1 card, 1 recipient, 21 results results in a CSV being attached and a table being sent
+(expect
+  (rasta-pulse-email {:body [{"Pulse Name"                      true
+                              "Full results have been included" true
+                              "ID</th>"                         true},
+                             csv-attachment]})
+  (tt/with-temp* [Card                 [{card-id :id}  (checkins-query {:aggregation nil
+                                                                        :limit       21})]
+                  Pulse                [{pulse-id :id} {:name          "Pulse Name"
+                                                        :skip_if_empty false}]
+                  PulseCard             [_             {:pulse_id pulse-id
+                                                        :card_id  card-id
+                                                        :position 0}]
+                  PulseChannel          [{pc-id :id}   {:pulse_id pulse-id}]
+                  PulseChannelRecipient [_             {:user_id          (rasta-id)
+                                                        :pulse_channel_id pc-id}]]
+    (email-test-setup
+     (send-pulse! (retrieve-pulse pulse-id))
+     (et/summarize-multipart-email #"Pulse Name"  #"Full results have been included" #"ID</th>"))))
 
 ;; Pulse should be sent to two recipients
 (expect
@@ -193,7 +222,8 @@
 ;; Rows alert with data
 (expect
   (rasta-alert-email "Metabase alert: Test card has results"
-                     [{"Test card.*has results for you to see" true}, png-attachment])
+                     [{"Test card.*has results for you to see" true
+                       "Full results have been included"       false}, png-attachment])
   (tt/with-temp* [Card                  [{card-id :id}  (checkins-query {:breakout [["datetime-field" (data/id :checkins :date) "hour"]]})]
                   Pulse                 [{pulse-id :id} {:alert_condition  "rows"
                                                          :alert_first_only false}]
@@ -205,7 +235,28 @@
                                                         :pulse_channel_id pc-id}]]
     (email-test-setup
      (send-pulse! (retrieve-pulse-or-alert pulse-id))
-     (et/summarize-multipart-email #"Test card.*has results for you to see"))))
+     (et/summarize-multipart-email #"Test card.*has results for you to see" #"Full results have been included"))))
+
+;; Rows alert with too much data will attach as CSV and include a table
+(expect
+  (rasta-alert-email "Metabase alert: Test card has results"
+                     [{"Test card.*has results for you to see" true
+                       "Full results have been included"       true
+                       "ID</th>"                               true},
+                      csv-attachment])
+  (tt/with-temp* [Card                  [{card-id :id}  (checkins-query {:limit 21
+                                                                         :aggregation nil})]
+                  Pulse                 [{pulse-id :id} {:alert_condition  "rows"
+                                                         :alert_first_only false}]
+                  PulseCard             [_             {:pulse_id pulse-id
+                                                        :card_id  card-id
+                                                        :position 0}]
+                  PulseChannel          [{pc-id :id}   {:pulse_id pulse-id}]
+                  PulseChannelRecipient [_             {:user_id (rasta-id)
+                                                        :pulse_channel_id pc-id}]]
+    (email-test-setup
+     (send-pulse! (retrieve-pulse-or-alert pulse-id))
+     (et/summarize-multipart-email #"Test card.*has results for you to see" #"Full results have been included" #"ID</th>"))))
 
 ;; Above goal alert with data
 (expect
@@ -541,15 +592,6 @@
      (send-pulse! (retrieve-pulse-or-alert pulse-id))
      [@et/inbox
       (db/exists? Pulse :id pulse-id)])))
-
-(def ^:private csv-attachment
-  {:type :attachment, :content-type "text/csv", :file-name "Test card.csv",
-   :content java.net.URL, :description "Full results for 'Test card'", :content-id false})
-
-(def ^:private xls-attachment
-  {:type :attachment, :file-name "Test card.xlsx",
-   :content-type "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-   :content java.net.URL, :description "Full results for 'Test card'", :content-id false})
 
 (defn- add-rasta-attachment
   "Append `ATTACHMENT` to the first email found for Rasta"
