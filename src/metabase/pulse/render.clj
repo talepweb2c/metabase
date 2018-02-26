@@ -35,8 +35,8 @@
 ;;; # ------------------------------------------------------------ STYLES ------------------------------------------------------------
 
 (def ^:private ^:const card-width 400)
-(def ^:private ^:const rows-limit 10)
-(def ^:private ^:const cols-limit 3)
+(def ^:private ^:const rows-limit 20)
+(def ^:private ^:const cols-limit 10)
 (def ^:private ^:const sparkline-dot-radius 6)
 (def ^:private ^:const sparkline-thickness 3)
 (def ^:private ^:const sparkline-pad 8)
@@ -98,6 +98,11 @@
                       :let  [v (if (keyword? v) (name v) v)]]
                   (str (name k) ": " v ";"))))
 
+(defn- graphing-columns [card {:keys [cols] :as data}]
+  [(or (ui-logic/x-axis-rowfn card data)
+       first)
+   (or (ui-logic/y-axis-rowfn card data)
+       second)])
 
 (defn- datetime-field?
   [field]
@@ -108,6 +113,43 @@
   [field]
   (or (isa? (:base_type field)    :type/Number)
       (isa? (:special_type field) :type/Number)))
+
+(defn detect-pulse-card-type
+  "Determine the pulse (visualization) type of a CARD, e.g. `:scalar` or `:bar`."
+  [card data]
+  (let [col-count                 (-> data :cols count)
+        row-count                 (-> data :rows count)
+        [col-1-rowfn col-2-rowfn] (graphing-columns card data)
+        col-1                     (col-1-rowfn (:cols data))
+        col-2                     (col-2-rowfn (:cols data))
+        aggregation               (-> card :dataset_query :query :aggregation first)]
+    (cond
+      (or (zero? row-count)
+          ;; Many aggregations result in [[nil]] if there are no rows to aggregate after filters
+          (= [[nil]] (-> data :rows)))                             :empty
+      (contains? #{:pin_map :state :country} (:display card))      nil
+      (and (= col-count 1)
+           (= row-count 1))                                        :scalar
+      (and (= col-count 2)
+           (> row-count 1)
+           (datetime-field? col-1)
+           (number-field? col-2))                                  :sparkline
+      (and (= col-count 2)
+           (number-field? col-2))                                  :bar
+      :else                                                        :table)))
+
+(defn include-csv-attachment?
+  "Returns true if this card and resultset should include a CSV attachment"
+  [{:keys [include_csv] :as card} {:keys [cols rows] :as result-data}]
+  (or (:include_csv card)
+      (and (= :table (detect-pulse-card-type card result-data))
+           (or (< cols-limit (count cols))
+               (< rows-limit (count rows))))))
+
+(defn include-xls-attachment?
+  "Returns true if this card and resultset should include an XLS attachment"
+  [{:keys [include_csv] :as card} result-data]
+  (:include_xls card))
 
 
 ;;; # ------------------------------------------------------------ FORMATTING ------------------------------------------------------------
@@ -351,15 +393,14 @@
 (s/defn ^:private render:table :- RenderedPulseCard
   [timezone card {:keys [cols rows] :as data}]
   {:attachments nil
-   :content     [:div
-                 (render-table (prep-for-html-rendering timezone cols rows nil nil cols-limit))
-                 (render-truncation-warning cols-limit (count cols) rows-limit (count rows))]})
-
-(defn- graphing-columns [card {:keys [cols] :as data}]
-  [(or (ui-logic/x-axis-rowfn card data)
-       first)
-   (or (ui-logic/y-axis-rowfn card data)
-       second)])
+   :content     (vec
+                 (conj (when (or (< cols-limit (count cols))
+                                 (< rows-limit (count rows)))
+                         [:div {:style (style {:color color-gray-2})}
+                          "Full results have been included as a file attachment"])
+                       [:div
+                        (render-table (prep-for-html-rendering timezone cols rows nil nil cols-limit))
+                        (render-truncation-warning cols-limit (count cols) rows-limit (count rows))]))})
 
 (s/defn ^:private render:bar :- RenderedPulseCard
   [timezone card {:keys [cols rows] :as data}]
@@ -599,31 +640,6 @@
                                       :padding     :16px})}
                  "An error occurred while displaying this card."]})
 
-(defn detect-pulse-card-type
-  "Determine the pulse (visualization) type of a CARD, e.g. `:scalar` or `:bar`."
-  [card data]
-  (let [col-count                 (-> data :cols count)
-        row-count                 (-> data :rows count)
-        [col-1-rowfn col-2-rowfn] (graphing-columns card data)
-        col-1                     (col-1-rowfn (:cols data))
-        col-2                     (col-2-rowfn (:cols data))
-        aggregation               (-> card :dataset_query :query :aggregation first)]
-    (cond
-      (or (zero? row-count)
-          ;; Many aggregations result in [[nil]] if there are no rows to aggregate after filters
-          (= [[nil]] (-> data :rows)))                             :empty
-      (or (> col-count 3)
-          (contains? #{:pin_map :state :country} (:display card))) nil
-      (and (= col-count 1)
-           (= row-count 1))                                        :scalar
-      (and (= col-count 2)
-           (> row-count 1)
-           (datetime-field? col-1)
-           (number-field? col-2))                                  :sparkline
-      (and (= col-count 2)
-           (number-field? col-2))                                  :bar
-      :else                                                        :table)))
-
 (s/defn ^:private make-title-if-needed :- (s/maybe RenderedPulseCard)
   [render-type card]
   (when *include-title*
@@ -691,16 +707,19 @@
 
 (s/defn render-pulse-section :- RenderedPulseCard
   "Render a specific section of a Pulse, i.e. a single Card, to Hiccup HTML."
-  [timezone {:keys [card result]}]
+  [timezone {card :card {:keys [data] :as result} :result}]
   (let [{:keys [attachments content]} (binding [*include-title* true]
                                         (render-pulse-card :attachment timezone card result))]
     {:attachments attachments
-     :content     [:div {:style (style {:margin-top       :10px
-                                        :margin-bottom    :20px
-                                        :border           "1px solid #dddddd"
-                                        :border-radius    :2px
-                                        :background-color :white
-                                        :box-shadow       "0 1px 2px rgba(0, 0, 0, .08)"})}
+     :content     [:div {:style (style (merge {:margin-top       :10px
+                                               :margin-bottom    :20px}
+                                              ;; Don't include the boder on cards rendered with a table as the table
+                                              ;; will be to larger and overrun the border
+                                              (when-not (= :table (detect-pulse-card-type card data))
+                                                {:border           "1px solid #dddddd"
+                                                 :border-radius    :2px
+                                                 :background-color :white
+                                                 :box-shadow       "0 1px 2px rgba(0, 0, 0, .08)"})))}
                    content]}))
 
 (defn render-pulse-card-to-png
