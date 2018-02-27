@@ -78,17 +78,38 @@
                      :padding-top     :14px
                      :padding-bottom  :5px}))
 
+;; TO-DO for @senior: apply this style to headings of numeric columns
+(def ^:private ^:const bar-th-numeric-style
+  (merge font-style {:text-align      :right
+                     :font-size       :14.22px
+                     :font-weight     700
+                     :color           color-gray-4
+                     :border-bottom   (str "1px solid " color-row-border)
+                     :padding-top     :14px
+                     :padding-bottom  :5px}))
+
 (def ^:private ^:const bar-td-style
   (merge font-style {:font-size      :14.22px
                      :font-weight    400
                      :color          color-dark-gray
-                     :text-align     :right
-                     :padding-left   :1em
+                     :text-align     :left
+                     :padding-right  :1em
                      :padding-top    :2px
                      :padding-bottom :1px
                      :max-width      :500px
                      :overflow       :hidden
                      :text-overflow  :ellipsis
+                     :border-bottom  (str "1px solid " color-row-border)}))
+
+;; TO-DO for @senior: apply this style to numeric cells
+(def ^:private ^:const bar-td-style-numeric
+  (merge font-style {:font-size      :14.22px
+                     :font-weight    400
+                     :color          color-dark-gray
+                     :text-align     :right
+                     :padding-right  :1em
+                     :padding-top    :2px
+                     :padding-bottom :1px
                      :font-family    "Courier, Monospace"
                      :border-bottom  (str "1px solid " color-row-border)}))
 
