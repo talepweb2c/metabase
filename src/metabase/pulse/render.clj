@@ -402,15 +402,17 @@
 
 (s/defn ^:private render:table :- RenderedPulseCard
   [timezone card {:keys [cols rows] :as data}]
-  {:attachments nil
-   :content     (vec
-                 (conj (when (or (< cols-limit (count cols))
-                                 (< rows-limit (count rows)))
-                         [:div {:style (style {:color color-gray-2})}
-                          "Full results have been included as a file attachment"])
-                       [:div
-                        (render-table (prep-for-html-rendering timezone cols rows nil nil cols-limit))
-                        (render-truncation-warning cols-limit (count cols) rows-limit (count rows))]))})
+  (let [results-attached (when (or (< cols-limit (count cols))
+                                   (< rows-limit (count rows)))
+                           [:div {:style (style {:color color-gray-2})}
+                            "Full results have been included as a file attachment"])
+        table-body       [:div
+                          (render-table (prep-for-html-rendering timezone cols rows nil nil cols-limit))
+                          (render-truncation-warning cols-limit (count cols) rows-limit (count rows))]]
+    {:attachments nil
+     :content     (if results-attached
+                    (list results-attached table-body)
+                    (list table-body))}))
 
 (s/defn ^:private render:bar :- RenderedPulseCard
   [timezone card {:keys [cols rows] :as data}]
