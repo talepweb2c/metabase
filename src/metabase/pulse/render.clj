@@ -68,19 +68,20 @@
                      :color       color-brand}))
 
 (def ^:private ^:const bar-th-style
-  (merge font-style {:font-size      :10px
-                     :font-weight    400
-                     :color          color-gray-4
-                     :border-bottom  (str "4px solid " color-gray-1)
-                     :padding-top    :0px
-                     :padding-bottom :10px}))
+  (merge font-style {:font-size       :14.22px
+                     :font-weight     700
+                     :color           color-gray-4
+                     :border-bottom   (str "1px solid " color-gray-1)
+                     :padding-top     :0px
+                     :padding-bottom  :10px}))
 
 (def ^:private ^:const bar-td-style
-  (merge font-style {:font-size     :16px
+  (merge font-style {:font-size     :14.22px
                      :font-weight   400
                      :text-align    :left
                      :padding-right :1em
-                     :padding-top   :8px}))
+                     :padding-top   :8px
+                     :border-bottom (str "1px solid " color-gray-1)}))
 
 (def ^:private RenderedPulseCard
   "Schema used for functions that operate on pulse card contents and their attachments"
@@ -295,7 +296,7 @@
 
 (defn- render-table
   [header+rows]
-  [:table {:style (style {:padding-bottom :8px, :border-bottom (str "4px solid " color-gray-1)})}
+  [:table {:style (style {:max-width (str "100%"), :white-space :nowrap, :padding-bottom :8px, :border-collapse :collapse, :border-bottom (str "4px solid " color-gray-1)})}
    (let [{header-row :row bar-width :bar-width} (first header+rows)]
      [:thead
       [:tr
@@ -306,7 +307,7 @@
          [:th {:style (style bar-td-style bar-th-style {:width (str bar-width "%")})}])]])
    [:tbody
     (map-indexed (fn [row-idx {:keys [row bar-width]}]
-                   [:tr {:style (style {:color (if (odd? row-idx) color-gray-2 color-gray-3)})}
+                   [:tr {:style (style {:color color-gray-3})}
                     (map-indexed (fn [col-idx cell]
                                    [:td {:style (style bar-td-style (when (and bar-width (= col-idx 1)) {:font-weight 700}))}
                                     (h cell)])
@@ -342,7 +343,7 @@
               ;; If this column is remapped from another, it's already
               ;; in the output and should be skipped
               :when (not (:remapped_from maybe-remapped-col))]
-          (str/upper-case (name (or (:display_name col) (:name col)))))
+          (name (or (:display_name col) (:name col))))
    :bar-width (when include-bar? 99)})
 
 (defn- query-results->row-seq
@@ -713,7 +714,7 @@
     {:attachments attachments
      :content     [:div {:style (style (merge {:margin-top       :10px
                                                :margin-bottom    :20px}
-                                              ;; Don't include the boder on cards rendered with a table as the table
+                                              ;; Don't include the border on cards rendered with a table as the table
                                               ;; will be to larger and overrun the border
                                               (when-not (= :table (detect-pulse-card-type card data))
                                                 {:border           "1px solid #dddddd"
