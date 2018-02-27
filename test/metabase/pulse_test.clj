@@ -118,6 +118,25 @@
      (send-pulse! (retrieve-pulse pulse-id))
      (et/summarize-multipart-email #"Pulse Name"  #"Full results have been included" #"ID</th>"))))
 
+;; Basic test, 1 card, 1 recipient, 19 results, so no attachment
+(expect
+  (rasta-pulse-email {:body [{"Pulse Name"                      true
+                              "Full results have been included" false
+                              "ID</th>"                         true}]})
+  (tt/with-temp* [Card                 [{card-id :id}  (checkins-query {:aggregation nil
+                                                                        :limit       19})]
+                  Pulse                [{pulse-id :id} {:name          "Pulse Name"
+                                                        :skip_if_empty false}]
+                  PulseCard             [_             {:pulse_id pulse-id
+                                                        :card_id  card-id
+                                                        :position 0}]
+                  PulseChannel          [{pc-id :id}   {:pulse_id pulse-id}]
+                  PulseChannelRecipient [_             {:user_id          (rasta-id)
+                                                        :pulse_channel_id pc-id}]]
+    (email-test-setup
+     (send-pulse! (retrieve-pulse pulse-id))
+     (et/summarize-multipart-email #"Pulse Name"  #"Full results have been included" #"ID</th>"))))
+
 ;; Pulse should be sent to two recipients
 (expect
   (into {} (map (fn [user-kwd]
