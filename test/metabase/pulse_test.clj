@@ -1,11 +1,13 @@
 (ns metabase.pulse-test
-  (:require [clojure.walk :as walk]
+  (:require [clojure.string :as str]
+            [clojure.walk :as walk]
             [expectations :refer :all]
             [medley.core :as m]
             [metabase.integrations.slack :as slack]
             [metabase
              [email-test :as et]
-             [pulse :refer :all]]
+             [pulse :refer :all]
+             [query-processor :as qp]]
             [metabase.models
              [card :refer [Card]]
              [pulse :refer [Pulse retrieve-pulse retrieve-pulse-or-alert]]
@@ -118,6 +120,33 @@
     (email-test-setup
      (send-pulse! (retrieve-pulse pulse-id))
      (et/summarize-multipart-email #"Pulse Name"  #"Full results have been included" #"ID</th>"))))
+
+;; Validate pulse queries are limited by qp/default-query-constraints
+(expect
+  31 ;; Should return 30 results (the redef'd limit) plus the header row
+  (tt/with-temp* [Card                 [{card-id :id}  (checkins-query {:aggregation nil})]
+                  Pulse                [{pulse-id :id} {:name          "Pulse Name"
+                                                        :skip_if_empty false}]
+                  PulseCard             [_             {:pulse_id pulse-id
+                                                        :card_id  card-id
+                                                        :position 0}]
+                  PulseChannel          [{pc-id :id}   {:pulse_id pulse-id}]
+                  PulseChannelRecipient [_             {:user_id          (rasta-id)
+                                                        :pulse_channel_id pc-id}]]
+    (email-test-setup
+     (with-redefs [qp/default-query-constraints {:max-results           10000
+                                                 :max-results-bare-rows 30}]
+       (send-pulse! (retrieve-pulse pulse-id))
+       ;; Slurp in the generated CSV and count the lines found in the file
+       (-> @et/inbox
+           vals
+           ffirst
+           :body
+           last
+           :content
+           slurp
+           str/split-lines
+           count)))))
 
 ;; Basic test, 1 card, 1 recipient, 19 results, so no attachment
 (expect
@@ -423,13 +452,10 @@
       (invoke [_ x1 x2 x3]
         (invoke-with-wrapping input output func [x1 x2 x3]))
       (invoke [_ x1 x2 x3 x4]
-        (println "4 args")
         (invoke-with-wrapping input output func [x1 x2 x3 x4]))
       (invoke [_ x1 x2 x3 x4 x5]
-        (println "5 args eh?")
         (invoke-with-wrapping input output func [x1 x2 x3 x4 x5]))
       (invoke [_ x1 x2 x3 x4 x5 x6]
-        (println "6 args eh?")
         (invoke-with-wrapping input output func [x1 x2 x3 x4 x5 x6])))))
 
 ;; Basic slack test, 1 card, 1 recipient channel
