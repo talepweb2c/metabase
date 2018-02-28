@@ -442,7 +442,7 @@
              (or (< cols-limit (count cols))
                  (< rows-limit (count rows))))
     [:div {:style (style {:color color-gray-2})}
-     "Full results have been included as a file attachment"]))
+     "More results have been included as a file attachment"]))
 
 (s/defn ^:private render:table :- RenderedPulseCard
   [render-type timezone card {:keys [cols rows] :as data}]
