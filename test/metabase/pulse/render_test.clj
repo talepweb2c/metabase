@@ -31,19 +31,19 @@
 
 ;; Testing the format of headers
 (expect
-  {:row ["ID" "LATITUDE" "LAST LOGIN" "NAME"]
+  {:row ["ID" "Latitude" "Last Login" "Name"]
    :bar-width nil}
   (first (#'render/prep-for-html-rendering pacific-tz test-columns test-data nil nil (count test-columns))))
 
 ;; When including a bar column, bar-width is 99%
 (expect
-  {:row ["ID" "LATITUDE" "LAST LOGIN" "NAME"]
+  {:row ["ID" "Latitude" "Last Login" "Name"]
    :bar-width 99}
   (first (#'render/prep-for-html-rendering pacific-tz test-columns test-data second 40.0 (count test-columns))))
 
 ;; When there are too many columns, #'render/prep-for-html-rendering show narrow it
 (expect
-  {:row ["ID" "LATITUDE"]
+  {:row ["ID" "Latitude"]
    :bar-width 99}
   (first (#'render/prep-for-html-rendering pacific-tz test-columns test-data second 40.0 2)))
 
@@ -91,7 +91,7 @@
 
 ;; With a remapped column, the header should contain the name of the remapped column (not the original)
 (expect
-  {:row ["ID" "LATITUDE" "RATING DESC" "LAST LOGIN" "NAME"]
+  {:row ["ID" "Latitude" "Rating Desc" "Last Login" "Name"]
    :bar-width nil}
   (first (#'render/prep-for-html-rendering pacific-tz test-columns-with-remapping test-data-with-remapping nil nil (count test-columns-with-remapping))))
 
