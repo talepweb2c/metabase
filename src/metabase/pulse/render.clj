@@ -421,17 +421,22 @@
         " of "     [:strong {:style (style {:color color-gray-3})} (format-number col-count)]
         " columns."])]))
 
+(defn- attached-results-text
+  "Returns hiccup structures to indicate truncated results are available as an attachment"
+  [render-type cols cols-limit rows rows-limit]
+  (when (and (not= :inline render-type)
+             (or (< cols-limit (count cols))
+                 (< rows-limit (count rows))))
+    [:div {:style (style {:color color-gray-2})}
+     "Full results have been included as a file attachment"]))
+
 (s/defn ^:private render:table :- RenderedPulseCard
-  [timezone card {:keys [cols rows] :as data}]
-  (let [results-attached (when (or (< cols-limit (count cols))
-                                   (< rows-limit (count rows)))
-                           [:div {:style (style {:color color-gray-2})}
-                            "Full results have been included as a file attachment"])
-        table-body       [:div
-                          (render-table (prep-for-html-rendering timezone cols rows nil nil cols-limit))
-                          (render-truncation-warning cols-limit (count cols) rows-limit (count rows))]]
+  [render-type timezone card {:keys [cols rows] :as data}]
+  (let [table-body [:div
+                    (render-table (prep-for-html-rendering timezone cols rows nil nil cols-limit))
+                    (render-truncation-warning cols-limit (count cols) rows-limit (count rows))]]
     {:attachments nil
-     :content     (if results-attached
+     :content     (if-let [results-attached (#'attached-results-text render-type cols cols-limit rows rows-limit)]
                     (list results-attached table-body)
                     (list table-body))}))
 
@@ -708,7 +713,7 @@
       :scalar    (render:scalar    timezone card data)
       :sparkline (render:sparkline render-type timezone card data)
       :bar       (render:bar       timezone card data)
-      :table     (render:table     timezone card data)
+      :table     (render:table     render-type timezone card data)
       (if (is-attached? card)
         (render:attached render-type card data)
         (render:unknown card data)))

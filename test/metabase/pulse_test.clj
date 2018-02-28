@@ -12,6 +12,7 @@
              [pulse-card :refer [PulseCard]]
              [pulse-channel :refer [PulseChannel]]
              [pulse-channel-recipient :refer [PulseChannelRecipient]]]
+            [metabase.pulse.render :as render]
             [metabase.test
              [data :as data]
              [util :as tu]]
@@ -392,6 +393,45 @@
   (assoc result :attachments (for [attachment-info attachments]
                                (update attachment-info :attachment-bytes-thunk fn?))))
 
+(defprotocol WrappedFunction
+  (input [_])
+  (output [_]))
+
+(defn- invoke-with-wrapping
+  "Apply `args` to `func`, capturing the arguments of the invocation and the result of the invocation. Store the arguments in
+  `input-atom` and the result in `output-atom`."
+  [input-atom output-atom func args]
+  (swap! input-atom conj args)
+  (let [result (apply func args)]
+    (swap! output-atom conj result)
+    result))
+
+(defn- wrap-function
+  "Return a function that wraps `func`, not interfering with it but recording it's input and output, which is
+  available via the `input` function and `output`function that can be used directly on this object"
+  [func]
+  (let [input (atom nil)
+        output (atom nil)]
+    (reify WrappedFunction
+      (input [_] @input)
+      (output [_] @output)
+      clojure.lang.IFn
+      (invoke [_ x1]
+        (invoke-with-wrapping input output func [x1]))
+      (invoke [_ x1 x2]
+        (invoke-with-wrapping input output func [x1 x2]))
+      (invoke [_ x1 x2 x3]
+        (invoke-with-wrapping input output func [x1 x2 x3]))
+      (invoke [_ x1 x2 x3 x4]
+        (println "4 args")
+        (invoke-with-wrapping input output func [x1 x2 x3 x4]))
+      (invoke [_ x1 x2 x3 x4 x5]
+        (println "5 args eh?")
+        (invoke-with-wrapping input output func [x1 x2 x3 x4 x5]))
+      (invoke [_ x1 x2 x3 x4 x5 x6]
+        (println "6 args eh?")
+        (invoke-with-wrapping input output func [x1 x2 x3 x4 x5 x6])))))
+
 ;; Basic slack test, 1 card, 1 recipient channel
 (tt/expect-with-temp [Card         [{card-id :id}  (checkins-query {:breakout [["datetime-field" (data/id :checkins :date) "hour"]]})]
                       Pulse        [{pulse-id :id} {:name "Pulse Name"
@@ -415,6 +455,47 @@
    (-> (send-pulse! (retrieve-pulse pulse-id))
        first
        thunk->boolean)))
+
+(defn- force-bytes-thunk
+  "Grabs the thunk that produces the image byte array and invokes it"
+  [results]
+  ((-> results
+       :attachments
+       first
+       :attachment-bytes-thunk)))
+
+;; Basic slack test, 1 card, 1 recipient channel, verifies that "full results in attachment" text is not present for
+;; slack pulses
+(tt/expect-with-temp [Card         [{card-id :id}  (checkins-query {:aggregation nil
+                                                                    :limit       25})]
+                      Pulse        [{pulse-id :id} {:name          "Pulse Name"
+                                                    :skip_if_empty false}]
+                      PulseCard    [_              {:pulse_id pulse-id
+                                                    :card_id  card-id
+                                                    :position 0}]
+                      PulseChannel [{pc-id :id}    {:pulse_id     pulse-id
+                                                    :channel_type "slack"
+                                                    :details      {:channel "#general"}}]]
+  [{:channel-id "#general",
+     :message    "Pulse: Pulse Name",
+     :attachments
+     [{:title                  "Test card",
+       :attachment-bytes-thunk true
+       :title_link             (str "https://metabase.com/testmb/question/" card-id),
+       :attachment-name        "image.png",
+       :channel-id             "FOO",
+       :fallback               "Test card"}]}
+   1     ;; -> attached-results-text should be invoked exactly once
+   [nil] ;; -> attached-results-text should return nil since it's a slack message
+   ]
+  (slack-test-setup
+   (with-redefs [render/attached-results-text (wrap-function (var-get #'render/attached-results-text))]
+     (let [[pulse-results] (send-pulse! (retrieve-pulse pulse-id))]
+       ;; If we don't force the thunk, the rendering code will never execute and attached-results-text won't be called
+       (force-bytes-thunk pulse-results)
+       [(thunk->boolean pulse-results)
+        (count (input (var-get #'render/attached-results-text)))
+        (output (var-get #'render/attached-results-text))]))))
 
 (defn- produces-bytes? [{:keys [attachment-bytes-thunk]}]
   (< 0 (alength (attachment-bytes-thunk))))
