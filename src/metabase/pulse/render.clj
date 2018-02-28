@@ -362,11 +362,16 @@
               :when remapped_from]
           [remapped_from col-idx])))
 
+(defn- show-in-table? [{:keys [special_type visibility_type] :as column}]
+  (and (not (isa? special_type :type/Description))
+       (not (contains? #{:details-only :retired :sensitive} visibility_type))))
+
 (defn- query-results->header-row
   "Returns a row structure with header info from `COLS`. These values
   are strings that are ready to be rendered as HTML"
   [remapping-lookup cols include-bar?]
   {:row (for [maybe-remapped-col cols
+              :when (show-in-table? maybe-remapped-col)
               :let [col (if (:remapped_to maybe-remapped-col)
                           (nth cols (get remapping-lookup (:name maybe-remapped-col)))
                           maybe-remapped-col)]
@@ -384,7 +389,8 @@
                   ;; cast to double to avoid "Non-terminating decimal expansion" errors
                   (float (* 100 (/ (double (bar-column row)) max-value))))
      :row (for [[maybe-remapped-col maybe-remapped-row-cell] (map vector cols row)
-                :when (not (:remapped_from maybe-remapped-col))
+                :when (and (not (:remapped_from maybe-remapped-col))
+                           (show-in-table? maybe-remapped-col))
                 :let [[col row-cell] (if (:remapped_to maybe-remapped-col)
                                        [(nth cols (get remapping-lookup (:name maybe-remapped-col)))
                                         (nth row (get remapping-lookup (:name maybe-remapped-col)))]
