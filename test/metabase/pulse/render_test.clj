@@ -1,5 +1,6 @@
 (ns metabase.pulse.render-test
-  (:require [expectations :refer :all]
+  (:require [clojure.walk :as walk]
+            [expectations :refer :all]
             [hiccup.core :refer [html]]
             [metabase.pulse.render :as render :refer :all])
   (:import java.util.TimeZone))
@@ -166,3 +167,47 @@
                                 :base_type    :type/DateTime
                                 :special_type nil}]
                         :rows [["2014-04-01T08:30:00.0000"]]}))
+
+(defn- replace-style-maps [hiccup-map]
+  (walk/postwalk (fn [maybe-map]
+                   (if (and (map? maybe-map)
+                            (contains? maybe-map :style))
+                     :style-map
+                     maybe-map)) hiccup-map))
+
+(def ^:private render-truncation-warning'
+  (comp replace-style-maps #'render/render-truncation-warning))
+
+(expect
+  nil
+  (render-truncation-warning' 10 5 20 10))
+
+(expect
+  [:div :style-map
+   [:div :style-map
+    "Showing " [:strong :style-map "10"] " of "
+    [:strong :style-map "11"] " columns."]]
+  (render-truncation-warning' 10 11 20 10))
+
+(expect
+  [:div
+   :style-map
+   [:div :style-map "Showing "
+    [:strong :style-map "20"] " of " [:strong :style-map "21"] " rows."]]
+  (render-truncation-warning' 10 5 20 21))
+
+(expect
+  [:div
+   :style-map
+   [:div
+    :style-map
+    "Showing "
+    [:strong :style-map "20"]
+    " of "
+    [:strong :style-map "21"]
+    " rows and "
+    [:strong :style-map "10"]
+    " of "
+    [:strong :style-map "11"]
+    " columns."]]
+  (render-truncation-warning' 10 11 20 21))

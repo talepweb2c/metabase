@@ -401,25 +401,39 @@
      (query-results->header-row remapping-lookup limited-cols bar-column)
      (query-results->row-seq timezone remapping-lookup limited-cols (take rows-limit rows) bar-column max-value))))
 
+(defn- strong-limit-text [number]
+  [:strong {:style (style {:color color-gray-3})} (format-number number)])
+
 (defn- render-truncation-warning
   [col-limit col-count row-limit row-count]
-  (if (or (> row-count row-limit)
-          (> col-count col-limit))
-    [:div {:style (style {:padding-top :16px})}
-     (cond
-       (> row-count row-limit)
-       [:div {:style (style {:color color-gray-2
-                             :padding-bottom :10px})}
-        "Showing " [:strong {:style (style {:color color-gray-3})} (format-number row-limit)]
-        " of "     [:strong {:style (style {:color color-gray-3})} (format-number row-count)]
-        " rows."]
+  (let [over-row-limit (> row-count row-limit)
+        over-col-limit (> col-count col-limit)]
+    (when (or over-row-limit over-col-limit)
+      [:div {:style (style {:padding-top :16px})}
+       (cond
 
-       (> col-count col-limit)
-       [:div {:style (style {:color          color-gray-2
-                             :padding-bottom :10px})}
-        "Showing " [:strong {:style (style {:color color-gray-3})} (format-number col-limit)]
-        " of "     [:strong {:style (style {:color color-gray-3})} (format-number col-count)]
-        " columns."])]))
+         (and over-row-limit over-col-limit)
+         [:div {:style (style {:color color-gray-2
+                               :padding-bottom :10px})}
+          "Showing " (strong-limit-text row-limit)
+          " of "     (strong-limit-text row-count)
+          " rows and " (strong-limit-text col-limit)
+          " of "     (strong-limit-text col-count)
+          " columns."]
+
+         over-row-limit
+         [:div {:style (style {:color color-gray-2
+                               :padding-bottom :10px})}
+          "Showing " (strong-limit-text row-limit)
+          " of "     (strong-limit-text row-count)
+          " rows."]
+
+         over-col-limit
+         [:div {:style (style {:color          color-gray-2
+                               :padding-bottom :10px})}
+          "Showing " (strong-limit-text col-limit)
+          " of "     (strong-limit-text col-count)
+          " columns."])])))
 
 (defn- attached-results-text
   "Returns hiccup structures to indicate truncated results are available as an attachment"
@@ -436,7 +450,7 @@
                     (render-table (prep-for-html-rendering timezone cols rows nil nil cols-limit))
                     (render-truncation-warning cols-limit (count cols) rows-limit (count rows))]]
     {:attachments nil
-     :content     (if-let [results-attached (#'attached-results-text render-type cols cols-limit rows rows-limit)]
+     :content     (if-let [results-attached (attached-results-text render-type cols cols-limit rows rows-limit)]
                     (list results-attached table-body)
                     (list table-body))}))
 
