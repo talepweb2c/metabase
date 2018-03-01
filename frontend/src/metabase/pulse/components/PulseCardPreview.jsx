@@ -70,7 +70,7 @@ export default class PulseCardPreview extends Component {
       <div
         className="flex relative flex-full"
         style={{
-          maxWidth: 379
+          maxWidth: 379,
         }}
       >
         <div
