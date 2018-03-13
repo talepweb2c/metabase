@@ -2628,7 +2628,7 @@ msgstr ""
 #: frontend/src/metabase/components/LoadingAndErrorWrapper.jsx:36
 #, fuzzy
 msgid "Loading..."
-msgstr "{0} yükleniyor..."
+msgstr "Yükleniyor..."
 
 #: frontend/src/metabase/components/NewsletterForm.jsx:70
 msgid "Metabase Newsletter"
@@ -3072,7 +3072,7 @@ msgstr ""
 #: frontend/src/metabase/home/components/Activity.jsx:427
 #, fuzzy
 msgid "removed the filter ${ item.details.name }"
-msgstr "{item.details.name} süzgecini kaldırdı"
+msgstr "${ item.details.name } süzgecini kaldırdı"
 
 #: frontend/src/metabase/home/components/Activity.jsx:430
 msgid "joined!"

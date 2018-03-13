@@ -2902,7 +2902,7 @@ msgstr ""
 
 #: frontend/src/metabase/dashboards/containers/Dashboards.jsx:191
 msgid ""
-"Put the charts and graphs you look at ${ el }frequently in a single, handy "
+"Put the charts and graphs you look at ${ brTag }frequently in a single, handy "
 "place."
 msgstr ""
 
@@ -2918,7 +2918,7 @@ msgid ""
 msgstr ""
 
 #: frontend/src/metabase/dashboards/containers/DashboardsArchive.jsx:97
-msgid "No dashboards have been ${ el } archived yet"
+msgid "No dashboards have been ${ brTag } archived yet"
 msgstr ""
 
 #: frontend/src/metabase/home/components/Activity.jsx:92
@@ -6158,7 +6158,7 @@ msgid "Questions about ${ this.props.segment.name }"
 msgstr ""
 
 #: frontend/src/metabase/reference/segments/SegmentQuestions.jsx:99
-msgid "Created ${ '' } by ${ entity.creator.common_name }"
+msgid "Created ${ entityCreatedAt } by ${ entity.creator.common_name }"
 msgstr ""
 
 #: frontend/src/metabase/reference/segments/SegmentRevisions.jsx:29
