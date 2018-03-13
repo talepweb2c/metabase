@@ -37,8 +37,8 @@ msgstr ""
 #: frontend/src/metabase/admin/databases/components/CreatedDatabaseModal.jsx:28
 msgid ""
 "We're analyzing its schema now to make some educated guesses about its\n"
-"metadata. ${ linkViewDatabase } in the Data Model section to see what we've found and to\n"
-"make edits, or ${ linkAskQuestion } about\n"
+"metadata. ${ el } in the Data Model section to see what we've found and to\n"
+"make edits, or ${ el2 } about\n"
 "this database."
 msgstr ""
 
@@ -1084,18 +1084,18 @@ msgstr ""
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:231
 msgid ""
 "We couldn’t send them an email invitation,\n"
-"so make sure to tell them to log in using ${ userEmail }\n"
+"so make sure to tell them to log in using ${ el }\n"
 "and this password we’ve generated for them:"
 msgstr ""
 
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:240
 msgid ""
-"If you want to be able to send email invites, just go to the ${ emailSettings } page."
+"If you want to be able to send email invites, just go to the ${ el2 } page."
 msgstr ""
 
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:265
 msgid ""
-"We’ve sent an invite to ${ userEmail } with instructions to set their password."
+"We’ve sent an invite to ${ el } with instructions to set their password."
 msgstr ""
 
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:277
@@ -1511,7 +1511,7 @@ msgstr ""
 msgid ""
 "To allow users to sign in with Google you'll need to give Metabase a Google "
 "Developers console application client ID. It only takes a few steps and "
-"instructions on how to create a key can be found ${ linkGoogleSignIn }"
+"instructions on how to create a key can be found ${ el }"
 msgstr ""
 
 #: frontend/src/metabase/admin/settings/components/SettingsSingleSignOnForm.jsx:132
@@ -1538,7 +1538,7 @@ msgstr ""
 
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:259
 msgid ""
-"Once you're there, give it a name and click ${ addBotIntegration }. Then copy and paste the "
+"Once you're there, give it a name and click ${ el }. Then copy and paste the "
 "Bot API Token into the field below. Once you are done, create a "
 "\"metabase_files\" channel in Slack. Metabase needs this to upload graphs."
 msgstr ""
@@ -1580,7 +1580,7 @@ msgid ""
 msgstr ""
 
 #: frontend/src/metabase/admin/settings/components/SettingsXrayForm.jsx:47
-msgid "${ noteText } \"Extended\" is required for viewing time series x-rays."
+msgid "${ el } \"Extended\" is required for viewing time series x-rays."
 msgstr ""
 
 #: frontend/src/metabase/admin/settings/components/widgets/CustomGeoJSONWidget.jsx:131
@@ -2361,7 +2361,7 @@ msgid "Click here"
 msgstr ""
 
 #: frontend/src/metabase/components/DatabaseDetailsForm.jsx:264
-msgid "${ credentialsUrlLink } to generate a Client ID and Client Secret for your project."
+msgid "${ el } to generate a Client ID and Client Secret for your project."
 msgstr ""
 
 #: frontend/src/metabase/components/DatabaseDetailsForm.jsx:265
@@ -4101,7 +4101,7 @@ msgid "Embed code snippet for your HTML or Frontend Application"
 msgstr ""
 
 #: frontend/src/metabase/public/components/widgets/EmbedCodePane.jsx:106
-msgid "More ${ examplesGithubLink }"
+msgid "More ${ el }"
 msgstr ""
 
 #: frontend/src/metabase/public/components/widgets/SharingPane.jsx:72
