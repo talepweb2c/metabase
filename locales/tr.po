@@ -1083,13 +1083,13 @@ msgstr ""
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:231
 msgid ""
 "We couldn’t send them an email invitation,\n"
-"so make sure to tell them to log in using ${ el }\n"
+"so make sure to tell them to log in using ${ userEmail }\n"
 "and this password we’ve generated for them:"
 msgstr ""
 
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:240
 msgid ""
-"If you want to be able to send email invites, just go to the ${ el2 } page."
+"If you want to be able to send email invites, just go to the ${ emailSettings } page."
 msgstr ""
 
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:265
