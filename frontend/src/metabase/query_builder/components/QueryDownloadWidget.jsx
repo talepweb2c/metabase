@@ -85,7 +85,7 @@ const UnsavedQueryButton = ({
 }) => (
   <DownloadButton
     className={className}
-    url={`api/dataset/${type}`}
+    url={`api/dataset/${ type }`}
     params={{ query: JSON.stringify(_.omit(json_query, "constraints")) }}
     extensions={[type]}
   >
@@ -101,7 +101,7 @@ const SavedQueryButton = ({
 }) => (
   <DownloadButton
     className={className}
-    url={`api/card/${card.id}/query/${type}`}
+    url={`api/card/${ card.id }/query/${ type }`}
     params={{ parameters: JSON.stringify(json_query.parameters) }}
     extensions={[type]}
   >

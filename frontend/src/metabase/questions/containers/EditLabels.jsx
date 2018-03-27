@@ -118,7 +118,7 @@ export default class EditLabels extends Component {
                             onClick={() => editLabel(label.id)}
                           >{t`Edit`}</a>
                           <Confirm
-                            title={t`Delete label "${label.name}"`}
+                            title={t`Delete label "${ label.name }"`}
                             action={() => deleteLabel(label.id)}
                           >
                             <Icon

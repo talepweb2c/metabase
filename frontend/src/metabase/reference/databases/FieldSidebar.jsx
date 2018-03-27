@@ -23,10 +23,10 @@ const FieldSidebar = ({
         <Breadcrumbs
           className="py4"
           crumbs={[
-            [database.name, `/reference/databases/${database.id}`],
+            [database.name, `/reference/databases/${ database.id }`],
             [
               table.name,
-              `/reference/databases/${database.id}/tables/${table.id}`,
+              `/reference/databases/${ database.id }/tables/${ table.id }`,
             ],
             [field.name],
           ]}
@@ -35,19 +35,19 @@ const FieldSidebar = ({
         />
       </div>
       <SidebarItem
-        key={`/reference/databases/${database.id}/tables/${table.id}/fields/${
+        key={`/reference/databases/${ database.id }/tables/${ table.id }/fields/${ 
           field.id
-        }`}
-        href={`/reference/databases/${database.id}/tables/${table.id}/fields/${
+         }`}
+        href={`/reference/databases/${ database.id }/tables/${ table.id }/fields/${ 
           field.id
-        }`}
+         }`}
         icon="document"
         name={t`Details`}
       />
       {showXray && (
         <SidebarItem
-          key={`/xray/field/${field.id}/approximate`}
-          href={`/xray/field/${field.id}/approximate`}
+          key={`/xray/field/${ field.id }/approximate`}
+          href={`/xray/field/${ field.id }/approximate`}
           icon="beaker"
           name={t`X-ray this Field`}
         />

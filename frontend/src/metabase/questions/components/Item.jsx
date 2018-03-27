@@ -206,7 +206,7 @@ const ItemCreated = pure(
   ({ created, by }) =>
     created || by ? (
       <div className={S.itemSubtitle}>
-        {t`Created` + (created ? ` ${created}` : ``) + (by ? t` by ${by}` : ``)}
+        {t`Created` + (created ? ` ${ created }` : ``) + (by ? t` by ${ by }` : ``)}
       </div>
     ) : null,
 );

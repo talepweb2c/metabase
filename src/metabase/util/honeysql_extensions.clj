@@ -4,7 +4,13 @@
             (honeysql [core :as hsql]
                       [format :as hformat]
                       helpers))
-  (:import honeysql.format.ToSql))
+  (:import honeysql.format.ToSql
+           java.util.Locale))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 (alter-meta! #'honeysql.core/format assoc :style/indent 1)
 (alter-meta! #'honeysql.core/call   assoc :style/indent 1)
@@ -19,7 +25,7 @@
 (let [quote-fns     @(resolve 'honeysql.format/quote-fns)
       ansi-quote-fn (:ansi quote-fns)]
   (intern 'honeysql.format 'quote-fns
-          (assoc quote-fns :h2 (comp s/upper-case ansi-quote-fn))))
+          (assoc quote-fns :h2 (comp str-upper-case-en ansi-quote-fn))))
 
 
 ;; `:crate` quote style that correctly quotes nested column identifiers

@@ -76,15 +76,15 @@ function formatExpressionReference([, expressionName]) {
 function formatMath([operator, ...args], info, parens) {
   let formatted = args
     .map(arg => format(arg, info, true))
-    .join(` ${operator} `);
-  return parens ? `(${formatted})` : formatted;
+    .join(` ${ operator } `);
+  return parens ? `(${ formatted })` : formatted;
 }
 
 function formatAggregation([aggregation, ...args], info) {
   const { aggregations } = info;
   return args.length === 0
     ? aggregations.get(aggregation)
-    : `${aggregations.get(aggregation)}(${args
+    : `${ aggregations.get(aggregation) }(${ args
         .map(arg => format(arg, info))
-        .join(", ")})`;
+        .join(", ") })`;
 }

@@ -116,7 +116,7 @@ export default class ActionsWidget extends Component {
           MetabaseAnalytics.trackEvent(
             "Actions",
             "Executed Action",
-            `${action.section || ""}:${action.name || ""}`,
+            `${ action.section || "" }:${ action.name || "" }`,
           );
           this.handleOnChangeCardAndRun({ nextCard: nextQuestion.card() });
         }
@@ -206,8 +206,8 @@ export default class ActionsWidget extends Component {
                           MetabaseAnalytics.trackEvent(
                             "Actions",
                             "Executed Action",
-                            `${selectedAction.section ||
-                              ""}:${selectedAction.name || ""}`,
+                            `${ selectedAction.section ||
+                              "" }:${ selectedAction.name || "" }`,
                           );
                         }
                         this.handleOnChangeCardAndRun({ nextCard });

@@ -85,7 +85,7 @@ describe("dashboard list", () => {
       ).toBe(true);
 
       const updateInputValue = (name, value) =>
-        setInputValue(dbDetailsForm.find(`input[name="${name}"]`), value);
+        setInputValue(dbDetailsForm.find(`input[name="${ name }"]`), value);
 
       updateInputValue("name", "Test db name");
       updateInputValue("dbname", "test_postgres_db");
@@ -136,7 +136,7 @@ describe("dashboard list", () => {
       ).toBe(true);
 
       const updateInputValue = (name, value) =>
-        setInputValue(dbDetailsForm.find(`input[name="${name}"]`), value);
+        setInputValue(dbDetailsForm.find(`input[name="${ name }"]`), value);
 
       updateInputValue("name", "Test db name");
       updateInputValue("dbname", "test_postgres_db");
@@ -202,7 +202,7 @@ describe("dashboard list", () => {
       ).toBe(true);
 
       const updateInputValue = (name, value) =>
-        setInputValue(dbDetailsForm.find(`input[name="${name}"]`), value);
+        setInputValue(dbDetailsForm.find(`input[name="${ name }"]`), value);
 
       updateInputValue("name", "Test db name");
       updateInputValue("dbname", "test_postgres_db");
@@ -285,7 +285,7 @@ describe("dashboard list", () => {
 
       // TODO: Apply change method here
       const updateInputValue = (name, value) =>
-        setInputValue(dbDetailsForm.find(`input[name="${name}"]`), value);
+        setInputValue(dbDetailsForm.find(`input[name="${ name }"]`), value);
 
       updateInputValue("name", "Test db name");
       updateInputValue("dbname", "test_postgres_db");

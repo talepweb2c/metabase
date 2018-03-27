@@ -130,7 +130,7 @@ export const MetabaseApi = {
   table_query_metadata: GET(
     "/api/table/:tableId/query_metadata",
     async table => {
-      // HACK: inject GA metadata that we don't have intergrated on the backend yet
+      // HACK: inject GA metadata that we don't have integrated on the backend yet
       if (table && table.db && table.db.engine === "googleanalytics") {
         let GA = await getGAMetadata();
         table.fields = table.fields.map(f => ({ ...f, ...GA.fields[f.name] }));

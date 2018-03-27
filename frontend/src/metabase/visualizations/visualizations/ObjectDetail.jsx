@@ -204,7 +204,7 @@ export class ObjectDetail extends Component {
           fkCountsByTable[fk.origin.table.id] > 1 ? (
             <span className="text-grey-3 text-normal">
               {" "}
-              {t`via ${fk.origin.display_name}`}
+              {t`via ${ fk.origin.display_name }`}
             </span>
           ) : null;
 
@@ -268,6 +268,7 @@ export class ObjectDetail extends Component {
     // TODO: once we nail down the "title" column of each table this should be something other than the id
     const idValue = this.getIdValue();
 
+    const tableNameText = <span className="text-dark">{tableName}</span>;
     return (
       <div className="ObjectDetail rounded mt2">
         <div className="Grid ObjectDetail-headingGroup">
@@ -281,9 +282,7 @@ export class ObjectDetail extends Component {
             <div className="p4 flex align-center text-bold text-grey-3">
               <Icon name="connections" size={17} />
               <div className="ml2">
-                {jt`This ${(
-                  <span className="text-dark">{tableName}</span>
-                )} is connected to:`}
+                {jt`This ${ tableNameText } is connected to:`}
               </div>
             </div>
           </div>

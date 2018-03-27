@@ -71,7 +71,7 @@ export default class PublicLinksListing extends Component {
   }
 
   trackEvent(label: string) {
-    MetabaseAnalytics.trackEvent(`Admin ${this.props.type}`, label);
+    MetabaseAnalytics.trackEvent(`Admin ${ this.props.type }`, label);
   }
 
   render() {

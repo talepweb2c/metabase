@@ -150,6 +150,7 @@ export class Dashboards extends Component {
     const filteredDashboards = isLoading ? [] : this.getFilteredDashboards();
     const noResultsFound = filteredDashboards.length === 0;
 
+    const brTag = <br />;
     return (
       <LoadingAndErrorWrapper
         loading={isLoading}
@@ -187,9 +188,7 @@ export class Dashboards extends Component {
           <div className="mt2 flex-full flex align-center justify-center">
             <EmptyState
               message={
-                <span>{jt`Put the charts and graphs you look at ${(
-                  <br />
-                )}frequently in a single, handy place.`}</span>
+                <span>{jt`Put the charts and graphs you look at ${ brTag }frequently in a single, handy place.`}</span>
               }
               image="/app/img/dashboard_illustration"
               action={t`Create a dashboard`}

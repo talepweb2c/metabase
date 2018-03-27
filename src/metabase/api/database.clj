@@ -32,7 +32,18 @@
             [toucan
              [db :as db]
              [hydrate :refer [hydrate]]])
-  (:import metabase.models.database.DatabaseInstance))
+  (:import metabase.models.database.DatabaseInstance
+           java.util.Locale))
+
+(defn str-lower-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toLowerCase strng (Locale/ENGLISH)))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 (def DBEngineString
   "Schema for a valid database engine name, e.g. `h2` or `postgres`."
@@ -214,14 +225,14 @@
   (db/select [Table :id :db_id :schema :name]
     {:where    [:and [:= :db_id db-id]
                      [:= :active true]
-                     [:like :%lower.name (str (str/lower-case prefix) "%")]
+                     [:like :%lower.name (str (str-lower-case-en prefix) "%")]
                      [:= :visibility_type nil]]
      :order-by [[:%lower.name :asc]]}))
 
 (defn- autocomplete-fields [db-id prefix]
   (db/select [Field :name :base_type :special_type :id :table_id [:table.name :table_name]]
     :metabase_field.active          true
-    :%lower.metabase_field.name     [:like (str (str/lower-case prefix) "%")]
+    :%lower.metabase_field.name     [:like (str (str-lower-case-en prefix) "%")]
     :metabase_field.visibility_type [:not-in ["sensitive" "retired"]]
     :table.db_id                    db-id
     {:order-by  [[:%lower.metabase_field.name :asc]
@@ -284,7 +295,7 @@
   "Get a list of all primary key `Fields` for `Database`."
   [id]
   (api/read-check Database id)
-  (sort-by (comp str/lower-case :name :table) (filter mi/can-read? (-> (database/pk-fields {:id id})
+  (sort-by (comp str-lower-case-en :name :table) (filter mi/can-read? (-> (database/pk-fields {:id id})
                                                                        (hydrate :table)))))
 
 

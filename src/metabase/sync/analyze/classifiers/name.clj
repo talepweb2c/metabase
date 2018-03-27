@@ -11,7 +11,18 @@
              [util :as sync-util]]
             [metabase.util.schema :as su]
             [schema.core :as s]
-            [toucan.db :as db]))
+            [toucan.db :as db])
+  (:import  java.util.Locale))
+
+(defn str-lower-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toLowerCase strng (Locale/ENGLISH)))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 (def ^:private bool-or-int-type #{:type/Boolean :type/Integer})
 (def ^:private float-type       #{:type/Float})
@@ -72,10 +83,10 @@
 (s/defn ^:private special-type-for-name-and-base-type :- (s/maybe su/FieldType)
   "If `name` and `base-type` matches a known pattern, return the `special_type` we should assign to it."
   [field-name :- su/NonBlankString, base-type :- su/FieldType]
-  (or (when (= "id" (str/lower-case field-name)) :type/PK)
+  (or (when (= "id" (str-lower-case-en field-name)) :type/PK)
       (some (fn [[name-pattern valid-base-types special-type]]
               (when (and (some (partial isa? base-type) valid-base-types)
-                         (re-matches name-pattern (str/lower-case field-name)))
+                         (re-matches name-pattern (str-lower-case-en field-name)))
                 special-type))
             pattern+base-types+special-type)))
 

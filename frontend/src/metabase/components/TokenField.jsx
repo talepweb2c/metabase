@@ -567,10 +567,10 @@ export default class TokenField extends Component {
                     : null
                 }
                 className={cx(
-                  `py1 pl1 pr2 block rounded text-bold text-${color}-hover inline-block full cursor-pointer`,
+                  `py1 pl1 pr2 block rounded text-bold text-${ color }-hover inline-block full cursor-pointer`,
                   `bg-grey-0-hover`,
                   {
-                    [`text-${color} bg-grey-0`]:
+                    [`text-${ color } bg-grey-0`]:
                       !this.state.listIsHovered &&
                       this._valueIsEqual(
                         selectedOptionValue,

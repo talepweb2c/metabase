@@ -4,7 +4,7 @@
              [route :as route]]
             [metabase.api
              [activity :as activity]
-             [alert    :as alert]
+             [alert :as alert]
              [async :as async]
              [card :as card]
              [collection :as collection]
@@ -35,7 +35,8 @@
              [user :as user]
              [util :as util]
              [x-ray :as x-ray]]
-            [metabase.middleware :as middleware]))
+            [metabase.middleware :as middleware])
+            (:import java.util.Locale))
 
 (def ^:private +generic-exceptions
   "Wrap ROUTES so any Exception thrown is just returned as a generic 400, to prevent details from leaking in public
@@ -90,4 +91,4 @@
   (context "/util"            [] util/routes)
   (route/not-found (fn [{:keys [request-method uri]}]
                      {:status 404
-                      :body   (str (.toUpperCase (name request-method)) " " uri " does not exist.")})))
+                      :body   (str (.toUpperCase (name request-method) (Locale/ENGLISH)) " " uri " does not exist.")})))

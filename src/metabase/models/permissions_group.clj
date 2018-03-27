@@ -12,7 +12,18 @@
             [metabase.util :as u]
             [toucan
              [db :as db]
-             [models :as models]]))
+             [models :as models]])
+  (:import java.util.Locale))
+
+(defn str-lower-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toLowerCase strng (Locale/ENGLISH)))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 (models/defmodel PermissionsGroup :permissions_group)
 
@@ -50,7 +61,7 @@
   ^Boolean [group-name]
   {:pre [((some-fn keyword? string?) group-name)]}
   (db/exists? PermissionsGroup
-    :%lower.name (str/lower-case (name group-name))))
+    :%lower.name (str-lower-case-en (name group-name))))
 
 (defn- check-name-not-already-taken
   [group-name]

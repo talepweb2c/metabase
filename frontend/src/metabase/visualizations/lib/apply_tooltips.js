@@ -64,7 +64,7 @@ function applyChartTooltips(
               {
                 key: getFriendlyName(cols[1]),
                 value: isNormalized
-                  ? `${formatValue(d.data.value) * 100}%`
+                  ? `${ formatValue(d.data.value) * 100 }%`
                   : d.data.value,
                 col: cols[1],
               },

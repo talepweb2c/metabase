@@ -15,7 +15,7 @@ const DisclosureTriangle = ({ open }) => (
         className="ml1 mr1"
         name="expandarrow"
         style={{
-          transform: `rotate(${motionStyle.deg}deg)`,
+          transform: `rotate(${ motionStyle.deg }deg)`,
         }}
       />
     )}

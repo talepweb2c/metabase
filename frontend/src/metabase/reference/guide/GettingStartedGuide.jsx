@@ -145,15 +145,17 @@ export default class GettingStartedGuide extends Component {
           loading={!loadingError && loading}
           error={loadingError}
         >
-          {() => (
-            <div>
-              <GuideHeader
-                startEditing={startEditing}
-                isSuperuser={user && user.is_superuser}
-              />
+          {() => {
+            const recentOrders = <b>${ t`"Recent orders."` }</b>;
+            return (
+              <div>
+                <GuideHeader
+                  startEditing={startEditing}
+                  isSuperuser={user && user.is_superuser}
+                />
 
-              <div className="wrapper wrapper--trim">
-                {(!guide || isGuideEmpty(guide)) &&
+                <div className="wrapper wrapper--trim">
+                  {(!guide || isGuideEmpty(guide)) &&
                   user &&
                   user.is_superuser && (
                     <AdminInstructions>
@@ -170,155 +172,153 @@ export default class GettingStartedGuide extends Component {
                     </AdminInstructions>
                   )}
 
-                {guide.most_important_dashboard !== null && [
-                  <div className="my2">
-                    <SectionHeader key={"dashboardTitle"}>
-                      {t`Our most important dashboard`}
-                    </SectionHeader>
-                    <GuideDetail
-                      key={"dashboardDetail"}
-                      type="dashboard"
-                      entity={dashboards[guide.most_important_dashboard]}
-                      tables={tables}
-                    />
-                  </div>,
-                ]}
-                {Object.keys(metrics).length > 0 && (
-                  <div className="my4 pt4">
-                    <SectionHeader trim={guide.important_metrics.length === 0}>
+                  {guide.most_important_dashboard !== null && [
+                    <div className="my2">
+                      <SectionHeader key={"dashboardTitle"}>
+                        {t`Our most important dashboard`}
+                      </SectionHeader>
+                      <GuideDetail
+                        key={"dashboardDetail"}
+                        type="dashboard"
+                        entity={dashboards[guide.most_important_dashboard]}
+                        tables={tables}
+                      />
+                    </div>,
+                  ]}
+                  {Object.keys(metrics).length > 0 && (
+                    <div className="my4 pt4">
+                      <SectionHeader trim={guide.important_metrics.length === 0}>
+                        {guide.important_metrics &&
+                        guide.important_metrics.length > 0
+                          ? t`Numbers that we pay attention to`
+                          : t`Metrics`}
+                      </SectionHeader>
                       {guide.important_metrics &&
-                      guide.important_metrics.length > 0
-                        ? t`Numbers that we pay attention to`
-                        : t`Metrics`}
+                      guide.important_metrics.length > 0 ? (
+                        [
+                          <div className="my2">
+                            {guide.important_metrics.map(metricId => (
+                              <GuideDetail
+                                key={metricId}
+                                type="metric"
+                                entity={metrics[metricId]}
+                                tables={tables}
+                                exploreLinks={exploreLinksForMetric(
+                                  metricId,
+                                  guide,
+                                  metadataFields,
+                                  tables,
+                                )}
+                              />
+                            ))}
+                          </div>,
+                        ]
+                      ) : (
+                        <GuideText>
+                          {t`Metrics are important numbers your company cares about. They often represent a core indicator of how the business is performing.`}
+                        </GuideText>
+                      )}
+                      <div>
+                        <Link
+                          className="Button Button--primary"
+                          to={"/reference/metrics"}
+                        >
+                          {t`See all metrics`}
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="mt4 pt4">
+                    <SectionHeader
+                      trim={
+                        !has(guide.important_segments) &&
+                        !has(guide.important_tables)
+                      }
+                    >
+                      {Object.keys(segments).length > 0
+                        ? t`Segments and tables`
+                        : t`Tables`}
                     </SectionHeader>
-                    {guide.important_metrics &&
-                    guide.important_metrics.length > 0 ? (
-                      [
-                        <div className="my2">
-                          {guide.important_metrics.map(metricId => (
-                            <GuideDetail
-                              key={metricId}
-                              type="metric"
-                              entity={metrics[metricId]}
-                              tables={tables}
-                              exploreLinks={exploreLinksForMetric(
-                                metricId,
-                                guide,
-                                metadataFields,
-                                tables,
-                              )}
-                            />
-                          ))}
-                        </div>,
-                      ]
+                    {has(guide.important_segments) ||
+                    has(guide.important_tables) ? (
+                      <div className="my2">
+                        {guide.important_segments.map(segmentId => (
+                          <GuideDetail
+                            key={segmentId}
+                            type="segment"
+                            entity={segments[segmentId]}
+                            tables={tables}
+                          />
+                        ))}
+                        {guide.important_tables.map(tableId => (
+                          <GuideDetail
+                            key={tableId}
+                            type="table"
+                            entity={tables[tableId]}
+                            tables={tables}
+                          />
+                        ))}
+                      </div>
                     ) : (
                       <GuideText>
-                        {t`Metrics are important numbers your company cares about. They often represent a core indicator of how the business is performing.`}
+                        {Object.keys(segments).length > 0 ? (
+                          <span>
+                          {jt`Segments and tables are the building blocks of your company's data. Tables are collections of the raw information while segments are specific slices with specific meanings, like ${ recentOrders }`}
+                        </span>
+                        ) : (
+                          t`Tables are the building blocks of your company's data.`
+                        )}
                       </GuideText>
                     )}
                     <div>
+                      {Object.keys(segments).length > 0 && (
+                        <Link
+                          className="Button Button--purple mr2"
+                          to={"/reference/segments"}
+                        >
+                          {t`See all segments`}
+                        </Link>
+                      )}
                       <Link
-                        className="Button Button--primary"
-                        to={"/reference/metrics"}
+                        className={cx(
+                          {
+                            "text-purple text-bold no-decoration text-underline-hover":
+                            Object.keys(segments).length > 0,
+                          },
+                          {
+                            "Button Button--purple":
+                            Object.keys(segments).length === 0,
+                          },
+                        )}
+                        to={"/reference/databases"}
                       >
-                        {t`See all metrics`}
+                        {t`See all tables`}
                       </Link>
                     </div>
                   </div>
-                )}
 
-                <div className="mt4 pt4">
-                  <SectionHeader
-                    trim={
-                      !has(guide.important_segments) &&
-                      !has(guide.important_tables)
-                    }
-                  >
-                    {Object.keys(segments).length > 0
-                      ? t`Segments and tables`
-                      : t`Tables`}
-                  </SectionHeader>
-                  {has(guide.important_segments) ||
-                  has(guide.important_tables) ? (
-                    <div className="my2">
-                      {guide.important_segments.map(segmentId => (
-                        <GuideDetail
-                          key={segmentId}
-                          type="segment"
-                          entity={segments[segmentId]}
-                          tables={tables}
-                        />
-                      ))}
-                      {guide.important_tables.map(tableId => (
-                        <GuideDetail
-                          key={tableId}
-                          type="table"
-                          entity={tables[tableId]}
-                          tables={tables}
-                        />
-                      ))}
-                    </div>
-                  ) : (
+                  <div className="mt4 pt4">
+                    <SectionHeader trim={!guide.things_to_know}>
+                      {guide.things_to_know
+                        ? t`Other things to know about our data`
+                        : t`Find out more`}
+                    </SectionHeader>
                     <GuideText>
-                      {Object.keys(segments).length > 0 ? (
-                        <span>
-                          {jt`Segments and tables are the building blocks of your company's data. Tables are collections of the raw information while segments are specific slices with specific meanings, like ${(
-                            <b>"Recent orders."</b>
-                          )}`}
-                        </span>
-                      ) : (
-                        t`Tables are the building blocks of your company's data.`
-                      )}
+                      {guide.things_to_know
+                        ? guide.things_to_know
+                        : t`A good way to get to know your data is by spending a bit of time exploring the different tables and other info available to you. It may take a while, but you'll start to recognize names and meanings over time.`}
                     </GuideText>
-                  )}
-                  <div>
-                    {Object.keys(segments).length > 0 && (
-                      <Link
-                        className="Button Button--purple mr2"
-                        to={"/reference/segments"}
-                      >
-                        {t`See all segments`}
-                      </Link>
-                    )}
                     <Link
-                      className={cx(
-                        {
-                          "text-purple text-bold no-decoration text-underline-hover":
-                            Object.keys(segments).length > 0,
-                        },
-                        {
-                          "Button Button--purple":
-                            Object.keys(segments).length === 0,
-                        },
-                      )}
+                      className="Button link text-bold"
                       to={"/reference/databases"}
                     >
-                      {t`See all tables`}
+                      {t`Explore our data`}
                     </Link>
                   </div>
-                </div>
 
-                <div className="mt4 pt4">
-                  <SectionHeader trim={!guide.things_to_know}>
-                    {guide.things_to_know
-                      ? t`Other things to know about our data`
-                      : t`Find out more`}
-                  </SectionHeader>
-                  <GuideText>
-                    {guide.things_to_know
-                      ? guide.things_to_know
-                      : t`A good way to get to know your data is by spending a bit of time exploring the different tables and other info available to you. It may take a while, but you'll start to recognize names and meanings over time.`}
-                  </GuideText>
-                  <Link
-                    className="Button link text-bold"
-                    to={"/reference/databases"}
-                  >
-                    {t`Explore our data`}
-                  </Link>
-                </div>
-
-                <div className="mt4">
-                  {guide.contact &&
+                  <div className="mt4">
+                    {guide.contact &&
                     (guide.contact.name || guide.contact.email) && [
                       <SectionHeader key={"contactTitle"}>
                         {t`Have questions?`}
@@ -326,23 +326,24 @@ export default class GettingStartedGuide extends Component {
                       <div className="mb4 pb4" key={"contactDetails"}>
                         {guide.contact.name && (
                           <span className="text-dark mr3">
-                            {t`Contact ${guide.contact.name}`}
+                            {t`Contact ${ guide.contact.name }`}
                           </span>
                         )}
                         {guide.contact.email && (
                           <a
                             className="text-brand text-bold no-decoration"
-                            href={`mailto:${guide.contact.email}`}
+                            href={`mailto:${ guide.contact.email }`}
                           >
                             {guide.contact.email}
                           </a>
                         )}
                       </div>,
                     ]}
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
+          }
         </LoadingAndErrorWrapper>
       </div>
     );

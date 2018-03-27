@@ -19,7 +19,18 @@
              [util :as sync-util]]
             [metabase.util.schema :as su]
             [schema.core :as s]
-            [toucan.db :as db]))
+            [toucan.db :as db])
+  (:import java.util.Locale))
+
+(defn str-lower-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toLowerCase strng (Locale/ENGLISH)))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 (def ^:private KeypathComponents
   {:table-name su/NonBlankString
@@ -84,7 +95,7 @@
 (s/defn is-metabase-metadata-table? :- s/Bool
   "Is this TABLE the special `_metabase_metadata` table?"
   [table :- i/DatabaseMetadataTable]
-  (= "_metabase_metadata" (str/lower-case (:name table))))
+  (= "_metabase_metadata" (str-lower-case-en (:name table))))
 
 (s/defn sync-metabase-metadata!
   "Sync the `_metabase_metadata` table, a special table with Metabase metadata, if present.

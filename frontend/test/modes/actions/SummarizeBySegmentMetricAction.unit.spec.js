@@ -20,7 +20,7 @@ describe("SummarizeBySegmentMetricAction", () => {
   describe("aggregation options", () => {
     it("should show only a subset of all query aggregations", () => {
       const hasAggregationOption = (popover, optionName) =>
-        popover.find(`.List-item-title[children="${optionName}"]`).length === 1;
+        popover.find(`.List-item-title[children="${ optionName }"]`).length === 1;
 
       const action = SummarizeBySegmentMetricAction({ question })[0];
       const popover = mount(

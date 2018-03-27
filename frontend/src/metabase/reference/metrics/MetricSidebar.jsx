@@ -21,24 +21,24 @@ const MetricSidebar = ({ metric, user, style, className }) => (
         />
       </div>
       <SidebarItem
-        key={`/reference/metrics/${metric.id}`}
-        href={`/reference/metrics/${metric.id}`}
+        key={`/reference/metrics/${ metric.id }`}
+        href={`/reference/metrics/${ metric.id }`}
         icon="document"
         name={t`Details`}
       />
       <SidebarItem
-        key={`/reference/metrics/${metric.id}/questions`}
-        href={`/reference/metrics/${metric.id}/questions`}
+        key={`/reference/metrics/${ metric.id }/questions`}
+        href={`/reference/metrics/${ metric.id }/questions`}
         icon="all"
-        name={t`Questions about ${metric.name}`}
+        name={t`Questions about ${ metric.name }`}
       />
       {user &&
         user.is_superuser && (
           <SidebarItem
-            key={`/reference/metrics/${metric.id}/revisions`}
-            href={`/reference/metrics/${metric.id}/revisions`}
+            key={`/reference/metrics/${ metric.id }/revisions`}
+            href={`/reference/metrics/${ metric.id }/revisions`}
             icon="history"
-            name={t`Revision history for ${metric.name}`}
+            name={t`Revision history for ${ metric.name }`}
           />
         )}
     </ul>

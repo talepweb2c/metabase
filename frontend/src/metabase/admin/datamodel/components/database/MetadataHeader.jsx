@@ -71,7 +71,7 @@ export default class MetadataHeader extends Component {
 
     return (
       <span className="ml4 mr3">
-        <Link to={`${this.props.location.pathname}/settings`}>
+        <Link to={`${ this.props.location.pathname }/settings`}>
           <Icon name="gear" />
         </Link>
       </span>

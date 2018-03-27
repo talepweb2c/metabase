@@ -68,7 +68,7 @@ export default class TableQuestions extends Component {
     return (
       <div style={style} className="full">
         <ReferenceHeader
-          name={t`Questions about ${this.props.table.display_name}`}
+          name={t`Questions about ${ this.props.table.display_name }`}
           type="questions"
           headerIcon="table2"
         />
@@ -76,38 +76,39 @@ export default class TableQuestions extends Component {
           loading={!loadingError && loading}
           error={loadingError}
         >
-          {() =>
-            Object.keys(entities).length > 0 ? (
+          {() => {
+            return Object.keys(entities).length > 0 ? (
               <div className="wrapper wrapper--trim">
                 <List>
                   {Object.values(entities)
                     .filter(isQueryable)
                     .map(
-                      (entity, index) =>
-                        entity &&
-                        entity.id &&
-                        entity.name && (
-                          <li className="relative" key={entity.id}>
-                            <ListItem
-                              id={entity.id}
-                              index={index}
-                              name={entity.display_name || entity.name}
-                              description={t`Created ${moment(
-                                entity.created_at,
-                              ).fromNow()} by ${entity.creator.common_name}`}
-                              url={Urls.question(entity.id)}
-                              icon={visualizations.get(entity.display).iconName}
-                            />
-                          </li>
-                        ),
-                    )}
+                      (entity, index) => {
+                        const momentEntityCreatedAt = moment(entity.created_at,).fromNow();
+
+                        return entity &&
+                          entity.id &&
+                          entity.name && (
+                            <li className="relative" key={entity.id}>
+                              <ListItem
+                                id={entity.id}
+                                index={index}
+                                name={entity.display_name || entity.name}
+                                description={t`Created ${ momentEntityCreatedAt } by ${ entity.creator.common_name }`}
+                                url={Urls.question(entity.id)}
+                                icon={visualizations.get(entity.display).iconName}
+                              />
+                            </li>
+                          );
+                      }
+                      ,)}
                 </List>
               </div>
             ) : (
               <div className={S.empty}>
                 <AdminAwareEmptyState {...emptyStateData(this.props.table)} />
               </div>
-            )
+            )}
           }
         </LoadingAndErrorWrapper>
       </div>

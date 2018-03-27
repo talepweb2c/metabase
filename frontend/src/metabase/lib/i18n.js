@@ -13,4 +13,22 @@ export function setLocalization(translationsObject) {
   // add and set locale with C-3PO
   addLocale(locale, translationsObject);
   useLocale(locale);
+
+  // d3 TR locale
+  if (locale.toLowerCase() === 'tr') {
+    window['d3_locale_TR'] = {
+      decimal: ",",
+      thousands: ".",
+      grouping: [3],
+      currency: ["", " ₺"],
+      dateTime: "%A %B %e, %Y %X",
+      date: "%d.%m.%Y",
+      time: "%H:%M:%S",
+      periods: ["ÖÖ", "ÖS"], // unused
+      days: ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"],
+      shortDays: ["Pz", "Pt", "Sa", "Ça", "Pe", "Cu", "Ct"],
+      months: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"],
+      shortMonths: ["Oca", "Şub", "Mar", "Nis", "May", "Haz", "Tem", "Ağu", "Eyl", "Eki", "Kas", "Ara"]
+    }
+  }
 }

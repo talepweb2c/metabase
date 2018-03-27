@@ -21,16 +21,16 @@ const DatabaseSidebar = ({ database, style, className }) => (
         />
       </div>
       <SidebarItem
-        key={`/reference/databases/${database.id}`}
-        href={`/reference/databases/${database.id}`}
+        key={`/reference/databases/${ database.id }`}
+        href={`/reference/databases/${ database.id }`}
         icon="document"
         name={t`Details`}
       />
       <SidebarItem
-        key={`/reference/databases/${database.id}/tables`}
-        href={`/reference/databases/${database.id}/tables`}
+        key={`/reference/databases/${ database.id }/tables`}
+        href={`/reference/databases/${ database.id }/tables`}
         icon="table2"
-        name={t`Tables in ${database.name}`}
+        name={t`Tables in ${ database.name }`}
       />
     </ul>
   </div>

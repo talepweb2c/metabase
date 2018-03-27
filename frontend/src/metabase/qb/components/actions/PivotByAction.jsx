@@ -44,6 +44,7 @@ export default (name: string, icon: string, fieldFilter: FieldFilter) => ({
   if (breakoutOptions.count === 0) {
     return [];
   }
+  const lowerCaseName = <span className="text-dark">{name.toLowerCase()}</span>;
   return [
     {
       name: "pivot-by-" + name.toLowerCase(),
@@ -52,9 +53,7 @@ export default (name: string, icon: string, fieldFilter: FieldFilter) => ({
         name
       ) : (
         <span>
-          {jt`Break out by ${(
-            <span className="text-dark">{name.toLowerCase()}</span>
-          )}`}
+          {jt`Break out by ${ lowerCaseName }`}
         </span>
       ),
       icon: icon,

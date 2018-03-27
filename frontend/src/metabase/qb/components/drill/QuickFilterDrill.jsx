@@ -45,15 +45,15 @@ export default ({ question, clicked }: ClickActionProps): ClickAction[] => {
     return [];
   }
   if (isFK(column.special_type)) {
+    const singularColumnDisplayName = singularize(stripId(column.display_name),);
+    const pluralTableDisplayName = pluralize(query.table().display_name);
     return [
       {
         name: "view-fks",
         section: "filter",
         title: (
           <span>
-            {jt`View this ${singularize(
-              stripId(column.display_name),
-            )}'s ${pluralize(query.table().display_name)}`}
+            {jt`View this ${ singularColumnDisplayName }'s ${ pluralTableDisplayName }`}
           </span>
         ),
         question: () => question.filter("=", column, value),

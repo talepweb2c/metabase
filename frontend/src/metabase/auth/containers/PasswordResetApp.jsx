@@ -138,7 +138,7 @@ export default class PasswordResetApp extends Component {
                 >
                   <h3 className="Login-header Form-offset">{t`New password`}</h3>
 
-                  <p className="Form-offset text-grey-3 mb4">{t`To keep your data secure, passwords ${passwordComplexity}`}</p>
+                  <p className="Form-offset text-grey-3 mb4">{t`To keep your data secure, passwords ${ passwordComplexity }`}</p>
 
                   <FormMessage
                     formError={

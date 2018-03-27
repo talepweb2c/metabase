@@ -18,7 +18,18 @@
             [metabase.util :as u]
             [metabase.util.schema :as su]
             [schema.core :as s]
-            [toucan.db :as db]))
+            [toucan.db :as db])
+  (:import  java.util.Locale))
+
+(defn str-lower-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toLowerCase strng (Locale/ENGLISH)))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 (def ^:private ParentID (s/maybe su/IntGreaterThanZero))
 
@@ -45,7 +56,7 @@
   (format "%s Field '%s'" (sync-util/name-for-logging table) (:name field-metadata)))
 
 (defn- canonical-name [field]
-  (str/lower-case (:name field)))
+  (str-lower-case-en (:name field)))
 
 (s/defn ^:private special-type [field :- (s/maybe i/TableMetadataField)]
   (and field

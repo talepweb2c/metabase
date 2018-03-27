@@ -80,9 +80,10 @@ export default class Scalar extends Component {
           { name: "100,000.00", value: "en" },
           { name: "100 000,00", value: "fr" },
           { name: "100.000,00", value: "de" },
+          { name: "100.000,00", value: "tr" },
         ],
       },
-      default: "en",
+      default: "tr",
     },
     "scalar.decimals": {
       title: t`Number of decimal places`,

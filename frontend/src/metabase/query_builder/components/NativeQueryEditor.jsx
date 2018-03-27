@@ -328,8 +328,9 @@ export default class NativeQueryEditor extends Component {
         );
       }
     } else {
+      const nativeQueryLanguage = query.nativeQueryLanguage();
       dataSelectors = (
-        <span className="p2 text-grey-4">{t`This question is written in ${query.nativeQueryLanguage()}.`}</span>
+        <span className="p2 text-grey-4">{t`This question is written in ${ nativeQueryLanguage }.`}</span>
       );
     }
 

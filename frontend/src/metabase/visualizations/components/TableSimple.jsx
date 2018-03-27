@@ -106,6 +106,8 @@ export default class TableSimple extends Component {
       }
     }
 
+    const startText = start + 1;
+    const endText = end + 1;
     return (
       <div className={cx(this.props.className, "relative flex flex-column")}>
         <div className="flex-full relative">
@@ -211,9 +213,9 @@ export default class TableSimple extends Component {
             ref="footer"
             className="p1 flex flex-no-shrink flex-align-right fullscreen-normal-text fullscreen-night-text"
           >
-            <span className="text-bold">{t`Rows ${start + 1}-${end + 1} of ${
+            <span className="text-bold">{t`Rows ${ startText }-${ endText } of ${ 
               rows.length
-            }`}</span>
+             }`}</span>
             <span
               className={cx("text-brand-hover px1 cursor-pointer", {
                 disabled: start === 0,

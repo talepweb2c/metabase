@@ -68,7 +68,7 @@ export default class TablePane extends Component {
     if (table) {
       var queryButton;
       if (table.rows != null) {
-        var text = t`See the raw data for ${table.display_name}`;
+        var text = t`See the raw data for ${ table.display_name }`;
         queryButton = (
           <QueryButton
             className="border-bottom border-top mb3"

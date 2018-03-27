@@ -20,7 +20,18 @@
            [java.sql PreparedStatement ResultSet ResultSetMetaData SQLException]
            [java.util Calendar Date TimeZone]
            [metabase.query_processor.interface AgFieldRef BinnedField DateTimeField DateTimeValue Expression
-            ExpressionRef Field FieldLiteral RelativeDateTimeValue TimeField TimeValue Value]))
+            ExpressionRef Field FieldLiteral RelativeDateTimeValue TimeField TimeValue Value]
+           java.util.Locale))
+
+(defn str-lower-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toLowerCase strng (Locale/ENGLISH)))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 (def ^:dynamic *query*
   "The outer query currently being processed."
@@ -244,7 +255,7 @@
   ;; custom implementation?
   (if case-sensitive?
     [:like field                    (->honeysql driver value)]
-    [:like (hsql/call :lower field) (->honeysql driver (update value :value str/lower-case))]))
+    [:like (hsql/call :lower field) (->honeysql driver (update value :value str-lower-case-en))]))
 
 (defn filter-subclause->predicate
   "Given a filter SUBCLAUSE, return a HoneySQL filter predicate form for use in HoneySQL `where`."

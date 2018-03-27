@@ -5,7 +5,18 @@
             [medley.core :as m]
             [metabase.util :as u]
             [metabase.util.password :as password]
-            [schema.core :as s]))
+            [schema.core :as s])
+  (:import  java.util.Locale))
+
+(defn str-lower-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toLowerCase strng (Locale/ENGLISH)))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 ;; always validate all schemas in s/defn function declarations. See
 ;; https://github.com/plumatic/schema#schemas-in-practice for details.
@@ -156,7 +167,7 @@
 
 (defn- boolean-string? ^Boolean [s]
   (boolean (when (string? s)
-             (let [s (str/lower-case s)]
+             (let [s (str-lower-case-en s)]
                (contains? #{"true" "false"} s)))))
 
 (def BooleanString

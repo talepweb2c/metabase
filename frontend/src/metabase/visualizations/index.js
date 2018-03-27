@@ -63,7 +63,7 @@ export function getVisualizationTransformed(series: Series) {
   do {
     CardVisualization = visualizations.get(series[0].card.display);
     if (!CardVisualization) {
-      throw new Error(t`No visualization for ${series[0].card.display}`);
+      throw new Error(t`No visualization for ${ series[0].card.display }`);
     }
     lastSeries = series;
     if (typeof CardVisualization.transformSeries === "function") {

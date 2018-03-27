@@ -28,7 +28,7 @@ const LegacyChoropleth = ({
       >
         {() => (
           // eslint-disable-line react/display-name
-          <svg className="flex-full m1" viewBox={`0 0 ${width} ${height}`}>
+          <svg className="flex-full m1" viewBox={`0 0 ${ width } ${ height }`}>
             {geoJson.features.map((feature, index) => (
               <path
                 d={geo(feature, index)}

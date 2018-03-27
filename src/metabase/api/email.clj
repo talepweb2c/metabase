@@ -11,7 +11,13 @@
              [email :as email]]
             [metabase.api.common :as api]
             [metabase.models.setting :as setting]
-            [metabase.util.schema :as su]))
+            [metabase.util.schema :as su])
+  (:import java.util.Locale))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 (def ^:private ^:const mb-to-smtp-settings
   {:email-smtp-host     :host
@@ -62,7 +68,7 @@
         (mapv (fn [[k v]]
                 [k (format "%s was autocorrected to %s"
                            (name (mb-to-smtp-settings k))
-                           (string/upper-case v))])
+                           (str-upper-case-en v))])
               corrections)))
 
 (api/defendpoint PUT "/"

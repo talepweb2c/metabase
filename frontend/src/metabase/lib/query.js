@@ -565,7 +565,7 @@ var Query = {
       }
       components.push(Query.formatField(target.field, options));
       if (target.unit) {
-        components.push(` (${target.unit})`);
+        components.push(` (${ target.unit })`);
       }
       return components;
     } catch (e) {

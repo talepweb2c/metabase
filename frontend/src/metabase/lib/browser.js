@@ -23,6 +23,6 @@ export function updateQueryString(location, optionsUpdater) {
   return {
     pathname: location.pathname,
     hash: location.hash,
-    search: queryString ? `?${queryString}` : null,
+    search: queryString ? `?${ queryString }` : null,
   };
 }

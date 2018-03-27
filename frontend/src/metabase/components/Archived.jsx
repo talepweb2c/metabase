@@ -7,7 +7,7 @@ const Archived = ({ entityName, linkTo }) => (
     <EmptyState
       message={
         <div>
-          <div>{t`This ${entityName} has been archived`}</div>
+          <div>{t`This ${ entityName } has been archived`}</div>
           <Link
             to={linkTo}
             className="my2 link"

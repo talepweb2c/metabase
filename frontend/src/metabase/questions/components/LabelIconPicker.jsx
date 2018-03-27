@@ -126,7 +126,7 @@ export default class LabelIconPicker extends Component {
               className={S.category}
               onClick={() => this.scrollToCategory(category.id)}
             >
-              <Icon name={`emoji${category.id}`} />
+              <Icon name={`emoji${ category.id }`} />
             </li>
           ))}
         </ul>

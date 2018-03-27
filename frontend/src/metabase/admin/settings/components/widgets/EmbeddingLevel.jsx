@@ -78,9 +78,9 @@ class EmbeddingLevel extends Component {
         style={{ maxWidth: 820 }}
       >
         <ReactRetinaImage
-          src={`app/assets/img/${
+          src={`app/assets/img/${ 
             premiumToken ? "premium_embed_added" : "premium_embed"
-          }.png`}
+           }.png`}
         />
         <div className="flex align-center justify-center">
           <PremiumEmbedding

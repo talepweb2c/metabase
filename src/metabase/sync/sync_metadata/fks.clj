@@ -11,7 +11,18 @@
              [util :as sync-util]]
             [metabase.util :as u]
             [schema.core :as s]
-            [toucan.db :as db]))
+            [toucan.db :as db])
+  (:import  java.util.Locale))
+
+(defn str-lower-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toLowerCase strng (Locale/ENGLISH)))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 (def ^:private FKRelationshipObjects
   "Relevant objects for a foreign key relationship."
@@ -24,20 +35,20 @@
   [database :- i/DatabaseInstance, table :- i/TableInstance, fk :- i/FKMetadataEntry]
   (when-let [source-field (db/select-one Field
                             :table_id           (u/get-id table)
-                            :%lower.name        (str/lower-case (:fk-column-name fk))
+                            :%lower.name        (str-lower-case-en (:fk-column-name fk))
                             :fk_target_field_id nil
                             :active             true
                             :visibility_type    [:not= "retired"])]
     (when-let [dest-table (db/select-one Table
                             :db_id           (u/get-id database)
-                            :%lower.name     (str/lower-case (-> fk :dest-table :name))
+                            :%lower.name     (str-lower-case-en (-> fk :dest-table :name))
                             :%lower.schema   (when-let [schema (-> fk :dest-table :schema)]
-                                               (str/lower-case schema))
+                                               (str-lower-case-en schema))
                             :active          true
                             :visibility_type nil)]
       (when-let [dest-field (db/select-one Field
                               :table_id           (u/get-id dest-table)
-                              :%lower.name        (str/lower-case (:dest-column-name fk))
+                              :%lower.name        (str-lower-case-en (:dest-column-name fk))
                               :active             true
                               :visibility_type    [:not= "retired"])]
         {:source-field source-field

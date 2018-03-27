@@ -397,7 +397,7 @@ export default class GuiQueryEditor extends Component {
     let contentWidth =
       ["data", "filter", "view", "groupedBy", "sortLimit"].reduce(
         (acc, ref) => {
-          let node = ReactDOM.findDOMNode(this.refs[`${ref}Section`]);
+          let node = ReactDOM.findDOMNode(this.refs[`${ ref }Section`]);
           return acc + (node ? node.offsetWidth : 0);
         },
         0,

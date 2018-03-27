@@ -216,11 +216,11 @@ describe("Dashboard", () => {
       await store.waitForActions([FETCH_REVISIONS]);
       const modal = app.find(DashboardHistoryModal);
       expect(modal.length).toBe(1);
-      expect(store.getPath()).toBe(`${dashboardUrl}/history`);
+      expect(store.getPath()).toBe(`${ dashboardUrl }/history`);
 
       click(modal.find(".Icon.Icon-close"));
       await store.waitForActions([BROWSER_HISTORY_PUSH]);
-      expect(store.getPath()).toBe(`/dashboard/${dashboardId}`);
+      expect(store.getPath()).toBe(`/dashboard/${ dashboardId }`);
     });
 
     it("lets you go directly to the revisions screen via url", async () => {
@@ -232,12 +232,12 @@ describe("Dashboard", () => {
 
       const modal = app.find(DashboardHistoryModal);
       expect(modal.length).toBe(1);
-      expect(store.getPath()).toBe(`${dashboardUrl}/history`);
+      expect(store.getPath()).toBe(`${ dashboardUrl }/history`);
 
       // check that we can normally return to the revisions screen
       click(modal.find(".Icon.Icon-close"));
       await store.waitForActions([BROWSER_HISTORY_PUSH]);
-      expect(store.getPath()).toBe(`/dashboard/${dashboardId}`);
+      expect(store.getPath()).toBe(`/dashboard/${ dashboardId }`);
     });
 
     afterAll(async () => {

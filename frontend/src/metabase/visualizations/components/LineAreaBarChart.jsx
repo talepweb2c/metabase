@@ -32,41 +32,41 @@ const MAX_SERIES = 20;
 const MUTE_STYLE = "opacity: 0.25;";
 for (let i = 0; i < MAX_SERIES; i++) {
   addCSSRule(
-    `.LineAreaBarChart.mute-${i} svg.stacked .stack._${i} .area`,
+    `.LineAreaBarChart.mute-${ i } svg.stacked .stack._${ i } .area`,
     MUTE_STYLE,
   );
   addCSSRule(
-    `.LineAreaBarChart.mute-${i} svg.stacked .stack._${i} .line`,
+    `.LineAreaBarChart.mute-${ i } svg.stacked .stack._${ i } .line`,
     MUTE_STYLE,
   );
   addCSSRule(
-    `.LineAreaBarChart.mute-${i} svg.stacked .stack._${i} .bar`,
+    `.LineAreaBarChart.mute-${ i } svg.stacked .stack._${ i } .bar`,
     MUTE_STYLE,
   );
   addCSSRule(
-    `.LineAreaBarChart.mute-${i} svg.stacked .dc-tooltip._${i} .dot`,
+    `.LineAreaBarChart.mute-${ i } svg.stacked .dc-tooltip._${ i } .dot`,
     MUTE_STYLE,
   );
 
   addCSSRule(
-    `.LineAreaBarChart.mute-${i} svg:not(.stacked) .sub._${i} .bar`,
+    `.LineAreaBarChart.mute-${ i } svg:not(.stacked) .sub._${ i } .bar`,
     MUTE_STYLE,
   );
   addCSSRule(
-    `.LineAreaBarChart.mute-${i} svg:not(.stacked) .sub._${i} .line`,
+    `.LineAreaBarChart.mute-${ i } svg:not(.stacked) .sub._${ i } .line`,
     MUTE_STYLE,
   );
   addCSSRule(
-    `.LineAreaBarChart.mute-${i} svg:not(.stacked) .sub._${i} .dot`,
+    `.LineAreaBarChart.mute-${ i } svg:not(.stacked) .sub._${ i } .dot`,
     MUTE_STYLE,
   );
   addCSSRule(
-    `.LineAreaBarChart.mute-${i} svg:not(.stacked) .sub._${i} .bubble`,
+    `.LineAreaBarChart.mute-${ i } svg:not(.stacked) .sub._${ i } .bubble`,
     MUTE_STYLE,
   );
 
   // row charts don't support multiseries
-  addCSSRule(`.LineAreaBarChart.mute-${i} svg:not(.stacked) .row`, MUTE_STYLE);
+  addCSSRule(`.LineAreaBarChart.mute-${ i } svg:not(.stacked) .row`, MUTE_STYLE);
 }
 
 import type { VisualizationProps } from "metabase/meta/types/Visualization";

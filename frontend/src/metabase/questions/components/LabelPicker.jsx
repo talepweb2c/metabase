@@ -14,7 +14,7 @@ import cx from "classnames";
 const LabelPicker = ({ labels, count, item, setLabeled }) => (
   <div className={S.picker}>
     <div className={S.heading}>
-      {count > 1 ? t`Apply labels to ${count} questions` : t`Label as`}
+      {count > 1 ? t`Apply labels to ${ count } questions` : t`Label as`}
     </div>
     <ul className={S.options}>
       {labels.map(label => {

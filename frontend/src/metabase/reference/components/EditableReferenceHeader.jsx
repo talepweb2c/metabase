@@ -90,10 +90,10 @@ const EditableReferenceHeader = ({
                     "ml3",
                     E.editButton,
                   )}
-                  data-metabase-event={`Data Reference;Entity -> QB click;${type}`}
+                  data-metabase-event={`Data Reference;Entity -> QB click;${ type }`}
                 >
                   <div className="flex align-center relative">
-                    <span className="mr1 flex-no-shrink">{t`See this ${type}`}</span>
+                    <span className="mr1 flex-no-shrink">{t`See this ${ type }`}</span>
                     <Icon name="chevronright" size={16} />
                   </div>
                 </Link>
@@ -115,7 +115,7 @@ const EditableReferenceHeader = ({
             {t`A subset of`}{" "}
             <Link
               className={S.subheaderLink}
-              to={`/reference/databases/${table.db_id}/tables/${table.id}`}
+              to={`/reference/databases/${ table.db_id }/tables/${ table.id }`}
             >
               {table.display_name}
             </Link>

@@ -34,8 +34,18 @@
             TableList TableList$Tables TableReference TableRow TableSchema]
            java.sql.Time
            [java.util Collections Date]
-           [metabase.query_processor.interface AggregationWithField AggregationWithoutField DateTimeValue Expression TimeValue Value]))
+           [metabase.query_processor.interface AggregationWithField AggregationWithoutField DateTimeValue Expression TimeValue Value]
+           java.util.Locale))
 
+(defn str-lower-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toLowerCase strng (Locale/ENGLISH)))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 (defrecord BigQueryDriver []
   clojure.lang.Named
   (getName [_] "BigQuery"))
@@ -135,7 +145,7 @@
    (let [request (doto (QueryRequest.)
                    (.setTimeoutMs (* query-timeout-seconds 1000))
                    ;; if the query contains a `#standardSQL` directive then use Standard SQL instead of legacy SQL
-                   (.setUseLegacySql (not (str/includes? (str/lower-case query-string) "#standardsql")))
+                   (.setUseLegacySql (not (str/includes? (str-lower-case-en query-string) "#standardsql")))
                    (.setQuery query-string))]
      (google/execute (.query (.jobs client) project-id request)))))
 

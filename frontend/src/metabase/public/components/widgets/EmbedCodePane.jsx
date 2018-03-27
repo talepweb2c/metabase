@@ -55,11 +55,16 @@ export default class EmbedCodePane extends Component {
       params,
       displayOptions,
     } = this.props;
+
+    const examplesGithubLink = <ExternalLink href="https://github.com/metabase/embedding_reference_apps">
+      ${ t`examples on GitHub` }
+    </ExternalLink>;
+
     return (
       <div className={className}>
         {embedType === "application" ? (
           <div key="application">
-            <p>{t`To embed this ${resourceType} in your application:`}</p>
+            <p>{t`To embed this ${ resourceType } in your application:`}</p>
             <CodeSample
               title={t`Insert this code snippet in your server code to generate the signed embedding URL `}
               options={getSignTokenOptions({
@@ -98,11 +103,7 @@ export default class EmbedCodePane extends Component {
         )}
 
         <div className="text-centered my2">
-          <h4>{jt`More ${(
-            <ExternalLink href="https://github.com/metabase/embedding_reference_apps">
-              examples on GitHub
-            </ExternalLink>
-          )}`}</h4>
+          <h4>{jt`More ${ examplesGithubLink }`}</h4>
         </div>
       </div>
     );

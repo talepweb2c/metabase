@@ -11,29 +11,29 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
                 unique: true
               name: slug
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
               name: name
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               name: description
-              type: text
+              type: TEXT
           - column:
               name: logo_url
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
               name: inherits
-              type: boolean
+              type: BOOLEAN
           tableName: core_organization
       - createTable:
           columns:
@@ -43,34 +43,34 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
                 unique: true
               name: email
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
               name: first_name
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
               name: last_name
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
               name: password
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
               defaultValue: default
               name: password_salt
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
@@ -85,20 +85,20 @@ databaseChangeLog:
               constraints:
                 nullable: false
               name: is_staff
-              type: boolean
+              type: BOOLEAN
           - column:
               constraints:
                 nullable: false
               name: is_superuser
-              type: boolean
+              type: BOOLEAN
           - column:
               constraints:
                 nullable: false
               name: is_active
-              type: boolean
+              type: BOOLEAN
           - column:
               name: reset_token
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               name: reset_triggered
               type: BIGINT
@@ -111,12 +111,12 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: admin
-              type: boolean
+              type: BOOLEAN
           - column:
               constraints:
                 deferrable: false
@@ -125,7 +125,7 @@ databaseChangeLog:
                 nullable: false
                 references: core_user(id)
               name: user_id
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -134,7 +134,7 @@ databaseChangeLog:
                 nullable: false
                 references: core_organization(id)
               name: organization_id
-              type: int
+              type: INT
           tableName: core_userorgperm
       - addUniqueConstraint:
           columnNames: user_id, organization_id
@@ -144,14 +144,14 @@ databaseChangeLog:
           columns:
           - column:
               name: user_id
-              type: int
+              type: INT
           indexName: idx_userorgperm_user_id
           tableName: core_userorgperm
       - createIndex:
           columns:
           - column:
               name: organization_id
-              type: int
+              type: INT
           indexName: idx_userorgperm_organization_id
           tableName: core_userorgperm
       - createTable:
@@ -162,12 +162,12 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: url
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
@@ -181,13 +181,13 @@ databaseChangeLog:
                 nullable: false
                 references: core_user(id)
               name: user_id
-              type: int
+              type: INT
           tableName: core_permissionsviolation
       - createIndex:
           columns:
           - column:
               name: user_id
-              type: int
+              type: INT
           indexName: idx_permissionsviolation_user_id
           tableName: core_permissionsviolation
       - createTable:
@@ -198,7 +198,7 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
@@ -213,10 +213,10 @@ databaseChangeLog:
               constraints:
                 nullable: false
               name: name
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               name: description
-              type: text
+              type: TEXT
           - column:
               constraints:
                 deferrable: false
@@ -225,15 +225,15 @@ databaseChangeLog:
                 nullable: false
                 references: core_organization(id)
               name: organization_id
-              type: int
+              type: INT
           - column:
               name: details
-              type: text
+              type: TEXT
           - column:
               constraints:
                 nullable: false
               name: engine
-              type: varchar(254)
+              type: VARCHAR(254)
           tableName: metabase_database
       - createIndex:
           columns:
@@ -249,7 +249,7 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
@@ -264,24 +264,24 @@ databaseChangeLog:
               constraints:
                 nullable: false
               name: name
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               name: rows
-              type: int
+              type: INT
           - column:
               name: description
-              type: text
+              type: TEXT
           - column:
               name: entity_name
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               name: entity_type
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
               name: active
-              type: boolean
+              type: BOOLEAN
           - column:
               constraints:
                 deferrable: false
@@ -290,7 +290,7 @@ databaseChangeLog:
                 nullable: false
                 references: metabase_database(id)
               name: db_id
-              type: int
+              type: INT
           tableName: metabase_table
       - createIndex:
           columns:
@@ -306,7 +306,7 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
@@ -321,33 +321,33 @@ databaseChangeLog:
               constraints:
                 nullable: false
               name: name
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
               name: base_type
-              type: varchar(255)
+              type: VARCHAR(255)
           - column:
               name: special_type
-              type: varchar(255)
+              type: VARCHAR(255)
           - column:
               constraints:
                 nullable: false
               name: active
-              type: boolean
+              type: BOOLEAN
           - column:
               name: description
-              type: text
+              type: TEXT
           - column:
               constraints:
                 nullable: false
               name: preview_display
-              type: boolean
+              type: BOOLEAN
           - column:
               constraints:
                 nullable: false
               name: position
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -356,12 +356,12 @@ databaseChangeLog:
                 nullable: false
                 references: metabase_table(id)
               name: table_id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: field_type
-              type: varchar(254)
+              type: VARCHAR(254)
           tableName: metabase_field
       - createIndex:
           columns:
@@ -377,7 +377,7 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
@@ -392,7 +392,7 @@ databaseChangeLog:
               constraints:
                 nullable: false
               name: relationship
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 deferrable: false
@@ -401,7 +401,7 @@ databaseChangeLog:
                 nullable: false
                 references: metabase_field(id)
               name: destination_id
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -410,7 +410,7 @@ databaseChangeLog:
                 nullable: false
                 references: metabase_field(id)
               name: origin_id
-              type: int
+              type: INT
           tableName: metabase_foreignkey
       - createIndex:
           columns:
@@ -432,7 +432,7 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
@@ -445,10 +445,10 @@ databaseChangeLog:
               type: DATETIME
           - column:
               name: values
-              type: text
+              type: TEXT
           - column:
               name: human_readable_values
-              type: text
+              type: TEXT
           - column:
               constraints:
                 deferrable: false
@@ -457,7 +457,7 @@ databaseChangeLog:
                 nullable: false
                 references: metabase_field(id)
               name: field_id
-              type: int
+              type: INT
           tableName: metabase_fieldvalues
       - createIndex:
           columns:
@@ -473,7 +473,7 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
@@ -488,7 +488,7 @@ databaseChangeLog:
               constraints:
                 nullable: false
               name: name
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 deferrable: false
@@ -497,12 +497,12 @@ databaseChangeLog:
                 nullable: false
                 references: metabase_table(id)
               name: table_id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: filter_clause
-              type: text
+              type: TEXT
           tableName: metabase_tablesegment
       - createIndex:
           columns:
@@ -518,7 +518,7 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
@@ -533,27 +533,27 @@ databaseChangeLog:
               constraints:
                 nullable: false
               name: name
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
               name: type
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
               name: details
-              type: text
+              type: TEXT
           - column:
               constraints:
                 nullable: false
               name: version
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: public_perms
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -562,7 +562,7 @@ databaseChangeLog:
                 nullable: false
                 references: core_user(id)
               name: creator_id
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -571,7 +571,7 @@ databaseChangeLog:
                 nullable: false
                 references: metabase_database(id)
               name: database_id
-              type: int
+              type: INT
           tableName: query_query
       - createIndex:
           columns:
@@ -593,33 +593,33 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
                 unique: true
               name: uuid
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
               name: version
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: json_query
-              type: text
+              type: TEXT
           - column:
               constraints:
                 nullable: false
               name: raw_query
-              type: text
+              type: TEXT
           - column:
               constraints:
                 nullable: false
               name: status
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
@@ -632,27 +632,27 @@ databaseChangeLog:
               constraints:
                 nullable: false
               name: running_time
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: error
-              type: text
+              type: TEXT
           - column:
               constraints:
                 nullable: false
               name: result_file
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
               name: result_rows
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: result_data
-              type: text
+              type: TEXT
           - column:
               constraints:
                 deferrable: false
@@ -661,12 +661,12 @@ databaseChangeLog:
                 nullable: true
                 references: query_query(id)
               name: query_id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: additional_info
-              type: text
+              type: TEXT
           - column:
               constraints:
                 deferrable: false
@@ -675,7 +675,7 @@ databaseChangeLog:
                 nullable: false
                 references: core_user(id)
               name: executor_id
-              type: int
+              type: INT
           tableName: query_queryexecution
       - createIndex:
           columns:
@@ -697,7 +697,7 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
@@ -712,30 +712,30 @@ databaseChangeLog:
               constraints:
                 nullable: false
               name: name
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               name: description
-              type: text
+              type: TEXT
           - column:
               constraints:
                 nullable: false
               name: display
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
               name: public_perms
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: dataset_query
-              type: text
+              type: TEXT
           - column:
               constraints:
                 nullable: false
               name: visualization_settings
-              type: text
+              type: TEXT
           - column:
               constraints:
                 deferrable: false
@@ -744,7 +744,7 @@ databaseChangeLog:
                 nullable: false
                 references: core_user(id)
               name: creator_id
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -753,7 +753,7 @@ databaseChangeLog:
                 nullable: false
                 references: core_organization(id)
               name: organization_id
-              type: int
+              type: INT
           tableName: report_card
       - createIndex:
           columns:
@@ -775,7 +775,7 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
@@ -794,7 +794,7 @@ databaseChangeLog:
                 nullable: false
                 references: report_card(id)
               name: card_id
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -803,7 +803,7 @@ databaseChangeLog:
                 nullable: false
                 references: core_user(id)
               name: owner_id
-              type: int
+              type: INT
           tableName: report_cardfavorite
       - addUniqueConstraint:
           columnNames: card_id, owner_id
@@ -829,7 +829,7 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
@@ -844,15 +844,15 @@ databaseChangeLog:
               constraints:
                 nullable: false
               name: name
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               name: description
-              type: text
+              type: TEXT
           - column:
               constraints:
                 nullable: false
               name: public_perms
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -861,7 +861,7 @@ databaseChangeLog:
                 nullable: false
                 references: core_user(id)
               name: creator_id
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -870,7 +870,7 @@ databaseChangeLog:
                 nullable: false
                 references: core_organization(id)
               name: organization_id
-              type: int
+              type: INT
           tableName: report_dashboard
       - createIndex:
           columns:
@@ -892,7 +892,7 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
@@ -907,18 +907,18 @@ databaseChangeLog:
               constraints:
                 nullable: false
               name: sizeX
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: sizeY
-              type: int
+              type: INT
           - column:
               name: row
-              type: int
+              type: INT
           - column:
               name: col
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -927,7 +927,7 @@ databaseChangeLog:
                 nullable: false
                 references: report_card(id)
               name: card_id
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -936,7 +936,7 @@ databaseChangeLog:
                 nullable: false
                 references: report_dashboard(id)
               name: dashboard_id
-              type: int
+              type: INT
           tableName: report_dashboardcard
       - createIndex:
           columns:
@@ -958,7 +958,7 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -967,7 +967,7 @@ databaseChangeLog:
                 nullable: false
                 references: report_dashboard(id)
               name: dashboard_id
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -976,7 +976,7 @@ databaseChangeLog:
                 nullable: false
                 references: core_user(id)
               name: user_id
-              type: int
+              type: INT
           tableName: report_dashboardsubscription
       - addUniqueConstraint:
           columnNames: dashboard_id, user_id
@@ -1002,7 +1002,7 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
@@ -1017,33 +1017,33 @@ databaseChangeLog:
               constraints:
                 nullable: false
               name: name
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               name: description
-              type: text
+              type: TEXT
           - column:
               constraints:
                 nullable: false
               name: public_perms
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: mode
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: version
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: dataset_query
-              type: text
+              type: TEXT
           - column:
               name: email_addresses
-              type: text
+              type: TEXT
           - column:
               constraints:
                 deferrable: false
@@ -1052,7 +1052,7 @@ databaseChangeLog:
                 nullable: false
                 references: core_user(id)
               name: creator_id
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -1061,12 +1061,12 @@ databaseChangeLog:
                 nullable: false
                 references: core_organization(id)
               name: organization_id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: schedule
-              type: text
+              type: TEXT
           tableName: report_emailreport
       - createIndex:
           columns:
@@ -1088,7 +1088,7 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -1097,7 +1097,7 @@ databaseChangeLog:
                 nullable: false
                 references: report_emailreport(id)
               name: emailreport_id
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -1106,7 +1106,7 @@ databaseChangeLog:
                 nullable: false
                 references: core_user(id)
               name: user_id
-              type: int
+              type: INT
           tableName: report_emailreport_recipients
       - addUniqueConstraint:
           columnNames: emailreport_id, user_id
@@ -1132,17 +1132,17 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: details
-              type: text
+              type: TEXT
           - column:
               constraints:
                 nullable: false
               name: status
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
@@ -1158,12 +1158,12 @@ databaseChangeLog:
               constraints:
                 nullable: false
               name: error
-              type: text
+              type: TEXT
           - column:
               constraints:
                 nullable: false
               name: sent_email
-              type: text
+              type: TEXT
           - column:
               constraints:
                 deferrable: false
@@ -1172,7 +1172,7 @@ databaseChangeLog:
                 nullable: false
                 references: core_organization(id)
               name: organization_id
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -1181,7 +1181,7 @@ databaseChangeLog:
                 nullable: true
                 references: report_emailreport(id)
               name: report_id
-              type: int
+              type: INT
           tableName: report_emailreportexecutions
       - createIndex:
           columns:
@@ -1203,7 +1203,7 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
@@ -1236,22 +1236,22 @@ databaseChangeLog:
               constraints:
                 nullable: false
               name: annotation_type
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: edit_count
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: object_type_id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
               name: object_id
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -1260,7 +1260,7 @@ databaseChangeLog:
                 nullable: false
                 references: core_user(id)
               name: author_id
-              type: int
+              type: INT
           - column:
               constraints:
                 deferrable: false
@@ -1269,7 +1269,7 @@ databaseChangeLog:
                 nullable: false
                 references: core_organization(id)
               name: organization_id
-              type: int
+              type: INT
           tableName: annotation_annotation
       - createIndex:
           columns:
@@ -1311,7 +1311,7 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: id
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 deferrable: false
@@ -1320,7 +1320,7 @@ databaseChangeLog:
                 nullable: false
                 references: core_user(id)
               name: user_id
-              type: int
+              type: INT
           - column:
               constraints:
                 nullable: false
@@ -1343,12 +1343,12 @@ databaseChangeLog:
                 nullable: false
                 primaryKey: true
               name: key
-              type: varchar(254)
+              type: VARCHAR(254)
           - column:
               constraints:
                 nullable: false
               name: value
-              type: varchar(254)
+              type: VARCHAR(254)
           tableName: setting
   - changeSet:
       id: '5'
@@ -1358,49 +1358,49 @@ databaseChangeLog:
           columns:
           - column:
               name: report_timezone
-              type: varchar(254)
+              type: VARCHAR(254)
           tableName: core_organization
   - changeSet:
       id: '6'
       author: agilliland
       changes:
       - dropNotNullConstraint:
-          columnDataType: int
+          columnDataType: INT
           columnName: organization_id
           tableName: metabase_database
       - dropForeignKeyConstraint:
           baseTableName: metabase_database
           constraintName: fk_database_ref_organization_id
       - dropNotNullConstraint:
-          columnDataType: int
+          columnDataType: INT
           columnName: organization_id
           tableName: report_card
       - dropForeignKeyConstraint:
           baseTableName: report_card
           constraintName: fk_card_ref_organization_id
       - dropNotNullConstraint:
-          columnDataType: int
+          columnDataType: INT
           columnName: organization_id
           tableName: report_dashboard
       - dropForeignKeyConstraint:
           baseTableName: report_dashboard
           constraintName: fk_dashboard_ref_organization_id
       - dropNotNullConstraint:
-          columnDataType: int
+          columnDataType: INT
           columnName: organization_id
           tableName: report_emailreport
       - dropForeignKeyConstraint:
           baseTableName: report_emailreport
           constraintName: fk_emailreport_ref_organization_id
       - dropNotNullConstraint:
-          columnDataType: int
+          columnDataType: INT
           columnName: organization_id
           tableName: report_emailreportexecutions
       - dropForeignKeyConstraint:
           baseTableName: report_emailreportexecutions
           constraintName: fk_emailreportexecutions_ref_organization_id
       - dropNotNullConstraint:
-          columnDataType: int
+          columnDataType: INT
           columnName: organization_id
           tableName: annotation_annotation
       - dropForeignKeyConstraint:
@@ -1418,7 +1418,7 @@ databaseChangeLog:
                 nullable: true
                 references: metabase_field(id)
               name: parent_id
-              type: int
+              type: INT
           tableName: metabase_field
   - changeSet:
       id: '8'
@@ -1428,13 +1428,13 @@ databaseChangeLog:
           columns:
           - column:
               name: display_name
-              type: varchar(254)
+              type: VARCHAR(254)
           tableName: metabase_table
       - addColumn:
           columns:
           - column:
               name: display_name
-              type: varchar(254)
+              type: VARCHAR(254)
           tableName: metabase_field
   - changeSet:
       id: '9'
@@ -1444,7 +1444,7 @@ databaseChangeLog:
           columns:
           - column:
               name: visibility_type
-              type: varchar(254)
+              type: VARCHAR(254)
           tableName: metabase_table
   - changeSet:
       id: 10
@@ -1455,24 +1455,24 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: model
-                  type: varchar(16)
+                  type: VARCHAR(16)
                   constraints:
                     nullable: false
               - column:
                   name: model_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
               - column:
                   name: user_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: core_user(id)
@@ -1486,12 +1486,12 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: object
-                  type: varchar
+                  type: VARCHAR
                   constraints:
                     nullable: false
               - column:
                   name: is_reversion
-                  type: boolean
+                  type: BOOLEAN
                   defaultValueBoolean: false
                   constraints:
                     nullable: false
@@ -1528,7 +1528,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: database_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: true
                     references: metabase_database(id)
@@ -1537,7 +1537,7 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: table_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: true
                     references: metabase_table(id)
@@ -1546,7 +1546,7 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: query_type
-                  type: varchar(16)
+                  type: VARCHAR(16)
                   constraints:
                     nullable: true
   - changeSet:
@@ -1558,14 +1558,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: topic
-                  type: varchar(32)
+                  type: VARCHAR(32)
                   constraints:
                     nullable: false
               - column:
@@ -1575,7 +1575,7 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: user_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: true
                     references: core_user(id)
@@ -1584,32 +1584,32 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: model
-                  type: varchar(16)
+                  type: VARCHAR(16)
                   constraints:
                     nullable: true
               - column:
                   name: model_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: true
               - column:
                   name: database_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: true
               - column:
                   name: table_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: true
               - column:
                   name: custom_id
-                  type: varchar(48)
+                  type: VARCHAR(48)
                   constraints:
                     nullable: true
               - column:
                   name: details
-                  type: varchar
+                  type: VARCHAR
                   constraints:
                     nullable: false
         - createIndex:
@@ -1649,14 +1649,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: user_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: true
                     references: core_user(id)
@@ -1665,12 +1665,12 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: model
-                  type: varchar(16)
+                  type: VARCHAR(16)
                   constraints:
                     nullable: false
               - column:
                   name: model_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
               - column:
@@ -1704,7 +1704,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: is_creation
-                  type: boolean
+                  type: BOOLEAN
                   defaultValueBoolean: false
                   constraints:
                     nullable: false
@@ -1730,7 +1730,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: is_sample
-                  type: boolean
+                  type: BOOLEAN
                   defaultValueBoolean: false
                   constraints:
                     nullable: false
@@ -1781,14 +1781,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: creator_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: core_user(id)
@@ -1797,12 +1797,12 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: name
-                  type: varchar(254)
+                  type: VARCHAR(254)
                   constraints:
                     nullable: false
               - column:
                   name: public_perms
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
               - column:
@@ -1826,14 +1826,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: pulse_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: pulse(id)
@@ -1842,7 +1842,7 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: card_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: report_card(id)
@@ -1851,7 +1851,7 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: position
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
         - createIndex:
@@ -1871,14 +1871,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: pulse_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: pulse(id)
@@ -1887,27 +1887,27 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: channel_type
-                  type: varchar(32)
+                  type: VARCHAR(32)
                   constraints:
                     nullable: false
               - column:
                   name: details
-                  type: text
+                  type: TEXT
                   constraints:
                     nullable: false
               - column:
                   name: schedule_type
-                  type: varchar(32)
+                  type: VARCHAR(32)
                   constraints:
                     nullable: false
               - column:
                   name: schedule_hour
-                  type: int
+                  type: INT
                   constraints:
                     nullable: true
               - column:
                   name: schedule_day
-                  type: varchar(64)
+                  type: VARCHAR(64)
                   constraints:
                     nullable: true
               - column:
@@ -1937,14 +1937,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: pulse_channel_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: pulse_channel(id)
@@ -1953,7 +1953,7 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: user_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: core_user(id)
@@ -1974,14 +1974,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: table_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: metabase_table(id)
@@ -1990,7 +1990,7 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: creator_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: core_user(id)
@@ -1999,23 +1999,23 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: name
-                  type: varchar(254)
+                  type: VARCHAR(254)
                   constraints:
                     nullable: false
               - column:
                   name: description
-                  type: text
+                  type: TEXT
                   constraints:
                     nullable: true
               - column:
                   name: is_active
-                  type: boolean
+                  type: BOOLEAN
                   defaultValueBoolean: true
                   constraints:
                     nullable: false
               - column:
                   name: definition
-                  type: text
+                  type: TEXT
                   constraints:
                     nullable: false
               - column:
@@ -2054,7 +2054,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: message
-                  type: text
+                  type: TEXT
                   constraints:
                     nullable: true
   - changeSet:
@@ -2074,29 +2074,29 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: model
-                  type: varchar(32)
+                  type: VARCHAR(32)
                   constraints:
                     nullable: false
               - column:
                   name: model_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
               - column:
                   name: dependent_on_model
-                  type: varchar(32)
+                  type: VARCHAR(32)
                   constraints:
                     nullable: false
               - column:
                   name: dependent_on_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
               - column:
@@ -2142,14 +2142,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: table_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: metabase_table(id)
@@ -2158,7 +2158,7 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: creator_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: core_user(id)
@@ -2167,23 +2167,23 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: name
-                  type: varchar(254)
+                  type: VARCHAR(254)
                   constraints:
                     nullable: false
               - column:
                   name: description
-                  type: text
+                  type: TEXT
                   constraints:
                     nullable: true
               - column:
                   name: is_active
-                  type: boolean
+                  type: BOOLEAN
                   defaultValueBoolean: true
                   constraints:
                     nullable: false
               - column:
                   name: definition
-                  type: text
+                  type: TEXT
                   constraints:
                     nullable: false
               - column:
@@ -2222,7 +2222,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: is_full_sync
-                  type: boolean
+                  type: BOOLEAN
                   defaultValueBoolean: true
                   constraints:
                     nullable: false
@@ -2237,14 +2237,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: dashboardcard_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: report_dashboardcard(id)
@@ -2253,7 +2253,7 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: card_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: report_card(id)
@@ -2262,7 +2262,7 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: position
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
         - createIndex:
@@ -2291,7 +2291,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: is_qbnewb
-                  type: boolean
+                  type: BOOLEAN
                   defaultValueBoolean: true
                   constraints:
                     nullable: false
@@ -2304,7 +2304,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: schedule_frame
-                  type: varchar(32)
+                  type: VARCHAR(32)
                   constraints:
                     nullable: true
   - changeSet:
@@ -2316,13 +2316,13 @@ databaseChangeLog:
             columns:
               - column:
                   name: visibility_type
-                  type: varchar(32)
+                  type: VARCHAR(32)
                   constraints:
                     nullable: true
                     deferrable: false
                     initiallyDeferred: false
         - addNotNullConstraint:
-            columnDataType: varchar(32)
+            columnDataType: VARCHAR(32)
             columnName: visibility_type
             defaultNullValue: unset
             tableName: metabase_field
@@ -2335,7 +2335,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: fk_target_field_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: true
                     deferrable: false
@@ -2350,7 +2350,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
@@ -2381,14 +2381,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: card_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: report_card(id)
@@ -2397,7 +2397,7 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: label_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: label(id)
@@ -2426,7 +2426,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: archived
-                  type: boolean
+                  type: BOOLEAN
                   defaultValueBoolean: false
                   constraints:
                     nullable: false
@@ -2439,14 +2439,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: database_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: metabase_database(id)
@@ -2455,22 +2455,22 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: active
-                  type: boolean
+                  type: BOOLEAN
                   constraints:
                     nullable: false
               - column:
                   name: schema
-                  type: varchar(255)
+                  type: VARCHAR(255)
                   constraints:
                     nullable: true
               - column:
                   name: name
-                  type: varchar(255)
+                  type: VARCHAR(255)
                   constraints:
                     nullable: false
               - column:
                   name: details
-                  type: text
+                  type: TEXT
                   constraints:
                     nullable: false
               - column:
@@ -2498,14 +2498,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: raw_table_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: raw_table(id)
@@ -2514,27 +2514,27 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: active
-                  type: boolean
+                  type: BOOLEAN
                   constraints:
                     nullable: false
               - column:
                   name: name
-                  type: varchar(255)
+                  type: VARCHAR(255)
                   constraints:
                     nullable: false
               - column:
                   name: column_type
-                  type: varchar(128)
+                  type: VARCHAR(128)
                   constraints:
                     nullable: true
               - column:
                   name: is_pk
-                  type: boolean
+                  type: BOOLEAN
                   constraints:
                     nullable: false
               - column:
                   name: fk_target_column_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: true
                     references: raw_column(id)
@@ -2543,7 +2543,7 @@ databaseChangeLog:
                     initiallyDeferred: false
               - column:
                   name: details
-                  type: text
+                  type: TEXT
                   constraints:
                     nullable: false
               - column:
@@ -2571,7 +2571,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: raw_table_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: true
                     deferrable: false
@@ -2581,7 +2581,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: raw_column_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: true
                     deferrable: false
@@ -2611,7 +2611,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: enabled
-                  type: boolean
+                  type: BOOLEAN
                   defaultValueBoolean: true
                   constraints:
                     nullable: false
@@ -2635,13 +2635,13 @@ databaseChangeLog:
             columns:
               - column:
                   name: parameters
-                  type: text
+                  type: TEXT
                   constraints:
                     nullable: true
                     deferrable: false
                     initiallyDeferred: false
         - addNotNullConstraint:
-            columnDataType: text
+            columnDataType: TEXT
             columnName: parameters
             defaultNullValue: '[]'
             tableName: report_dashboard
@@ -2650,13 +2650,13 @@ databaseChangeLog:
             columns:
               - column:
                   name: parameter_mappings
-                  type: text
+                  type: TEXT
                   constraints:
                     nullable: true
                     deferrable: false
                     initiallyDeferred: false
         - addNotNullConstraint:
-            columnDataType: text
+            columnDataType: TEXT
             columnName: parameter_mappings
             defaultNullValue: '[]'
             tableName: report_dashboardcard
@@ -2669,13 +2669,13 @@ databaseChangeLog:
             columns:
               - column:
                   name: query_hash
-                  type: int
+                  type: INT
                   constraints:
                     nullable: true
         - addNotNullConstraint:
             tableName: query_queryexecution
             columnName: query_hash
-            columnDataType: int
+            columnDataType: INT
             defaultNullValue: 0
         - createIndex:
             tableName: query_queryexecution
@@ -2699,88 +2699,88 @@ databaseChangeLog:
             columns:
               - column:
                   name: points_of_interest
-                  type: text
+                  type: TEXT
         - addColumn:
             tableName: metabase_table
             columns:
               - column:
                   name: points_of_interest
-                  type: text
+                  type: TEXT
         - addColumn:
             tableName: metabase_field
             columns:
               - column:
                   name: points_of_interest
-                  type: text
+                  type: TEXT
         - addColumn:
             tableName: report_dashboard
             columns:
               - column:
                   name: points_of_interest
-                  type: text
+                  type: TEXT
         - addColumn:
             tableName: metric
             columns:
               - column:
                   name: points_of_interest
-                  type: text
+                  type: TEXT
         - addColumn:
             tableName: segment
             columns:
               - column:
                   name: points_of_interest
-                  type: text
+                  type: TEXT
         ######################################## Add "caveats" metadata column to various models ########################################
         - addColumn:
             tableName: metabase_database
             columns:
               - column:
                   name: caveats
-                  type: text
+                  type: TEXT
         - addColumn:
             tableName: metabase_table
             columns:
               - column:
                   name: caveats
-                  type: text
+                  type: TEXT
         - addColumn:
             tableName: metabase_field
             columns:
               - column:
                   name: caveats
-                  type: text
+                  type: TEXT
         - addColumn:
             tableName: report_dashboard
             columns:
               - column:
                   name: caveats
-                  type: text
+                  type: TEXT
         - addColumn:
             tableName: metric
             columns:
               - column:
                   name: caveats
-                  type: text
+                  type: TEXT
         - addColumn:
             tableName: segment
             columns:
               - column:
                   name: caveats
-                  type: text
+                  type: TEXT
         ######################################## Add "how_is_this_calculated" to metric ########################################
         - addColumn:
             tableName: metric
             columns:
               - column:
                   name: how_is_this_calculated
-                  type: text
+                  type: TEXT
         ######################################## Add "most important dashboard" (0 or 1 dashboards) ########################################
         - addColumn:
             tableName: report_dashboard
             columns:
               - column:
                   name: show_in_getting_started
-                  type: boolean
+                  type: BOOLEAN
                   defaultValueBoolean: false
                   constraints:
                     nullable: false
@@ -2796,7 +2796,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: show_in_getting_started
-                  type: boolean
+                  type: BOOLEAN
                   defaultValueBoolean: false
                   constraints:
                     nullable: false
@@ -2812,7 +2812,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: show_in_getting_started
-                  type: boolean
+                  type: BOOLEAN
                   defaultValueBoolean: false
                   constraints:
                     nullable: false
@@ -2828,7 +2828,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: show_in_getting_started
-                  type: boolean
+                  type: BOOLEAN
                   defaultValueBoolean: false
                   constraints:
                     nullable: false
@@ -2844,21 +2844,21 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: metric_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: metric(id)
                     foreignKeyName: fk_metric_important_field_metric_id
               - column:
                   name: field_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: metabase_field(id)
@@ -2888,7 +2888,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: google_auth
-                  type: boolean
+                  type: BOOLEAN
                   defaultValueBoolean: false
                   constraints:
                     nullable: false
@@ -2902,7 +2902,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
@@ -2910,7 +2910,7 @@ databaseChangeLog:
               # TODO - it would be nice to make this a case-insensitive unique constraint / index?
               - column:
                   name: name
-                  type: varchar(255)
+                  type: VARCHAR(255)
                   constraints:
                     nullable: false
                     unique: true
@@ -2927,21 +2927,21 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: user_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: core_user(id)
                     foreignKeyName: fk_permissions_group_membership_user_id
               - column:
                   name: group_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: permissions_group(id)
@@ -2979,19 +2979,19 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: object
-                  type: varchar(254)
+                  type: VARCHAR(254)
                   constraints:
                     nullable: false
               - column:
                   name: group_id
-                  type: int
+                  type: INT
                   constraints:
                     nullable: false
                     references: permissions_group(id)
@@ -3022,7 +3022,7 @@ databaseChangeLog:
         ############################################################ Tweaks to metabase_table ############################################################
         # Modify the length of metabase_table.schema from 256 -> 254
         # It turns out MySQL InnoDB indices have to be 767 bytes or less (at least for older versions of MySQL)
-        # and 'utf8' text columns can use up to 3 bytes per character in MySQL -- see http://stackoverflow.com/a/22515986/1198455
+        # and 'utf8' TEXT columns can use up to 3 bytes per character in MySQL -- see http://stackoverflow.com/a/22515986/1198455
         # So 256 * 3 = 768 bytes (too large to index / add unique constraints)
         # Drop this to 254; 254 * 3 = 762, which should give us room to index it along with a 4-byte integer as well if need be
         # Hoping this doesn't break anyone's existing databases. Hopefully there aren't any schemas that are 255 or 256 bytes long out there; any longer
@@ -3031,7 +3031,7 @@ databaseChangeLog:
         - modifyDataType:
             tableName: metabase_table
             columnName: schema
-            newDataType: varchar(254)
+            newDataType: VARCHAR(254)
         # Add index: this is for doing things like getting all the tables that belong to a given schema
         - createIndex:
             tableName: metabase_table
@@ -3120,26 +3120,26 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: before
-                  type: text
+                  type: TEXT
                   remarks: 'Serialized JSON of the permissions before the changes.'
                   constraints:
                     nullable: false
               - column:
                   name: after
-                  type: text
+                  type: TEXT
                   remarks: 'Serialized JSON of the permissions after the changes.'
                   constraints:
                     nullable: false
               - column:
                   name: user_id
-                  type: int
+                  type: INT
                   remarks: 'The ID of the admin who made this set of changes.'
                   constraints:
                     nullable: false
@@ -3153,7 +3153,7 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: remark
-                  type: text
+                  type: TEXT
                   remarks: 'Optional remarks explaining why these changes were made.'
   - changeSet:
       id: 44
@@ -3177,11 +3177,11 @@ databaseChangeLog:
             columns:
               - column:
                   name: visualization_settings
-                  type: text
+                  type: TEXT
         - addNotNullConstraint:
             tableName: report_dashboardcard
             columnName: visualization_settings
-            columnDataType: text
+            columnDataType: TEXT
             defaultNullValue: '{}'
   - changeSet:
       id: 46
@@ -3216,27 +3216,27 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: name
-                  type: text
+                  type: TEXT
                   remarks: 'The unique, user-facing name of this Collection.'
                   constraints:
                     nullable: false
               - column:
                   name: slug
-                  type: varchar(254)
+                  type: VARCHAR(254)
                   remarks: 'URL-friendly, sluggified, indexed version of name.'
                   constraints:
                     nullable: false
                     unique: true
               - column:
                   name: description
-                  type: text
+                  type: TEXT
                   remarks: 'Optional description for this Collection.'
               - column:
                   name: color
@@ -3246,7 +3246,7 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: archived
-                  type: boolean
+                  type: BOOLEAN
                   remarks: 'Whether this Collection has been archived and should be hidden from users.'
                   defaultValueBoolean: false
                   constraints:
@@ -3263,7 +3263,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: collection_id
-                  type: int
+                  type: INT
                   remarks: 'Optional ID of Collection this Card belongs to.'
                   constraints:
                     references: collection(id)
@@ -3284,26 +3284,26 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: before
-                  type: text
+                  type: TEXT
                   remarks: 'Serialized JSON of the collections graph before the changes.'
                   constraints:
                     nullable: false
               - column:
                   name: after
-                  type: text
+                  type: TEXT
                   remarks: 'Serialized JSON of the collections graph after the changes.'
                   constraints:
                     nullable: false
               - column:
                   name: user_id
-                  type: int
+                  type: INT
                   remarks: 'The ID of the admin who made this set of changes.'
                   constraints:
                     nullable: false
@@ -3317,7 +3317,7 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: remark
-                  type: text
+                  type: TEXT
                   remarks: 'Optional remarks explaining why these changes were made.'
   - changeSet:
       id: 49
@@ -3335,7 +3335,7 @@ databaseChangeLog:
                     unique: true
               - column:
                   name: made_public_by_id
-                  type: int
+                  type: INT
                   remarks: 'The ID of the User who first publically shared this Card.'
                   constraints:
                     references: core_user(id)
@@ -3358,7 +3358,7 @@ databaseChangeLog:
                     unique: true
               - column:
                   name: made_public_by_id
-                  type: int
+                  type: INT
                   remarks: 'The ID of the User who first publically shared this Dashboard.'
                   constraints:
                     references: core_user(id)
@@ -3373,7 +3373,7 @@ databaseChangeLog:
         - dropNotNullConstraint:
             tableName: query_queryexecution
             columnName: executor_id
-            columnDataType: int
+            columnDataType: INT
   - changeSet:
       id: 50
       author: camsaul
@@ -3384,14 +3384,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: enable_embedding
-                  type: boolean
+                  type: BOOLEAN
                   remarks: 'Is this Card allowed to be embedded in different websites (using a signed JWT)?'
                   defaultValueBoolean: false
                   constraints:
                     nullable: false
               - column:
                   name: embedding_params
-                  type: text
+                  type: TEXT
                   remarks: 'Serialized JSON containing information about required parameters that must be supplied when embedding this Card.'
           ######################################## new Card columns ########################################
         - addColumn:
@@ -3399,14 +3399,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: enable_embedding
-                  type: boolean
+                  type: BOOLEAN
                   remarks: 'Is this Dashboard allowed to be embedded in different websites (using a signed JWT)?'
                   defaultValueBoolean: false
                   constraints:
                     nullable: false
               - column:
                   name: embedding_params
-                  type: text
+                  type: TEXT
                   remarks: 'Serialized JSON containing information about required parameters that must be supplied when embedding this Dashboard.'
   - changeSet:
       id: 51
@@ -3418,7 +3418,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
@@ -3449,17 +3449,17 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: native
-                  type: boolean
+                  type: BOOLEAN
                   remarks: 'Whether the query was a native query, as opposed to an MBQL one (e.g., created with the GUI).'
                   constraints:
                     nullable: false
               - column:
                   name: context
-                  type: varchar(32)
+                  type: VARCHAR(32)
                   remarks: 'Short string specifying how this query was executed, e.g. in a Dashboard or Pulse.'
               - column:
                   name: error
-                  type: text
+                  type: TEXT
                   remarks: 'Error message returned by failed query, if any.'
               # The following columns are foreign keys, but we don't keep FK constraints on them for a few reasons:
               # - We don't want to keep indexes on these columns since they wouldn't be generally useful and for size and performance reasons
@@ -3544,7 +3544,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: cache_ttl
-                  type: int
+                  type: INT
                   remarks: 'The maximum time, in seconds, to return cached results for this Card rather than running a new query.'
   - changeSet:
       id: 53
@@ -3563,7 +3563,7 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: average_execution_time
-                  type: int
+                  type: INT
                   remarks: 'Average execution time for the query, round to nearest number of milliseconds. This is updated as a rolling average.'
                   constraints:
                     nullable: false
@@ -3578,7 +3578,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: skip_if_empty
-                  type: boolean
+                  type: BOOLEAN
                   remarks: 'Skip a scheduled Pulse if none of its questions have any results'
                   defaultValueBoolean: false
                   constraints:
@@ -3592,7 +3592,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: archived
-                  type: boolean
+                  type: BOOLEAN
                   remarks: 'Is this Dashboard archived (effectively treated as deleted?)'
                   defaultValueBoolean: false
                   constraints:
@@ -3607,14 +3607,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: user_id
-                  type: int
+                  type: INT
                   remarks: 'ID of the User who favorited the Dashboard.'
                   constraints:
                     nullable: false
@@ -3623,7 +3623,7 @@ databaseChangeLog:
                     deleteCascade: true
               - column:
                   name: dashboard_id
-                  type: int
+                  type: INT
                   remarks: 'ID of the Dashboard favorited by the User.'
                   constraints:
                     nullable: false
@@ -3656,7 +3656,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: ldap_auth
-                  type: boolean
+                  type: BOOLEAN
                   defaultValueBoolean: false
                   constraints:
                     nullable: false
@@ -3670,7 +3670,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: result_metadata
-                  type: text
+                  type: TEXT
                   remarks: 'Serialized JSON containing metadata about the result columns from running the query.'
   - changeSet:
       id: 58
@@ -3683,14 +3683,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
                     nullable: false
               - column:
                   name: field_id
-                  type: int
+                  type: INT
                   remarks: 'ID of the field this dimension row applies to'
                   constraints:
                     deferrable: false
@@ -3707,13 +3707,13 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: type
-                  type: varchar(254)
+                  type: VARCHAR(254)
                   remarks: 'Either internal for a user defined remapping or external for a foreign key based remapping'
                   constraints:
                     nullable: false
               - column:
                   name: human_readable_field_id
-                  type: int
+                  type: INT
                   remarks: 'Only used with external type remappings. Indicates which field on the FK related table to use for display'
                   constraints:
                     deferrable: false
@@ -3754,7 +3754,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: fingerprint
-                  type: text
+                  type: TEXT
                   remarks: 'Serialized JSON containing non-identifying information about this Field, such as min, max, and percent JSON. Used for classification.'
   - changeSet:
       id: 60
@@ -3766,14 +3766,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: metadata_sync_schedule
-                  type: varchar(254)
+                  type: VARCHAR(254)
                   remarks: 'The cron schedule string for when this database should undergo the metadata sync process (and analysis for new fields).'
                   defaultValue: '0 50 * * * ? *' # run at the end of every hour
                   constraints:
                     nullable: false
               - column:
                   name: cache_field_values_schedule
-                  type: varchar(254)
+                  type: VARCHAR(254)
                   remarks: 'The cron schedule string for when FieldValues for eligible Fields should be updated.'
                   defaultValue: '0 50 0 * * ? *' # run at 12:50 AM
                   constraints:
@@ -3788,7 +3788,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: fingerprint_version
-                  type: int
+                  type: INT
                   remarks: 'The version of the fingerprint for this Field. Used so we can keep track of which Fields need to be analyzed again when new things are added to fingerprints.'
                   defaultValue: 0
                   constraints:
@@ -3815,7 +3815,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: is_on_demand
-                  type: boolean
+                  type: BOOLEAN
                   remarks: 'Whether we should do On-Demand caching of FieldValues for this DB. This means FieldValues are updated when their Field is used in a Dashboard or Card param.'
                   defaultValue: false
                   constraints:
@@ -3855,7 +3855,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
@@ -3867,7 +3867,7 @@ databaseChangeLog:
                     initiallyDeferred: false
                     references: core_user(id)
                   name: creator_id
-                  type: int
+                  type: INT
               - column:
                   name: created_at
                   type: DATETIME
@@ -3880,12 +3880,12 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: type
-                  type: varchar(254)
+                  type: VARCHAR(254)
                   constraints:
                     nullable: false
               - column:
                   name: status
-                  type: varchar(254)
+                  type: VARCHAR(254)
                   constraints:
                     nullable: false
         - createTable:
@@ -3894,7 +3894,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  type: int
+                  type: INT
                   autoIncrement: true
                   constraints:
                     primaryKey: true
@@ -3907,7 +3907,7 @@ databaseChangeLog:
                     nullable: false
                     references: computation_job(id)
                   name: job_id
-                  type: int
+                  type: INT
               - column:
                   name: created_at
                   type: DATETIME
@@ -3920,12 +3920,12 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: permanence
-                  type: varchar(254)
+                  type: VARCHAR(254)
                   constraints:
                     nullable: false
               - column:
                   name: payload
-                  type: text
+                  type: TEXT
                   constraints:
                     nullable: false
   - changeSet:
@@ -3938,7 +3938,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: context
-                  type: text
+                  type: TEXT
               - column:
                   name: ended_at
                   type: DATETIME
@@ -3953,21 +3953,21 @@ databaseChangeLog:
             columns:
               - column:
                   name: alert_condition
-                  type: varchar(254)
+                  type: VARCHAR(254)
                   remarks: 'Condition (i.e. "rows" or "goal") used as a guard for alerts'
               - column:
                   name: alert_first_only
-                  type: boolean
+                  type: BOOLEAN
                   remarks: 'True if the alert should be disabled after the first notification'
               - column:
                   name: alert_above_goal
-                  type: boolean
+                  type: BOOLEAN
                   remarks: 'For a goal condition, alert when above the goal'
         # There is no name for an alert, so this column is only required for pulses
         - dropNotNullConstraint:
             tableName: pulse
             columnName: name
-            columnDataType: varchar(254)
+            columnDataType: VARCHAR(254)
   - changeSet:
       id: 70
       author: camsaul
@@ -3978,14 +3978,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: database_type
-                  type: varchar(255)
+                  type: VARCHAR(255)
                   remarks: 'The actual type of this column in the database. e.g. VARCHAR or TEXT.'
         # We want to enforce NOT NULL right away for all columns going forward so just put some sort of
         # placeholder in place for existing columns.
         - addNotNullConstraint:
             tableName: metabase_field
             columnName: database_type
-            columnDataType: varchar(255)
+            columnDataType: VARCHAR(255)
             defaultNullValue: '?'
   - changeSet:
       id: 71
@@ -3993,11 +3993,11 @@ databaseChangeLog:
       comment: 'Added 0.28.0'
       changes:
         # drop the NOT NULL constraint on DashboardCard.card_id since we're now letting you add things other than Cards
-        # to Dashboards, for example static text cards
+        # to Dashboards, for example static TEXT cards
         - dropNotNullConstraint:
             tableName: report_dashboardcard
             columnName: card_id
-            columnDataType: int
+            columnDataType: INT
   - changeSet:
       id: 72
       author: senior
@@ -4008,14 +4008,14 @@ databaseChangeLog:
             columns:
               - column:
                   name: include_csv
-                  type: boolean
+                  type: BOOLEAN
                   defaultValueBoolean: false
                   remarks: 'True if a CSV of the data should be included for this pulse card'
                   constraints:
                     nullable: false
               - column:
                   name: include_xls
-                  type: boolean
+                  type: BOOLEAN
                   defaultValueBoolean: false
                   remarks: 'True if a XLS of the data should be included for this pulse card'
                   constraints:
@@ -4032,7 +4032,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: options
-                  type: text
+                  type: TEXT
                   remarks: 'Serialized JSON containing various options like QB behavior.'
   - changeSet:
       id: 74
@@ -4044,5 +4044,5 @@ databaseChangeLog:
             columns:
               - column:
                   name: has_field_values
-                  type: text
+                  type: TEXT
                   remarks: 'Whether we have FieldValues ("list"), should ad-hoc search ("search"), disable entirely ("none"), or infer dynamically (null)"'

@@ -186,7 +186,7 @@ const testStoreEnhancer = (createStore, history, getRoutes) => {
     // let's create synthetic actions from actual history changes instead
     history.listen(location => {
       store.dispatch({
-        type: `integrated-tests/BROWSER_HISTORY_${location.action}`,
+        type: `integrated-tests/BROWSER_HISTORY_${ location.action }`,
         location: location,
       });
     });
@@ -267,7 +267,7 @@ const testStoreEnhancer = (createStore, history, getRoutes) => {
 
               return reject(
                 new Error(
-                  `All these actions were not dispatched within ${timeout}ms:\n` +
+                  `All these actions were not dispatched within ${ timeout }ms:\n` +
                     chalk.cyan(actionTypes.join("\n")) +
                     "\n\nDispatched actions since the last call of `waitForActions`:\n" +
                     (store._latestDispatchedActions
@@ -419,10 +419,10 @@ export const waitForRequestToComplete = (
     const completionTimeoutId = setTimeout(() => {
       reject(
         new Error(
-          `API request ${method} ${urlRegex} wasn't completed within ${timeout}ms.\n` +
-            `Other requests during that time period:\n${skippedApiRequests.join(
+          `API request ${ method } ${ urlRegex } wasn't completed within ${ timeout }ms.\n` +
+            `Other requests during that time period:\n${ skippedApiRequests.join(
               "\n",
-            ) || "No requests"}`,
+            ) || "No requests" }`,
         ),
       );
     }, timeout);
@@ -432,7 +432,7 @@ export const waitForRequestToComplete = (
         clearTimeout(completionTimeoutId);
         resolve();
       } else {
-        skippedApiRequests.push(`${requestMethod} ${requestUrl}`);
+        skippedApiRequests.push(`${ requestMethod } ${ requestUrl }`);
       }
     };
   });
@@ -481,7 +481,7 @@ api._makeRequest = async (method, url, headers, requestBody, data, options) => {
   const headersWithSessionCookie = {
     ...headers,
     ...(loginSession
-      ? { Cookie: `${METABASE_SESSION_COOKIE}=${loginSession.id}` }
+      ? { Cookie: `${ METABASE_SESSION_COOKIE }=${ loginSession.id }` }
       : {}),
   };
 
@@ -532,8 +532,8 @@ api._makeRequest = async (method, url, headers, requestBody, data, options) => {
     if (!simulateOfflineMode) {
       console.log("A request made in a test failed with the following error:");
       console.log(error, { depth: null });
-      console.log(`The original request: ${method} ${url}`);
-      if (requestBody) console.log(`Original payload: ${requestBody}`);
+      console.log(`The original request: ${ method } ${ url }`);
+      if (requestBody) console.log(`Original payload: ${ requestBody }`);
     }
 
     throw error;

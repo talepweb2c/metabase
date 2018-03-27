@@ -33,7 +33,7 @@ const CostSelect = ({ currentCost, location, maxCost }) => {
         const c = COSTS[cost];
         return (
           <Link
-            to={`${urlWithoutCost}/${cost}`}
+            to={`${ urlWithoutCost }/${ cost }`}
             className={cx("no-decoration", {
               disabled: getDisabled(maxCost).indexOf(cost) >= 0,
             })}

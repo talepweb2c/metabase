@@ -85,7 +85,7 @@ export default class SegmentRevisions extends Component {
     return (
       <div style={style} className="full">
         <ReferenceHeader
-          name={t`Revision history for ${this.props.segment.name}`}
+          name={t`Revision history for ${ this.props.segment.name }`}
           headerIcon="segment"
         />
         <LoadingAndErrorWrapper

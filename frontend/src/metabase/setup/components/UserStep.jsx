@@ -150,7 +150,7 @@ export default class UserStep extends Component {
     const stepText =
       activeStep <= stepNumber
         ? t`What should we call you?`
-        : t`Hi, ${userDetails.first_name}. nice to meet you!`;
+        : t`Hi, ${ userDetails.first_name }. nice to meet you!`;
 
     if (activeStep !== stepNumber) {
       return (

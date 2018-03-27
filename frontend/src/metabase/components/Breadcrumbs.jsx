@@ -63,7 +63,7 @@ export default class Breadcrumbs extends Component {
                   ? [
                       breadcrumb,
                       <Icon
-                        key={`${index}-separator`}
+                        key={`${ index }-separator`}
                         name="chevronright"
                         className={S.breadcrumbDivider}
                         width={12}

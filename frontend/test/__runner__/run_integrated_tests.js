@@ -50,7 +50,7 @@ const login = async (apiHost, user) => {
   } catch (e) {}
 
   if (result.status >= 200 && result.status <= 299) {
-    console.log(`Successfully created a shared login with id ${resultBody.id}`);
+    console.log(`Successfully created a shared login with id ${ resultBody.id }`);
     return resultBody;
   } else {
     const error = { status: result.status, data: resultBody };

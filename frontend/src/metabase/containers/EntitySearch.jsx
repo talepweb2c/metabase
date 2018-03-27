@@ -479,7 +479,7 @@ class SearchResultsList extends Component {
     const { entities, currentPage, setCurrentPage } = this.props;
 
     const currentEntitiesText =
-      start === end ? `${start + 1}` : `${start + 1}-${end + 1}`;
+      start === end ? `${ start + 1 }` : `${ start + 1 }-${ end + 1 }`;
     const isInBeginning = start === 0;
     const isInEnd = end + 1 >= entityCount;
 

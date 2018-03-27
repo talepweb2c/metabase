@@ -79,6 +79,7 @@ export class Dashboards extends Component {
       </div>
     );
 
+    const brTag = <br />;
     return (
       <LoadingAndErrorWrapper
         loading={isLoading}
@@ -93,9 +94,7 @@ export class Dashboards extends Component {
             >
               <EmptyState
                 message={
-                  <span>{jt`No dashboards have been ${(
-                    <br />
-                  )} archived yet`}</span>
+                  <span>{jt`No dashboards have been ${ brTag } archived yet`}</span>
                 }
                 icon="viewArchive"
               />

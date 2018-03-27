@@ -36,7 +36,7 @@ import * as actions from "metabase/reference/reference";
 const interestingQuestions = (database, table, field, metadata) => {
   return [
     {
-      text: t`Number of ${table.display_name} grouped by ${field.display_name}`,
+      text: t`Number of ${ table.display_name } grouped by ${ field.display_name }`,
       icon: { name: "bar", scale: 1, viewBox: "8 8 16 16" },
       link: getQuestionUrl({
         dbId: database.id,
@@ -48,7 +48,7 @@ const interestingQuestions = (database, table, field, metadata) => {
       }),
     },
     {
-      text: t`Number of ${table.display_name} grouped by ${field.display_name}`,
+      text: t`Number of ${ table.display_name } grouped by ${ field.display_name }`,
       icon: { name: "pie", scale: 1, viewBox: "8 8 16 16" },
       link: getQuestionUrl({
         dbId: database.id,
@@ -60,7 +60,7 @@ const interestingQuestions = (database, table, field, metadata) => {
       }),
     },
     {
-      text: t`All distinct values of ${field.display_name}`,
+      text: t`All distinct values of ${ field.display_name }`,
       icon: "table2",
       link: getQuestionUrl({
         dbId: database.id,

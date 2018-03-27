@@ -22,6 +22,8 @@ const SettingsXrayForm = ({ settings, elements, updateSetting }) => {
     maxCost.value = "extended";
   }
 
+  const noteText = <strong>${ t`Note:` }</strong>;
+
   return (
     <div>
       <div className="mx2">
@@ -42,9 +44,7 @@ const SettingsXrayForm = ({ settings, elements, updateSetting }) => {
           {t`If you're having performance issues related to x-ray usage you can cap how expensive x-rays are allowed to be.`}
         </p>
         <p className="text-paragraph">
-          <em>{jt`${(
-            <strong>Note:</strong>
-          )} "Extended" is required for viewing time series x-rays.`}</em>
+          <em>{jt`${ noteText } "Extended" is required for viewing time series x-rays.`}</em>
         </p>
 
         <ol className="mt4">

@@ -119,9 +119,9 @@ export default class SegmentForm extends Component {
                 description={
                   segment && segment.id != null
                     ? t`Make changes to your segment and leave an explanatory note.`
-                    : t`Select and add filters to create your new segment for the ${
+                    : t`Select and add filters to create your new segment for the ${ 
                         tableMetadata.display_name
-                      } table`
+                       } table`
                 }
               >
                 <PartialQueryBuilder

@@ -11,7 +11,7 @@ describe("Icon", () => {
   describe("parseViewBox", () => {
     it("should return the proper values from a viewBox", () => {
       const value = 32;
-      const viewBox = `0 0 ${value} ${value}`;
+      const viewBox = `0 0 ${ value } ${ value }`;
 
       expect(parseViewBox(viewBox)).toEqual([value, value]);
     });
@@ -23,8 +23,8 @@ describe("Icon", () => {
       const { width, height, viewBox } = def.attrs;
       const [parsedWidth, parsedHeight] = parseViewBox(viewBox);
 
-      expect(width).toEqual(`${parsedWidth / 2}px`);
-      expect(height).toEqual(`${parsedHeight / 2}px`);
+      expect(width).toEqual(`${ parsedWidth / 2 }px`);
+      expect(height).toEqual(`${ parsedHeight / 2 }px`);
     });
   });
 });

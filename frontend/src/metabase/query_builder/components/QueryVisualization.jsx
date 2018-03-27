@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 import { Link } from "react-router";
-import { t, jt } from "c-3po";
+import { t } from "c-3po";
 import LoadingSpinner from "metabase/components/LoadingSpinner.jsx";
 import Tooltip from "metabase/components/Tooltip";
 import Icon from "metabase/components/Icon";
@@ -119,16 +119,16 @@ export default class QueryVisualization extends Component {
       result.cached &&
       result.average_execution_time > REFRESH_TOOLTIP_THRESHOLD
     ) {
-      runButtonTooltip = t`This question will take approximately ${duration(
-        result.average_execution_time,
-      )} to refresh`;
+      const durationAvgExecution = duration(result.average_execution_time,);
+      runButtonTooltip = t`This question will take approximately ${ durationAvgExecution } to refresh`;
     }
 
     const messages = [];
     if (result && result.cached) {
+      const momentNow = moment(result.updated_at).fromNow();
       messages.push({
         icon: "clock",
-        message: <div>{t`Updated ${moment(result.updated_at).fromNow()}`}</div>,
+        message: <div>{t`Updated ${ momentNow }`}</div>,
       });
     }
     if (
@@ -137,17 +137,15 @@ export default class QueryVisualization extends Component {
       !isObjectDetail &&
       question.display() === "table"
     ) {
+      const rowCountNumber = <strong>{formatNumber(result.row_count)}</strong>;
+      const rowsLength = inflect("row", result.data.rows.length,);
+      const showing = result.data.rows_truncated != null ? t`Showing first ${ rowCountNumber } ${ rowsLength }` : t`Showing ${ rowCountNumber } ${ rowsLength }`;
       messages.push({
         icon: "table2",
         message: (
           // class name is included for the sake of making targeting the element in tests easier
           <div className="ShownRowCount">
-            {jt`${
-              result.data.rows_truncated != null ? t`Showing first` : t`Showing`
-            } ${<strong>{formatNumber(result.row_count)}</strong>} ${inflect(
-              "row",
-              result.data.rows.length,
-            )}`}
+            {showing}
           </div>
         ),
       });

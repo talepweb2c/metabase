@@ -23,14 +23,14 @@ describeE2E("tutorial", () => {
 
   // TODO Atte Keinänen 6/22/17: Failing test, disabled until converted to use Jest and Enzyme
   xit("should guide users through query builder tutorial", async () => {
-    await driver.get(`${server.host}/?new`);
-    await waitForUrl(driver, `${server.host}/?new`);
+    await driver.get(`${ server.host }/?new`);
+    await waitForUrl(driver, `${ server.host }/?new`);
 
     await waitForElementAndClick(driver, ".Modal .Button.Button--primary");
     await waitForElementAndClick(driver, ".Modal .Button.Button--primary");
     await waitForElementAndClick(driver, ".Modal .Button.Button--primary");
 
-    await waitForUrl(driver, `${server.host}/question`);
+    await waitForUrl(driver, `${ server.host }/question`);
     await waitForElement(driver, ".Modal .Button.Button--primary");
     await screenshot(driver, "screenshots/setup-tutorial-qb.png");
     await waitForElementAndClick(driver, ".Modal .Button.Button--primary");

@@ -101,7 +101,7 @@ const migrateDatabaseToNewSchedulingSettings = database => {
       });
     } else {
       console.log(
-        `${MIGRATE_TO_NEW_SCHEDULING_SETTINGS} is no-op as scheduling settings are already set`,
+        `${ MIGRATE_TO_NEW_SCHEDULING_SETTINGS } is no-op as scheduling settings are already set`,
       );
     }
   };

@@ -11,7 +11,7 @@ const EmailAdmin = () => {
   return (
     adminEmail && (
       <span className="QueryError-adminEmail">
-        <a className="no-decoration" href={`mailto:${adminEmail}`}>
+        <a className="no-decoration" href={`mailto:${ adminEmail }`}>
           {adminEmail}
         </a>
       </span>

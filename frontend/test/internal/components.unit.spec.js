@@ -8,7 +8,7 @@ components.map(
     !noSnapshotTest &&
     describe(component.displayName, () => {
       Object.entries(examples).map(([exampleName, element]) =>
-        it(`should render "${exampleName}" correctly`, () => {
+        it(`should render "${ exampleName }" correctly`, () => {
           expect(renderer.create(element).toJSON()).toMatchSnapshot();
         }),
       );

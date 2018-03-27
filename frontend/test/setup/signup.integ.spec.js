@@ -135,7 +135,7 @@ describe("setup wizard", () => {
     expect(nextButton.props().disabled).toBe(true);
 
     const dbPath = path.resolve(__dirname, "../__runner__/test_db_fixture.db");
-    setInputValue(databaseStep.find("input[name='db']"), `file:${dbPath}`);
+    setInputValue(databaseStep.find("input[name='db']"), `file:${ dbPath }`);
 
     expect(nextButton.props().disabled).toBe(undefined);
     clickButton(nextButton);

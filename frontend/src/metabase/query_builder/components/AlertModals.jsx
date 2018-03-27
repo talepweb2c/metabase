@@ -213,10 +213,8 @@ export class AlertEducationalScreen extends Component {
           >
             <RetinaImage src="app/assets/img/alerts/education-illustration-01-raw-data.png" />
             <p
-              className={`${classes} ml2 text-left`}
-            >{jt`When a raw data question ${(
-              <strong>returns any results</strong>
-            )}`}</p>
+              className={`${ classes } ml2 text-left`}
+            >{jt`When a raw data question <strong>returns any results</strong>`}</p>
           </div>
           <div
             className="relative flex align-center flex-reverse pl4"
@@ -224,10 +222,8 @@ export class AlertEducationalScreen extends Component {
           >
             <RetinaImage src="app/assets/img/alerts/education-illustration-02-goal.png" />
             <p
-              className={`${classes} mr2 text-right`}
-            >{jt`When a line or bar ${(
-              <strong>crosses a goal line</strong>
-            )}`}</p>
+              className={`${ classes } mr2 text-right`}
+            >{jt`When a line or bar <strong>crosses a goal line</strong>`}</p>
           </div>
           <div
             className="relative flex align-center"
@@ -235,8 +231,8 @@ export class AlertEducationalScreen extends Component {
           >
             <RetinaImage src="app/assets/img/alerts/education-illustration-03-progress.png" />
             <p
-              className={`${classes} ml2 text-left`}
-            >{jt`When a progress bar ${<strong>reaches its goal</strong>}`}</p>
+              className={`${ classes } ml2 text-left`}
+            >{jt`When a progress bar <strong>reaches its goal</strong>`}</p>
           </div>
         </div>
         <Button
@@ -347,23 +343,22 @@ export class DeleteAlertSection extends Component {
   getConfirmItems() {
     // same as in PulseEdit but with some changes to copy
     return this.props.alert.channels.map(
-      c =>
-        c.channel_type === "email" ? (
-          <span>{jt`This alert will no longer be emailed to ${(
-            <strong>
-              {c.recipients.length} {inflect("address", c.recipients.length)}
-            </strong>
-          )}.`}</span>
+      c => {
+        const recipientsLengthNumberOfAddresses = <strong>
+          {c.recipients.length} {inflect("address", c.recipients.length)}
+        </strong>;
+        const slackChannelDetails = <strong>{c.details && c.details.channel}</strong>;
+        const channelType = <strong>{c.channel_type}</strong>;
+
+        return c.channel_type === "email" ? (
+          <span>{jt`This alert will no longer be emailed to ${ recipientsLengthNumberOfAddresses }.`}</span>
         ) : c.channel_type === "slack" ? (
-          <span>{jt`Slack channel ${(
-            <strong>{c.details && c.details.channel}</strong>
-          )} will no longer get this alert.`}</span>
+          <span>{jt`Slack channel ${ slackChannelDetails } will no longer get this alert.`}</span>
         ) : (
-          <span>{jt`Channel ${(
-            <strong>{c.channel_type}</strong>
-          )} will no longer receive this alert.`}</span>
-        ),
-    );
+          <span>{jt`Channel ${ channelType } will no longer receive this alert.`}</span>
+        );
+      }
+      ,);
   }
 
   render() {
@@ -645,16 +640,8 @@ export class RawDataAlertTip extends Component {
 }
 
 export const MultiSeriesAlertTip = () => (
-  <div>{jt`${(
-    <strong>Heads up:</strong>
-  )} Goal-based alerts aren't yet supported for charts with more than one line, so this alert will be sent whenever the chart has ${(
-    <em>results</em>
-  )}.`}</div>
+  <div>{jt`<strong>Heads up:</strong> Goal-based alerts aren't yet supported for charts with more than one line, so this alert will be sent whenever the chart has <em>results</em>.`}</div>
 );
 export const NormalAlertTip = () => (
-  <div>{jt`${(
-    <strong>Tip:</strong>
-  )} This kind of alert is most useful when your saved question doesn’t ${(
-    <em>usually</em>
-  )} return any results, but you want to know when it does.`}</div>
+  <div>{jt`<strong>Tip:</strong> This kind of alert is most useful when your saved question doesn’t <em>usually</em> return any results, but you want to know when it does.`}</div>
 );

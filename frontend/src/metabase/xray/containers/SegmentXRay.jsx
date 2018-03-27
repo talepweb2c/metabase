@@ -96,15 +96,15 @@ class SegmentXRay extends Component {
 
     if (currentModelType === comparableModelType) {
       push(
-        `/xray/compare/${currentModelType}s/${features.model.id}/${
+        `/xray/compare/${ currentModelType }s/${ features.model.id }/${ 
           comparable.id
-        }/approximate`,
+         }/approximate`,
       );
     } else {
       push(
-        `/xray/compare/${currentModelType}/${
+        `/xray/compare/${ currentModelType }/${ 
           features.model.id
-        }/${comparableModelType}/${comparable.id}/approximate`,
+         }/${ comparableModelType }/${ comparable.id }/approximate`,
       );
     }
   }
@@ -134,7 +134,7 @@ class SegmentXRay extends Component {
                 <div>
                   <Link
                     className="my2 px2 text-bold text-brand-hover inline-block bordered bg-white p1 h4 no-decoration shadowed rounded"
-                    to={`/xray/table/${features.table.id}/approximate`}
+                    to={`/xray/table/${ features.table.id }/approximate`}
                   >
                     {features.table.display_name}
                   </Link>

@@ -274,7 +274,7 @@ export default class FilterPopover extends Component {
         }
         return (
           <span key={index}>
-            {t`not implemented ${operatorField.type}`}{" "}
+            {t`not implemented ${ operatorField.type }`}{" "}
             {operator.multi ? t`true` : t`false`}
           </span>
         );

@@ -187,7 +187,7 @@ describe("xray integration tests", () => {
       // and then witch the compared items
       const store = await createTestStore();
       store.pushPath(
-        `/xray/compare/cards/${segmentQuestion.id()}/${segmentQuestion2.id()}/approximate`,
+        `/xray/compare/cards/${ segmentQuestion.id() }/${ segmentQuestion2.id() }/approximate`,
       );
 
       const app = mount(store.getAppContainer());
@@ -204,7 +204,7 @@ describe("xray integration tests", () => {
   describe("segment x-rays", async () => {
     it("should render the segment x-ray page without errors", async () => {
       const store = await createTestStore();
-      store.pushPath(`/xray/segment/${segmentId}/approximate`);
+      store.pushPath(`/xray/segment/${ segmentId }/approximate`);
 
       const app = mount(store.getAppContainer());
       await store.waitForActions([FETCH_SEGMENT_XRAY], { timeout: 20000 });
@@ -220,12 +220,12 @@ describe("xray integration tests", () => {
         .find(Popover);
       expect(
         comparisonPopover.find(
-          `a[href="/xray/compare/segment/${segmentId}/table/1/approximate"]`,
+          `a[href="/xray/compare/segment/${ segmentId }/table/1/approximate"]`,
         ).length,
       ).toBe(1);
       expect(
         comparisonPopover.find(
-          `a[href="/xray/compare/segments/${segmentId}/${segmentId2}/approximate"]`,
+          `a[href="/xray/compare/segments/${ segmentId }/${ segmentId2 }/approximate"]`,
         ).length,
       ).toBe(1);
     });
@@ -233,7 +233,7 @@ describe("xray integration tests", () => {
     it("should render the segment-by-segment comparison page without errors", async () => {
       const store = await createTestStore();
       store.pushPath(
-        `/xray/compare/segments/${segmentId}/${segmentId2}/approximate`,
+        `/xray/compare/segments/${ segmentId }/${ segmentId2 }/approximate`,
       );
 
       const app = mount(store.getAppContainer());
@@ -248,7 +248,7 @@ describe("xray integration tests", () => {
 
     it("should render the segment-by-table comparison page without errors", async () => {
       const store = await createTestStore();
-      store.pushPath(`/xray/compare/segment/${segmentId}/table/1/approximate`);
+      store.pushPath(`/xray/compare/segment/${ segmentId }/table/1/approximate`);
 
       const app = mount(store.getAppContainer());
       await store.waitForActions([FETCH_TWO_TYPES_COMPARISON_XRAY], {
@@ -272,7 +272,7 @@ describe("xray integration tests", () => {
       console.log(leftSidePopover.debug());
       expect(
         leftSidePopover.find(
-          `a[href="/xray/compare/segment/${segmentId}/table/1/approximate"]`,
+          `a[href="/xray/compare/segment/${ segmentId }/table/1/approximate"]`,
         ).length,
       ).toBe(0);
       // should filter out the current table
@@ -287,13 +287,13 @@ describe("xray integration tests", () => {
       console.log(rightSidePopover.debug());
       expect(
         rightSidePopover.find(
-          `a[href="/xray/compare/segments/${segmentId}/${segmentId2}/approximate"]`,
+          `a[href="/xray/compare/segments/${ segmentId }/${ segmentId2 }/approximate"]`,
         ).length,
       ).toBe(1);
       // should filter out the current segment
       expect(
         rightSidePopover.find(
-          `a[href="/xray/compare/segments/${segmentId}/${segmentId}/approximate"]`,
+          `a[href="/xray/compare/segments/${ segmentId }/${ segmentId }/approximate"]`,
         ).length,
       ).toBe(0);
     });
@@ -301,7 +301,7 @@ describe("xray integration tests", () => {
     it("should render the segment - by - raw query question comparison page without errors", async () => {
       const store = await createTestStore();
       store.pushPath(
-        `/xray/compare/segment/${segmentId}/card/${segmentQuestion.id()}/approximate`,
+        `/xray/compare/segment/${ segmentId }/card/${ segmentQuestion.id() }/approximate`,
       );
 
       const app = mount(store.getAppContainer());
@@ -365,7 +365,7 @@ describe("xray integration tests", () => {
 
       await store.waitForActions([FETCH_CARD_XRAY], { timeout: 20000 });
       expect(store.getPath()).toBe(
-        `/xray/card/${timeBreakoutQuestion.id()}/extended`,
+        `/xray/card/${ timeBreakoutQuestion.id() }/extended`,
       );
 
       const cardXRay = app.find(CardXRay);
@@ -391,7 +391,7 @@ describe("xray integration tests", () => {
       click(xrayOptionIcon);
 
       await store.waitForActions([FETCH_SEGMENT_XRAY], { timeout: 20000 });
-      expect(store.getPath()).toBe(`/xray/segment/${segmentId}/approximate`);
+      expect(store.getPath()).toBe(`/xray/segment/${ segmentId }/approximate`);
 
       const segmentXRay = app.find(SegmentXRay);
       expect(segmentXRay.length).toBe(1);

@@ -87,7 +87,7 @@ export default class ChartClickActions extends Component {
         MetabaseAnalytics.trackEvent(
           "Actions",
           "Executed Click Action",
-          `${action.section || ""}:${action.name || ""}`,
+          `${ action.section || "" }:${ action.name || "" }`,
         );
         onChangeCardAndRun({ nextCard: nextQuestion.card() });
       }
@@ -113,7 +113,7 @@ export default class ChartClickActions extends Component {
               MetabaseAnalytics.trackEvent(
                 "Action",
                 "Executed Click Action",
-                `${popoverAction.section || ""}:${popoverAction.name || ""}`,
+                `${ popoverAction.section || "" }:${ popoverAction.name || "" }`,
               );
             }
             onChangeCardAndRun({ nextCard });

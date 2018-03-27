@@ -10,7 +10,7 @@ const DirectionalButton = ({ direction = "back", onClick }) => (
       boxShadow: "0 2px 4px 0 #DCE1E4",
     }}
   >
-    <Icon name={`${direction}Arrow`} />
+    <Icon name={`${ direction }Arrow`} />
   </div>
 );
 

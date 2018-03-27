@@ -319,9 +319,9 @@ class LegacySelect extends Component {
             .map(value => optionNameFn(value))
             .sort()
             .map((name, index) => (
-              <span key={index} className="mr1">{`${name}${
+              <span key={index} className="mr1">{`${ name }${
                 index !== values.length - 1 ? ",   " : ""
-              }`}</span>
+               }`}</span>
             ))
         ) : (
           <span className="mr1">{selectedName}</span>

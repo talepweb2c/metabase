@@ -306,7 +306,7 @@ describe("TokenField", () => {
 
   describe("key selection", () => {
     [KEYCODE_TAB, KEYCODE_ENTER, KEYCODE_COMMA].map(key =>
-      it(`should allow the user to use arrow keys and then ${key} to select a recipient`, () => {
+      it(`should allow the user to use arrow keys and then ${ key } to select a recipient`, () => {
         const spy = jest.fn();
 
         component = mount(

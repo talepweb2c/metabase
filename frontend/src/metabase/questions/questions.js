@@ -124,8 +124,8 @@ function createUndo(type, actions, collection) {
           {inflect(
             null,
             undo.count,
-            t`${undo.count} question was ${type}`,
-            t`${undo.count} questions were ${type}`,
+            t`${ undo.count } question was ${ type }`,
+            t`${ undo.count } questions were ${ type }`,
           )}
           {undo.count === 1 &&
             collection && (

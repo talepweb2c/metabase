@@ -76,7 +76,7 @@ export default class DeleteModalWithConfirm extends Component {
             })}
             onClick={this.onDelete}
           >
-            {t`Delete this ${objectType}`}
+            {t`Delete this ${ objectType }`}
           </button>
         </div>
       </ModalContent>

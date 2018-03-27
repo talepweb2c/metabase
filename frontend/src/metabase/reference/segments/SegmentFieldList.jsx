@@ -132,7 +132,7 @@ export default class SegmentFieldList extends Component {
         <EditableReferenceHeader
           type="segment"
           headerIcon="segment"
-          name={t`Fields in ${segment.name}`}
+          name={t`Fields in ${ segment.name }`}
           user={user}
           isEditing={isEditing}
           startEditing={startEditing}
@@ -167,9 +167,9 @@ export default class SegmentFieldList extends Component {
                           <Field
                             field={entity}
                             foreignKeys={foreignKeys}
-                            url={`/reference/segments/${segment.id}/fields/${
+                            url={`/reference/segments/${ segment.id }/fields/${ 
                               entity.id
-                            }`}
+                             }`}
                             icon={getIconForField(entity)}
                             isEditing={isEditing}
                             formField={fields[entity.id]}

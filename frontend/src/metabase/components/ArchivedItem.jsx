@@ -22,7 +22,7 @@ const ArchivedItem = ({
         tooltip={
           type === "card"
             ? t`Unarchive this question`
-            : t`Unarchive this ${type}`
+            : t`Unarchive this ${ type }`
         }
       >
         <Icon

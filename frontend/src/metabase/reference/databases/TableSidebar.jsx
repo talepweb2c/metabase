@@ -16,7 +16,7 @@ const TableSidebar = ({ database, table, style, className, showXray }) => (
         className="py4"
         crumbs={[
           [t`Databases`, "/reference/databases"],
-          [database.name, `/reference/databases/${database.id}`],
+          [database.name, `/reference/databases/${ database.id }`],
           [table.name],
         ]}
         inSidebar={true}
@@ -25,29 +25,29 @@ const TableSidebar = ({ database, table, style, className, showXray }) => (
     </div>
     <ol>
       <SidebarItem
-        key={`/reference/databases/${database.id}/tables/${table.id}`}
-        href={`/reference/databases/${database.id}/tables/${table.id}`}
+        key={`/reference/databases/${ database.id }/tables/${ table.id }`}
+        href={`/reference/databases/${ database.id }/tables/${ table.id }`}
         icon="document"
         name={t`Details`}
       />
       <SidebarItem
-        key={`/reference/databases/${database.id}/tables/${table.id}/fields`}
-        href={`/reference/databases/${database.id}/tables/${table.id}/fields`}
+        key={`/reference/databases/${ database.id }/tables/${ table.id }/fields`}
+        href={`/reference/databases/${ database.id }/tables/${ table.id }/fields`}
         icon="fields"
         name={t`Fields in this table`}
       />
       <SidebarItem
-        key={`/reference/databases/${database.id}/tables/${table.id}/questions`}
-        href={`/reference/databases/${database.id}/tables/${
+        key={`/reference/databases/${ database.id }/tables/${ table.id }/questions`}
+        href={`/reference/databases/${ database.id }/tables/${ 
           table.id
-        }/questions`}
+         }/questions`}
         icon="all"
         name={t`Questions about this table`}
       />
       {showXray && (
         <SidebarItem
-          key={`/xray/table/${table.id}/approximate`}
-          href={`/xray/table/${table.id}/approximate`}
+          key={`/xray/table/${ table.id }/approximate`}
+          href={`/xray/table/${ table.id }/approximate`}
           icon="beaker"
           name={t`X-ray this table`}
         />

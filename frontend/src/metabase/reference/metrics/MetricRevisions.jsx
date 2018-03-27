@@ -85,7 +85,7 @@ export default class MetricRevisions extends Component {
     return (
       <div style={style} className="full">
         <ReferenceHeader
-          name={t`Revision history for ${this.props.metric.name}`}
+          name={t`Revision history for ${ this.props.metric.name }`}
           headerIcon="ruler"
         />
         <LoadingAndErrorWrapper

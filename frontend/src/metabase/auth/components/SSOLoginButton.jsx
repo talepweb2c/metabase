@@ -11,11 +11,12 @@ const propTypes = {
 class SSOLoginButton extends Component {
   render() {
     const { provider } = this.props;
+    const capitalProvider = capitalize(provider);
     return (
       <div className="relative z2 bg-white p2 cursor-pointer shadow-hover text-centered sm-text-left rounded block sm-inline-block bordered shadowed">
         <div className="flex align-center">
           <Icon className="mr1" name={provider} />
-          <h4>{t`Sign in with ${capitalize(provider)}`}</h4>
+          <h4>{t`Sign in with ${ capitalProvider }`}</h4>
         </div>
       </div>
     );

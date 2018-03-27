@@ -40,7 +40,7 @@ class SearchResults extends Component {
             <HeaderWithBack
               name={
                 totalCount != null
-                  ? `${totalCount} ${inflect("result", totalCount)}`
+                  ? `${ totalCount } ${ inflect("result", totalCount) }`
                   : t`Search results`
               }
             />

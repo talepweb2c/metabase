@@ -55,13 +55,14 @@ export default class QueryModeButton extends Component {
         ? () => this.setState({ isOpen: true })
         : () => onSetMode("native");
       tooltip = nativeForm
-        ? t`View the ${nativeQueryName}`
-        : t`Switch to ${nativeQueryName}`;
+        ? t`View the ${ nativeQueryName }`
+        : t`Switch to ${ nativeQueryName }`;
     } else if (mode === "native" && allowNativeToQuery) {
       onClick = () => onSetMode("query");
       tooltip = t`Switch to Builder`;
     }
 
+    const capitalNativeQueryName = capitalize(nativeQueryName);
     return (
       <div>
         <Tooltip tooltip={tooltip}>
@@ -84,7 +85,7 @@ export default class QueryModeButton extends Component {
         >
           <div className="p4">
             <div className="mb3 flex flex-row flex-full align-center justify-between">
-              <h2>{t`${capitalize(nativeQueryName)} for this question`}</h2>
+              <h2>{t`${ capitalNativeQueryName } for this question`}</h2>
               <span
                 className="cursor-pointer"
                 onClick={() => this.setState({ isOpen: false })}
@@ -108,7 +109,7 @@ export default class QueryModeButton extends Component {
                   onSetMode(targetType);
                   this.setState({ isOpen: false });
                 }}
-              >{t`Convert this question to ${nativeQueryName}`}</a>
+              >{t`Convert this question to ${ nativeQueryName }`}</a>
             </div>
           </div>
         </Modal>

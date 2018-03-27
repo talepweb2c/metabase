@@ -28,7 +28,13 @@
            [org.fit.cssbox.io DefaultDOMSource StreamDocumentSource]
            org.fit.cssbox.layout.BrowserCanvas
            org.fit.cssbox.misc.Base64Coder
-           org.joda.time.DateTimeZone))
+           org.joda.time.DateTimeZone
+           java.util.Locale))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 ;; NOTE: hiccup does not escape content by default so be sure to use "h" to escape any user-controlled content :-/
 
@@ -300,7 +306,7 @@
               ;; If this column is remapped from another, it's already
               ;; in the output and should be skipped
               :when (not (:remapped_from maybe-remapped-col))]
-          (str/upper-case (name (or (:display_name col) (:name col)))))
+          (str-upper-case-en (name (or (:display_name col) (:name col)))))
    :bar-width (when include-bar? 99)})
 
 (defn- query-results->row-seq

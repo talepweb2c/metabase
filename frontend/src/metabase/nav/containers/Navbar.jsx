@@ -45,7 +45,7 @@ const AdminNavItem = ({ name, path, currentPath }) => (
   <li>
     <Link
       to={path}
-      data-metabase-event={`NavBar;${name}`}
+      data-metabase-event={`NavBar;${ name }`}
       className={cx("NavItem py1 px2 no-decoration", {
         "is--selected": currentPath.startsWith(path),
       })}
@@ -58,7 +58,7 @@ const AdminNavItem = ({ name, path, currentPath }) => (
 const MainNavLink = ({ to, name, eventName, icon }) => (
   <Link
     to={to}
-    data-metabase-event={`NavBar;${eventName}`}
+    data-metabase-event={`NavBar;${ eventName }`}
     style={BUTTON_PADDING_STYLES.navButton}
     className={
       "NavItem cursor-pointer flex-full text-white text-bold no-decoration flex align-center px2 transition-background"

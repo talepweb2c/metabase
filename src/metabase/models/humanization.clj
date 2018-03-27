@@ -13,15 +13,34 @@
             [clojure.tools.logging :as log]
             [metabase.models.setting :as setting :refer [defsetting]]
             [metabase.util.infer-spaces :refer [infer-spaces]]
-            [toucan.db :as db]))
+            [toucan.db :as db])
+  (:import java.util.Locale))
+
+(defn str-lower-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toLowerCase strng (Locale/ENGLISH)))
+
+(defn str-capitalize-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (if (< (count strng) 1)
+    (.toUpperCase strng (Locale/ENGLISH))
+    (str (.toUpperCase (subs strng 0 1) (Locale/ENGLISH))
+         (.toLowerCase (subs strng 1) (Locale/ENGLISH)))))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 (def ^:private ^:const acronyms
   #{"id" "url" "ip" "uid" "uuid" "guid"})
 
 (defn- capitalize-word [word]
-  (if (contains? acronyms (str/lower-case word))
-    (str/upper-case word)
-    (str/capitalize word)))
+  (if (contains? acronyms (str-lower-case-en word))
+    (str-upper-case-en word)
+    (str-capitalize-en word)))
 
 
 (declare humanization-strategy)

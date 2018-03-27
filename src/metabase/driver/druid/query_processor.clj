@@ -16,7 +16,18 @@
   (:import java.util.TimeZone
            [metabase.query_processor.interface AgFieldRef DateTimeField DateTimeValue Expression Field
             RelativeDateTimeValue Value]
-           org.joda.time.DateTimeZone))
+           org.joda.time.DateTimeZone
+           java.util.Locale))
+
+(defn str-lower-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toLowerCase strng (Locale/ENGLISH)))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 (def ^:private ^:const topN-max-results
   "Maximum number of rows the topN query in Druid should return. Huge values cause significant issues with the engine.
@@ -504,7 +515,7 @@
    ;; if this is a case-insensitive search we'll lower-case the search pattern and add an extraction function to
    ;; lower-case the dimension values we're matching against
    :pattern      (cond-> pattern
-                   (not case-sensitive?) str/lower-case)
+                   (not case-sensitive?) str-lower-case-en)
    :extractionFn (when-not case-sensitive?
                    {:type :lower})})
 

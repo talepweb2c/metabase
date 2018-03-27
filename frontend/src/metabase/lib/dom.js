@@ -252,5 +252,5 @@ export function clipPathReference(id: string): string {
   // add the current page URL (with fragment removed) to support pages with <base> tag.
   // https://stackoverflow.com/questions/18259032/using-base-tag-on-a-page-that-contains-svg-marker-elements-fails-to-render-marke
   const url = window.location.href.replace(/#.*$/, "") + "#" + id;
-  return `url(${url})`;
+  return `url(${ url })`;
 }

@@ -429,8 +429,8 @@ export function loadIcon(name: string) {
     // down by half currently
     if (attrs && attrs.viewBox) {
       const [width, height] = parseViewBox(attrs.viewBox);
-      icon.attrs.width = `${width / 2}px`;
-      icon.attrs.height = `${height / 2}px`;
+      icon.attrs.width = `${ width / 2 }px`;
+      icon.attrs.height = `${ height / 2 }px`;
     }
     icon.path = path;
     icon.svg = svg;

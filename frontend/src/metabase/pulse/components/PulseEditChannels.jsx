@@ -184,6 +184,8 @@ export default class PulseEditChannels extends Component {
   renderChannel(channel, index, channelSpec) {
     let isValid =
       this.props.pulseIsValid && channelIsValid(channel, channelSpec);
+    const channelSpecType = CHANNEL_NOUN_PLURAL[channelSpec && channelSpec.type] || t`Messages`;
+
     return (
       <li key={index} className="py2">
         {channelSpec.error && (
@@ -219,9 +221,7 @@ export default class PulseEditChannels extends Component {
               )}
               scheduleOptions={channelSpec.schedules}
               textBeforeInterval={t`Sent`}
-              textBeforeSendTime={t`${CHANNEL_NOUN_PLURAL[
-                channelSpec && channelSpec.type
-              ] || t`Messages`} will be sent at`}
+              textBeforeSendTime={t`${ channelSpecType } will be sent at`}
               onScheduleChange={this.onChannelScheduleChange.bind(this, index)}
             />
           )}
@@ -233,7 +233,7 @@ export default class PulseEditChannels extends Component {
               normalText={
                 channelSpec.type === "email"
                   ? t`Send email now`
-                  : t`Send to ${channelSpec.name} now`
+                  : t`Send to ${ channelSpec.name } now`
               }
               activeText={t`Sending…`}
               failedText={t`Sending failed`}
@@ -279,9 +279,9 @@ export default class PulseEditChannels extends Component {
           <ul className="bg-grey-0 px3">{channels}</ul>
         ) : channels.length > 0 && !channelSpec.configured ? (
           <div className="p4 text-centered">
-            <h3 className="mb2">{t`${
+            <h3 className="mb2">{t`${ 
               channelSpec.name
-            } needs to be set up by an administrator.`}</h3>
+             } needs to be set up by an administrator.`}</h3>
             <ChannelSetupMessage user={user} channels={[channelSpec.name]} />
           </div>
         ) : null}

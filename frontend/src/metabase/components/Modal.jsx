@@ -67,7 +67,7 @@ export class WindowModal extends Component {
       this.props.className,
       ...["small", "medium", "wide", "tall"]
         .filter(type => this.props[type])
-        .map(type => `Modal--${type}`),
+        .map(type => `Modal--${ type }`),
     );
     return (
       <OnClickOutsideWrapper handleDismissal={this.handleDismissal.bind(this)}>

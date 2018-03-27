@@ -21,34 +21,34 @@ const SegmentSidebar = ({ segment, user, style, className }) => (
         />
       </div>
       <SidebarItem
-        key={`/reference/segments/${segment.id}`}
-        href={`/reference/segments/${segment.id}`}
+        key={`/reference/segments/${ segment.id }`}
+        href={`/reference/segments/${ segment.id }`}
         icon="document"
         name={t`Details`}
       />
       <SidebarItem
-        key={`/reference/segments/${segment.id}/fields`}
-        href={`/reference/segments/${segment.id}/fields`}
+        key={`/reference/segments/${ segment.id }/fields`}
+        href={`/reference/segments/${ segment.id }/fields`}
         icon="fields"
         name={t`Fields in this segment`}
       />
       <SidebarItem
-        key={`/reference/segments/${segment.id}/questions`}
-        href={`/reference/segments/${segment.id}/questions`}
+        key={`/reference/segments/${ segment.id }/questions`}
+        href={`/reference/segments/${ segment.id }/questions`}
         icon="all"
         name={t`Questions about this segment`}
       />
       <SidebarItem
-        key={`/xray/segment/${segment.id}/approximate`}
-        href={`/xray/segment/${segment.id}/approximate`}
+        key={`/xray/segment/${ segment.id }/approximate`}
+        href={`/xray/segment/${ segment.id }/approximate`}
         icon="all"
         name={t`X-ray this segment`}
       />
       {user &&
         user.is_superuser && (
           <SidebarItem
-            key={`/reference/segments/${segment.id}/revisions`}
-            href={`/reference/segments/${segment.id}/revisions`}
+            key={`/reference/segments/${ segment.id }/revisions`}
+            href={`/reference/segments/${ segment.id }/revisions`}
             icon="history"
             name={t`Revision history`}
           />

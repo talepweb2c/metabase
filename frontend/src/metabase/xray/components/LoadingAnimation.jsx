@@ -4,7 +4,7 @@ import Icon from "metabase/components/Icon";
 const RotatingGear = ({ name, speed, size, delay }) => (
   <div
     style={{
-      animation: `${name} ${speed}ms linear ${delay}ms infinite`,
+      animation: `${ name } ${ speed }ms linear ${ delay }ms infinite`,
     }}
   >
     <Icon name="gear" size={size} />

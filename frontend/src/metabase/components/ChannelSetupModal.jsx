@@ -28,18 +28,15 @@ export default class ChannelSetupModal extends Component {
       channels,
     } = this.props;
 
+    const channelsList = channels.join(t` or `,)
     return (
       <ModalContent
         onClose={onClose}
         fullPageModal={fullPageModal}
         title={
           user.is_superuser
-            ? t`To send ${entityNamePlural}, you'll need to set up ${channels.join(
-                t` or `,
-              )} integration.`
-            : t`To send ${entityNamePlural}, an admin needs to set up ${channels.join(
-                t` or `,
-              )} integration.`
+            ? t`To send ${ entityNamePlural }, you'll need to set up ${ channelsList } integration.`
+            : t`To send ${ entityNamePlural }, an admin needs to set up ${ channelsList } integration.`
         }
       >
         <div

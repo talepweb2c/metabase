@@ -143,6 +143,7 @@ export default class Progress extends Component {
     };
     const isClickable = visualizationIsClickable(clicked);
 
+    const goalFormatted = formatValue(goal, {comma: true,});
     return (
       <div className={cx(this.props.className, "flex layout-centered")}>
         <div
@@ -204,9 +205,7 @@ export default class Progress extends Component {
           </div>
           <div className="mt1">
             <span className="float-left">0</span>
-            <span className="float-right">{t`Goal ${formatValue(goal, {
-              comma: true,
-            })}`}</span>
+            <span className="float-right">{t`Goal ${ goalFormatted }`}</span>
           </div>
         </div>
       </div>

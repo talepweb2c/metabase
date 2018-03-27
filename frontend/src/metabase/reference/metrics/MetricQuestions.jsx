@@ -72,7 +72,7 @@ export default class MetricQuestions extends Component {
     return (
       <div style={style} className="full">
         <ReferenceHeader
-          name={t`Questions about ${this.props.metric.name}`}
+          name={t`Questions about ${ this.props.metric.name }`}
           type="questions"
           headerIcon="ruler"
         />
@@ -87,8 +87,9 @@ export default class MetricQuestions extends Component {
                   {Object.values(entities)
                     .filter(isQueryable)
                     .map(
-                      (entity, index) =>
-                        entity &&
+                      (entity, index) => {
+                        const momentEntityCreatedAt = moment(entity.created_at,).fromNow();
+                        return entity &&
                         entity.id &&
                         entity.name && (
                           <li className="relative" key={entity.id}>
@@ -96,15 +97,12 @@ export default class MetricQuestions extends Component {
                               id={entity.id}
                               index={index}
                               name={entity.display_name || entity.name}
-                              description={t`Created ${moment(
-                                entity.created_at,
-                              ).fromNow()} by ${entity.creator.common_name}`}
+                              description={t`Created ${ momentEntityCreatedAt } by ${ entity.creator.common_name }`}
                               url={Urls.question(entity.id)}
                               icon={visualizations.get(entity.display).iconName}
                             />
                           </li>
-                        ),
-                    )}
+                        )},)}
                 </List>
               </div>
             ) : (

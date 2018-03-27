@@ -23,7 +23,7 @@ const DashCardParameterMapper = ({ dashcard }) => (
         .concat(dashcard.series || [])
         .map(card => (
           <DashCardCardParameterMapper
-            key={`${dashcard.id},${card.id}`}
+            key={`${ dashcard.id },${ card.id }`}
             dashcard={dashcard}
             card={card}
           />

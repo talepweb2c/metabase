@@ -200,7 +200,7 @@ export default class PeopleListingApp extends Component {
       <Modal
         full
         form
-        title={t`Edit ${user.first_name}'s details`}
+        title={t`Edit ${ user.first_name }'s details`}
         onClose={this.onCloseModal}
       >
         <EditUserForm user={user} submitFn={this.onEditDetails.bind(this)} />
@@ -210,11 +210,15 @@ export default class PeopleListingApp extends Component {
 
   renderUserAddedWithPasswordModal(modalDetails) {
     let { user } = modalDetails;
+    const userEmail = <span className="text-bold">{user.email}</span>;
+    const emailSettings = <Link to="/admin/settings/email" className="link text-bold">
+      ${ t`Email Settings` }
+    </Link>;
 
     return (
       <Modal
         small
-        title={t`${user.first_name} has been added`}
+        title={t`${ user.first_name } has been added`}
         footer={[
           <Button
             onClick={() => this.props.showModal({ type: MODAL_ADD_PERSON })}
@@ -225,9 +229,7 @@ export default class PeopleListingApp extends Component {
       >
         <div className="px4 pb4">
           <div className="pb4">{jt`We couldn’t send them an email invitation,
-                    so make sure to tell them to log in using ${(
-                      <span className="text-bold">{user.email}</span>
-                    )}
+                    so make sure to tell them to log in using ${ userEmail }
                     and this password we’ve generated for them:`}</div>
 
           <PasswordReveal password={user.password} />
@@ -235,11 +237,7 @@ export default class PeopleListingApp extends Component {
           <div
             style={{ paddingLeft: "5em", paddingRight: "5em" }}
             className="pt4 text-centered"
-          >{jt`If you want to be able to send email invites, just go to the ${(
-            <Link to="/admin/settings/email" className="link text-bold">
-              Email Settings
-            </Link>
-          )} page.`}</div>
+          >{jt`If you want to be able to send email invites, just go to the ${ emailSettings } page.`}</div>
         </div>
       </Modal>
     );
@@ -247,11 +245,12 @@ export default class PeopleListingApp extends Component {
 
   renderUserAddedWithInviteModal(modalDetails) {
     let { user } = modalDetails;
+    const userEmail = <span className="text-bold">{user.email}</span>;
 
     return (
       <Modal
         small
-        title={t`${user.first_name} has been added`}
+        title={t`${ user.first_name } has been added`}
         footer={[
           <Button
             onClick={() => this.props.showModal({ type: MODAL_ADD_PERSON })}
@@ -263,9 +262,7 @@ export default class PeopleListingApp extends Component {
         <div
           style={{ paddingLeft: "5em", paddingRight: "5em" }}
           className="pb4"
-        >{jt`We’ve sent an invite to ${(
-          <span className="text-bold">{user.email}</span>
-        )} with instructions to set their password.`}</div>
+        >{jt`We’ve sent an invite to ${ userEmail } with instructions to set their password.`}</div>
       </Modal>
     );
   }
@@ -277,7 +274,7 @@ export default class PeopleListingApp extends Component {
       <Modal
         small
         form
-        title={t`We've re-sent ${user.first_name}'s invite`}
+        title={t`We've re-sent ${ user.first_name }'s invite`}
         footer={[
           <Button primary onClick={this.onCloseModal}>{t`Okay`}</Button>,
         ]}
@@ -294,7 +291,7 @@ export default class PeopleListingApp extends Component {
     return (
       <Modal
         small
-        title={t`Remove ${user.common_name}?`}
+        title={t`Remove ${ user.common_name }?`}
         footer={[
           <Button onClick={this.onCloseModal}>{t`Cancel`}</Button>,
           <Button
@@ -307,7 +304,7 @@ export default class PeopleListingApp extends Component {
         <div className="px4 pb4">
           {t`${
             user.first_name
-          } won't be able to log in anymore. This can't be undone.`}
+           } won't be able to log in anymore. This can't be undone.`}
         </div>
       </Modal>
     );
@@ -319,7 +316,7 @@ export default class PeopleListingApp extends Component {
     return (
       <Modal
         small
-        title={t`Reset ${user.first_name}'s password?`}
+        title={t`Reset ${ user.first_name }'s password?`}
         footer={[
           <Button onClick={this.onCloseModal}>{t`Cancel`}</Button>,
           <Button
@@ -340,7 +337,7 @@ export default class PeopleListingApp extends Component {
     return (
       <Modal
         small
-        title={t`${user.first_name}'s password has been reset`}
+        title={t`${ user.first_name }'s password has been reset`}
         footer={
           <button
             className="Button Button--primary mr2"
@@ -364,7 +361,7 @@ export default class PeopleListingApp extends Component {
     return (
       <Modal
         small
-        title={t`${user.first_name}'s password has been reset`}
+        title={t`${ user.first_name }'s password has been reset`}
         footer={<Button primary onClick={this.onCloseModal}>{t`Done`}</Button>}
         onClose={this.onCloseModal}
       >

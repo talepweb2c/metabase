@@ -153,7 +153,7 @@ const GuideDetailEditor = ({
           <EditLabel>
             {type === "dashboard"
               ? t`Why is this dashboard the most important?`
-              : t`What is useful or interesting about this ${type}?`}
+              : t`What is useful or interesting about this ${ type }?`}
           </EditLabel>
           <textarea
             className={S.guideDetailEditorTextarea}
@@ -167,7 +167,7 @@ const GuideDetailEditor = ({
           <EditLabel>
             {type === "dashboard"
               ? t`Is there anything users of this dashboard should be aware of?`
-              : t`Anything users should be aware of about this ${type}?`}
+              : t`Anything users should be aware of about this ${ type }?`}
           </EditLabel>
           <textarea
             className={S.guideDetailEditorTextarea}

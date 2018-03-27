@@ -35,7 +35,7 @@ import * as actions from "metabase/reference/reference";
 const interestingQuestions = table => {
   return [
     {
-      text: t`Count of ${table.display_name}`,
+      text: t`Count of ${ table.display_name }`,
       icon: { name: "number", scale: 1, viewBox: "8 8 16 16" },
       link: getQuestionUrl({
         dbId: table.db_id,
@@ -44,7 +44,7 @@ const interestingQuestions = table => {
       }),
     },
     {
-      text: t`See raw data for ${table.display_name}`,
+      text: t`See raw data for ${ table.display_name }`,
       icon: "table2",
       link: getQuestionUrl({
         dbId: table.db_id,

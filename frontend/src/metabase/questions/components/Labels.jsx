@@ -54,9 +54,9 @@ class Label extends Component {
                     .darken(0.1)
                     .hex()
                 : icon,
-              boxShadow: `1px 1px 0 ${color(icon)
+              boxShadow: `1px 1px 0 ${ color(icon)
                 .darken(hovered ? 0.1 : 0.2)
-                .hex()}`,
+                .hex() }`,
               transition: "background .3s ease-in-out",
             }}
           >

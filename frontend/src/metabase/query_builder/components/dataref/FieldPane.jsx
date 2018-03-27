@@ -153,7 +153,7 @@ export default class FieldPane extends Component {
         !_.some(query.breakouts(), this.isBreakoutWithCurrentField)
       ) {
         useForCurrentQuestion.push(
-          <UseForButton title={t`Group by ${name}`} onClick={this.groupBy} />,
+          <UseForButton title={t`Group by ${ name }`} onClick={this.groupBy} />,
         );
       }
     }
@@ -162,7 +162,7 @@ export default class FieldPane extends Component {
       usefulQuestions.push(
         <QueryButton
           icon="number"
-          text={t`Sum of all values of ${fieldName}`}
+          text={t`Sum of all values of ${ fieldName }`}
           onClick={this.setQuerySum}
         />,
       );
@@ -170,13 +170,12 @@ export default class FieldPane extends Component {
     usefulQuestions.push(
       <QueryButton
         icon="table"
-        text={t`All distinct values of ${fieldName}`}
+        text={t`All distinct values of ${ fieldName }`}
         onClick={this.setQueryDistinct}
       />,
     );
-    let queryCountGroupedByText = t`Number of ${inflection.pluralize(
-      tableName,
-    )} grouped by ${fieldName}`;
+    const pluralTableName = inflection.pluralize(tableName,);
+    let queryCountGroupedByText = t`Number of ${ pluralTableName } grouped by ${ fieldName }`;
     if (validBreakout) {
       usefulQuestions.push(
         <QueryButton

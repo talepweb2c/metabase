@@ -110,7 +110,7 @@ class FieldXRay extends Component {
                 <div className="full">
                   <Link
                     className="my2 px2 text-bold text-brand-hover inline-block bordered bg-white p1 h4 no-decoration rounded shadowed"
-                    to={`/xray/table/${features.table.id}/approximate`}
+                    to={`/xray/table/${ features.table.id }/approximate`}
                   >
                     {features.table.display_name}
                   </Link>

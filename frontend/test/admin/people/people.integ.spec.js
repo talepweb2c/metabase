@@ -72,7 +72,7 @@ describe("admin/people", () => {
       click(addUserModal.find(".Button.Button--primary"));
 
       const usersTable = app.find(".ContentTable");
-      const userRow = usersTable.find(`td[children="${email}"]`).closest("tr");
+      const userRow = usersTable.find(`td[children="${ email }"]`).closest("tr");
       expect(
         userRow
           .find("td")
@@ -80,7 +80,7 @@ describe("admin/people", () => {
           .find("span")
           .last()
           .text(),
-      ).toBe(`${firstName} ${lastName}`);
+      ).toBe(`${ firstName } ${ lastName }`);
 
       // add admin permissions
       const userGroupSelect = userRow.find(UserGroupSelect);
@@ -121,7 +121,7 @@ describe("admin/people", () => {
       await store.waitForActions([UPDATE_USER]);
 
       const updatedUserRow = usersTable
-        .find(`td[children="${email}x"]`)
+        .find(`td[children="${ email }x"]`)
         .closest("tr");
       expect(
         updatedUserRow
@@ -130,7 +130,7 @@ describe("admin/people", () => {
           .find("span")
           .last()
           .text(),
-      ).toBe(`${firstName}x ${lastName}x`);
+      ).toBe(`${ firstName }x ${ lastName }x`);
 
       click(userRow.find(UserActionsSelect));
       click(app.find(".TestPopover").find('li[children="Reset Password"]'));

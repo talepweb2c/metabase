@@ -36,10 +36,10 @@ export const databaseToForeignKeys = database =>
           id: field.id,
           name:
             table.schema && table.schema !== "public"
-              ? `${titleize(humanize(table.schema))}.${table.display_name} → ${
+              ? `${ titleize(humanize(table.schema)) }.${ table.display_name } → ${ 
                   field.display_name
-                }`
-              : `${table.display_name} → ${field.display_name}`,
+                 }`
+              : `${ table.display_name } → ${ field.display_name }`,
           description: field.description,
         }))
         .reduce((map, foreignKey) => assoc(map, foreignKey.id, foreignKey), {})
@@ -48,9 +48,9 @@ export const databaseToForeignKeys = database =>
 export const fieldsToFormFields = fields =>
   Object.keys(fields)
     .map(key => [
-      `${key}.display_name`,
-      `${key}.special_type`,
-      `${key}.fk_target_field_id`,
+      `${ key }.display_name`,
+      `${ key }.special_type`,
+      `${ key }.fk_target_field_id`,
     ])
     .reduce((array, keys) => array.concat(keys), []);
 

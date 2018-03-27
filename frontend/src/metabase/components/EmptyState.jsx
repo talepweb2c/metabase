@@ -43,11 +43,11 @@ const EmptyState = ({
     {icon && <Icon name={icon} size={40} />}
     {image && (
       <img
-        src={`${image}.png`}
+        src={`${ image }.png`}
         width="300px"
         height={imageHeight}
         alt={message}
-        srcSet={`${image}@2x.png 2x`}
+        srcSet={`${ image }@2x.png 2x`}
         className={imageClassName}
       />
     )}

@@ -63,7 +63,7 @@ describe("FieldList", () => {
     const component = mount(getFieldList(query, fieldOptions));
 
     expect(
-      component.find(`.List-item-title[children="${expressionName}"]`).length,
+      component.find(`.List-item-title[children="${ expressionName }"]`).length,
     ).toBe(1);
   });
 
@@ -94,7 +94,7 @@ describe("FieldList", () => {
     // TODO: This is pretty awkward – each list item could have its own React component for easier traversal
     // Maybe also TestTooltip should provide an interface (like `tooltipWrapper.instance().show()`) for toggling it?
     const tooltipTarget = component
-      .find(`.List-item-title[children="${segment.name}"]`)
+      .find(`.List-item-title[children="${ segment.name }"]`)
       .first()
       .closest(".List-item")
       .find(".QuestionTooltipTarget")

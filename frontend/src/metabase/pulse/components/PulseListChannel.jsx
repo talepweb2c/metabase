@@ -104,7 +104,7 @@ export default class PulseListChannel extends Component {
               <div className="flex align-center rounded bg-green text-white text-bold">
                 <div className="pl2">{t`You get this ${
                   channel.channel_type
-                }`}</div>
+                 }`}</div>
                 <Icon
                   className="p2 text-grey-1 text-white-hover cursor-pointer"
                   name="close"
@@ -118,7 +118,7 @@ export default class PulseListChannel extends Component {
                 onClick={this.subscribe}
               >
                 <Icon className="p2" name="add" size={12} />
-                <div className="pr2">{t`Get this ${channel.channel_type}`}</div>
+                <div className="pr2">{t`Get this ${ channel.channel_type }`}</div>
               </div>
             ) : null}
           </div>

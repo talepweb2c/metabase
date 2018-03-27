@@ -37,14 +37,14 @@ const GuideDetail = ({
   };
   const link = typeToLink[type];
   const typeToLearnMoreLink = {
-    metric: `/reference/metrics/${entity.id}`,
-    segment: `/reference/segments/${entity.id}`,
-    table: `/reference/databases/${entity.db_id}/tables/${entity.id}`,
+    metric: `/reference/metrics/${ entity.id }`,
+    segment: `/reference/segments/${ entity.id }`,
+    table: `/reference/databases/${ entity.db_id }/tables/${ entity.id }`,
   };
   const learnMoreLink = typeToLearnMoreLink[type];
 
   const linkClass = typeToLinkClass[type];
-  const linkHoverClass = `${typeToLinkClass[type]}-hover`;
+  const linkHoverClass = `${ typeToLinkClass[type] }-hover`;
   const bgClass = typeToBgClass[type];
   const hasLearnMore =
     type === "metric" || type === "segment" || type === "table";
@@ -77,8 +77,8 @@ const GuideDetail = ({
       <div className="mt2">
         <ContextHeading>
           {type === "dashboard"
-            ? t`Why this ${type} is important`
-            : t`Why this ${type} is interesting`}
+            ? t`Why this ${ type } is important`
+            : t`Why this ${ type } is interesting`}
         </ContextHeading>
 
         <ContextContent empty={!points_of_interest}>
@@ -90,7 +90,7 @@ const GuideDetail = ({
 
         <div className="mt2">
           <ContextHeading>
-            {t`Things to be aware of about this ${type}`}
+            {t`Things to be aware of about this ${ type }`}
           </ContextHeading>
 
           <ContextContent empty={!caveats}>
@@ -109,7 +109,7 @@ const GuideDetail = ({
                   key={link.url}
                   to={link.url}
                 >
-                  {t`By ${link.name}`}
+                  {t`By ${ link.name }`}
                 </Link>
               ))}
             </div>

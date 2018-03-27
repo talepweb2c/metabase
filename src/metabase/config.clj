@@ -3,11 +3,22 @@
                           [shell :as shell])
             [clojure.string :as s]
             [environ.core :as environ])
-  (:import clojure.lang.Keyword))
+  (:import clojure.lang.Keyword
+           java.util.Locale))
+
+(defn str-lower-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toLowerCase strng (Locale/ENGLISH)))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 (def ^Boolean is-windows?
   "Are we running on a Windows machine?"
-  (s/includes? (s/lower-case (System/getProperty "os.name")) "win"))
+  (s/includes? (str-lower-case-en (System/getProperty "os.name")) "win"))
 
 (def ^:private app-defaults
   "Global application defaults"

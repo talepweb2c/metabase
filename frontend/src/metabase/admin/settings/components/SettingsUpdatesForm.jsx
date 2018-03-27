@@ -83,22 +83,25 @@ export default class SettingsUpdatesForm extends Component {
         versionInfo.latest.version,
       ) >= 0
     ) {
+      const exp = this.removeVersionPrefixIfNeeded(
+        currentVersion,
+      );
       return (
         <div className="p2 bg-brand bordered rounded border-brand text-white text-bold">
-          {jt`You're running Metabase ${this.removeVersionPrefixIfNeeded(
-            currentVersion,
-          )} which is the latest and greatest!`}
+          {jt`You're running Metabase ${ exp } which is the latest and greatest!`}
         </div>
       );
     } else {
+      const exp = this.removeVersionPrefixIfNeeded(
+        versionInfo.latest.version,
+      );
+      const exp2 = this.removeVersionPrefixIfNeeded(
+        currentVersion,
+      );
       return (
         <div>
           <div className="p2 bg-green bordered rounded border-green flex flex-row align-center justify-between">
-            <span className="text-white text-bold">{jt`Metabase ${this.removeVersionPrefixIfNeeded(
-              versionInfo.latest.version,
-            )} is available.  You're running ${this.removeVersionPrefixIfNeeded(
-              currentVersion,
-            )}`}</span>
+            <span className="text-white text-bold">{jt`Metabase ${ exp } is available.  You're running ${ exp2 }`}</span>
             <a
               data-metabase-event={
                 "Updates Settings; Update link clicked; " +

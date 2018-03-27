@@ -30,7 +30,7 @@ export default class HeaderModal extends Component {
           zIndex: 4,
           height: height,
           minHeight: 50,
-          transform: `translateY(${isOpen ? initialTop : "-100%"})`,
+          transform: `translateY(${ isOpen ? initialTop : "-100%" })`,
           transition: "transform 400ms ease-in-out",
           overflow: "hidden",
         }}

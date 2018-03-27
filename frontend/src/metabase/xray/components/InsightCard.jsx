@@ -16,13 +16,13 @@ const Feedback = ({ insightType }) => (
     <div className="ml-auto text-bold">
       <a
         className="text-brand-hover"
-        data-metabase-event={`InsightFeedback;${insightType};Yes`}
+        data-metabase-event={`InsightFeedback;${ insightType };Yes`}
       >
         {t`Yes`}
       </a>
       <a
         className="text-brand-hover ml1"
-        data-metabase-event={`InsightFeedback;${insightType};No`}
+        data-metabase-event={`InsightFeedback;${ insightType };No`}
       >
         {t`No`}
       </a>
@@ -37,10 +37,12 @@ export class NormalRangeInsight extends Component {
 
   render() {
     const { lower, upper, features: { model } } = this.props;
+    const modelDisplayNameOrName = model.display_name || model.name;
+    const lowerText = <b>{lower}</b>;
+    const upperText = <b>{upper}</b>;
     return (
       <InsightText>
-        {jt`Most of the values for ${model.display_name ||
-          model.name} are between ${<b>{lower}</b>} and ${<b>{upper}</b>}.`}
+        {jt`Most of the values for ${ modelDisplayNameOrName } are between ${ lowerText } and ${ upperText }.`}
       </InsightText>
     );
   }
@@ -67,7 +69,7 @@ export class NilsInsight extends Component {
     // construct the question with filter
     return (
       <InsightText>
-        {t`You have ${quality} missing (null) values in your data`}.
+        {t`You have ${ quality } missing (null) values in your data`}.
         <span> </span>
         {table && (
           <span>
@@ -100,7 +102,7 @@ export class ZerosInsight extends Component {
     // construct the question with filter
     return (
       <InsightText>
-        {t`You have ${quality} zeros in your data. They may be stand-ins for missing data, or might indicate some other abnormality.`}
+        {t`You have ${ quality } zeros in your data. They may be stand-ins for missing data, or might indicate some other abnormality.`}
         <span> </span>
         {table && (
           <span>
@@ -133,7 +135,7 @@ export class NoisinessInsight extends Component {
         >
           noisy
         </TermWithDefinition>.
-        {resolution && ` You might consider looking at it by ${resolution}.`}
+        {resolution && ` You might consider looking at it by ${ resolution }.`}
       </InsightText>
     );
   }
@@ -201,7 +203,7 @@ export class SeasonalityInsight extends Component {
 
     return (
       <InsightText>
-        {jt`Your data has a ${quality} seasonal component.`}
+        {jt`Your data has a ${ quality } seasonal component.`}
       </InsightText>
     );
   }
@@ -330,7 +332,7 @@ export class TrendInsight extends Component {
     const { mode, shape } = this.props;
 
     return (
-      <InsightText>{jt`Your data seems to be ${mode} ${shape}.`}</InsightText>
+      <InsightText>{jt`Your data seems to be ${ mode } ${ shape }.`}</InsightText>
     );
   }
 }

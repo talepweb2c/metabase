@@ -143,7 +143,7 @@ export default class DatabaseConnectionStep extends Component {
       stepText =
         databaseDetails === null
           ? t`I'll add my own data later`
-          : t`Connecting to ${databaseDetails.name}`;
+          : t`Connecting to ${ databaseDetails.name }`;
     }
 
     if (activeStep !== stepNumber) {

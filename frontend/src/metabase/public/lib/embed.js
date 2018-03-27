@@ -40,9 +40,9 @@ export function getSignedPreviewUrl(
     secretKey,
     previewEmbeddingParams,
   );
-  return `${siteUrl}/embed/${resourceType}/${token}${optionsToHashParams(
+  return `${ siteUrl }/embed/${ resourceType }/${ token }${ optionsToHashParams(
     options,
-  )}`;
+  ) }`;
 }
 
 export function getUnsignedPreviewUrl(
@@ -51,9 +51,9 @@ export function getUnsignedPreviewUrl(
   resourceId,
   options,
 ) {
-  return `${siteUrl}/public/${resourceType}/${resourceId}${optionsToHashParams(
+  return `${ siteUrl }/public/${ resourceType }/${ resourceId }${ optionsToHashParams(
     options,
-  )}`;
+  ) }`;
 }
 
 export function optionsToHashParams(options = {}) {
@@ -65,5 +65,5 @@ export function optionsToHashParams(options = {}) {
     }
   }
   const query = querystring.stringify(options);
-  return query ? `#${query}` : ``;
+  return query ? `#${ query }` : ``;
 }

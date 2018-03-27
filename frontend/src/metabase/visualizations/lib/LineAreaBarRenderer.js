@@ -68,10 +68,11 @@ import type { VisualizationProps } from "metabase/meta/types/Visualization";
 const BAR_PADDING_RATIO = 0.2;
 const DEFAULT_INTERPOLATION = "linear";
 
-const UNAGGREGATED_DATA_WARNING = col =>
-  t`"${getFriendlyName(
-    col,
-  )}" is an unaggregated field: if it has more than one value at a point on the x-axis, the values will be summed.`;
+const UNAGGREGATED_DATA_WARNING = col => {
+  const friendlyNameColumn = getFriendlyName(col,);
+
+  return t`"${ friendlyNameColumn }" is an unaggregated field: if it has more than one value at a point on the x-axis, the values will be summed.`;
+};
 
 const enableBrush = (series, onChangeCardAndRun) =>
   !!(
@@ -90,7 +91,7 @@ function checkSeriesIsValid({ series, maxSeries }) {
 
   if (series.length > maxSeries) {
     throw new Error(
-      t`This chart type doesn't support more than ${maxSeries} series of data.`,
+      t`This chart type doesn't support more than ${ maxSeries } series of data.`,
     );
   }
 }
@@ -578,7 +579,7 @@ function doHistogramBarStuff(parent) {
 
     // shift half of bar width so ticks line up with start of each bar
     for (const barChart of barCharts) {
-      barChart.setAttribute("transform", `translate(${barWidth / 2}, 0)`);
+      barChart.setAttribute("transform", `translate(${ barWidth / 2 }, 0)`);
     }
   });
 }

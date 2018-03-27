@@ -20,7 +20,8 @@
              [db :as db]
              [models :as models]])
   (:import com.fasterxml.jackson.core.JsonGenerator
-           java.io.OutputStream))
+           java.io.OutputStream
+           java.util.Locale))
 
 ;;; ---------------------------------------------------- UTIL FNS ----------------------------------------------------
 
@@ -317,7 +318,7 @@
                                 (>= status 400) [true  'red   log-debug]
                                 :else           [false 'green log-debug])]
     (log-fn (str (u/format-color color "%s %s %d (%s) (%d DB calls)"
-                   (.toUpperCase (name request-method)) uri status elapsed-time db-call-count)
+                   (.toUpperCase (name request-method) (Locale/ENGLISH)) uri status elapsed-time db-call-count)
                  ;; only print body on error so we don't pollute our environment by over-logging
                  (when (and error?
                             (or (string? body) (coll? body)))

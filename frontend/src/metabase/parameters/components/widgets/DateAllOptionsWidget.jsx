@@ -33,17 +33,17 @@ const serializersByOperatorName: {
   previous: getFilterValueSerializer(
     (value, unit, options = {}) =>
       // $FlowFixMe
-      `past${-value}${unit}s${options["include-current"] ? "~" : ""}`,
+      `past${ -value }${ unit }s${ options["include-current"] ? "~" : "" }`,
   ),
   next: getFilterValueSerializer(
     (value, unit, options = {}) =>
-      `next${value}${unit}s${options["include-current"] ? "~" : ""}`,
+      `next${ value }${ unit }s${ options["include-current"] ? "~" : "" }`,
   ),
-  current: getFilterValueSerializer((_, unit) => `this${unit}`),
-  before: getFilterValueSerializer(value => `~${value}`),
-  after: getFilterValueSerializer(value => `${value}~`),
-  on: getFilterValueSerializer(value => `${value}`),
-  between: getFilterValueSerializer((from, to) => `${from}~${to}`),
+  current: getFilterValueSerializer((_, unit) => `this${ unit }`),
+  before: getFilterValueSerializer(value => `~${ value }`),
+  after: getFilterValueSerializer(value => `${ value }~`),
+  on: getFilterValueSerializer(value => `${ value }`),
+  between: getFilterValueSerializer((from, to) => `${ from }~${ to }`),
 };
 
 function getFilterOperator(filter) {
@@ -70,7 +70,7 @@ function getFilterTitle(filter) {
   const desc = generateTimeFilterValuesDescriptions(filter).join(" - ");
   const op = getFilterOperator(filter);
   const prefix =
-    op && prefixedOperators.has(op.name) ? `${op.displayName} ` : "";
+    op && prefixedOperators.has(op.name) ? `${ op.displayName } ` : "";
   return prefix + desc;
 }
 

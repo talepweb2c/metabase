@@ -131,7 +131,7 @@ export default class FieldList extends Component {
         )}
         <EditableReferenceHeader
           headerIcon="table2"
-          name={t`Fields in ${table.display_name}`}
+          name={t`Fields in ${ table.display_name }`}
           user={user}
           isEditing={isEditing}
           startEditing={startEditing}
@@ -166,9 +166,9 @@ export default class FieldList extends Component {
                           <Field
                             field={entity}
                             foreignKeys={foreignKeys}
-                            url={`/reference/databases/${table.db_id}/tables/${
+                            url={`/reference/databases/${ table.db_id }/tables/${ 
                               table.id
-                            }/fields/${entity.id}`}
+                             }/fields/${ entity.id }`}
                             icon={getIconForField(entity)}
                             isEditing={isEditing}
                             formField={fields[entity.id]}

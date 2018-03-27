@@ -201,7 +201,7 @@ export class FieldValuesWidget extends Component {
       } else if (this.isSearchable() && searchField) {
         const searchFieldName =
           stripId(searchField.display_name) || searchField.display_name;
-        placeholder = t`Search by ${searchFieldName}`;
+        placeholder = t`Search by ${ searchFieldName }`;
         if (field.isID() && field !== searchField) {
           placeholder += t` or enter an ID`;
         }

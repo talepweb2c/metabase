@@ -22,7 +22,7 @@ const ActionHeader = ({
 }) => (
   <div className={S.actionHeader}>
     <Tooltip
-      tooltip={t`Select all ${visibleCount}`}
+      tooltip={t`Select all ${ visibleCount }`}
       isEnabled={!allAreSelected}
     >
       <span className="ml1">
@@ -34,7 +34,7 @@ const ActionHeader = ({
         />
       </span>
     </Tooltip>
-    <span className={S.selectedCount}>{t`${selectedCount} selected`}</span>
+    <span className={S.selectedCount}>{t`${ selectedCount } selected`}</span>
     <span className="flex align-center flex-align-right">
       {!sectionIsArchive && labels.length > 0 ? (
         <LabelPopover

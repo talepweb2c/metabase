@@ -78,7 +78,7 @@ export const getComparisonContributors = createSelector(
 );
 
 export const getTitle = ({ comparison, itemA, itemB }) =>
-  comparison && `${itemA.name} / ${itemB.name}`;
+  comparison && `${ itemA.name } / ${ itemB.name }`;
 
 const getItemColor = index => ({
   main: index === 0 ? normal.teal : normal.purple,

@@ -67,7 +67,7 @@ export default class Funnel extends Component {
         majorWidth: 0,
         comma: true,
       });
-    const formatPercent = percent => `${(100 * percent).toFixed(2)} %`;
+    const formatPercent = percent => `${ (100 * percent).toFixed(2) } %`;
 
     // Initial infos (required for step calculation)
     var infos: StepInfo[] = [
@@ -237,9 +237,9 @@ const GraphSection = ({
       <polygon
         opacity={1 - index * (0.9 / (infos.length + 1))}
         fill={DEFAULT_COLORS[0]}
-        points={`0 ${info.graph.startBottom}, 0 ${info.graph.startTop}, 1 ${
+        points={`0 ${ info.graph.startBottom }, 0 ${ info.graph.startTop }, 1 ${ 
           info.graph.endTop
-        }, 1 ${info.graph.endBottom}`}
+         }, 1 ${ info.graph.endBottom }`}
       />
     </svg>
   );

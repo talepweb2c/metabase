@@ -69,7 +69,7 @@ describe("SegmentPane", () => {
 
     click(
       dataReference
-        .find(`a[children="${orders_past_300_days_segment.name}"]`)
+        .find(`a[children="${ orders_past_300_days_segment.name }"]`)
         .first(),
     );
 

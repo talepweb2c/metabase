@@ -16,7 +16,18 @@
              [table :refer [Table]]]
             [metabase.util.schema :as su]
             [schema.core :as s])
-  (:import clojure.lang.Keyword))
+  (:import clojure.lang.Keyword
+           java.util.Locale))
+
+(defn str-lower-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toLowerCase strng (Locale/ENGLISH)))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 (s/defrecord FieldDefinition [field-name      :- su/NonBlankString
                               base-type       :- (s/cond-pre {:native su/NonBlankString}
@@ -46,7 +57,7 @@
   ^String [^String database-name, ^String table-name]
   {:pre [(string? database-name) (string? table-name)]}
   ;; take up to last 30 characters because databases like Oracle have limits on the lengths of identifiers
-  (apply str (take-last 30 (str/replace (str/lower-case (str database-name \_ table-name)) #"-" "_"))))
+  (apply str (take-last 30 (str/replace (str-lower-case-en (str database-name \_ table-name)) #"-" "_"))))
 
 (defn single-db-qualified-name-components
   "Implementation of `qualified-name-components` for drivers like Oracle and Redshift that must use a single existing
@@ -73,13 +84,13 @@
 (extend-protocol IMetabaseInstance
   FieldDefinition
   (metabase-instance [this table]
-    (Field :table_id (:id table), :%lower.name (str/lower-case (:field-name this))))
+    (Field :table_id (:id table), :%lower.name (str-lower-case-en (:field-name this))))
 
   TableDefinition
   (metabase-instance [this database]
     ;; Look first for an exact table-name match; otherwise allow DB-qualified table names for drivers that need them
     ;; like Oracle
-    (or (Table :db_id (:id database), :%lower.name (str/lower-case (:table-name this)))
+    (or (Table :db_id (:id database), :%lower.name (str-lower-case-en (:table-name this)))
         (Table :db_id (:id database), :%lower.name (db-qualified-table-name (:name database) (:table-name this)))))
 
   DatabaseDefinition
@@ -287,7 +298,7 @@
   (-> env-var-kwd
       name
       (str/replace "-" "_")
-      str/upper-case))
+      str-upper-case-en))
 
 (defn db-test-env-var-or-throw
   "Same as `db-test-env-var` but will throw an exception if the variable is `nil`."
@@ -297,5 +308,5 @@
    (or (db-test-env-var engine env-var default)
        (throw (Exception. (format "In order to test %s, you must specify the env var MB_%s_TEST_%s."
                                   (name engine)
-                                  (str/upper-case (name engine))
+                                  (str-upper-case-en (name engine))
                                   (to-system-env-var-str env-var)))))))

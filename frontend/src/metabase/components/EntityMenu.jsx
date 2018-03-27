@@ -76,7 +76,7 @@ class EntityMenu extends Component {
                   style={{
                     top: 35,
                     opacity: opacity,
-                    transform: `translateY(${translateY}px)`,
+                    transform: `translateY(${ translateY }px)`,
                   }}
                 >
                   <Card>

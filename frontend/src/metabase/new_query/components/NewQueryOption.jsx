@@ -37,9 +37,9 @@ export default class NewQueryOption extends Component {
           style={{ height: "160px" }}
         >
           <img
-            src={`${image}.png`}
-            style={{ width: width ? `${width}px` : "210px" }}
-            srcSet={`${image}@2x.png 2x`}
+            src={`${ image }.png`}
+            style={{ width: width ? `${ width }px` : "210px" }}
+            srcSet={`${ image }@2x.png 2x`}
           />
         </div>
         <div

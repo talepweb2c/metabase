@@ -80,7 +80,7 @@ const AdvancedEmbedPane = ({
           <div className="flex-full mr1">
             {resource.enable_embedding
               ? t`You’ve made changes that need to be published before they will be reflected in your application embed.`
-              : t`You will need to publish this ${resourceType} before you can embed it in another application.`}
+              : t`You will need to publish this ${ resourceType } before you can embed it in another application.`}
           </div>
           <div className="flex-no-shrink">
             {resource.enable_embedding &&

@@ -50,7 +50,7 @@ const createListItem = (entity, index) => (
       index={index}
       name={entity.display_name || entity.name}
       description={entity.description}
-      url={`/reference/databases/${entity.db_id}/tables/${entity.id}`}
+      url={`/reference/databases/${ entity.db_id }/tables/${ entity.id }`}
       icon="table2"
     />
   </li>
@@ -108,7 +108,7 @@ export default class TableList extends Component {
     return (
       <div style={style} className="full">
         <ReferenceHeader
-          name={t`Tables in ${database.name}`}
+          name={t`Tables in ${ database.name }`}
           type="tables"
           headerIcon="database"
         />

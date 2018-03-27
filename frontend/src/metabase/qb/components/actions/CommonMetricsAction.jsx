@@ -16,9 +16,13 @@ export default ({ question }: ClickActionProps): ClickAction[] => {
   }
 
   const activeMetrics = query.table().metrics.filter(m => m.isActive());
-  return activeMetrics.slice(0, 5).map(metric => ({
-    name: "common-metric",
-    title: <span>{jt`View ${<strong>{metric.name}</strong>}`}</span>,
-    question: () => question.summarize(["METRIC", metric.id]),
-  }));
+  return activeMetrics.slice(0, 5).map(metric => {
+    const metricName = <strong>{metric.name}</strong>;
+
+    return ({
+      name: "common-metric",
+      title: <span>{jt`View ${ metricName }`}</span>,
+      question: () => question.summarize(["METRIC", metric.id]),
+    })
+  });
 };

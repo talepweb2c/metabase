@@ -14,7 +14,7 @@ export function question(cardId, hash = "", query = "") {
       .map(kv => {
         if (Array.isArray(kv[1])) {
           return kv[1]
-            .map(v => `${encodeURIComponent(kv[0])}=${encodeURIComponent(v)}`)
+            .map(v => `${ encodeURIComponent(kv[0]) }=${ encodeURIComponent(v) }`)
             .join("&");
         } else {
           return kv.map(encodeURIComponent).join("=");
@@ -30,8 +30,8 @@ export function question(cardId, hash = "", query = "") {
   }
   // NOTE that this is for an ephemeral card link, not an editable card
   return cardId != null
-    ? `/question/${cardId}${query}${hash}`
-    : `/question${query}${hash}`;
+    ? `/question/${ cardId }${ query }${ hash }`
+    : `/question${ query }${ hash }`;
 }
 
 export function plainQuestion() {
@@ -40,8 +40,8 @@ export function plainQuestion() {
 
 export function dashboard(dashboardId, { addCardWithId } = {}) {
   return addCardWithId != null
-    ? `/dashboard/${dashboardId}#add=${addCardWithId}`
-    : `/dashboard/${dashboardId}`;
+    ? `/dashboard/${ dashboardId }#add=${ addCardWithId }`
+    : `/dashboard/${ dashboardId }`;
 }
 
 export function modelToUrl(model, modelId) {
@@ -58,41 +58,41 @@ export function modelToUrl(model, modelId) {
 }
 
 export function pulse(pulseId) {
-  return `/pulse/#${pulseId}`;
+  return `/pulse/#${ pulseId }`;
 }
 
 export function tableRowsQuery(databaseId, tableId, metricId, segmentId) {
-  let query = `?db=${databaseId}&table=${tableId}`;
+  let query = `?db=${ databaseId }&table=${ tableId }`;
 
   if (metricId) {
-    query += `&metric=${metricId}`;
+    query += `&metric=${ metricId }`;
   }
 
   if (segmentId) {
-    query += `&segment=${segmentId}`;
+    query += `&segment=${ segmentId }`;
   }
 
   return question(null, query);
 }
 
 export function collection(collection) {
-  return `/questions/collections/${collection.slug}`;
+  return `/questions/collections/${ collection.slug }`;
 }
 
 export function label(label) {
-  return `/questions/search?label=${encodeURIComponent(label.slug)}`;
+  return `/questions/search?label=${ encodeURIComponent(label.slug) }`;
 }
 
 export function publicCard(uuid, type = null) {
   const siteUrl = MetabaseSettings.get("site_url");
-  return `${siteUrl}/public/question/${uuid}` + (type ? `.${type}` : ``);
+  return `${ siteUrl }/public/question/${ uuid }` + (type ? `.${ type }` : ``);
 }
 
 export function publicDashboard(uuid) {
   const siteUrl = MetabaseSettings.get("site_url");
-  return `${siteUrl}/public/dashboard/${uuid}`;
+  return `${ siteUrl }/public/dashboard/${ uuid }`;
 }
 
 export function embedCard(token, type = null) {
-  return `/embed/question/${token}` + (type ? `.${type}` : ``);
+  return `/embed/question/${ token }` + (type ? `.${ type }` : ``);
 }

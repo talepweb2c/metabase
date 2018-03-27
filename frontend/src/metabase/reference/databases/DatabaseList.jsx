@@ -65,7 +65,7 @@ export default class DatabaseList extends Component {
                               index={index}
                               name={entity.display_name || entity.name}
                               description={entity.description}
-                              url={`/reference/databases/${entity.id}`}
+                              url={`/reference/databases/${ entity.id }`}
                               icon="database"
                             />
                           </li>

@@ -9,9 +9,9 @@ export const dispatchBrowserEvent = (eventName, ...args) => {
     eventListeners[eventName].forEach(listener => listener(...args));
   } else {
     throw new Error(
-      `No event listeners are currently attached to event '${eventName}'. List of event listeners:\n` +
+      `No event listeners are currently attached to event '${ eventName }'. List of event listeners:\n` +
         Object.entries(eventListeners)
-          .map(([name, funcs]) => `${name} (${funcs.length} listeners)`)
+          .map(([name, funcs]) => `${ name } (${ funcs.length } listeners)`)
           .join("\n"),
     );
   }

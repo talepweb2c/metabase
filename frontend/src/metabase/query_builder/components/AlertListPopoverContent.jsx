@@ -199,7 +199,7 @@ export class AlertListItem extends Component {
               <AlertCreatorTitle alert={alert} user={user} />
             </div>
             <div
-              className={`${unsubscribeButtonClasses} ml-auto text-bold text-small`}
+              className={`${ unsubscribeButtonClasses } ml-auto text-bold text-small`}
             >
               {(isAdmin || isCurrentUser) && (
                 <a className="link" onClick={this.onEdit}>{jt`Edit`}</a>
@@ -266,7 +266,7 @@ export const UnsubscribedListItem = () => (
       <Icon name="check" className="text-success" />
     </div>
     <h3
-      className={`${unsubscribedClasses} text-dark`}
+      className={`${ unsubscribedClasses } text-dark`}
     >{jt`Okay, you're unsubscribed`}</h3>
   </li>
 );
@@ -288,7 +288,7 @@ export class AlertScheduleText extends Component {
         opt => opt.value === (hourOfDay >= 12 ? 1 : 0),
       ).name;
 
-      return `${verbose ? "daily at " : "Daily, "} ${hour} ${amPm}`;
+      return `${ verbose ? "daily at " : "Daily, " } ${ hour } ${ amPm }`;
     } else if (scheduleType === "weekly") {
       console.log(schedule);
       const hourOfDay = schedule.schedule_hour;
@@ -304,10 +304,10 @@ export class AlertScheduleText extends Component {
       ).name;
 
       if (verbose) {
-        return `weekly on ${day}s at ${hour} ${amPm}`;
+        return `weekly on ${ day }s at ${ hour } ${ amPm }`;
       } else {
         // omit the minute part of time
-        return `${day}s, ${hour.substr(0, hour.indexOf(":"))} ${amPm}`;
+        return `${ day }s, ${ hour.substr(0, hour.indexOf(":")) } ${ amPm }`;
       }
     }
   };
@@ -339,8 +339,8 @@ export class AlertCreatorTitle extends Component {
       alert.creator.id === user.id ? "You" : alert.creator.first_name;
     const text =
       !isCurrentUser && !isAdmin
-        ? t`You're receiving ${creator}'s alerts`
-        : t`${creator} set up an alert`;
+        ? t`You're receiving ${ creator }'s alerts`
+        : t`${ creator } set up an alert`;
 
     return <h3 className="text-dark">{text}</h3>;
   }

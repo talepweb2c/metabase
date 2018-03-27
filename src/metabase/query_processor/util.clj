@@ -7,7 +7,18 @@
             [clojure.string :as str]
             [metabase.util :as u]
             [metabase.util.schema :as su]
-            [schema.core :as s]))
+            [schema.core :as s])
+  (:import  java.util.Locale))
+
+(defn str-lower-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toLowerCase strng (Locale/ENGLISH)))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 (defn mbql-query?
   "Is the given query an MBQL query?"
@@ -54,7 +65,7 @@
   keyword."
   [token :- su/KeywordOrString]
   (-> (name token)
-      str/lower-case
+      str-lower-case-en
       (str/replace #"_" "-")
       keyword))
 

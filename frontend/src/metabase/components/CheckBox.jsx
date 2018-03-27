@@ -35,7 +35,7 @@ export default class CheckBox extends Component {
       width: size,
       height: size,
       backgroundColor: checked ? themeColor : "white",
-      border: `2px solid ${checked ? themeColor : "#ddd"}`,
+      border: `2px solid ${ checked ? themeColor : "#ddd" }`,
     };
     return (
       <div className="cursor-pointer" onClick={() => this.onClick()}>

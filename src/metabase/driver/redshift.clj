@@ -12,7 +12,18 @@
              [postgres :as postgres]]
             [metabase.util
              [honeysql-extensions :as hx]
-             [ssh :as ssh]]))
+             [ssh :as ssh]])
+  (:import java.util.Locale))
+
+(defn str-lower-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toLowerCase strng (Locale/ENGLISH)))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 (defn- connection-details->spec
   "Create a database specification for a redshift database. Opts should include
@@ -102,7 +113,7 @@
                                                     :type         :password
                                                     :placeholder  "*******"
                                                     :required     true}]))
-          :format-custom-field-name (u/drop-first-arg str/lower-case)
+          :format-custom-field-name (u/drop-first-arg str-lower-case-en)
           :current-db-time          (driver/make-current-db-time-fn redshift-db-time-query redshift-date-formatters)})
 
   sql/ISQLDriver

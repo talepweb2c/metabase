@@ -6,7 +6,7 @@ import SimpleStat from "metabase/xray/SimpleStat";
 
 const Constituent = ({ constituent }) => (
   <Link
-    to={`xray/field/${constituent.model.id}/approximate`}
+    to={`xray/field/${ constituent.model.id }/approximate`}
     className="no-decoration"
   >
     <div className="Grid my3 bg-white bordered rounded shadowed shadow-hover no-decoration">

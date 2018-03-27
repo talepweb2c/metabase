@@ -158,7 +158,7 @@ export const setArchived = createThunkAction(
           addUndo(
             createUndo({
               type,
-              message: <div>{`Dashboard was ${type}.`}</div>,
+              message: <div>{`Dashboard was ${ type }.`}</div>,
               action: setArchived(dashId, !archived),
             }),
           ),

@@ -6,22 +6,18 @@ import { t } from "c-3po";
 
 export class MinColumnsError extends Error {
   constructor(minColumns: number, actualColumns: number) {
+    const columsText = inflect("column", actualColumns,);
     super(
-      t`Doh! The data from your query doesn't fit the chosen display choice. This visualization requires at least ${actualColumns} ${inflect(
-        "column",
-        actualColumns,
-      )} of data.`,
+      t`Doh! The data from your query doesn't fit the chosen display choice. This visualization requires at least ${ actualColumns } ${ columsText } of data.`,
     );
   }
 }
 
 export class MinRowsError extends Error {
   constructor(minRows: number, actualRows: number) {
+    const pointsText = inflect("point", actualRows,);
     super(
-      t`No dice. We have ${actualRows} data ${inflect(
-        "point",
-        actualRows,
-      )} to show and that's not enough for this visualization.`,
+      t`No dice. We have ${ actualRows } data ${ pointsText } to show and that's not enough for this visualization.`,
     );
   }
 }

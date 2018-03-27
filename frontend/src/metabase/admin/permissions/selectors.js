@@ -108,16 +108,16 @@ function getPermissionWarning(
   let perm = value || getter(permissions, groupId, entityId);
   let defaultPerm = getter(permissions, defaultGroup.id, entityId);
   if (perm === "controlled" && defaultPerm === "controlled") {
-    return t`The "${
+    return t`The "${ 
       defaultGroup.name
-    }" group may have access to a different set of ${entityType} than this group, which may give this group additional access to some ${entityType}.`;
+     }" group may have access to a different set of ${ entityType } than this group, which may give this group additional access to some ${ entityType }.`;
   }
   if (hasGreaterPermissions(defaultPerm, perm)) {
-    return t`The "${
+    return t`The "${ 
       defaultGroup.name
-    }" group has a higher level of access than this, which will override this setting. You should limit or revoke the "${
+     }" group has a higher level of access than this, which will override this setting. You should limit or revoke the "${ 
       defaultGroup.name
-    }" group's access to this item.`;
+     }" group's access to this item.`;
   }
   return null;
 }
@@ -142,9 +142,9 @@ function getPermissionWarningModal(
   );
   if (permissionWarning) {
     return {
-      title: t`${
-        value === "controlled" ? "Limit" : "Revoke"
-      } access even though "${defaultGroup.name}" has greater access?`,
+      title: value === "controlled" ?
+        t`Limit access even though "${ defaultGroup.name }" has greater access?` :
+        `Revoke access even though "${ defaultGroup.name }" has greater access?`,
       message: permissionWarning,
       confirmButtonText:
         value === "controlled" ? t`Limit access` : t`Revoke access`,
@@ -446,9 +446,9 @@ export const getSchemasPermissionsGrid = createSelector(
           postAction(groupId, { databaseId, schemaName }, value) {
             if (value === "controlled") {
               return push(
-                `/admin/permissions/databases/${databaseId}/schemas/${encodeURIComponent(
+                `/admin/permissions/databases/${ databaseId }/schemas/${ encodeURIComponent(
                   schemaName,
-                )}/tables`,
+                ) }/tables`,
               );
             }
           },
@@ -486,9 +486,9 @@ export const getSchemasPermissionsGrid = createSelector(
         name: schemaName,
         link: {
           name: t`View tables`,
-          url: `/admin/permissions/databases/${databaseId}/schemas/${encodeURIComponent(
+          url: `/admin/permissions/databases/${ databaseId }/schemas/${ encodeURIComponent(
             schemaName,
-          )}/tables`,
+          ) }/tables`,
         },
       })),
     };
@@ -543,17 +543,17 @@ export const getDatabasesPermissionsGrid = createSelector(
                 (schemas.length === 1 && schemas[0] === "")
               ) {
                 return push(
-                  `/admin/permissions/databases/${databaseId}/tables`,
+                  `/admin/permissions/databases/${ databaseId }/tables`,
                 );
               } else if (schemas.length === 1) {
                 return push(
-                  `/admin/permissions/databases/${databaseId}/schemas/${
+                  `/admin/permissions/databases/${ databaseId }/schemas/${ 
                     schemas[0]
-                  }/tables`,
+                   }/tables`,
                 );
               } else {
                 return push(
-                  `/admin/permissions/databases/${databaseId}/schemas`,
+                  `/admin/permissions/databases/${ databaseId }/schemas`,
                 );
               }
             }
@@ -643,18 +643,18 @@ export const getDatabasesPermissionsGrid = createSelector(
             schemas.length === 0 || (schemas.length === 1 && schemas[0] === "")
               ? {
                   name: t`View tables`,
-                  url: `/admin/permissions/databases/${database.id}/tables`,
+                  url: `/admin/permissions/databases/${ database.id }/tables`,
                 }
               : schemas.length === 1
                 ? {
                     name: t`View tables`,
-                    url: `/admin/permissions/databases/${database.id}/schemas/${
+                    url: `/admin/permissions/databases/${ database.id }/schemas/${ 
                       schemas[0]
-                    }/tables`,
+                     }/tables`,
                   }
                 : {
                     name: t`View schemas`,
-                    url: `/admin/permissions/databases/${database.id}/schemas`,
+                    url: `/admin/permissions/databases/${ database.id }/schemas`,
                   },
         };
       }),

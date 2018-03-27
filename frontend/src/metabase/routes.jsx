@@ -449,7 +449,7 @@ export const getRoutes = store => (
         path="/card/:cardId"
         onEnter={({ location, params }, replace) =>
           replace({
-            pathname: `/question/${params.cardId}`,
+            pathname: `/question/${ params.cardId }`,
             hash: location.hash,
           })
         }

@@ -171,9 +171,11 @@ export default class Visualization extends Component {
         props.rawSeries
           .filter(s => s.data && s.data.rows_truncated != null)
           .map(
-            s =>
-              t`Data truncated to ${formatNumber(s.data.rows_truncated)} rows.`,
-          ),
+            s => {
+              const dataRowsNumber = formatNumber(s.data.rows_truncated);
+
+              return t`Data truncated to ${ dataRowsNumber } rows.`;
+            },),
       );
     }
     return warnings;
@@ -254,9 +256,9 @@ export default class Visualization extends Component {
       MetabaseAnalytics.trackEvent(
         "Actions",
         "Clicked",
-        `${clicked.column ? "column" : ""} ${clicked.value ? "value" : ""} ${
+        `${ clicked.column ? "column" : "" } ${ clicked.value ? "value" : "" } ${ 
           clicked.dimensions ? "dimensions=" + clicked.dimensions.length : ""
-        }`,
+         }`,
       );
     }
 
@@ -399,6 +401,9 @@ export default class Visualization extends Component {
       };
     }
 
+    const durationExpected = <span style={{whiteSpace: "nowrap"}}>
+      {duration(expectedDuration)}
+    </span>;
     return (
       <div className={cx(className, "flex flex-column")}>
         {(showTitle &&
@@ -463,11 +468,7 @@ export default class Visualization extends Component {
                 <div className="h4 text-bold mb1">{t`Still Waiting...`}</div>
                 {isSlow === "usually-slow" ? (
                   <div>
-                    {jt`This usually takes an average of ${(
-                      <span style={{ whiteSpace: "nowrap" }}>
-                        {duration(expectedDuration)}
-                      </span>
-                    )}.`}
+                    {jt`This usually takes an average of ${ durationExpected }.`}
                     <br />
                     {t`(This is a bit long for a dashboard)`}
                   </div>

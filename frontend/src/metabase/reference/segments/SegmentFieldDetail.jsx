@@ -34,11 +34,12 @@ import * as metadataActions from "metabase/redux/metadata";
 import * as actions from "metabase/reference/reference";
 
 const interestingQuestions = (table, field) => {
+  const tableDisplayName = table && table.display_name;
   return [
     {
-      text: t`Number of ${table && table.display_name} grouped by ${
+      text: t`Number of ${ tableDisplayName } grouped by ${ 
         field.display_name
-      }`,
+       }`,
       icon: { name: "number", scale: 1, viewBox: "8 8 16 16" },
       link: getQuestionUrl({
         dbId: table && table.db_id,
@@ -48,7 +49,7 @@ const interestingQuestions = (table, field) => {
       }),
     },
     {
-      text: t`All distinct values of ${field.display_name}`,
+      text: t`All distinct values of ${ field.display_name }`,
       icon: "table2",
       link: getQuestionUrl({
         dbId: table && table.db_id,

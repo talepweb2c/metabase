@@ -16,7 +16,7 @@ export const getPublicEmbedOptions = ({
 }): CodeSampleOption[] => [
   {
     name: "HTML",
-    source: () => html({ iframeUrl: `"${iframeUrl}"` }),
+    source: () => html({ iframeUrl: `"${ iframeUrl }"` }),
     mode: "ace/mode/html",
   },
 ];
@@ -56,7 +56,7 @@ export const getPublicEmbedHTML = (iframeUrl: string): string =>
 
 const html = ({ iframeUrl }) =>
   `<iframe
-    src=${iframeUrl}
+    src=${ iframeUrl }
     frameborder="0"
     width="800"
     height="600"
@@ -65,7 +65,7 @@ const html = ({ iframeUrl }) =>
 
 const jsx = ({ iframeUrl }) =>
   `<iframe
-    src=${iframeUrl}
+    src=${ iframeUrl }
     frameBorder={0}
     width={800}
     height={600}
@@ -74,7 +74,7 @@ const jsx = ({ iframeUrl }) =>
 
 const pug = ({ iframeUrl }) =>
   `iframe(
-    src=${iframeUrl}
+    src=${ iframeUrl }
     frameborder="0"
     width="800"
     height="600"
@@ -93,22 +93,22 @@ const node = ({
 
 var jwt = require("jsonwebtoken");
 
-var METABASE_SITE_URL = ${JSON.stringify(siteUrl)};
-var METABASE_SECRET_KEY = ${JSON.stringify(secretKey)};
+var METABASE_SITE_URL = ${ JSON.stringify(siteUrl) };
+var METABASE_SECRET_KEY = ${ JSON.stringify(secretKey) };
 
 var payload = {
-  resource: { ${resourceType}: ${resourceId} },
-  params: ${JSON.stringify(params, null, 2)
+  resource: { ${ resourceType }: ${ resourceId } },
+  params: ${ JSON.stringify(params, null, 2)
     .split("\n")
-    .join("\n  ")}
+    .join("\n  ") }
 };
 var token = jwt.sign(payload, METABASE_SECRET_KEY);
 
-var iframeUrl = METABASE_SITE_URL + "/embed/${resourceType}/" + token${
+var iframeUrl = METABASE_SITE_URL + "/embed/${ resourceType }/" + token${ 
     optionsToHashParams(displayOptions)
       ? " + " + JSON.stringify(optionsToHashParams(displayOptions))
       : ""
-  };`;
+   };`;
 
 const ruby = ({
   siteUrl,
@@ -122,26 +122,26 @@ const ruby = ({
 
 require 'jwt'
 
-METABASE_SITE_URL = ${JSON.stringify(siteUrl)}
-METABASE_SECRET_KEY = ${JSON.stringify(secretKey)}
+METABASE_SITE_URL = ${ JSON.stringify(siteUrl) }
+METABASE_SECRET_KEY = ${ JSON.stringify(secretKey) }
 
 payload = {
-  :resource => {:${resourceType} => ${resourceId}},
+  :resource => {:${ resourceType } => ${ resourceId }},
   :params => {
-    ${Object.entries(params)
+    ${ Object.entries(params)
       .map(
         ([key, value]) => JSON.stringify(key) + " => " + JSON.stringify(value),
       )
-      .join(",\n    ")}
+      .join(",\n    ") }
   }
 }
 token = JWT.encode payload, METABASE_SECRET_KEY
 
-iframe_url = METABASE_SITE_URL + "/embed/${resourceType}/" + token${
+iframe_url = METABASE_SITE_URL + "/embed/${ resourceType }/" + token${ 
     optionsToHashParams(displayOptions)
       ? " + " + JSON.stringify(optionsToHashParams(displayOptions))
       : ""
-  }`;
+   }`;
 
 const python = ({
   siteUrl,
@@ -155,24 +155,24 @@ const python = ({
 
 import jwt
 
-METABASE_SITE_URL = ${JSON.stringify(siteUrl)}
-METABASE_SECRET_KEY = ${JSON.stringify(secretKey)}
+METABASE_SITE_URL = ${ JSON.stringify(siteUrl) }
+METABASE_SECRET_KEY = ${ JSON.stringify(secretKey) }
 
 payload = {
-  "resource": {"${resourceType}": ${resourceId}},
+  "resource": {"${ resourceType }": ${ resourceId }},
   "params": {
-    ${Object.entries(params)
+    ${ Object.entries(params)
       .map(([key, value]) => JSON.stringify(key) + ": " + JSON.stringify(value))
-      .join(",\n    ")}
+      .join(",\n    ") }
   }
 }
 token = jwt.encode(payload, METABASE_SECRET_KEY, algorithm="HS256")
 
-iframeUrl = METABASE_SITE_URL + "/embed/${resourceType}/" + token${
+iframeUrl = METABASE_SITE_URL + "/embed/${ resourceType }/" + token${ 
     optionsToHashParams(displayOptions)
       ? " + " + JSON.stringify(optionsToHashParams(displayOptions))
       : ""
-  }`;
+   }`;
 
 const clojure = ({
   siteUrl,
@@ -184,19 +184,19 @@ const clojure = ({
 }) =>
   `(require '[buddy.sign.jwt :as jwt])
 
-(def metabase-site-url   ${JSON.stringify(siteUrl)})
-(def metabase-secret-key ${JSON.stringify(secretKey)})
+(def metabase-site-url   ${ JSON.stringify(siteUrl) })
+(def metabase-secret-key ${ JSON.stringify(secretKey) })
 
 (def payload
-  {:resource {:${resourceType} ${resourceId}}
-   :params   {${Object.entries(params)
+  {:resource {:${ resourceType } ${ resourceId }}
+   :params   {${ Object.entries(params)
      .map(([key, value]) => JSON.stringify(key) + " " + JSON.stringify(value))
-     .join(",\n              ")}}})
+     .join(",\n              ") }}})
 
 (def token (jwt/sign payload metabase-secret-key))
 
-(def iframe-url (str metabase-site-url "/embed/${resourceType}/" token${
+(def iframe-url (str metabase-site-url "/embed/${ resourceType }/" token${ 
     optionsToHashParams(displayOptions)
       ? " " + JSON.stringify(optionsToHashParams(displayOptions))
       : ""
-  }))`;
+   }))`;

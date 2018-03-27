@@ -18,7 +18,7 @@ export default ({ question, settings }: ClickActionProps): ClickAction[] => {
         name: "xray-card",
         title: t`X-ray this question`,
         icon: "beaker",
-        url: () => `/xray/card/${question.card().id}/extended`,
+        url: () => `/xray/card/${ question.card().id }/extended`,
       },
     ];
   } else {

@@ -31,10 +31,10 @@ export class RestfulRequest {
     this.storeAsDictionary = storeAsDictionary;
 
     this.actions = {
-      requestStarted: `${this.actionPrefix}/REQUEST_STARTED`,
-      requestSuccessful: `${this.actionPrefix}/REQUEST_SUCCESSFUL`,
-      requestFailed: `${this.actionPrefix}/REQUEST_FAILED`,
-      resetRequest: `${this.actionPrefix}/REQUEST_RESET`,
+      requestStarted: `${ this.actionPrefix }/REQUEST_STARTED`,
+      requestSuccessful: `${ this.actionPrefix }/REQUEST_SUCCESSFUL`,
+      requestFailed: `${ this.actionPrefix }/REQUEST_FAILED`,
+      resetRequest: `${ this.actionPrefix }/REQUEST_RESET`,
     };
   }
 
@@ -118,10 +118,10 @@ export class BackgroundJobRequest {
     this.resultPropName = resultPropName || this.resultPropName;
 
     this.actions = {
-      requestStarted: `${this.actionPrefix}/REQUEST_STARTED`,
-      requestSuccessful: `${this.actionPrefix}/REQUEST_SUCCESSFUL`,
-      requestFailed: `${this.actionPrefix}/REQUEST_FAILED`,
-      resetRequest: `${this.actionPrefix}/REQUEST_RESET`,
+      requestStarted: `${ this.actionPrefix }/REQUEST_STARTED`,
+      requestSuccessful: `${ this.actionPrefix }/REQUEST_SUCCESSFUL`,
+      requestFailed: `${ this.actionPrefix }/REQUEST_FAILED`,
+      resetRequest: `${ this.actionPrefix }/REQUEST_RESET`,
     };
   }
 

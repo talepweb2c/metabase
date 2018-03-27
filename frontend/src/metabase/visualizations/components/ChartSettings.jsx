@@ -145,9 +145,10 @@ class ChartSettings extends Component {
     const currentTab = this.state.currentTab || tabNames[0];
     const widgets = tabs[currentTab];
 
+    const chartTypeName = this.getChartTypeName();
     return (
       <div className="flex flex-column spread p4">
-        <h2 className="my2">{t`Customize this ${this.getChartTypeName()}`}</h2>
+        <h2 className="my2">{t`Customize this ${ chartTypeName }`}</h2>
 
         {tabNames.length > 1 && (
           <ChartSettingsTabs

@@ -39,7 +39,18 @@
             [schema.core :as s]
             [toucan
              [db :as db]
-             [models :as models]]))
+             [models :as models]])
+  (:import java.util.Locale))
+
+(defn str-lower-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toLowerCase strng (Locale/ENGLISH)))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 (models/defmodel Setting
   "The model that underlies `defsetting`."
@@ -103,7 +114,7 @@
    (This is used primarily for documentation purposes)."
   ^String [setting-or-name]
   (let [setting (resolve-setting setting-or-name)]
-    (str "MB_" (str/upper-case (str/replace (setting-name setting) "-" "_")))))
+    (str "MB_" (str-upper-case-en (str/replace (setting-name setting) "-" "_")))))
 
 (defn env-var-value
   "Get the value of SETTING-OR-NAME from the corresponding env var, if any.
@@ -140,7 +151,7 @@
 
 (defn- string->boolean [string-value]
   (when (seq string-value)
-    (case (str/lower-case string-value)
+    (case (str-lower-case-en string-value)
       "true"  true
       "false" false
       (throw (Exception. "Invalid value for string: must be either \"true\" or \"false\" (case-insensitive).")))))

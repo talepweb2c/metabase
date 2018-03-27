@@ -115,7 +115,7 @@ export default class SharingPane extends Component {
           </div>
           <div className="ml2 flex-full">
             <h3 className="text-brand mb1">{t`Public link`}</h3>
-            <div className="mb1">{t`Share this ${resourceType} with people who don't have a Metabase account using the URL below:`}</div>
+            <div className="mb1">{t`Share this ${ resourceType } with people who don't have a Metabase account using the URL below:`}</div>
             <CopyWidget value={publicLink} />
             {extensions &&
               extensions.length > 0 && (
@@ -156,7 +156,7 @@ export default class SharingPane extends Component {
           />
           <div className="ml2 flex-full">
             <h3 className="text-green mb1">{t`Public embed`}</h3>
-            <div className="mb1">{t`Embed this ${resourceType} in blog posts or web pages by copying and pasting this snippet:`}</div>
+            <div className="mb1">{t`Embed this ${ resourceType } in blog posts or web pages by copying and pasting this snippet:`}</div>
             <CopyWidget value={iframeSource} />
           </div>
         </div>
@@ -173,8 +173,8 @@ export default class SharingPane extends Component {
               forceOriginalDimensions={false}
             />
             <div className="ml2 flex-full">
-              <h3 className="text-purple mb1">{t`Embed this ${resourceType} in an application`}</h3>
-              <div className="">{t`By integrating with your application server code, you can provide a secure stats ${resourceType} limited to a specific user, customer, organization, etc.`}</div>
+              <h3 className="text-purple mb1">{t`Embed this ${ resourceType } in an application`}</h3>
+              <div className="">{t`By integrating with your application server code, you can provide a secure stats ${ resourceType } limited to a specific user, customer, organization, etc.`}</div>
             </div>
           </div>
         )}

@@ -44,7 +44,7 @@ export default class PulseListItem extends Component {
         <div className="flex px4 mb2">
           <div>
             <h2 className="mb1">{pulse.name}</h2>
-            <span>{jt`Pulse by ${creator}`}</span>
+            <span>{jt`Pulse by ${ creator }`}</span>
           </div>
           {!pulse.read_only && (
             <div className="flex-align-right">

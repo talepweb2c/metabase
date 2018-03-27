@@ -25,7 +25,7 @@ export default class ComponentsApp extends Component {
           <div>
             <h2>
               <Link
-                to={`_internal/components/${slugify(component.name)}`}
+                to={`_internal/components/${ slugify(component.name) }`}
                 className="no-decoration"
               >
                 {component.name}
@@ -60,9 +60,9 @@ export default class ComponentsApp extends Component {
                     <div className="my2">
                       <h4 className="my1">
                         <Link
-                          to={`_internal/components/${slugify(
+                          to={`_internal/components/${ slugify(
                             component.name,
-                          )}/${slugify(name)}`}
+                          ) }/${ slugify(name) }`}
                           className="no-decoration"
                         >
                           {name}

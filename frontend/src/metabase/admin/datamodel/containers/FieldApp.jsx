@@ -180,12 +180,12 @@ export default class FieldApp extends Component {
               <div className="my4 py1 ml-auto mr-auto">
                 <Breadcrumbs
                   crumbs={[
-                    [db.name, `/admin/datamodel/database/${db.id}`],
+                    [db.name, `/admin/datamodel/database/${ db.id }`],
                     [
                       table.display_name,
-                      `/admin/datamodel/database/${db.id}/table/${table.id}`,
+                      `/admin/datamodel/database/${ db.id }/table/${ table.id }`,
                     ],
-                    t`${field.display_name} – Field Settings`,
+                    t`${ field.display_name } – Field Settings`,
                   ]}
                 />
               </div>
@@ -278,7 +278,7 @@ export default class FieldApp extends Component {
 // not sure if it's possible to do that neatly with Link component
 export const BackButton = ({ databaseId, tableId }) => (
   <Link
-    to={`/admin/datamodel/database/${databaseId}/table/${tableId}`}
+    to={`/admin/datamodel/database/${ databaseId }/table/${ tableId }`}
     className="circle text-white p2 mt3 ml3 flex align-center justify-center  absolute top left"
     style={{ backgroundColor: "#8091AB" }}
   >

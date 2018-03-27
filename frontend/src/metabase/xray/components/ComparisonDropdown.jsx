@@ -32,15 +32,15 @@ export class ComparisonDropdown extends Component {
     const isSharedModelType =
       comparisonModels[0]["type-tag"] === comparisonModels[1]["type-tag"];
     if (isSharedModelType) {
-      return `/xray/compare/${comparisonModels[0]["type-tag"]}s/${
+      return `/xray/compare/${ comparisonModels[0]["type-tag"] }s/${ 
         comparisonModels[0].id
-      }/${comparisonModels[1].id}/approximate`;
+       }/${ comparisonModels[1].id }/approximate`;
     } else {
-      return `/xray/compare/${comparisonModels[0]["type-tag"]}/${
+      return `/xray/compare/${ comparisonModels[0]["type-tag"] }/${ 
         comparisonModels[0].id
-      }/${comparisonModels[1]["type-tag"]}/${
+       }/${ comparisonModels[1]["type-tag"] }/${ 
         comparisonModels[1].id
-      }/approximate`;
+       }/approximate`;
     }
   };
 

@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 const VisualizationErrorMessage = ({ title, type, message, action }) => {
   return (
     <div className="QueryError flex full align-center">
-      <div className={`QueryError-image QueryError-image--${type}`} />
+      <div className={`QueryError-image QueryError-image--${ type }`} />
       <div className="QueryError-message text-centered">
         {title && <h1 className="text-bold">{title}</h1>}
         <p className="QueryError-messageText">{message}</p>

@@ -75,7 +75,7 @@ export default class SegmentList extends Component {
                               index={index}
                               name={entity.display_name || entity.name}
                               description={entity.description}
-                              url={`/reference/segments/${entity.id}`}
+                              url={`/reference/segments/${ entity.id }`}
                               icon="segment"
                             />
                           </li>

@@ -24,7 +24,26 @@
            [java.text Normalizer Normalizer$Form]
            [java.util Calendar Date TimeZone]
            org.joda.time.DateTime
-           org.joda.time.format.DateTimeFormatter))
+           org.joda.time.format.DateTimeFormatter
+           java.util.Locale))
+
+(defn str-lower-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toLowerCase strng (Locale/ENGLISH)))
+
+(defn str-capitalize-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (if (< (count strng) 1)
+    (.toUpperCase strng (Locale/ENGLISH))
+    (str (.toUpperCase (subs strng 0 1) (Locale/ENGLISH))
+         (.toLowerCase (subs strng 1) (Locale/ENGLISH)))))
+
+(defn str-upper-case-en
+  "Converts string to upper case with given locale"
+  ^String [^String strng]
+  (.toUpperCase strng (Locale/ENGLISH)))
 
 ;; This is the very first log message that will get printed.  It's here because this is one of the very first
 ;; namespaces that gets loaded, and the first that has access to the logger It shows up a solid 10-15 seconds before
@@ -576,7 +595,8 @@
   IFilteredStacktrace {:filtered-stacktrace (fn [this]
                                               (vec (for [frame this
                                                          :let  [s (str frame)]
-                                                         :when (re-find #"metabase" s)]
+;                                                         :when (re-find #"metabase" s)
+                                                                          ]
                                                      (s/replace s #"^metabase\." ""))))})
 
 (defn wrap-try-catch
@@ -709,7 +729,7 @@
    Optionally specify MAX-LENGTH which will truncate the slug after that many characters."
   (^String [^String s]
    (when (seq s)
-     (s/join (for [c (remove-diacritical-marks (s/lower-case s))]
+     (s/join (for [c (remove-diacritical-marks (str-lower-case-en s))]
                (slugify-char c)))))
   (^String [s max-length]
    (s/join (take max-length (slugify s)))))

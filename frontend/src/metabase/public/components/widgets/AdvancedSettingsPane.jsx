@@ -81,7 +81,7 @@ const AdvancedSettingsPane = ({
           <p>{t`Which parameters can users of this embed use?`}</p>
         ) : (
           <p
-          >{t`This ${resourceType} doesn't have any parameters to configure yet.`}</p>
+          >{t`This ${ resourceType } doesn't have any parameters to configure yet.`}</p>
         )}
         {resourceParameters.map(parameter => (
           <div className="flex align-center my1">
@@ -125,7 +125,7 @@ const AdvancedSettingsPane = ({
       )}
     {resource.enable_embedding ? (
       <Section title={t`Danger zone`}>
-        <p>{t`This will disable embedding for this ${resourceType}.`}</p>
+        <p>{t`This will disable embedding for this ${ resourceType }.`}</p>
         <Button medium warning onClick={onUnpublish}>{t`Unpublish`}</Button>
       </Section>
     ) : null}

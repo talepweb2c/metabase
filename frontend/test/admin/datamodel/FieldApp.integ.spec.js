@@ -64,7 +64,7 @@ const PRODUCT_RATING_ID = 33;
 
 const initFieldApp = async ({ tableId = 1, fieldId }) => {
   const store = await createTestStore();
-  store.pushPath(`/admin/datamodel/database/1/table/${tableId}/${fieldId}`);
+  store.pushPath(`/admin/datamodel/database/1/table/${ tableId }/${ fieldId }`);
   const fieldApp = mount(store.connectContainer(<FieldApp />));
   await store.waitForActions([FETCH_IDFIELDS]);
   return { store, fieldApp };

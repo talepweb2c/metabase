@@ -58,7 +58,7 @@ export default class CategoryWidget extends Component {
 
   static format(values, fieldValues) {
     if (Array.isArray(values) && values.length > 1) {
-      return `${values.length} selections`;
+      return `${ values.length } selections`;
     } else {
       return getHumanReadableValue(values, fieldValues);
     }

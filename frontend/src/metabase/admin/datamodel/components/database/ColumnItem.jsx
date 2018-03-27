@@ -99,7 +99,7 @@ export default class Column extends Component {
           </div>
         </div>
         <Link
-          to={`${this.props.location.pathname}/${this.props.field.id}`}
+          to={`${ this.props.location.pathname }/${ this.props.field.id }`}
           className="text-brand-hover mx2 mt1"
         >
           <Icon name="gear" />

@@ -115,7 +115,7 @@ export default class SegmentPane extends Component {
     ) {
       useForCurrentQuestion.push(
         <UseForButton
-          title={t`Filter by ${segmentName}`}
+          title={t`Filter by ${ segmentName }`}
           onClick={this.filterBy}
         />,
       );
@@ -124,14 +124,14 @@ export default class SegmentPane extends Component {
     usefulQuestions.push(
       <QueryButton
         icon="number"
-        text={t`Number of ${segmentName}`}
+        text={t`Number of ${ segmentName }`}
         onClick={this.setQueryCountFilteredBy}
       />,
     );
     usefulQuestions.push(
       <QueryButton
         icon="table"
-        text={t`See all ${segmentName}`}
+        text={t`See all ${ segmentName }`}
         onClick={this.setQueryFilteredBy}
       />,
     );

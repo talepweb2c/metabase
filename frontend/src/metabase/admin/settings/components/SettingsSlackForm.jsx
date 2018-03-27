@@ -222,6 +222,8 @@ export default class SettingsSlackForm extends Component {
     let disabled = !valid || submitting !== "default",
       saveButtonText = saveSettingsButtonStates[submitting];
 
+    const addBotIntegration = <strong>${ t`"Add bot integration"` }</strong>
+
     return (
       <form noValidate>
         <div className="px2" style={{ maxWidth: "585px" }}>
@@ -254,9 +256,7 @@ export default class SettingsSlackForm extends Component {
             </a>
           </div>
           <div className="py2">
-            {jt`Once you're there, give it a name and click ${(
-              <strong>"Add bot integration"</strong>
-            )}. Then copy and paste the Bot API Token into the field below. Once you are done, create a "metabase_files" channel in Slack. Metabase needs this to upload graphs.`}
+            {jt`Once you're there, give it a name and click ${ addBotIntegration }. Then copy and paste the Bot API Token into the field below. Once you are done, create a "metabase_files" channel in Slack. Metabase needs this to upload graphs.`}
           </div>
         </div>
         <ul>

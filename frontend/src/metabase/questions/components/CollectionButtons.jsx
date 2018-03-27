@@ -35,7 +35,7 @@ class CollectionButton extends Component {
     const { id, name, color, slug, isAdmin } = this.props;
     return (
       <Link
-        to={`/questions/collections/${slug}`}
+        to={`/questions/collections/${ slug }`}
         className="no-decoration"
         onMouseEnter={() => this.setState({ hovered: true })}
         onMouseLeave={() => this.setState({ hovered: false })}

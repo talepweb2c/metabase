@@ -5,6 +5,7 @@ import inflection from "inflection";
 import moment from "moment";
 import Humanize from "humanize-plus";
 import React from "react";
+import { t } from "c-3po";
 
 import ExternalLink from "metabase/components/ExternalLink.jsx";
 
@@ -37,6 +38,9 @@ export type FormattingOptions = {
   round?: boolean,
 };
 
+// Turkish support
+if (window['d3_locale_TR']) d3.formatDefaultLocale(window['d3_locale_TR']);
+
 const DEFAULT_NUMBER_OPTIONS: FormattingOptions = {
   comma: true,
   compact: false,
@@ -48,7 +52,7 @@ const FIXED_NUMBER_FORMATTER = d3.format(",.f");
 const FIXED_NUMBER_FORMATTER_NO_COMMA = d3.format(".f");
 const DECIMAL_DEGREES_FORMATTER = d3.format(".08f");
 const BINNING_DEGREES_FORMATTER = (value, binWidth) => {
-  return d3.format(`.0${decimalCount(binWidth)}f`)(value);
+  return d3.format(`.0${ decimalCount(binWidth) }f`)(value);
 };
 
 // use en dashes, for Maz
@@ -117,7 +121,7 @@ export function formatRange(
 ) {
   return range
     .map(value => formatter(value, options))
-    .join(` ${RANGE_SEPARATOR} `);
+    .join(` ${ RANGE_SEPARATOR } `);
 }
 
 function formatMajorMinor(major, minor, options = {}) {
@@ -140,7 +144,7 @@ function formatMajorMinor(major, minor, options = {}) {
       </span>
     );
   } else {
-    return `${major} - ${minor}`;
+    return `${ major } - ${ minor }`;
   }
 }
 
@@ -164,19 +168,19 @@ export function formatTimeRangeWithUnit(
   if (start.isValid() && end.isValid()) {
     if (!condensed || start.year() !== end.year()) {
       return (
-        start.format(`${monthFormat} D, YYYY`) +
+        start.format(`${ monthFormat } D, YYYY`) +
         RANGE_SEPARATOR +
-        end.format(`${monthFormat} D, YYYY`)
+        end.format(`${ monthFormat } D, YYYY`)
       );
     } else if (start.month() !== end.month()) {
       return (
-        start.format(`${monthFormat} D`) +
+        start.format(`${ monthFormat } D`) +
         RANGE_SEPARATOR +
-        end.format(`${monthFormat} D, YYYY`)
+        end.format(`${ monthFormat } D, YYYY`)
       );
     } else {
       return (
-        start.format(`${monthFormat} D`) +
+        start.format(`${ monthFormat } D`) +
         RANGE_SEPARATOR +
         end.format(`D, YYYY`)
       );
@@ -347,7 +351,7 @@ export function formatValue(value: Value, options: FormattingOptions = {}) {
     // TODO: get rid of one of these two code paths?
   }
 
-  if (value == undefined) {
+  if (typeof value === 'undefined') {
     return null;
   } else if (column && isa(column.special_type, TYPE.URL)) {
     return formatUrl(value, options);
@@ -440,10 +444,14 @@ export function humanize(...args) {
 export function duration(milliseconds: number) {
   if (milliseconds < 60000) {
     let seconds = Math.round(milliseconds / 1000);
-    return seconds + " " + inflect("second", seconds);
+    const secSingle = t`second`;
+    const secPlural = t`seconds`;
+    return seconds + " " + ((secSingle && secPlural) ? inflect("second", seconds, secSingle, secPlural) : inflect("second", seconds));
   } else {
     let minutes = Math.round(milliseconds / 1000 / 60);
-    return minutes + " " + inflect("minute", minutes);
+    const minSingle = t`minute`;
+    const minPlural = t`minutes`;
+    return minutes + " " + ((minSingle && minPlural) ? inflect("minute", minutes, minSingle, minPlural) : inflect("minute", minutes));
   }
 }
 

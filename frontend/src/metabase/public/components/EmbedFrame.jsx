@@ -106,7 +106,7 @@ export default class EmbedFrame extends Component {
         className={cx("EmbedFrame flex flex-column", className, {
           spread: innerScroll,
           "bordered rounded shadowed": bordered,
-          [`Theme--${theme}`]: !!theme,
+          [`Theme--${ theme }`]: !!theme,
         })}
       >
         <div

@@ -255,14 +255,13 @@ export default class DatabaseDetailsForm extends Component {
       var credentialsURLLink;
       // if (projectID) {
       let credentialsURL = CREDENTIALS_URL_PREFIXES[engine] + (projectID || "");
+      const credentialsUrlLink = <a href={credentialsURL} target="_blank">
+        ${ t`Click here` }
+      </a>;
       credentialsURLLink = (
         <div className="flex align-center Form-offset">
           <div className="Grid-cell--top">
-            {jt`${(
-              <a href={credentialsURL} target="_blank">
-                Click here
-              </a>
-            )} to generate a Client ID and Client Secret for your project.`}
+            {jt`${ credentialsUrlLink } to generate a Client ID and Client Secret for your project.`}
             {t`Choose "Other" as the application type. Name it whatever you'd like.`}
           </div>
         </div>
@@ -282,14 +281,13 @@ export default class DatabaseDetailsForm extends Component {
       var authURLLink;
       if (clientID) {
         let authURL = AUTH_URL_PREFIXES[engine] + clientID;
+        const el = <a href={authURL} target="_blank">
+          ${ t`Click here` }
+        </a>;
         authURLLink = (
           <div className="flex align-center Form-offset">
             <div className="Grid-cell--top">
-              {jt`${(
-                <a href={authURL} target="_blank">
-                  Click here
-                </a>
-              )} to get an auth code`}
+              {jt`${ el } to get an auth code`}
               {engine === "bigquery" && (
                 <span>
                   {" "}
@@ -314,17 +312,16 @@ export default class DatabaseDetailsForm extends Component {
       if (ENABLE_API_PREFIXES[engine] && projectID) {
         // URL looks like https://console.developers.google.com/apis/api/analytics.googleapis.com/overview?project=12343611585
         const enableAPIURL = ENABLE_API_PREFIXES[engine] + projectID;
+        const el = <a href={enableAPIURL} target="_blank">
+          ${ t`Click here` }
+        </a>
         enableAPILink = (
           <div className="flex align-center Form-offset">
             <div className="Grid-cell--top">
               {t`To use Metabase with this data you must enable API access in the Google Developers Console.`}
             </div>
             <div className="Grid-cell--top ml1">
-              {jt`${(
-                <a href={enableAPIURL} target="_blank">
-                  Click here
-                </a>
-              )} to go to the console if you haven't already done so.`}
+              {jt`${ el } to go to the console if you haven't already done so.`}
             </div>
           </div>
         );

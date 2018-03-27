@@ -14,7 +14,7 @@ const OPTION_NAMES = {
         {getCurrentIntervalName(filter)}
       </strong>
     );
-    return jt`Include ${period}`;
+    return jt`Include ${ period }`;
   },
   "case-sensitive": () => t`Case sensitive`,
 };

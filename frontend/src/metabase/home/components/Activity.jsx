@@ -424,7 +424,7 @@ export default class Activity extends Component {
         }
         break;
       case "segment-delete":
-        description.summary = t`removed the filter ${item.details.name}`;
+        description.summary = t`removed the filter ${ item.details.name }`;
         break;
       case "user-joined":
         description.summary = t`joined!`;

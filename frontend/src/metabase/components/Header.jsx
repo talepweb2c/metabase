@@ -105,7 +105,7 @@ export default class Header extends Component {
       } else {
         titleAndDescription = (
           <TitleAndDescription
-            title={t`New ${this.props.objectType}`}
+            title={t`New ${ this.props.objectType }`}
             description={this.props.item.description}
           />
         );
@@ -116,7 +116,7 @@ export default class Header extends Component {
     if (this.props.item && this.props.item.creator) {
       attribution = (
         <div className="Header-attribution">
-          {t`Asked by ${this.props.item.creator.common_name}`}
+          {t`Asked by ${ this.props.item.creator.common_name }`}
         </div>
       );
     }

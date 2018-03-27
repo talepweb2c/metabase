@@ -146,9 +146,9 @@ export default class Popover extends Component {
     if (o) {
       tetherOptions = {
         ...tetherOptions,
-        attachment: `${o.attachmentY} ${o.attachmentX}`,
-        targetAttachment: `${o.targetAttachmentY} ${o.targetAttachmentX}`,
-        targetOffset: `${o.offsetY}px ${o.offsetX}px`,
+        attachment: `${ o.attachmentY } ${ o.attachmentX }`,
+        targetAttachment: `${ o.targetAttachmentY } ${ o.targetAttachmentX }`,
+        targetOffset: `${ o.offsetY }px ${ o.offsetX }px`,
       };
     }
     if (this._tether) {

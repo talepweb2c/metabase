@@ -100,6 +100,8 @@ const TagEditorHelp = ({ setDatasetQuery, sampleDatasetId }) => {
       );
     };
   }
+  const variableNameCode = <Code>{"{{variable_name}}"}</Code>;
+  const codeVariable = <Code>{"[[{{variable}}]]"}</Code>;
   return (
     <div>
       <h4>{t`What's this for?`}</h4>
@@ -109,9 +111,7 @@ const TagEditorHelp = ({ setDatasetQuery, sampleDatasetId }) => {
 
       <h4 className="pt2">{t`Variables`}</h4>
       <p>
-        {jt`${(
-          <Code>{"{{variable_name}}"}</Code>
-        )} creates a variable in this SQL template called "variable_name". Variables can be given types in the side panel, which changes their behavior. All variable types other than "Field Filter" will automatically cause a filter widget to be placed on this question; with Field Filters, this is optional. When this filter widget is filled in, that value replaces the variable in the SQL template.`}
+        {jt`${ variableNameCode } creates a variable in this SQL template called "variable_name". Variables can be given types in the side panel, which changes their behavior. All variable types other than "Field Filter" will automatically cause a filter widget to be placed on this question; with Field Filters, this is optional. When this filter widget is filled in, that value replaces the variable in the SQL template.`}
       </p>
       <TagExample
         datasetQuery={EXAMPLES.variable}
@@ -129,9 +129,7 @@ const TagEditorHelp = ({ setDatasetQuery, sampleDatasetId }) => {
 
       <h4 className="pt2">{t`Optional Clauses`}</h4>
       <p>
-        {jt`brackets around a ${(
-          <Code>{"[[{{variable}}]]"}</Code>
-        )} create an optional clause in the template. If "variable" is set, then the entire clause is placed into the template. If not, then the entire clause is ignored.`}
+        {jt`brackets around a ${ codeVariable } create an optional clause in the template. If "variable" is set, then the entire clause is placed into the template. If not, then the entire clause is ignored.`}
       </p>
       <TagExample
         datasetQuery={EXAMPLES.optional}

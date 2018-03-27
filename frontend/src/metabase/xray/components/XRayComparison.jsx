@@ -18,15 +18,15 @@ import { ComparisonDropdown } from "metabase/xray/components/ComparisonDropdown"
 // can contain a table
 /*
 const fieldLinkUrl = (itemA, itemB, fieldName) => {
-    let url = `segments/${itemA.id}/${itemB.id}`
+    let url = `segments/${ itemA.id }/${ itemB.id }`
     if(itemB.itemType === 'table') {
-        url = `segment/${itemA.id}/table/${itemB.id}`
+        url = `segment/${ itemA.id }/table/${ itemB.id }`
     }
-    return `/xray/compare/${url}/field/${fieldName}/approximate`
+    return `/xray/compare/${ url }/field/${ fieldName }/approximate`
 }
 */
 
-const itemLinkUrl = item => `/xray/${item["type-tag"]}/${item.id}/approximate`;
+const itemLinkUrl = item => `/xray/${ item["type-tag"] }/${ item.id }/approximate`;
 
 const CompareInts = ({ itemA, itemAColor, itemB, itemBColor }) => (
   <div className="flex">
@@ -249,7 +249,7 @@ const XRayComparison = ({
               <tr key={field.id}>
                 <td className="border-right">
                   <Link
-                    to={`/xray/field/${field.id}/approximate`}
+                    to={`/xray/field/${ field.id }/approximate`}
                     className="px2 no-decoration text-brand flex align-center"
                   >
                     <Icon

@@ -231,16 +231,16 @@ export default class GridLayout extends Component {
     let { margin, cols } = this.props;
     let cellSize = this.getCellSize();
     return (
-      `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='${cellSize.width *
-        cols}' height='${cellSize.height}'>` +
+      `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='${ cellSize.width *
+        cols }' height='${ cellSize.height }'>` +
       _(cols)
         .times(
           i =>
-            `<rect stroke='rgba(0, 0, 0, 0.117647)' stroke-width='1' fill='none' x='${Math.round(
+            `<rect stroke='rgba(0, 0, 0, 0.117647)' stroke-width='1' fill='none' x='${ Math.round(
               margin / 2 + i * cellSize.width,
-            ) + 1.5}' y='${margin / 2 + 1.5}' width='${Math.round(
+            ) + 1.5 }' y='${ margin / 2 + 1.5 }' width='${ Math.round(
               cellSize.width - margin - 3,
-            )}' height='${cellSize.height - margin - 3}'/>`,
+            ) }' height='${ cellSize.height - margin - 3 }'/>`,
         )
         .join("") +
       `</svg>")`

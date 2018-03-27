@@ -10,7 +10,7 @@ export const DEFAULT_DB = __dirname + "/test_db_fixture.db";
 
 let testDbId = 0;
 const getDbFile = () =>
-  path.join(os.tmpdir(), `metabase-test-${process.pid}-${testDbId++}.db`);
+  path.join(os.tmpdir(), `metabase-test-${ process.pid }-${ testDbId++ }.db`);
 
 let port = 4000;
 const getPort = () => port++;
@@ -35,7 +35,7 @@ export const BackendResource = createSharedResource("BackendResource", {
       return {
         dbKey: dbKey,
         dbFile: dbFile,
-        host: `http://localhost:${port}`,
+        host: `http://localhost:${ port }`,
         port: port,
       };
     }
@@ -43,7 +43,7 @@ export const BackendResource = createSharedResource("BackendResource", {
   async start(server) {
     if (!server.process) {
       if (server.dbKey !== server.dbFile) {
-        await fs.copy(`${server.dbKey}.h2.db`, `${server.dbFile}.h2.db`);
+        await fs.copy(`${ server.dbKey }.h2.db`, `${ server.dbFile }.h2.db`);
       }
       server.process = spawn(
         "java",
@@ -96,7 +96,7 @@ export const BackendResource = createSharedResource("BackendResource", {
     }
     try {
       if (server.dbFile) {
-        await fs.unlink(`${server.dbFile}.h2.db`);
+        await fs.unlink(`${ server.dbFile }.h2.db`);
       }
     } catch (e) {}
   },
@@ -104,7 +104,7 @@ export const BackendResource = createSharedResource("BackendResource", {
 
 export async function isReady(host) {
   try {
-    let response = await fetch(`${host}/api/health`);
+    let response = await fetch(`${ host }/api/health`);
     if (response.status === 200) {
       return true;
     }

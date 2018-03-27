@@ -63,7 +63,7 @@ describe("MetricPane", () => {
     await delay(3000);
 
     click(
-      dataReference.find(`a[children="${vendor_count_metric.name}"]`).first(),
+      dataReference.find(`a[children="${ vendor_count_metric.name }"]`).first(),
     );
 
     await store.waitForActions([FETCH_TABLE_METADATA]);

@@ -23,14 +23,16 @@ export default ({ question, clicked }: ClickActionProps): ClickAction[] => {
   // the metric value should be the number of rows that will be displayed
   const count = typeof clicked.value === "number" ? clicked.value : 2;
 
+  const tableDisplayNameCount = inflect(
+    query.table().display_name,
+    count,
+  );
+  const these = inflect(t`these`, count, t`this`, t`these`);
   return [
     {
       name: "underlying-records",
       section: "records",
-      title: t`View ${inflect(t`these`, count, t`this`, t`these`)} ${inflect(
-        query.table().display_name,
-        count,
-      )}`,
+      title: t`View ${ these } ${ tableDisplayNameCount }`,
       question: () => question.drillUnderlyingRecords(dimensions),
     },
   ];

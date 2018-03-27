@@ -176,9 +176,9 @@ function onRenderCleanupGoal(chart, onGoalHover, isSplitAxis) {
     if (xAxisLine && goalLine.getBBox) {
       goalLine.setAttribute(
         "d",
-        `M0,${goalLine.getBBox().y}L${xAxisLine.getBBox().width},${
+        `M0,${ goalLine.getBBox().y }L${ xAxisLine.getBBox().width },${ 
           goalLine.getBBox().y
-        }`,
+         }`,
       );
     }
 

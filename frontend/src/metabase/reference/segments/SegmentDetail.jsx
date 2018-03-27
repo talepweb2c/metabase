@@ -33,7 +33,7 @@ import * as actions from "metabase/reference/reference";
 const interestingQuestions = (table, segment) => {
   return [
     {
-      text: t`Number of ${segment.name}`,
+      text: t`Number of ${ segment.name }`,
       icon: { name: "number", scale: 1, viewBox: "8 8 16 16" },
       link: getQuestionUrl({
         dbId: table && table.db_id,
@@ -43,7 +43,7 @@ const interestingQuestions = (table, segment) => {
       }),
     },
     {
-      text: t`See all ${segment.name}`,
+      text: t`See all ${ segment.name }`,
       icon: "table2",
       link: getQuestionUrl({
         dbId: table && table.db_id,

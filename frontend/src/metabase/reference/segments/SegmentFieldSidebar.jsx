@@ -17,7 +17,7 @@ const SegmentFieldSidebar = ({ segment, field, style, className }) => (
           className="py4"
           crumbs={[
             [t`Segments`, "/reference/segments"],
-            [segment.name, `/reference/segments/${segment.id}`],
+            [segment.name, `/reference/segments/${ segment.id }`],
             [field.name],
           ]}
           inSidebar={true}
@@ -25,8 +25,8 @@ const SegmentFieldSidebar = ({ segment, field, style, className }) => (
         />
       </div>
       <SidebarItem
-        key={`/reference/segments/${segment.id}/fields/${field.id}`}
-        href={`/reference/segments/${segment.id}/fields/${field.id}`}
+        key={`/reference/segments/${ segment.id }/fields/${ field.id }`}
+        href={`/reference/segments/${ segment.id }/fields/${ field.id }`}
         icon="document"
         name={t`Details`}
       />
