@@ -52,9 +52,6 @@ export default class VisualizationResult extends Component {
     if (noResults) {
       const supportsRowsPresentAlert = question.alertType() === ALERT_TYPE_ROWS;
 
-      const getAnAlertLink = <a className="link" onClick={this.showCreateAlertModal}>
-        ${ t`get an alert` }
-      </a>;
       // successful query but there were 0 rows returned with the result
       return (
         <div className="flex flex-full">
@@ -67,7 +64,11 @@ export default class VisualizationResult extends Component {
                 {supportsRowsPresentAlert &&
                   !isDirty && (
                     <p>
-                      {jt`You can also ${ getAnAlertLink } when there are any results.`}
+                      {jt`You can also ${(
+                        <a className="link" onClick={this.showCreateAlertModal}>
+                          {t`get an alert`}
+                        </a>
+                      )} when there are some results.`}
                     </p>
                   )}
                 <button

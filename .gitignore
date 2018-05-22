@@ -56,3 +56,4 @@ bin/node_modules/
 /.babel_cache/
 .babel_cache/.gitkeep
 Metabase.iml
+*.trace.db

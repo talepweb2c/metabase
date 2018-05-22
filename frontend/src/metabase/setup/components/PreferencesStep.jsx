@@ -68,7 +68,6 @@ export default class PreferencesStep extends Component {
         />
       );
     } else {
-      const neverText = <span style={{ fontWeight: "bold" }}>${ t`never` }</span>;
       return (
         <section className="SetupStep rounded full relative SetupStep--active">
           <StepTitle title={stepText} circleText={"3"} />
@@ -103,7 +102,9 @@ export default class PreferencesStep extends Component {
             {allowTracking ? (
               <div className="Form-field Form-offset">
                 <ul style={{ listStyle: "disc inside", lineHeight: "200%" }}>
-                  <li>{jt`Metabase ${ neverText } collects anything about your data or question results.`}</li>
+                  <li>{jt`Metabase ${(
+                    <span style={{ fontWeight: "bold" }}>{t`never`}</span>
+                  )} collects anything about your data or question results.`}</li>
                   <li>{t`All collection is completely anonymous.`}</li>
                   <li
                   >{t`Collection can be turned off at any point in your admin settings.`}</li>

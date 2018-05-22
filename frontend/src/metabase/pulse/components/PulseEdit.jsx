@@ -83,29 +83,33 @@ export default class PulseEdit extends Component {
 
   getConfirmItems() {
     return this.props.pulse.channels.map(
-      (c, index) => {
-        const recipients = <strong>
-          {c.recipients.length} {inflect("address", c.recipients.length)}
-        </strong>;
-        const scheduleType = <strong>{c.schedule_type}</strong>;
-        const channel = <strong>{c.details && c.details.channel}</strong>;
-        const channelType = <strong>{c.channel_type}</strong>;
-
-        return c.channel_type === "email" ? (
+      (c, index) =>
+        c.channel_type === "email" ? (
           <span key={index}>
-            {jt`This pulse will no longer be emailed to ${ recipients } ${ scheduleType }`}.
+            {jt`This pulse will no longer be emailed to ${(
+              <strong>
+                {c.recipients.length} {inflect(t`address`, c.recipients.length)}
+              </strong>
+            )} ${<strong>{c.schedule_type}</strong>}`}.
           </span>
         ) : c.channel_type === "slack" ? (
           <span key={index}>
-            {jt`Slack channel ${ channel } will no longer get this pulse ${ scheduleType }`}.
+            {jt`Slack channel ${(
+              <strong>{c.details && c.details.channel}</strong>
+            )} will no longer get this pulse ${(
+              <strong>{c.schedule_type}</strong>
+            )}`}.
           </span>
         ) : (
           <span key={index}>
-            {jt`Channel ${ channelType } will no longer receive this pulse ${ scheduleType }`}.
+            {jt`Channel ${(
+              <strong>{c.channel_type}</strong>
+            )} will no longer receive this pulse ${(
+              <strong>{c.schedule_type}</strong>
+            )}`}.
           </span>
-        )
-      }
-      ,);
+        ),
+    );
   }
 
   render() {

@@ -142,9 +142,10 @@ function getPermissionWarningModal(
   );
   if (permissionWarning) {
     return {
-      title: value === "controlled" ?
-        t`Limit access even though "${ defaultGroup.name }" has greater access?` :
-        `Revoke access even though "${ defaultGroup.name }" has greater access?`,
+      title:
+        (value === "controlled" ? t`Limit` : t`Revoke`) +
+        " " +
+        t`access even though "${defaultGroup.name}" has greater access?`,
       message: permissionWarning,
       confirmButtonText:
         value === "controlled" ? t`Limit access` : t`Revoke access`,
