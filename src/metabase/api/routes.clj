@@ -4,7 +4,7 @@
              [route :as route]]
             [metabase.api
              [activity :as activity]
-             [alert :as alert]
+             [alert    :as alert]
              [async :as async]
              [automagic-dashboards :as magic]
              [card :as card]
@@ -36,7 +36,8 @@
              [user :as user]
              [util :as util]
              [x-ray :as x-ray]]
-            [metabase.middleware :as middleware])
+            [metabase.middleware :as middleware]
+            [puppetlabs.i18n.core :refer [tru]]))
             (:import java.util.Locale))
 
 (def ^:private +generic-exceptions
@@ -91,6 +92,4 @@
   (context "/tiles"                [] (+auth tiles/routes))
   (context "/user"                 [] (+auth user/routes))
   (context "/util"                 [] util/routes)
-  (route/not-found (fn [{:keys [request-method uri]}]
-                     {:status 404
-                      :body   (str (.toUpperCase (name request-method) (Locale/ENGLISH)) " " uri " does not exist.")})))
+  (route/not-found (constantly {:status 404, :body (tru "API endpoint does not exist.")})))

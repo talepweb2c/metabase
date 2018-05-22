@@ -6,7 +6,7 @@
             [metabase.util :as u]
             [metabase.util.password :as password]
             [puppetlabs.i18n.core :refer [tru]]
-            [schema.core :as s])
+            [schema.core :as s]))
   (:import  java.util.Locale))
 
 (defn str-lower-case-en
@@ -138,6 +138,11 @@
    those values will be encoded as keywords at that point."
   (with-api-error-message (s/pred #(isa? (keyword %) :type/*) (tru "Valid field type (keyword or string)"))
     (tru "value must be a valid field type (keyword or string).")))
+
+(def EntityTypeKeywordOrString
+  "Validates entity type derivatives of `:entity/*`. Allows strings or keywords"
+  (with-api-error-message (s/pred #(isa? (keyword %) :entity/*) (tru "Valid entity type (keyword or string)"))
+   (tru "value must be a valid entity type (keyword or string).")))
 
 (def Map
   "Schema for a valid map."

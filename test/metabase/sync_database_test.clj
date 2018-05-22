@@ -1,15 +1,11 @@
 (ns metabase.sync-database-test
   "Tests for sync behavior that use a imaginary `SyncTestDriver`. These are kept around mainly because they've already
   been written. For newer sync tests see `metabase.sync.*` test namespaces."
-  (:require [clojure.java.jdbc :as jdbc]
-            [clojure.string :as str]
-            [expectations :refer :all]
+  (:require [expectations :refer :all]
             [metabase
-             [db :as mdb]
              [driver :as driver]
              [sync :refer :all]
              [util :as u]]
-            [metabase.driver.generic-sql :as sql]
             [metabase.models
              [database :refer [Database]]
              [field :refer [Field]]
@@ -21,7 +17,6 @@
             [metabase.test.mock.util :as mock-util]
             [toucan.db :as db]
             [toucan.util.test :as tt]))
-
 
 (def ^:private ^:const sync-test-tables
   {"movie"  {:name   "movie"
@@ -92,41 +87,42 @@
                tu/boolean-ids-and-timestamps)))
 
 (def ^:private table-defaults
-  {:id                      true
-   :db_id                   true
-   :raw_table_id            false
-   :schema                  nil
-   :description             nil
+  {:active                  true
    :caveats                 nil
-   :points_of_interest      nil
-   :show_in_getting_started false
-   :entity_type             :entity/GenericTable
-   :entity_name             nil
-   :visibility_type         nil
-   :rows                    nil
-   :active                  true
    :created_at              true
-   :updated_at              true})
+   :db_id                   true
+   :description             nil
+   :entity_name             nil
+   :entity_type             :entity/GenericTable
+   :id                      true
+   :points_of_interest      nil
+   :raw_table_id            false
+   :rows                    nil
+   :schema                  nil
+   :show_in_getting_started false
+   :updated_at              true
+   :visibility_type         nil})
 
 (def ^:private field-defaults
-  {:id                  true
-   :table_id            true
-   :raw_column_id       false
-   :description         nil
+  {:active              true
    :caveats             nil
-   :points_of_interest  nil
-   :active              true
+   :created_at          true
+   :description         nil
+   :fingerprint         false
+   :fingerprint_version false
+   :fk_target_field_id  false
+   :has_field_values    nil
+   :id                  true
+   :last_analyzed       false
    :parent_id           false
+   :points_of_interest  nil
    :position            0
    :preview_display     true
-   :visibility_type     :normal
-   :fk_target_field_id  false
-   :created_at          true
+   :raw_column_id       false
+   :special_type        nil
+   :table_id            true
    :updated_at          true
-   :last_analyzed       true
-   :has_field_values    nil
-   :fingerprint         true
-   :fingerprint_version true})
+   :visibility_type     :normal})
 
 ;; ## SYNC DATABASE
 (expect
@@ -135,18 +131,17 @@
            :name         "movie"
            :display_name "Movie"
            :fields       [(merge field-defaults
-                                 {:special_type  :type/PK
-                                  :name          "id"
+                                 {:name          "id"
                                   :display_name  "ID"
                                   :database_type "SERIAL"
                                   :base_type     :type/Integer})
                           (merge field-defaults
-                                 {:special_type       :type/FK
-                                  :name               "studio"
+                                 {:name               "studio"
                                   :display_name       "Studio"
                                   :database_type      "VARCHAR"
                                   :base_type          :type/Text
-                                  :fk_target_field_id true})
+                                  :fk_target_field_id true
+                                  :special_type       :type/FK})
                           (merge field-defaults
                                  {:name          "title"
                                   :display_name  "Title"
@@ -157,17 +152,16 @@
           {:name         "studio"
            :display_name "Studio"
            :fields       [(merge field-defaults
-                                 {:special_type  :type/Name
-                                  :name          "name"
+                                 {:name          "name"
                                   :display_name  "Name"
                                   :database_type "VARCHAR"
                                   :base_type     :type/Text})
                           (merge field-defaults
-                                 {:special_type  :type/PK
-                                  :name          "studio"
+                                 {:name          "studio"
                                   :display_name  "Studio"
                                   :database_type "VARCHAR"
-                                  :base_type     :type/Text})]})]
+                                  :base_type     :type/Text
+                                  :special_type  :type/PK})]})]
   (tt/with-temp Database [db {:engine :sync-test}]
     (sync-database! db)
     ;; we are purposely running the sync twice to test for possible logic issues which only manifest on resync of a
@@ -184,14 +178,12 @@
           :name         "movie"
           :display_name "Movie"
           :fields       [(merge field-defaults
-                                {:special_type  :type/PK
-                                 :name          "id"
+                                {:name          "id"
                                  :display_name  "ID"
                                  :database_type "SERIAL"
                                  :base_type     :type/Integer})
                          (merge field-defaults
-                                {:special_type  nil
-                                 :name          "studio"
+                                {:name          "studio"
                                  :display_name  "Studio"
                                  :database_type "VARCHAR"
                                  :base_type     :type/Text})
@@ -360,38 +352,8 @@
      (do (sync-table! (Table (data/id :venues)))
          (get-field-values))]))
 
-;; Make sure that if a Field's cardinality passes `list-cardinality-threshold` (currently 100) the corresponding
-;; FieldValues entry will be deleted (#3215)
-(defn- insert-range-sql
-  "Generate SQL to insert a row for each number in `rang`."
-  [rang]
-  (str "INSERT INTO blueberries_consumed (num) VALUES "
-       (str/join ", " (for [n rang]
-                        (str "(" n ")")))))
 
-(expect
-  false
-  (let [details {:db (str "mem:" (tu/random-name) ";DB_CLOSE_DELAY=10")}]
-    (binding [mdb/*allow-potentailly-unsafe-connections* true]
-      (tt/with-temp Database [db {:engine :h2, :details details}]
-        (jdbc/with-db-connection [conn (sql/connection-details->spec (driver/engine->driver :h2) details)]
-          (let [exec! #(doseq [statement %]
-                         (jdbc/execute! conn [statement]))]
-            ;; create the `blueberries_consumed` table and insert 50 values
-            (exec! ["CREATE TABLE blueberries_consumed (num INTEGER NOT NULL);"
-                    (insert-range-sql (range 50))])
-            (sync-database! db)
-            (let [table-id (db/select-one-id Table :db_id (u/get-id db))
-                  field-id (db/select-one-id Field :table_id table-id)]
-              ;; field values should exist...
-              (assert (= (count (db/select-one-field :values FieldValues :field_id field-id))
-                         50))
-              ;; ok, now insert enough rows to push the field past the `list-cardinality-threshold` and sync again,
-              ;; there should be no more field values
-              (exec! [(insert-range-sql (range 50 (+ 100 field-values/list-cardinality-threshold)))])
-              (sync-database! db)
-              (db/exists? FieldValues :field_id field-id))))))))
-
+;; TODO - hey, what is this testing? If you wrote this test, please explain what's going on here
 (defn- narrow-to-min-max [row]
   (-> row
       (get-in [:type :type/Number])

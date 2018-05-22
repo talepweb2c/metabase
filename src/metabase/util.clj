@@ -837,7 +837,7 @@
                   v
                   (select-nested-keys v nested-keys))})))
 
-(defn base-64-string?
+(defn base64-string?
   "Is S a Base-64 encoded string?"
   ^Boolean [s]
   (boolean (when (string? s)
@@ -963,3 +963,13 @@
   (first (keep-indexed (fn [i x]
                          (when (pred x) i))
                        coll)))
+
+
+(defn is-java-9-or-higher?
+  "Are we running on Java 9 or above?"
+  []
+  (when-let [java-major-version (some-> (System/getProperty "java.version")
+                                        (s/split #"\.")
+                                        first
+                                        Integer/parseInt)]
+    (>= java-major-version 9)))
