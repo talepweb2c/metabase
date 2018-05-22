@@ -13,7 +13,7 @@ msgstr ""
 "#-#-#-#-#  metabase-backend.pot (metabase)  #-#-#-#-#\n"
 "Project-Id-Version: metabase\n"
 "Report-Msgid-Bugs-To: docs@metabase.com\n"
-"POT-Creation-Date: 2018-05-22 09:34+0300\n"
+"POT-Creation-Date: 2018-05-22 17:30+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgstr ""
 #: frontend/src/metabase/admin/databases/components/CreatedDatabaseModal.jsx:22
 msgid ""
 "We took a look at your data, and we have some automated explorations that we "
-"can show you!."
+"can show you!"
 msgstr ""
 
 #: frontend/src/metabase/admin/databases/components/CreatedDatabaseModal.jsx:27
@@ -50,6 +50,8 @@ msgstr ""
 #: frontend/src/metabase/admin/settings/components/widgets/LdapGroupMappingsWidget.jsx:175
 #: frontend/src/metabase/components/ActionButton.jsx:51
 #: frontend/src/metabase/components/ButtonWithStatus.jsx:6
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:177
+#: frontend/src/metabase/query_builder/components/QueryHeader.jsx:216
 #: frontend/src/metabase/reference/components/EditHeader.jsx:54
 #: frontend/src/metabase/reference/components/EditHeader.jsx:69
 #: frontend/src/metabase/user/components/SetUserPassword.jsx:167
@@ -120,8 +122,8 @@ msgid "Never, I'll do this manually if I need to"
 msgstr ""
 
 #: frontend/src/metabase/admin/databases/components/DatabaseSchedulingForm.jsx:220
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:245
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:258
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:250
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:259
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:218
 #: frontend/src/metabase/components/ActionButton.jsx:52
 #: frontend/src/metabase/components/ButtonWithStatus.jsx:7
@@ -175,8 +177,8 @@ msgstr ""
 #: frontend/src/metabase/admin/datamodel/containers/SegmentForm.jsx:93
 #: frontend/src/metabase/admin/people/components/AddRow.jsx:27
 #: frontend/src/metabase/admin/people/components/EditUserForm.jsx:234
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:296
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:321
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:295
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:320
 #: frontend/src/metabase/admin/permissions/components/PermissionsEditor.jsx:49
 #: frontend/src/metabase/admin/permissions/components/PermissionsEditor.jsx:52
 #: frontend/src/metabase/admin/permissions/selectors.js:152
@@ -191,15 +193,17 @@ msgstr ""
 #: frontend/src/metabase/components/DeleteModalWithConfirm.jsx:71
 #: frontend/src/metabase/components/HeaderModal.jsx:49
 #: frontend/src/metabase/containers/SaveQuestionModal.jsx:194
+#: frontend/src/metabase/dashboard/components/AddSeriesModal.jsx:288
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:159
+#: frontend/src/metabase/dashboard/components/RemoveFromDashboardModal.jsx:42
 #: frontend/src/metabase/pulse/components/PulseEdit.jsx:199
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:180
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:334
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:183
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:343
 #: frontend/src/metabase/query_builder/components/RunButton.jsx:24
 #: frontend/src/metabase/query_builder/components/expressions/ExpressionWidget.jsx:83
 #: frontend/src/metabase/query_builder/containers/ArchiveQuestionModal.jsx:48
 #: frontend/src/metabase/questions/containers/ArchiveCollectionWidget.jsx:50
 #: frontend/src/metabase/questions/containers/CollectionEditorForm.jsx:49
-#: frontend/src/metabase/questions/containers/EditLabels.jsx:110
 #: frontend/src/metabase/questions/containers/MoveToCollection.jsx:61
 #: frontend/src/metabase/reference/components/EditHeader.jsx:34
 #: frontend/src/metabase/reference/components/RevisionMessageModal.jsx:52
@@ -221,7 +225,7 @@ msgstr ""
 #: frontend/src/metabase/nav/containers/Navbar.jsx:111
 #: frontend/src/metabase/reference/databases/DatabaseSidebar.jsx:18
 #: frontend/src/metabase/reference/databases/TableSidebar.jsx:18
-#: frontend/src/metabase/routes.jsx:381
+#: frontend/src/metabase/routes.jsx:377
 msgid "Databases"
 msgstr ""
 
@@ -241,11 +245,11 @@ msgstr ""
 #: frontend/src/metabase/admin/datamodel/containers/MetricForm.jsx:78
 #: frontend/src/metabase/admin/datamodel/containers/SegmentForm.jsx:84
 #: frontend/src/metabase/admin/people/components/EditUserForm.jsx:237
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:244
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:257
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:249
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:258
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:217
 #: frontend/src/metabase/pulse/components/PulseEdit.jsx:194
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:336
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:345
 #: frontend/src/metabase/reference/components/RevisionMessageModal.jsx:47
 msgid "Save changes"
 msgstr ""
@@ -295,7 +299,7 @@ msgstr ""
 
 #: frontend/src/metabase/admin/databases/containers/DatabaseEditApp.jsx:227
 #: frontend/src/metabase/pulse/components/PulseEdit.jsx:165
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:379
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:388
 msgid "Danger Zone"
 msgstr ""
 
@@ -315,7 +319,7 @@ msgstr ""
 #: frontend/src/metabase/admin/databases/containers/DatabaseListApp.jsx:85
 #: frontend/src/metabase/admin/datamodel/components/database/MetricsList.jsx:36
 #: frontend/src/metabase/admin/datamodel/components/database/SegmentsList.jsx:36
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:418
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:415
 #: frontend/src/metabase/admin/settings/components/widgets/CustomGeoJSONWidget.jsx:183
 #: frontend/src/metabase/admin/settings/components/widgets/PublicLinksListing.jsx:91
 #: frontend/src/metabase/components/CreateDashboardModal.jsx:90
@@ -323,7 +327,6 @@ msgstr ""
 #: frontend/src/metabase/containers/EntitySearch.jsx:24
 #: frontend/src/metabase/containers/SaveQuestionModal.jsx:215
 #: frontend/src/metabase/questions/containers/CollectionEditorForm.jsx:79
-#: frontend/src/metabase/questions/containers/LabelEditorForm.jsx:60
 #: frontend/src/metabase/reference/guide/GettingStartedGuideEditForm.jsx:463
 #: frontend/src/metabase/visualizations/visualizations/Scalar.jsx:62
 msgid "Name"
@@ -358,10 +361,10 @@ msgid "Successfully saved!"
 msgstr ""
 
 #: frontend/src/metabase/admin/datamodel/components/ObjectActionSelect.jsx:44
+#: frontend/src/metabase/dashboard/components/DashCard.jsx:256
 #: frontend/src/metabase/parameters/components/ParameterWidget.jsx:173
 #: frontend/src/metabase/pulse/components/PulseListItem.jsx:55
 #: frontend/src/metabase/query_builder/components/AlertListPopoverContent.jsx:205
-#: frontend/src/metabase/questions/containers/EditLabels.jsx:119
 #: frontend/src/metabase/reference/components/EditButton.jsx:18
 msgid "Edit"
 msgstr ""
@@ -449,7 +452,7 @@ msgid "Column"
 msgstr ""
 
 #: frontend/src/metabase/admin/datamodel/components/database/ColumnsList.jsx:24
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:119
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:121
 #: frontend/src/metabase/admin/datamodel/containers/FieldApp.jsx:206
 msgid "Visibility"
 msgstr ""
@@ -479,39 +482,41 @@ msgstr ""
 msgid "Find a schema"
 msgstr ""
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:80
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:82
 msgid "Why Hide?"
 msgstr ""
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:81
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:83
 msgid "Technical Data"
 msgstr ""
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:82
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:84
 msgid "Irrelevant/Cruft"
 msgstr ""
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:88
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:90
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTableList.jsx:85
 msgid "Queryable"
 msgstr ""
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:89
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:91
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTableList.jsx:93
 msgid "Hidden"
 msgstr ""
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:115
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:117
 msgid "No table description yet"
 msgstr ""
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:122
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:124
 msgid "Metadata Strength"
 msgstr ""
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTableList.jsx:104
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTableList.jsx:109
 msgid "Find a table"
 msgstr ""
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTableList.jsx:117
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTableList.jsx:122
 msgid "Schemas"
 msgstr ""
 
@@ -596,6 +601,18 @@ msgstr ""
 
 #: frontend/src/metabase/admin/datamodel/components/revisions/RevisionHistory.jsx:48
 msgid "Revision History for"
+msgstr ""
+
+#: frontend/src/metabase/admin/datamodel/containers/FieldApp.jsx:42
+msgid "Search box"
+msgstr ""
+
+#: frontend/src/metabase/admin/datamodel/containers/FieldApp.jsx:43
+msgid "A list of all values"
+msgstr ""
+
+#: frontend/src/metabase/admin/datamodel/containers/FieldApp.jsx:44
+msgid "Plain input box"
 msgstr ""
 
 #: frontend/src/metabase/admin/datamodel/containers/FieldApp.jsx:188
@@ -858,10 +875,10 @@ msgid ""
 msgstr ""
 
 #: frontend/src/metabase/admin/datamodel/containers/TableSettingsApp.jsx:91
-#: frontend/src/metabase/admin/settings/containers/SettingsEditorApp.jsx:272
+#: frontend/src/metabase/admin/settings/containers/SettingsEditorApp.jsx:274
 #: frontend/src/metabase/nav/containers/Navbar.jsx:96
 #: frontend/src/metabase/query_builder/components/template_tags/TagEditorSidebar.jsx:99
-#: frontend/src/metabase/routes.jsx:424
+#: frontend/src/metabase/routes.jsx:420
 msgid "Settings"
 msgstr ""
 
@@ -876,8 +893,9 @@ msgid "Re-scan this table"
 msgstr ""
 
 #: frontend/src/metabase/admin/people/components/AddRow.jsx:34
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:188
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:187
 #: frontend/src/metabase/admin/settings/components/widgets/LdapGroupMappingsWidget.jsx:246
+#: frontend/src/metabase/dashboard/components/DashCard.jsx:256
 msgid "Add"
 msgstr ""
 
@@ -944,8 +962,8 @@ msgid "Members"
 msgstr ""
 
 #: frontend/src/metabase/admin/people/components/GroupDetail.jsx:176
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:420
-#: frontend/src/metabase/admin/settings/selectors.js:104
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:417
+#: frontend/src/metabase/admin/settings/selectors.js:107
 #: frontend/src/metabase/lib/core.js:50
 #: frontend/src/metabase/pulse/components/PulseEditChannels.jsx:296
 msgid "Email"
@@ -956,11 +974,15 @@ msgid "A group is only as good as its members."
 msgstr ""
 
 #: frontend/src/metabase/admin/people/components/GroupSummary.jsx:16
-#: frontend/src/metabase/routes.jsx:378
+#: frontend/src/metabase/routes.jsx:374
 msgid "Admin"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/components/GroupSummary.jsx:36
+#: frontend/src/metabase/admin/people/components/GroupSummary.jsx:22
+msgid "other"
+msgstr ""
+
+#: frontend/src/metabase/admin/people/components/GroupSummary.jsx:38
 msgid "Default"
 msgstr ""
 
@@ -999,14 +1021,15 @@ msgid "Remove Group"
 msgstr ""
 
 #: frontend/src/metabase/admin/people/components/GroupsListing.jsx:135
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:226
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:258
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:345
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:365
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:225
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:257
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:344
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:364
 #: frontend/src/metabase/components/HeaderModal.jsx:43
+#: frontend/src/metabase/dashboard/components/AddSeriesModal.jsx:281
 #: frontend/src/metabase/parameters/components/widgets/CategoryWidget.jsx:106
 #: frontend/src/metabase/query_builder/components/AggregationPopover.jsx:298
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:182
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:185
 #: frontend/src/metabase/query_builder/components/expressions/ExpressionWidget.jsx:96
 #: frontend/src/metabase/visualizations/components/ChartSettings.jsx:201
 msgid "Done"
@@ -1018,9 +1041,9 @@ msgstr ""
 
 #: frontend/src/metabase/admin/people/components/GroupsListing.jsx:389
 #: frontend/src/metabase/admin/people/containers/AdminPeopleApp.jsx:25
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:421
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:418
 #: frontend/src/metabase/admin/settings/components/widgets/LdapGroupMappingsWidget.jsx:147
-#: frontend/src/metabase/routes.jsx:417
+#: frontend/src/metabase/routes.jsx:413
 msgid "Groups"
 msgstr ""
 
@@ -1049,125 +1072,127 @@ msgid "Reset Password"
 msgstr ""
 
 #: frontend/src/metabase/admin/people/components/UserActionsSelect.jsx:97
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:300
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:299
 #: frontend/src/metabase/admin/settings/components/widgets/CustomGeoJSONWidget.jsx:201
 #: frontend/src/metabase/admin/settings/components/widgets/LdapGroupMappingsWidget.jsx:320
+#: frontend/src/metabase/dashboard/components/RemoveFromDashboardModal.jsx:48
 #: frontend/src/metabase/parameters/components/ParameterWidget.jsx:177
 #: frontend/src/metabase/query_builder/components/expressions/ExpressionWidget.jsx:104
 msgid "Remove"
 msgstr ""
 
 #: frontend/src/metabase/admin/people/containers/AdminPeopleApp.jsx:24
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:408
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:405
 #: frontend/src/metabase/nav/containers/Navbar.jsx:101
-#: frontend/src/metabase/routes.jsx:415
+#: frontend/src/metabase/routes.jsx:411
 msgid "People"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:186
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:185
 msgid "Who do you want to add?"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:203
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:202
 msgid "Edit {0}'s details"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:215
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:214
 msgid "Email Settings"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:221
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:253
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:220
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:252
 msgid "{0} has been added"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:225
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:257
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:224
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:256
 msgid "Add another person"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:231
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:230
 msgid ""
 "We couldn’t send them an email invitation,\n"
 "so make sure to tell them to log in using {0}\n"
 "and this password we’ve generated for them:"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:240
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:239
 msgid "If you want to be able to send email invites, just go to the {0} page."
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:265
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:264
 msgid "We’ve sent an invite to {0} with instructions to set their password."
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:277
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:276
 msgid "We've re-sent {0}'s invite"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:279
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:278
 #: frontend/src/metabase/query_builder/components/SavedQuestionIntroModal.jsx:22
 #: frontend/src/metabase/tutorial/Tutorial.jsx:245
 msgid "Okay"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:283
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:282
 msgid "Any previous email invites they have will no longer work."
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:294
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:293
 msgid "Remove {0}?"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:305
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:304
 msgid "{0} won't be able to log in anymore. This can't be undone."
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:319
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:318
 msgid "Reset {0}'s password?"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:325
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:324
 msgid "Reset"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:329
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:328
 #: frontend/src/metabase/components/ConfirmContent.jsx:10
+#: frontend/src/metabase/dashboard/components/ArchiveDashboardModal.jsx:47
 msgid "Are you sure you want to do this?"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:340
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:364
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:339
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:363
 msgid "{0}'s password has been reset"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:350
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:349
 msgid ""
 "Here’s a temporary password they can use to log in and then change their "
 "password."
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:368
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:367
 msgid "We've sent them an email with instructions for creating a new password."
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:409
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:406
 msgid "Add someone"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:422
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:419
 msgid "Last Login"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:444
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:441
 msgid "Signed up via Google"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:449
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:446
 msgid "Signed up via LDAP"
 msgstr ""
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:464
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:461
 msgid "Never"
 msgstr ""
 
@@ -1411,8 +1436,8 @@ msgid "Configure"
 msgstr ""
 
 #: frontend/src/metabase/admin/settings/components/SettingsAuthenticationOptions.jsx:23
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:270
-#: frontend/src/metabase/admin/settings/selectors.js:194
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:271
+#: frontend/src/metabase/admin/settings/selectors.js:201
 msgid "LDAP"
 msgstr ""
 
@@ -1423,68 +1448,72 @@ msgid ""
 "groups."
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:75
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:71
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:74
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:72
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:67
-#: frontend/src/metabase/admin/settings/selectors.js:150
+#: frontend/src/metabase/admin/settings/selectors.js:154
 msgid "That's not a valid email address"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:79
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:75
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:78
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:76
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:71
 msgid "That's not a valid integer"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:133
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:136
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:132
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:137
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:128
 msgid "Looks like we ran into some problems"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:238
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:243
 msgid "Send test email"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:239
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:244
 msgid "Sending..."
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:240
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:245
 msgid "Sent!"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:246
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:259
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:251
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:260
 #: frontend/src/metabase/admin/settings/components/SettingsSingleSignOnForm.jsx:156
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:219
 msgid "Changes saved!"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:80
-#: frontend/src/metabase/admin/settings/selectors.js:246
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:287
+msgid "Clear"
+msgstr ""
+
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:81
+#: frontend/src/metabase/admin/settings/selectors.js:254
 msgid "Check your parentheses"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:269
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:270
 #: frontend/src/metabase/admin/settings/components/SettingsSingleSignOnForm.jsx:116
-#: frontend/src/metabase/admin/settings/selectors.js:190
+#: frontend/src/metabase/admin/settings/selectors.js:196
 msgid "Authentication"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:274
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:275
 msgid "Server Settings"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:276
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:277
 msgid "User Schema"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:285
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:286
 msgid "Attributes"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:292
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:293
 msgid "Group Schema"
 msgstr ""
 
@@ -1602,7 +1631,8 @@ msgid "Delete custom map"
 msgstr ""
 
 #: frontend/src/metabase/admin/settings/components/widgets/CustomGeoJSONWidget.jsx:226
-#: frontend/src/metabase/parameters/components/ParameterValueWidget.jsx:244
+#: frontend/src/metabase/dashboard/containers/DashCardCardParameterMapper.jsx:187
+#: frontend/src/metabase/parameters/components/ParameterValueWidget.jsx:239
 #: frontend/src/metabase/query_builder/components/template_tags/TagEditorParam.jsx:142
 #: frontend/src/metabase/query_builder/components/template_tags/TagEditorParam.jsx:184
 msgid "Select…"
@@ -1803,18 +1833,18 @@ msgid "Generate Key"
 msgstr ""
 
 #: frontend/src/metabase/admin/settings/components/widgets/SettingToggle.jsx:11
-#: frontend/src/metabase/admin/settings/selectors.js:75
-#: frontend/src/metabase/admin/settings/selectors.js:84
+#: frontend/src/metabase/admin/settings/selectors.js:77
+#: frontend/src/metabase/admin/settings/selectors.js:86
 msgid "Enabled"
 msgstr ""
 
 #: frontend/src/metabase/admin/settings/components/widgets/SettingToggle.jsx:11
-#: frontend/src/metabase/admin/settings/selectors.js:80
+#: frontend/src/metabase/admin/settings/selectors.js:82
 #: frontend/src/metabase/public/components/widgets/AdvancedSettingsPane.jsx:104
 msgid "Disabled"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/containers/SettingsEditorApp.jsx:116
+#: frontend/src/metabase/admin/settings/containers/SettingsEditorApp.jsx:117
 msgid "Unknown setting {0}"
 msgstr ""
 
@@ -1822,249 +1852,249 @@ msgstr ""
 msgid "Setup"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:26
+#: frontend/src/metabase/admin/settings/selectors.js:27
 msgid "General"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:30
+#: frontend/src/metabase/admin/settings/selectors.js:32
 msgid "Site Name"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:35
+#: frontend/src/metabase/admin/settings/selectors.js:37
 msgid "Site URL"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:40
+#: frontend/src/metabase/admin/settings/selectors.js:42
 msgid "Email Address for Help Requests"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:45
+#: frontend/src/metabase/admin/settings/selectors.js:47
 msgid "Report Timezone"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:48
+#: frontend/src/metabase/admin/settings/selectors.js:50
 msgid "Database Default"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:51
+#: frontend/src/metabase/admin/settings/selectors.js:53
 msgid "Select a timezone"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:52
+#: frontend/src/metabase/admin/settings/selectors.js:54
 msgid ""
 "Not all databases support timezones, in which case this setting won't take "
 "effect."
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:57
+#: frontend/src/metabase/admin/settings/selectors.js:59
 msgid "Language"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:62
+#: frontend/src/metabase/admin/settings/selectors.js:64
 msgid "Select a language"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:67
+#: frontend/src/metabase/admin/settings/selectors.js:69
 msgid "Anonymous Tracking"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:72
+#: frontend/src/metabase/admin/settings/selectors.js:74
 msgid "Friendly Table and Field Names"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:78
+#: frontend/src/metabase/admin/settings/selectors.js:80
 msgid "Only replace underscores and dashes with spaces"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:88
+#: frontend/src/metabase/admin/settings/selectors.js:90
 msgid "Enable Nested Queries"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:94
+#: frontend/src/metabase/admin/settings/selectors.js:96
 msgid "Updates"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:98
+#: frontend/src/metabase/admin/settings/selectors.js:101
 msgid "Check for updates"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:108
+#: frontend/src/metabase/admin/settings/selectors.js:112
 msgid "SMTP Host"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:116
+#: frontend/src/metabase/admin/settings/selectors.js:120
 msgid "SMTP Port"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:120
-#: frontend/src/metabase/admin/settings/selectors.js:216
+#: frontend/src/metabase/admin/settings/selectors.js:124
+#: frontend/src/metabase/admin/settings/selectors.js:224
 msgid "That's not a valid port number"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:124
+#: frontend/src/metabase/admin/settings/selectors.js:128
 msgid "SMTP Security"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:132
+#: frontend/src/metabase/admin/settings/selectors.js:136
 msgid "SMTP Username"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:139
+#: frontend/src/metabase/admin/settings/selectors.js:143
 msgid "SMTP Password"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:146
+#: frontend/src/metabase/admin/settings/selectors.js:150
 msgid "From Address"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:159
+#: frontend/src/metabase/admin/settings/selectors.js:164
 msgid "Slack API Token"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:161
+#: frontend/src/metabase/admin/settings/selectors.js:166
 msgid "Enter the token you received from Slack"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:178
+#: frontend/src/metabase/admin/settings/selectors.js:183
 msgid "Single Sign-On"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:199
+#: frontend/src/metabase/admin/settings/selectors.js:207
 msgid "LDAP Authentication"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:205
+#: frontend/src/metabase/admin/settings/selectors.js:213
 msgid "LDAP Host"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:213
+#: frontend/src/metabase/admin/settings/selectors.js:221
 msgid "LDAP Port"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:220
+#: frontend/src/metabase/admin/settings/selectors.js:228
 msgid "LDAP Security"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:228
+#: frontend/src/metabase/admin/settings/selectors.js:236
 msgid "Username or DN"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:233
+#: frontend/src/metabase/admin/settings/selectors.js:241
 #: frontend/src/metabase/auth/containers/LoginApp.jsx:186
 #: frontend/src/metabase/user/components/UserSettings.jsx:72
 msgid "Password"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:238
+#: frontend/src/metabase/admin/settings/selectors.js:246
 msgid "User search base"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:244
+#: frontend/src/metabase/admin/settings/selectors.js:252
 msgid "User filter"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:250
+#: frontend/src/metabase/admin/settings/selectors.js:258
 msgid "Email attribute"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:255
+#: frontend/src/metabase/admin/settings/selectors.js:263
 msgid "First name attribute"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:260
+#: frontend/src/metabase/admin/settings/selectors.js:268
 msgid "Last name attribute"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:265
+#: frontend/src/metabase/admin/settings/selectors.js:273
 msgid "Synchronize group memberships"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:271
+#: frontend/src/metabase/admin/settings/selectors.js:279
 msgid "Group search base"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:280
+#: frontend/src/metabase/admin/settings/selectors.js:288
 msgid "Maps"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:284
+#: frontend/src/metabase/admin/settings/selectors.js:293
 msgid "Map tile server URL"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:285
+#: frontend/src/metabase/admin/settings/selectors.js:294
 msgid "Metabase uses OpenStreetMaps by default."
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:290
+#: frontend/src/metabase/admin/settings/selectors.js:299
 msgid "Custom Maps"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:291
+#: frontend/src/metabase/admin/settings/selectors.js:300
 msgid ""
 "Add your own GeoJSON files to enable different region map visualizations"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:298
+#: frontend/src/metabase/admin/settings/selectors.js:307
 msgid "Public Sharing"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:302
+#: frontend/src/metabase/admin/settings/selectors.js:312
 msgid "Enable Public Sharing"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:307
+#: frontend/src/metabase/admin/settings/selectors.js:317
 msgid "Shared Dashboards"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:313
+#: frontend/src/metabase/admin/settings/selectors.js:323
 msgid "Shared Questions"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:320
+#: frontend/src/metabase/admin/settings/selectors.js:330
 msgid "Embedding in other Applications"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:346
+#: frontend/src/metabase/admin/settings/selectors.js:357
 msgid "Enable Embedding Metabase in other Applications"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:356
+#: frontend/src/metabase/admin/settings/selectors.js:367
 msgid "Embedding secret key"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:362
+#: frontend/src/metabase/admin/settings/selectors.js:373
 msgid "Embedded Dashboards"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:368
+#: frontend/src/metabase/admin/settings/selectors.js:379
 msgid "Embedded Questions"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:375
+#: frontend/src/metabase/admin/settings/selectors.js:386
 msgid "Caching"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:379
+#: frontend/src/metabase/admin/settings/selectors.js:391
 msgid "Enable Caching"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:384
+#: frontend/src/metabase/admin/settings/selectors.js:396
 msgid "Minimum Query Duration"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:391
+#: frontend/src/metabase/admin/settings/selectors.js:403
 msgid "Cache Time-To-Live (TTL) multiplier"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:398
+#: frontend/src/metabase/admin/settings/selectors.js:410
 msgid "Max Cache Entry Size"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:406
+#: frontend/src/metabase/admin/settings/selectors.js:418
 msgid "X-Rays"
 msgstr ""
 
-#: frontend/src/metabase/admin/settings/selectors.js:410
+#: frontend/src/metabase/admin/settings/selectors.js:423
 msgid "Enable X-Rays"
 msgstr ""
 
@@ -2152,56 +2182,60 @@ msgstr ""
 msgid "I seem to have forgotten my password"
 msgstr ""
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:112
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:100
+msgid "request a new reset email"
+msgstr ""
+
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:118
 msgid "Whoops, that's an expired link"
 msgstr ""
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:114
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:120
 msgid ""
 "For security reasons, password reset links expire after a little while. If "
 "you still need\n"
-"to reset your password, you can <Link to=\"/auth/forgot_password\" className="
-"\"link\">request a new reset email</Link>."
+"to reset your password, you can {0}."
 msgstr ""
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:139
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:145
 #: frontend/src/metabase/user/components/SetUserPassword.jsx:122
 msgid "New password"
 msgstr ""
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:141
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:147
 msgid "To keep your data secure, passwords {0}"
 msgstr ""
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:155
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:161
 msgid "Create a new password"
 msgstr ""
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:162
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:168
 #: frontend/src/metabase/user/components/SetUserPassword.jsx:137
 msgid "Make sure its secure like the instructions above"
 msgstr ""
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:176
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:182
 #: frontend/src/metabase/user/components/SetUserPassword.jsx:146
 msgid "Confirm new password"
 msgstr ""
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:183
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:189
 #: frontend/src/metabase/user/components/SetUserPassword.jsx:155
 msgid "Make sure it matches the one you just entered"
 msgstr ""
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:208
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:214
 msgid "Your password has been reset."
 msgstr ""
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:214
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:219
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:220
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:225
 msgid "Sign in with your new password"
 msgstr ""
 
 #: frontend/src/metabase/components/ActionButton.jsx:53
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:179
 #: frontend/src/metabase/pulse/components/PulseEdit.jsx:196
 #: frontend/src/metabase/query_builder/components/QueryHeader.jsx:269
 msgid "Save failed"
@@ -2209,6 +2243,8 @@ msgstr ""
 
 #: frontend/src/metabase/components/ActionButton.jsx:54
 #: frontend/src/metabase/components/SaveStatus.jsx:60
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:180
+#: frontend/src/metabase/dashboard/containers/AutomaticDashboardApp.jsx:115
 #: frontend/src/metabase/pulse/components/PulseEdit.jsx:197
 #: frontend/src/metabase/query_builder/components/QueryHeader.jsx:243
 #: frontend/src/metabase/query_builder/components/QueryHeader.jsx:270
@@ -2219,11 +2255,11 @@ msgstr ""
 msgid "Ok"
 msgstr ""
 
-#: frontend/src/metabase/components/Archived.jsx:10
+#: frontend/src/metabase/components/Archived.jsx:13
 msgid "This {0} has been archived"
 msgstr ""
 
-#: frontend/src/metabase/components/Archived.jsx:15
+#: frontend/src/metabase/components/Archived.jsx:18
 #: frontend/src/metabase/dashboards/containers/Dashboards.jsx:171
 #: frontend/src/metabase/questions/containers/QuestionIndex.jsx:98
 msgid "View the archive"
@@ -2251,31 +2287,31 @@ msgstr ""
 msgid "Saving failed."
 msgstr ""
 
-#: frontend/src/metabase/components/Calendar.jsx:109
+#: frontend/src/metabase/components/Calendar.jsx:119
 msgid "Su"
 msgstr ""
 
-#: frontend/src/metabase/components/Calendar.jsx:109
+#: frontend/src/metabase/components/Calendar.jsx:119
 msgid "Mo"
 msgstr ""
 
-#: frontend/src/metabase/components/Calendar.jsx:109
+#: frontend/src/metabase/components/Calendar.jsx:119
 msgid "Tu"
 msgstr ""
 
-#: frontend/src/metabase/components/Calendar.jsx:109
+#: frontend/src/metabase/components/Calendar.jsx:119
 msgid "We"
 msgstr ""
 
-#: frontend/src/metabase/components/Calendar.jsx:109
+#: frontend/src/metabase/components/Calendar.jsx:119
 msgid "Th"
 msgstr ""
 
-#: frontend/src/metabase/components/Calendar.jsx:109
+#: frontend/src/metabase/components/Calendar.jsx:119
 msgid "Fr"
 msgstr ""
 
-#: frontend/src/metabase/components/Calendar.jsx:109
+#: frontend/src/metabase/components/Calendar.jsx:119
 msgid "Sa"
 msgstr ""
 
@@ -2314,7 +2350,7 @@ msgstr ""
 
 #: frontend/src/metabase/components/CreateDashboardModal.jsx:105
 #: frontend/src/metabase/containers/SaveQuestionModal.jsx:229
-#: frontend/src/metabase/lib/core.js:45
+#: frontend/src/metabase/lib/core.js:45 frontend/src/metabase/lib/core.js:180
 #: frontend/src/metabase/questions/containers/CollectionEditorForm.jsx:87
 #: frontend/src/metabase/reference/databases/DatabaseDetail.jsx:156
 #: frontend/src/metabase/reference/databases/FieldDetail.jsx:211
@@ -2352,7 +2388,7 @@ msgstr ""
 
 #: frontend/src/metabase/components/DatabaseDetailsForm.jsx:245
 msgid ""
-"By default, Metabase does a lightweight hourly sync, and an intensive daily "
+"By default, Metabase does a lightweight hourly sync and an intensive daily "
 "scan of field values.\n"
 "If you have a large database, we recommend turning this on and reviewing "
 "when and how often the field value scans happen."
@@ -2444,11 +2480,10 @@ msgstr ""
 #: frontend/src/metabase/query_builder/containers/ArchiveQuestionModal.jsx:40
 #: frontend/src/metabase/query_builder/containers/ArchiveQuestionModal.jsx:53
 #: frontend/src/metabase/questions/components/ActionHeader.jsx:71
-#: frontend/src/metabase/questions/components/Item.jsx:106
+#: frontend/src/metabase/questions/components/Item.jsx:133
 #: frontend/src/metabase/questions/containers/Archive.jsx:61
 #: frontend/src/metabase/questions/containers/ArchiveCollectionWidget.jsx:51
-#: frontend/src/metabase/questions/containers/EntityList.jsx:100
-#: frontend/src/metabase/questions/selectors.js:223
+#: frontend/src/metabase/questions/containers/EntityList.jsx:102
 #: frontend/src/metabase/routes.jsx:255
 msgid "Archive"
 msgstr ""
@@ -2495,47 +2530,64 @@ msgstr ""
 msgid "View the SQL"
 msgstr ""
 
-#: frontend/src/metabase/components/ExplorePane.jsx:13
+#: frontend/src/metabase/components/ErrorDetails.jsx:20
+msgid "Show error details"
+msgstr ""
+
+#: frontend/src/metabase/components/ErrorDetails.jsx:26
+msgid "Here's the full error message"
+msgstr ""
+
+#: frontend/src/metabase/components/ExplorePane.jsx:15
 msgid "Hi, Metabot here."
 msgstr ""
 
-#: frontend/src/metabase/components/FieldValuesWidget.jsx:237
+#: frontend/src/metabase/components/FieldValuesWidget.jsx:234
 msgid "Search the list"
 msgstr ""
 
-#: frontend/src/metabase/components/FieldValuesWidget.jsx:241
+#: frontend/src/metabase/components/FieldValuesWidget.jsx:238
 msgid "Search by {0}"
 msgstr ""
 
-#: frontend/src/metabase/components/FieldValuesWidget.jsx:243
+#: frontend/src/metabase/components/FieldValuesWidget.jsx:240
 msgid " or enter an ID"
 msgstr ""
 
-#: frontend/src/metabase/components/FieldValuesWidget.jsx:247
+#: frontend/src/metabase/components/FieldValuesWidget.jsx:244
 msgid "Enter an ID"
 msgstr ""
 
-#: frontend/src/metabase/components/FieldValuesWidget.jsx:249
+#: frontend/src/metabase/components/FieldValuesWidget.jsx:246
 msgid "Enter a number"
 msgstr ""
 
-#: frontend/src/metabase/components/FieldValuesWidget.jsx:251
+#: frontend/src/metabase/components/FieldValuesWidget.jsx:248
 msgid "Enter some text"
 msgstr ""
 
-#: frontend/src/metabase/components/FieldValuesWidget.jsx:357
+#: frontend/src/metabase/components/FieldValuesWidget.jsx:354
 msgid "No matching {0} found."
 msgstr ""
 
-#: frontend/src/metabase/components/FieldValuesWidget.jsx:365
+#: frontend/src/metabase/components/FieldValuesWidget.jsx:362
 msgid "Including every option in your filter probably won’t do much…"
+msgstr ""
+
+#: frontend/src/metabase/components/GenericError.jsx:8
+msgid "Something's gone wrong"
+msgstr ""
+
+#: frontend/src/metabase/components/GenericError.jsx:9
+msgid ""
+"We've run into an error. You can try refreshing the page, or just go back."
 msgstr ""
 
 #: frontend/src/metabase/components/Header.jsx:93
 #: frontend/src/metabase/components/HeaderBar.jsx:45
 #: frontend/src/metabase/components/ListItem.jsx:37
 #: frontend/src/metabase/components/SortableItemList.jsx:78
-#: frontend/src/metabase/questions/components/Item.jsx:191
+#: frontend/src/metabase/questions/components/Item.jsx:215
 #: frontend/src/metabase/reference/components/Detail.jsx:47
 #: frontend/src/metabase/reference/databases/DatabaseDetail.jsx:158
 #: frontend/src/metabase/reference/databases/FieldDetail.jsx:213
@@ -2571,8 +2623,9 @@ msgid "Reverted to an earlier revision and {0}"
 msgstr ""
 
 #: frontend/src/metabase/components/HistoryModal.jsx:80
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:287
 #: frontend/src/metabase/query_builder/components/QueryHeader.jsx:392
-#: frontend/src/metabase/reference/segments/SegmentSidebar.jsx:60
+#: frontend/src/metabase/reference/segments/SegmentSidebar.jsx:54
 msgid "Revision history"
 msgstr ""
 
@@ -2609,7 +2662,7 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
-#: frontend/src/metabase/components/ListSearchField.jsx:18
+#: frontend/src/metabase/components/ListSearchField.jsx:19
 msgid "Find..."
 msgstr ""
 
@@ -2637,33 +2690,33 @@ msgstr ""
 msgid "You're subscribed. Thanks for using Metabase!"
 msgstr ""
 
-#: frontend/src/metabase/components/NotFound.jsx:11
+#: frontend/src/metabase/components/NotFound.jsx:13
 msgid "We're a little lost..."
 msgstr ""
 
-#: frontend/src/metabase/components/NotFound.jsx:13
+#: frontend/src/metabase/components/NotFound.jsx:15
 msgid "The page you asked for couldn't be found"
 msgstr ""
 
-#: frontend/src/metabase/components/NotFound.jsx:15
+#: frontend/src/metabase/components/NotFound.jsx:17
 msgid ""
 "You might've been tricked by a ninja, but in all likelihood, you were just "
 "given a bad link."
 msgstr ""
 
-#: frontend/src/metabase/components/NotFound.jsx:16
+#: frontend/src/metabase/components/NotFound.jsx:18
 msgid "You can always:"
 msgstr ""
 
-#: frontend/src/metabase/components/NotFound.jsx:19
+#: frontend/src/metabase/components/NotFound.jsx:21
 msgid "Ask a new question."
 msgstr ""
 
-#: frontend/src/metabase/components/NotFound.jsx:21
+#: frontend/src/metabase/components/NotFound.jsx:23
 msgid "or"
 msgstr ""
 
-#: frontend/src/metabase/components/NotFound.jsx:29
+#: frontend/src/metabase/components/NotFound.jsx:31
 msgid "Take a kitten break."
 msgstr ""
 
@@ -2672,14 +2725,14 @@ msgid "Temporary Password"
 msgstr ""
 
 #: frontend/src/metabase/components/PasswordReveal.jsx:67
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:321
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:336
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:322
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:337
 msgid "Hide"
 msgstr ""
 
 #: frontend/src/metabase/components/PasswordReveal.jsx:67
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:322
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:337
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:323
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:338
 msgid "Show"
 msgstr ""
 
@@ -2780,7 +2833,12 @@ msgstr ""
 msgid "Nothing to select"
 msgstr ""
 
-#: frontend/src/metabase/components/Unauthorized.jsx:10
+#: frontend/src/metabase/components/SortableItemList.jsx:47
+#: frontend/src/metabase/questions/containers/AddToDashboard.jsx:115
+msgid "Sort by"
+msgstr ""
+
+#: frontend/src/metabase/components/Unauthorized.jsx:12
 msgid "Sorry, you don’t have permission to see that."
 msgstr ""
 
@@ -2872,23 +2930,191 @@ msgstr ""
 msgid "Undo"
 msgstr ""
 
-#: frontend/src/metabase/dashboard/containers/AutomaticDashboardApp.jsx:86
-msgid "View your recently created dashboard"
+#: frontend/src/metabase/dashboard/components/AddSeriesModal.jsx:269
+msgid "Applying Question"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/AddSeriesModal.jsx:273
+msgid "That question isn't compatible"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/AddSeriesModal.jsx:309
+#: frontend/src/metabase/questions/components/ExpandingSearchField.jsx:93
+msgid "Search for a question"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/AddSeriesModal.jsx:338
+msgid "We're not sure if this question is compatible"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/ArchiveDashboardModal.jsx:45
+msgid "Archive Dashboard"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/DashCardParameterMapper.jsx:17
+msgid ""
+"Make sure to make a selection for each series, or the filter won't work on "
+"this card."
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/Dashboard.jsx:284
+msgid "This dashboard is looking empty."
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/Dashboard.jsx:287
+msgid "Add a question to start making it useful!"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/DashboardActions.jsx:36
+msgid "Daytime mode"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/DashboardActions.jsx:36
+msgid "Nighttime mode"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/DashboardActions.jsx:53
+msgid "Exit fullscreen"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/DashboardActions.jsx:53
+msgid "Enter fullscreen"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:178
+#: frontend/src/metabase/pulse/components/PulseEdit.jsx:195
+#: frontend/src/metabase/query_builder/components/QueryHeader.jsx:268
+msgid "Saving…"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:214
+msgid "Add a question"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:217
+msgid "Add a question to this dashboard"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:246
+msgid "Add a filter"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:252
+#: frontend/src/metabase/public/components/widgets/AdvancedSettingsPane.jsx:79
+msgid "Parameters"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:273
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:277
+msgid "Add a text box"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:300
+msgid "Edit dashboard"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:304
+msgid "Edit Dashboard Layout"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:338
+msgid "You are editing a dashboard"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:343
+msgid "Select the field that should be filtered for each card"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/ParametersPopover.jsx:82
+msgid "What do you want to filter?"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/ParametersPopover.jsx:115
+msgid "What kind of filter?"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:13
+msgid "Off"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:14
+msgid "1 minute"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:15
+msgid "5 minutes"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:16
+msgid "10 minutes"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:17
+msgid "15 minutes"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:18
+msgid "30 minutes"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:19
+msgid "60 minutes"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:31
+msgid "Auto-refresh"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:37
+msgid "Refreshing in"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/components/RemoveFromDashboardModal.jsx:37
+msgid "Remove this question?"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/containers/AutomaticDashboardApp.jsx:69
+msgid "Your dashboard was saved"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/containers/AutomaticDashboardApp.jsx:74
+msgid "See it"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/containers/AutomaticDashboardApp.jsx:123
+msgid "Save this"
+msgstr ""
+
+#: frontend/src/metabase/dashboard/containers/DashCardCardParameterMapper.jsx:140
+msgid ""
+"This card doesn't have any fields or parameters that can be mapped to this "
+"parameter type."
+msgstr ""
+
+#: frontend/src/metabase/dashboard/containers/DashCardCardParameterMapper.jsx:142
+msgid ""
+"The values in this field don't overlap with the values of any other fields "
+"you've chosen."
+msgstr ""
+
+#: frontend/src/metabase/dashboard/containers/DashCardCardParameterMapper.jsx:186
+#: frontend/src/metabase/visualizations/components/settings/ChartSettingFieldPicker.jsx:15
+msgid "No valid fields"
 msgstr ""
 
 #: frontend/src/metabase/dashboards/components/DashboardList.jsx:40
 #: frontend/src/metabase/questions/components/ActionHeader.jsx:71
-#: frontend/src/metabase/questions/components/Item.jsx:106
+#: frontend/src/metabase/questions/components/Item.jsx:133
 msgid "Unarchive"
 msgstr ""
 
 #: frontend/src/metabase/dashboards/components/DashboardList.jsx:57
-#: frontend/src/metabase/questions/components/Item.jsx:170
+#: frontend/src/metabase/questions/components/Item.jsx:195
 msgid "Unfavorite"
 msgstr ""
 
 #: frontend/src/metabase/dashboards/components/DashboardList.jsx:57
-#: frontend/src/metabase/questions/components/Item.jsx:170
+#: frontend/src/metabase/questions/components/Item.jsx:195
 msgid "Favorite"
 msgstr ""
 
@@ -2897,14 +3123,12 @@ msgid "All dashboards"
 msgstr ""
 
 #: frontend/src/metabase/dashboards/containers/Dashboards.jsx:52
-#: frontend/src/metabase/questions/containers/EntityList.jsx:76
-#: frontend/src/metabase/questions/selectors.js:155
+#: frontend/src/metabase/questions/containers/EntityList.jsx:78
 msgid "Favorites"
 msgstr ""
 
 #: frontend/src/metabase/dashboards/containers/Dashboards.jsx:58
-#: frontend/src/metabase/questions/containers/EntityList.jsx:88
-#: frontend/src/metabase/questions/selectors.js:157
+#: frontend/src/metabase/questions/containers/EntityList.jsx:90
 msgid "Saved by me"
 msgstr ""
 
@@ -2977,7 +3201,7 @@ msgid "removed a question from the dashboard - "
 msgstr ""
 
 #: frontend/src/metabase/home/components/Activity.jsx:234
-#: frontend/src/metabase/visualizations/visualizations/ObjectDetail.jsx:267
+#: frontend/src/metabase/visualizations/visualizations/ObjectDetail.jsx:271
 msgid "Unknown"
 msgstr ""
 
@@ -3008,6 +3232,7 @@ msgstr ""
 #: frontend/src/metabase/home/components/Activity.jsx:323
 #: frontend/src/metabase/home/components/Activity.jsx:373
 #: frontend/src/metabase/home/components/Activity.jsx:414
+#: src/metabase/automagic_dashboards/core.clj
 msgid " table"
 msgstr ""
 
@@ -3115,6 +3340,11 @@ msgstr ""
 msgid "Entity Key"
 msgstr ""
 
+#: frontend/src/metabase/lib/core.js:8 frontend/src/metabase/lib/core.js:14
+#: frontend/src/metabase/lib/core.js:20
+msgid "Overall Row"
+msgstr ""
+
 #: frontend/src/metabase/lib/core.js:9
 msgid "The primary key for this table."
 msgstr ""
@@ -3139,6 +3369,28 @@ msgstr ""
 
 #: frontend/src/metabase/lib/core.js:25
 msgid "Avatar Image URL"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:26 frontend/src/metabase/lib/core.js:31
+#: frontend/src/metabase/lib/core.js:36 frontend/src/metabase/lib/core.js:41
+#: frontend/src/metabase/lib/core.js:46 frontend/src/metabase/lib/core.js:51
+#: frontend/src/metabase/lib/core.js:56 frontend/src/metabase/lib/core.js:61
+#: frontend/src/metabase/lib/core.js:66 frontend/src/metabase/lib/core.js:71
+#: frontend/src/metabase/lib/core.js:76 frontend/src/metabase/lib/core.js:81
+#: frontend/src/metabase/lib/core.js:86 frontend/src/metabase/lib/core.js:91
+#: frontend/src/metabase/lib/core.js:96 frontend/src/metabase/lib/core.js:101
+#: frontend/src/metabase/lib/core.js:106 frontend/src/metabase/lib/core.js:111
+#: frontend/src/metabase/lib/core.js:116 frontend/src/metabase/lib/core.js:121
+#: frontend/src/metabase/lib/core.js:126 frontend/src/metabase/lib/core.js:131
+#: frontend/src/metabase/lib/core.js:136 frontend/src/metabase/lib/core.js:141
+#: frontend/src/metabase/lib/core.js:146 frontend/src/metabase/lib/core.js:151
+#: frontend/src/metabase/lib/core.js:156 frontend/src/metabase/lib/core.js:161
+#: frontend/src/metabase/lib/core.js:166 frontend/src/metabase/lib/core.js:171
+#: frontend/src/metabase/lib/core.js:176 frontend/src/metabase/lib/core.js:181
+#: frontend/src/metabase/lib/core.js:186 frontend/src/metabase/lib/core.js:191
+#: frontend/src/metabase/lib/core.js:196 frontend/src/metabase/lib/core.js:201
+#: frontend/src/metabase/lib/core.js:206
+msgid "Common"
 msgstr ""
 
 #: frontend/src/metabase/lib/core.js:30
@@ -3200,32 +3452,110 @@ msgstr ""
 msgid "Zip Code"
 msgstr ""
 
-#: frontend/src/metabase/lib/core.js:213
+#: frontend/src/metabase/lib/core.js:110
+msgid "Quantity"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:115
+msgid "Income"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:120
+msgid "Discount"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:125
+msgid "Creation timestamp"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:130
+msgid "Product"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:135
+msgid "User"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:140
+msgid "Source"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:145
+msgid "Price"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:150
+msgid "Join timestamp"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:155
+msgid "Share"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:160
+msgid "Owner"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:165
+msgid "Company"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:170
+msgid "Subscription"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:175
+msgid "Score"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:185
+#: frontend/src/metabase/public/components/widgets/DisplayOptionsPane.jsx:49
+#: frontend/src/metabase/visualizations/lib/settings.js:159
+msgid "Title"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:190
+msgid "Comment"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:195
+msgid "Cost"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:200
+msgid "Gross margin"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:205
+msgid "Birthday"
+msgstr ""
+
+#: frontend/src/metabase/lib/core.js:313
 msgid "Everywhere"
 msgstr ""
 
-#: frontend/src/metabase/lib/core.js:214
+#: frontend/src/metabase/lib/core.js:314
 msgid ""
 "The default setting. This field will be displayed normally in tables and "
 "charts."
 msgstr ""
 
-#: frontend/src/metabase/lib/core.js:218
+#: frontend/src/metabase/lib/core.js:318
 msgid "Only in Detail Views"
 msgstr ""
 
-#: frontend/src/metabase/lib/core.js:219
+#: frontend/src/metabase/lib/core.js:319
 msgid ""
 "This field will only be displayed when viewing the details of a single "
 "record. Use this for information that's lengthy or that isn't useful in a "
 "table or chart."
 msgstr ""
 
-#: frontend/src/metabase/lib/core.js:223
+#: frontend/src/metabase/lib/core.js:323
 msgid "Do Not Include"
 msgstr ""
 
-#: frontend/src/metabase/lib/core.js:224
+#: frontend/src/metabase/lib/core.js:324
 msgid ""
 "Metabase will never retrieve this field. Use this for sensitive or "
 "irrelevant information."
@@ -3268,13 +3598,13 @@ msgstr ""
 
 #: frontend/src/metabase/lib/expressions/config.js:14
 #: frontend/src/metabase/qb/components/drill/SummarizeColumnDrill.js:25
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:350
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:351
 msgid "Min"
 msgstr ""
 
 #: frontend/src/metabase/lib/expressions/config.js:15
 #: frontend/src/metabase/qb/components/drill/SummarizeColumnDrill.js:29
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:358
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:359
 msgid "Max"
 msgstr ""
 
@@ -3282,19 +3612,19 @@ msgstr ""
 msgid "sad sad panda, lexing errors detected"
 msgstr ""
 
-#: frontend/src/metabase/lib/formatting.js:454
+#: frontend/src/metabase/lib/formatting.js:448
 msgid "second"
 msgstr ""
 
-#: frontend/src/metabase/lib/formatting.js:455
+#: frontend/src/metabase/lib/formatting.js:449
 msgid "seconds"
 msgstr ""
 
-#: frontend/src/metabase/lib/formatting.js:459
+#: frontend/src/metabase/lib/formatting.js:453
 msgid "minute"
 msgstr ""
 
-#: frontend/src/metabase/lib/formatting.js:460
+#: frontend/src/metabase/lib/formatting.js:454
 msgid "minutes"
 msgstr ""
 
@@ -3332,7 +3662,7 @@ msgid "What do you want to find out?"
 msgstr ""
 
 #: frontend/src/metabase/lib/query.js:607
-#: frontend/src/metabase/lib/schema_metadata.js:412
+#: frontend/src/metabase/lib/schema_metadata.js:428
 #: frontend/src/metabase/query_builder/components/GuiQueryEditor.jsx:244
 msgid "Raw data"
 msgstr ""
@@ -3393,208 +3723,208 @@ msgstr ""
 msgid "False"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:273
+#: frontend/src/metabase/lib/schema_metadata.js:282
 msgid "Select longitude field"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:274
+#: frontend/src/metabase/lib/schema_metadata.js:283
 msgid "Enter upper latitude"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:275
+#: frontend/src/metabase/lib/schema_metadata.js:284
 msgid "Enter left longitude"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:276
+#: frontend/src/metabase/lib/schema_metadata.js:285
 msgid "Enter lower latitude"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:277
+#: frontend/src/metabase/lib/schema_metadata.js:286
 msgid "Enter right longitude"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:306
-#: frontend/src/metabase/lib/schema_metadata.js:326
-#: frontend/src/metabase/lib/schema_metadata.js:336
+#: frontend/src/metabase/lib/schema_metadata.js:322
 #: frontend/src/metabase/lib/schema_metadata.js:342
-#: frontend/src/metabase/lib/schema_metadata.js:350
-#: frontend/src/metabase/lib/schema_metadata.js:356
-#: frontend/src/metabase/lib/schema_metadata.js:361
+#: frontend/src/metabase/lib/schema_metadata.js:352
+#: frontend/src/metabase/lib/schema_metadata.js:358
+#: frontend/src/metabase/lib/schema_metadata.js:366
+#: frontend/src/metabase/lib/schema_metadata.js:372
+#: frontend/src/metabase/lib/schema_metadata.js:377
 msgid "Is"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:307
-#: frontend/src/metabase/lib/schema_metadata.js:327
-#: frontend/src/metabase/lib/schema_metadata.js:337
-#: frontend/src/metabase/lib/schema_metadata.js:351
-#: frontend/src/metabase/lib/schema_metadata.js:357
+#: frontend/src/metabase/lib/schema_metadata.js:323
+#: frontend/src/metabase/lib/schema_metadata.js:343
+#: frontend/src/metabase/lib/schema_metadata.js:353
+#: frontend/src/metabase/lib/schema_metadata.js:367
+#: frontend/src/metabase/lib/schema_metadata.js:373
 msgid "Is not"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:308
-#: frontend/src/metabase/lib/schema_metadata.js:322
-#: frontend/src/metabase/lib/schema_metadata.js:330
+#: frontend/src/metabase/lib/schema_metadata.js:324
 #: frontend/src/metabase/lib/schema_metadata.js:338
 #: frontend/src/metabase/lib/schema_metadata.js:346
-#: frontend/src/metabase/lib/schema_metadata.js:352
+#: frontend/src/metabase/lib/schema_metadata.js:354
 #: frontend/src/metabase/lib/schema_metadata.js:362
+#: frontend/src/metabase/lib/schema_metadata.js:368
+#: frontend/src/metabase/lib/schema_metadata.js:378
 msgid "Is empty"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:309
-#: frontend/src/metabase/lib/schema_metadata.js:323
-#: frontend/src/metabase/lib/schema_metadata.js:331
+#: frontend/src/metabase/lib/schema_metadata.js:325
 #: frontend/src/metabase/lib/schema_metadata.js:339
 #: frontend/src/metabase/lib/schema_metadata.js:347
-#: frontend/src/metabase/lib/schema_metadata.js:353
+#: frontend/src/metabase/lib/schema_metadata.js:355
 #: frontend/src/metabase/lib/schema_metadata.js:363
+#: frontend/src/metabase/lib/schema_metadata.js:369
+#: frontend/src/metabase/lib/schema_metadata.js:379
 msgid "Not empty"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:315
-msgid "Equal"
+#: frontend/src/metabase/lib/schema_metadata.js:331
+msgid "Equal to"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:316
-msgid "Not equal"
+#: frontend/src/metabase/lib/schema_metadata.js:332
+msgid "Not equal to"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:317
+#: frontend/src/metabase/lib/schema_metadata.js:333
 msgid "Greater than"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:318
+#: frontend/src/metabase/lib/schema_metadata.js:334
 msgid "Less than"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:319
-#: frontend/src/metabase/lib/schema_metadata.js:345
+#: frontend/src/metabase/lib/schema_metadata.js:335
+#: frontend/src/metabase/lib/schema_metadata.js:361
 #: frontend/src/metabase/query_builder/components/filters/pickers/DatePicker.jsx:289
 #: frontend/src/metabase/query_builder/components/filters/pickers/TimePicker.jsx:96
 msgid "Between"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:320
+#: frontend/src/metabase/lib/schema_metadata.js:336
 msgid "Greater than or equal to"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:321
+#: frontend/src/metabase/lib/schema_metadata.js:337
 msgid "Less than or equal to"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:328
+#: frontend/src/metabase/lib/schema_metadata.js:344
 msgid "Contains"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:329
+#: frontend/src/metabase/lib/schema_metadata.js:345
 msgid "Does not contain"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:332
+#: frontend/src/metabase/lib/schema_metadata.js:348
 msgid "Starts with"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:333
+#: frontend/src/metabase/lib/schema_metadata.js:349
 msgid "Ends with"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:343
+#: frontend/src/metabase/lib/schema_metadata.js:359
 #: frontend/src/metabase/query_builder/components/filters/pickers/DatePicker.jsx:268
 #: frontend/src/metabase/query_builder/components/filters/pickers/TimePicker.jsx:74
 msgid "Before"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:344
+#: frontend/src/metabase/lib/schema_metadata.js:360
 #: frontend/src/metabase/query_builder/components/filters/pickers/DatePicker.jsx:275
 #: frontend/src/metabase/query_builder/components/filters/pickers/TimePicker.jsx:85
 msgid "After"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:358
+#: frontend/src/metabase/lib/schema_metadata.js:374
 msgid "Inside"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:414
+#: frontend/src/metabase/lib/schema_metadata.js:430
 msgid "Just a table with the rows in the answer, no additional operations."
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:420
+#: frontend/src/metabase/lib/schema_metadata.js:436
 msgid "Count of rows"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:422
+#: frontend/src/metabase/lib/schema_metadata.js:438
 msgid "Total number of rows in the answer."
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:428
+#: frontend/src/metabase/lib/schema_metadata.js:444
 msgid "Sum of ..."
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:430
+#: frontend/src/metabase/lib/schema_metadata.js:446
 msgid "Sum of all the values of a column."
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:436
+#: frontend/src/metabase/lib/schema_metadata.js:452
 msgid "Average of ..."
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:438
+#: frontend/src/metabase/lib/schema_metadata.js:454
 msgid "Average of all the values of a column"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:444
+#: frontend/src/metabase/lib/schema_metadata.js:460
 msgid "Number of distinct values of ..."
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:446
+#: frontend/src/metabase/lib/schema_metadata.js:462
 msgid "Number of unique values of a column among all the rows in the answer."
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:452
+#: frontend/src/metabase/lib/schema_metadata.js:468
 msgid "Cumulative sum of ..."
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:454
+#: frontend/src/metabase/lib/schema_metadata.js:470
 msgid ""
 "Additive sum of all the values of a column.\\ne.x. total revenue over time."
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:460
+#: frontend/src/metabase/lib/schema_metadata.js:476
 msgid "Cumulative count of rows"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:462
+#: frontend/src/metabase/lib/schema_metadata.js:478
 msgid ""
 "Additive count of the number of rows.\\ne.x. total number of sales over time."
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:468
+#: frontend/src/metabase/lib/schema_metadata.js:484
 msgid "Standard deviation of ..."
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:470
+#: frontend/src/metabase/lib/schema_metadata.js:486
 msgid ""
 "Number which expresses how much the values of a column vary among all rows "
 "in the answer."
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:476
+#: frontend/src/metabase/lib/schema_metadata.js:492
 msgid "Minimum of ..."
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:478
+#: frontend/src/metabase/lib/schema_metadata.js:494
 msgid "Minimum value of a column"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:484
+#: frontend/src/metabase/lib/schema_metadata.js:500
 msgid "Maximum of ..."
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:486
+#: frontend/src/metabase/lib/schema_metadata.js:502
 msgid "Maximum value of a column"
 msgstr ""
 
-#: frontend/src/metabase/lib/schema_metadata.js:494
+#: frontend/src/metabase/lib/schema_metadata.js:510
 msgid "Break out by dimension"
 msgstr ""
 
@@ -3816,7 +4146,7 @@ msgid "Metabase Admin"
 msgstr ""
 
 #: frontend/src/metabase/nav/containers/Navbar.jsx:106
-#: frontend/src/metabase/routes.jsx:387
+#: frontend/src/metabase/routes.jsx:383
 msgid "Data Model"
 msgstr ""
 
@@ -3827,7 +4157,7 @@ msgstr ""
 
 #: frontend/src/metabase/nav/containers/Navbar.jsx:179
 #: frontend/src/metabase/pulse/components/PulseList.jsx:46
-#: frontend/src/metabase/routes.jsx:367
+#: frontend/src/metabase/routes.jsx:363
 msgid "Pulses"
 msgstr ""
 
@@ -3893,12 +4223,12 @@ msgid ""
 "For more complicated questions, you can write your own SQL or native query."
 msgstr ""
 
-#: frontend/src/metabase/parameters/components/ParameterValueWidget.jsx:243
+#: frontend/src/metabase/parameters/components/ParameterValueWidget.jsx:238
 msgid "Select a default value…"
 msgstr ""
 
 #: frontend/src/metabase/parameters/components/widgets/DateAllOptionsWidget.jsx:147
-#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:383
+#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:390
 msgid "Update filter"
 msgstr ""
 
@@ -3922,16 +4252,19 @@ msgstr ""
 
 #: frontend/src/metabase/parameters/components/widgets/DateRelativeWidget.jsx:24
 #: frontend/src/metabase/parameters/components/widgets/DateRelativeWidget.jsx:29
+#: src/metabase/api/table.clj
 msgid "Week"
 msgstr ""
 
 #: frontend/src/metabase/parameters/components/widgets/DateRelativeWidget.jsx:25
 #: frontend/src/metabase/parameters/components/widgets/DateRelativeWidget.jsx:30
+#: src/metabase/api/table.clj
 msgid "Month"
 msgstr ""
 
 #: frontend/src/metabase/parameters/components/widgets/DateRelativeWidget.jsx:26
 #: frontend/src/metabase/parameters/components/widgets/DateRelativeWidget.jsx:31
+#: src/metabase/api/table.clj
 msgid "Year"
 msgstr ""
 
@@ -4025,10 +4358,6 @@ msgstr ""
 msgid "Style"
 msgstr ""
 
-#: frontend/src/metabase/public/components/widgets/AdvancedSettingsPane.jsx:79
-msgid "Parameters"
-msgstr ""
-
 #: frontend/src/metabase/public/components/widgets/AdvancedSettingsPane.jsx:81
 msgid "Which parameters can users of this embed use?"
 msgstr ""
@@ -4078,11 +4407,6 @@ msgstr ""
 
 #: frontend/src/metabase/public/components/widgets/DisplayOptionsPane.jsx:37
 msgid "Border"
-msgstr ""
-
-#: frontend/src/metabase/public/components/widgets/DisplayOptionsPane.jsx:49
-#: frontend/src/metabase/visualizations/lib/settings.js:159
-msgid "Title"
 msgstr ""
 
 #: frontend/src/metabase/public/components/widgets/EmbedCodePane.jsx:63
@@ -4240,18 +4564,13 @@ msgstr ""
 msgid "Create pulse"
 msgstr ""
 
-#: frontend/src/metabase/pulse/components/PulseEdit.jsx:195
-#: frontend/src/metabase/query_builder/components/QueryHeader.jsx:268
-msgid "Saving…"
-msgstr ""
-
 #: frontend/src/metabase/pulse/components/PulseEditCards.jsx:89
 msgid "Attachment"
 msgstr ""
 
 #: frontend/src/metabase/pulse/components/PulseEditCards.jsx:103
 #: frontend/src/metabase/pulse/components/PulseEditCards.jsx:110
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:651
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:660
 msgid "Heads up"
 msgstr ""
 
@@ -4431,6 +4750,10 @@ msgstr ""
 msgid "All Time"
 msgstr ""
 
+#: frontend/src/metabase/qb/components/TimeseriesFilterWidget.jsx:154
+msgid "Apply"
+msgstr ""
+
 #: frontend/src/metabase/qb/components/actions/CommonMetricsAction.jsx:24
 msgid "View {0}"
 msgstr ""
@@ -4443,7 +4766,7 @@ msgstr ""
 msgid "Count of rows by time"
 msgstr ""
 
-#: frontend/src/metabase/qb/components/actions/GenerateDashboardAction.jsx:25
+#: frontend/src/metabase/qb/components/actions/GenerateDashboardAction.jsx:36
 msgid "See an exploration of this question"
 msgstr ""
 
@@ -4464,11 +4787,25 @@ msgid "View the underlying {0} records"
 msgstr ""
 
 #: frontend/src/metabase/qb/components/actions/XRayCard.jsx:19
-msgid "X-ray this question"
+msgid "Analyze this question"
 msgstr ""
 
 #: frontend/src/metabase/qb/components/actions/XRaySegment.jsx:23
 msgid "X-ray {0}"
+msgstr ""
+
+#: frontend/src/metabase/qb/components/drill/AutomaticDashboardDrill.jsx:32
+msgid "X-ray {0} {1}"
+msgstr ""
+
+#: frontend/src/metabase/qb/components/drill/AutomaticDashboardDrill.jsx:32
+#: frontend/src/metabase/qb/components/drill/UnderlyingRecordsDrill.jsx:30
+msgid "these"
+msgstr ""
+
+#: frontend/src/metabase/qb/components/drill/AutomaticDashboardDrill.jsx:32
+#: frontend/src/metabase/qb/components/drill/UnderlyingRecordsDrill.jsx:30
+msgid "this"
 msgstr ""
 
 #: frontend/src/metabase/qb/components/drill/CountByColumnDrill.js:29
@@ -4492,7 +4829,7 @@ msgstr ""
 msgid "Descending"
 msgstr ""
 
-#: frontend/src/metabase/qb/components/drill/SummarizeColumnByTimeDrill.js:44
+#: frontend/src/metabase/qb/components/drill/SummarizeColumnByTimeDrill.js:47
 msgid "by time"
 msgstr ""
 
@@ -4502,14 +4839,6 @@ msgstr ""
 
 #: frontend/src/metabase/qb/components/drill/SummarizeColumnDrill.js:33
 msgid "Distincts"
-msgstr ""
-
-#: frontend/src/metabase/qb/components/drill/UnderlyingRecordsDrill.jsx:30
-msgid "these"
-msgstr ""
-
-#: frontend/src/metabase/qb/components/drill/UnderlyingRecordsDrill.jsx:30
-msgid "this"
 msgstr ""
 
 #: frontend/src/metabase/qb/components/drill/UnderlyingRecordsDrill.jsx:35
@@ -4568,151 +4897,151 @@ msgstr ""
 msgid "{0} set up an alert"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:149
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:152
 msgid "alerts"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:172
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:175
 msgid "Let's set up your alert"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:203
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:206
 msgid "The wide world of alerts"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:204
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:207
 msgid "There are a few different kinds of alerts you can get"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:217
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:220
 msgid "When a raw data question {0}"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:218
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:221
 msgid "returns any results"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:228
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:231
 msgid "When a line or bar {0}"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:229
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:232
 msgid "crosses a goal line"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:239
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:242
 msgid "When a progress bar {0}"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:240
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:243
 msgid "reaches its goal"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:248
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:251
 msgid "Set up an alert"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:311
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:320
 msgid "Edit your alert"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:311
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:320
 msgid "Edit alert"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:354
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:363
 msgid "This alert will no longer be emailed to {0}."
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:360
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:369
 msgid "Slack channel {0} will no longer get this alert."
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:364
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:373
 msgid "Channel {0} will no longer receive this alert."
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:381
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:390
 msgid "Delete this alert"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:383
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:392
 msgid "Stop delivery and delete this alert. There's no undo, so be careful."
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:391
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:400
 msgid "Delete this alert?"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:475
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:484
 msgid "Alert me when the line…"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:476
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:485
 msgid "Alert me when the progress bar…"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:479
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:488
 msgid "Goes above the goal line"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:479
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:488
 msgid "Reaches the goal"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:482
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:491
 msgid "Goes below the goal line"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:482
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:491
 msgid "Goes below the goal"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:490
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:499
 msgid "The first time it crosses, or every time?"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:491
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:500
 msgid "The first time it reaches the goal, or every time?"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:493
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:502
 msgid "The first time"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:494
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:503
 msgid "Every time"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:597
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:606
 msgid "Where do you want to send these alerts?"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:608
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:617
 msgid "Email alerts to:"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:650
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:659
 msgid ""
 "{0} Goal-based alerts aren't yet supported for charts with more than one "
 "line, so this alert will be sent whenever the chart has {1}."
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:653
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:662
 msgid "results"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:657
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:666
 msgid ""
 "{0} This kind of alert is most useful when your saved question doesn’t {1} "
 "return any results, but you want to know when it does."
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:658
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:667
 msgid "Tip"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:660
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:669
 msgid "usually"
 msgstr ""
 
@@ -4995,60 +5324,52 @@ msgstr ""
 msgid "Group time by"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:45
+#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:46
 msgid "Your question took too long"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:46
+#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:47
 msgid ""
 "We didn't get an answer back from your database in time, so we had to stop. "
 "You can try again in a minute, or if the problem persists, you can email an "
 "admin to let them know."
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:54
+#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:55
 msgid "We're experiencing server issues"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:55
+#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:56
 msgid ""
 "Try refreshing the page after waiting a minute or two. If the problem "
 "persists we'd recommend you contact an admin."
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:87
+#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:88
 msgid "There was a problem with your question"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:88
+#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:89
 msgid ""
 "Most of the time this is caused by an invalid selection or bad input value. "
 "Double check your inputs and retry your query."
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:93
-msgid "Show error details"
-msgstr ""
-
-#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:99
-msgid "Here's the full error message"
-msgstr ""
-
-#: frontend/src/metabase/query_builder/components/VisualizationResult.jsx:61
+#: frontend/src/metabase/query_builder/components/VisualizationResult.jsx:60
 msgid ""
 "This may be the answer you’re looking for. If not, try removing or changing "
 "your filters to make them less specific."
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/VisualizationResult.jsx:67
+#: frontend/src/metabase/query_builder/components/VisualizationResult.jsx:66
 msgid "You can also {0} when there are some results."
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/VisualizationResult.jsx:69
+#: frontend/src/metabase/query_builder/components/VisualizationResult.jsx:68
 msgid "get an alert"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/VisualizationResult.jsx:78
+#: frontend/src/metabase/query_builder/components/VisualizationResult.jsx:77
 msgid "Back to last run"
 msgstr ""
 
@@ -5057,7 +5378,7 @@ msgid "Visualization"
 msgstr ""
 
 #: frontend/src/metabase/query_builder/components/dataref/DetailPane.jsx:17
-#: frontend/src/metabase/query_builder/components/dataref/TablePane.jsx:146
+#: frontend/src/metabase/query_builder/components/dataref/TablePane.jsx:148
 msgid "No description set."
 msgstr ""
 
@@ -5134,7 +5455,7 @@ msgstr ""
 msgid "See the raw data for {0}"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/dataref/TablePane.jsx:199
+#: frontend/src/metabase/query_builder/components/dataref/TablePane.jsx:202
 msgid "More"
 msgstr ""
 
@@ -5154,8 +5475,7 @@ msgstr ""
 msgid ""
 "Think of this as being kind of like writing a formula in a spreadsheet "
 "program: you can use numbers, fields in this table, mathematical symbols "
-"like +, and some functions. So you could type something like Subtotal "
-"&minus; Cost."
+"like +, and some functions. So you could type something like Subtotal - Cost."
 msgstr ""
 
 #: frontend/src/metabase/query_builder/components/expressions/ExpressionWidget.jsx:62
@@ -5212,23 +5532,23 @@ msgstr ""
 msgid "this hour"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:278
+#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:285
 msgid "not implemented {0}"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:279
+#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:286
 msgid "true"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:279
+#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:286
 msgid "false"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:383
+#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:390
 msgid "Add filter"
 msgstr ""
 
-#: frontend/src/metabase/query_builder/components/filters/FilterWidget.jsx:140
+#: frontend/src/metabase/query_builder/components/filters/FilterWidget.jsx:151
 msgid "Matches"
 msgstr ""
 
@@ -5408,24 +5728,16 @@ msgstr ""
 msgid "New collection"
 msgstr ""
 
-#: frontend/src/metabase/questions/components/ExpandingSearchField.jsx:93
-msgid "Search for a question"
-msgstr ""
-
-#: frontend/src/metabase/questions/components/Item.jsx:92
+#: frontend/src/metabase/questions/components/Item.jsx:119
 msgid "Move to a collection"
 msgstr ""
 
-#: frontend/src/metabase/questions/components/Item.jsx:209
+#: frontend/src/metabase/questions/components/Item.jsx:233
 msgid "Created"
 msgstr ""
 
-#: frontend/src/metabase/questions/components/Item.jsx:209
+#: frontend/src/metabase/questions/components/Item.jsx:233
 msgid " by {0}"
-msgstr ""
-
-#: frontend/src/metabase/questions/components/LabelIconPicker.jsx:47
-msgid "Colors"
 msgstr ""
 
 #: frontend/src/metabase/questions/components/LabelPicker.jsx:17
@@ -5437,12 +5749,10 @@ msgid "Label as"
 msgstr ""
 
 #: frontend/src/metabase/questions/components/LabelPicker.jsx:51
-#: frontend/src/metabase/questions/containers/EditLabels.jsx:73
 msgid "Add and edit labels"
 msgstr ""
 
 #: frontend/src/metabase/questions/components/LabelPicker.jsx:53
-#: frontend/src/metabase/questions/containers/EditLabels.jsx:77
 msgid "In an upcoming release, Labels will be removed in favor of Collections."
 msgstr ""
 
@@ -5499,71 +5809,44 @@ msgstr ""
 msgid "No questions have been added to this collection yet."
 msgstr ""
 
-#: frontend/src/metabase/questions/containers/EditLabels.jsx:75
-msgid "Heads up!"
-msgstr ""
-
-#: frontend/src/metabase/questions/containers/EditLabels.jsx:83
-msgid "Create Label"
-msgstr ""
-
-#: frontend/src/metabase/questions/containers/EditLabels.jsx:105
-msgid "Update Label"
-msgstr ""
-
-#: frontend/src/metabase/questions/containers/EditLabels.jsx:121
-msgid "Delete label \"{0}\""
-msgstr ""
-
-#: frontend/src/metabase/questions/containers/EditLabels.jsx:140
-msgid "Create labels to group and manage questions."
-msgstr ""
-
-#: frontend/src/metabase/questions/containers/EntityList.jsx:70
-#: frontend/src/metabase/questions/selectors.js:154
+#: frontend/src/metabase/questions/containers/EntityList.jsx:72
 msgid "All questions"
 msgstr ""
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:72
+#: frontend/src/metabase/questions/containers/EntityList.jsx:74
 msgid "No questions have been saved yet."
 msgstr ""
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:78
+#: frontend/src/metabase/questions/containers/EntityList.jsx:80
 msgid "You haven't favorited any questions yet."
 msgstr ""
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:82
-#: frontend/src/metabase/questions/selectors.js:156
+#: frontend/src/metabase/questions/containers/EntityList.jsx:84
 msgid "Recently viewed"
 msgstr ""
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:84
+#: frontend/src/metabase/questions/containers/EntityList.jsx:86
 msgid "You haven't viewed any questions recently."
 msgstr ""
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:90
+#: frontend/src/metabase/questions/containers/EntityList.jsx:92
 msgid "You haven't saved any questions yet."
 msgstr ""
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:94
-#: frontend/src/metabase/questions/selectors.js:158
+#: frontend/src/metabase/questions/containers/EntityList.jsx:96
 msgid "Most popular"
 msgstr ""
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:96
+#: frontend/src/metabase/questions/containers/EntityList.jsx:98
 msgid "The most-viewed questions across your company will show up here."
 msgstr ""
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:102
+#: frontend/src/metabase/questions/containers/EntityList.jsx:104
 msgid "If you no longer need a question, you can archive it."
 msgstr ""
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:108
+#: frontend/src/metabase/questions/containers/EntityList.jsx:110
 msgid "There aren't any questions matching that criteria."
-msgstr ""
-
-#: frontend/src/metabase/questions/containers/LabelEditorForm.jsx:21
-msgid "Icon is required"
 msgstr ""
 
 #: frontend/src/metabase/questions/containers/MoveToCollection.jsx:52
@@ -5840,11 +6123,7 @@ msgid "Field name"
 msgstr ""
 
 #: frontend/src/metabase/reference/databases/FieldSidebar.jsx:53
-msgid "See an exploration of this field"
-msgstr ""
-
-#: frontend/src/metabase/reference/databases/FieldSidebar.jsx:62
-msgid "X-ray this Field"
+msgid "X-ray this field"
 msgstr ""
 
 #: frontend/src/metabase/reference/databases/NoDatabasesEmptyState.jsx:8
@@ -5909,10 +6188,6 @@ msgid "Questions about this table"
 msgstr ""
 
 #: frontend/src/metabase/reference/databases/TableSidebar.jsx:51
-msgid "See an exploration of this table"
-msgstr ""
-
-#: frontend/src/metabase/reference/databases/TableSidebar.jsx:58
 msgid "X-ray this table"
 msgstr ""
 
@@ -6140,13 +6415,17 @@ msgid "There are no revisions for this metric"
 msgstr ""
 
 #: frontend/src/metabase/reference/metrics/MetricRevisions.jsx:88
-#: frontend/src/metabase/reference/metrics/MetricSidebar.jsx:47
+#: frontend/src/metabase/reference/metrics/MetricSidebar.jsx:53
 #: frontend/src/metabase/reference/segments/SegmentRevisions.jsx:88
 msgid "Revision history for {0}"
 msgstr ""
 
 #: frontend/src/metabase/reference/metrics/MetricSidebar.jsx:39
 msgid "See an exploration of this metric"
+msgstr ""
+
+#: frontend/src/metabase/reference/metrics/MetricSidebar.jsx:45
+msgid "X-ray this metric"
 msgstr ""
 
 #: frontend/src/metabase/reference/segments/SegmentDetail.jsx:217
@@ -6192,14 +6471,10 @@ msgid "Questions about this segment"
 msgstr ""
 
 #: frontend/src/metabase/reference/segments/SegmentSidebar.jsx:45
-msgid "Create a dashboard based on this segment"
-msgstr ""
-
-#: frontend/src/metabase/reference/segments/SegmentSidebar.jsx:52
 msgid "X-ray this segment"
 msgstr ""
 
-#: frontend/src/metabase/routes.jsx:195
+#: frontend/src/metabase/routes.jsx:194
 msgid "Login"
 msgstr ""
 
@@ -6211,7 +6486,7 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: frontend/src/metabase/routes.jsx:351
+#: frontend/src/metabase/routes.jsx:347
 #: frontend/src/metabase/xray/containers/TableXRay.jsx:119
 msgid "XRay"
 msgstr ""
@@ -6293,33 +6568,33 @@ msgstr ""
 msgid "If you feel stuck"
 msgstr ""
 
-#: frontend/src/metabase/setup/components/Setup.jsx:50
+#: frontend/src/metabase/setup/components/Setup.jsx:52
 msgid "our getting started guide"
 msgstr ""
 
-#: frontend/src/metabase/setup/components/Setup.jsx:51
+#: frontend/src/metabase/setup/components/Setup.jsx:53
 msgid "is just a click away."
 msgstr ""
 
-#: frontend/src/metabase/setup/components/Setup.jsx:93
+#: frontend/src/metabase/setup/components/Setup.jsx:95
 msgid "Welcome to Metabase"
 msgstr ""
 
-#: frontend/src/metabase/setup/components/Setup.jsx:94
+#: frontend/src/metabase/setup/components/Setup.jsx:96
 msgid ""
 "Looks like everything is working. Now let’s get to know you, connect to your "
 "data, and start finding you some answers!"
 msgstr ""
 
-#: frontend/src/metabase/setup/components/Setup.jsx:98
+#: frontend/src/metabase/setup/components/Setup.jsx:100
 msgid "Let's get started"
 msgstr ""
 
-#: frontend/src/metabase/setup/components/Setup.jsx:143
+#: frontend/src/metabase/setup/components/Setup.jsx:145
 msgid "You're all set up!"
 msgstr ""
 
-#: frontend/src/metabase/setup/components/Setup.jsx:154
+#: frontend/src/metabase/setup/components/Setup.jsx:156
 msgid "Take me to Metabase"
 msgstr ""
 
@@ -6356,42 +6631,60 @@ msgstr ""
 msgid "Department of awesome"
 msgstr ""
 
-#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:19
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:23
 msgid "Metabot is admiring your integers…"
 msgstr ""
 
-#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:20
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:24
 msgid "Metabot is performing billions of differential equations…"
 msgstr ""
 
-#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:21
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:25
 msgid "Metabot is doing science…"
 msgstr ""
 
-#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:22
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:26
 msgid "Metabot is checking out your metrics…"
 msgstr ""
 
-#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:23
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:27
 msgid "Metabot is looking for trends and outliers…"
 msgstr ""
 
-#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:132
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:28
+msgid "Metabot is consulting the quantum abacus…"
+msgstr ""
+
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:29
+msgid "Metabot is feeling pretty good about all this…"
+msgstr ""
+
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:140
+msgid ""
+"We’ll show you some interesting explorations of your data in\n"
+"just a few minutes."
+msgstr ""
+
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:160
 msgid ""
 "This seems to be taking a while. In the meantime, you can check out one of "
 "these example explorations to see what Metabase can do for you."
 msgstr ""
 
-#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:143
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:171
 msgid ""
 "Once you connect your own data, I can show you some automatic explorations "
 "called x-rays. Here are some examples with sample data."
 msgstr ""
 
-#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:144
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:172
 msgid ""
-"I took a look at the data you just connected, and I put together some "
-"explorations of interesting metrics I found. Hope you like them!"
+"I took a look at the data you just connected, and I have some explorations "
+"of interesting things I found. Hope you like them!"
+msgstr ""
+
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:182
+msgid "I'm done exploring for now"
 msgstr ""
 
 #: frontend/src/metabase/tutorial/QueryBuilderTutorial.jsx:20
@@ -6588,52 +6881,48 @@ msgstr ""
 msgid "Pin Map"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/components/TableInteractive.jsx:310
+#: frontend/src/metabase/visualizations/components/TableInteractive.jsx:315
 msgid "Unset"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/components/TableSimple.jsx:216
+#: frontend/src/metabase/visualizations/components/TableSimple.jsx:218
 msgid "Rows {0}-{1} of {2}"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/components/Visualization.jsx:179
+#: frontend/src/metabase/visualizations/components/Visualization.jsx:186
 msgid "Data truncated to {0} rows."
 msgstr ""
 
-#: frontend/src/metabase/visualizations/components/Visualization.jsx:342
+#: frontend/src/metabase/visualizations/components/Visualization.jsx:349
 msgid "Could not find visualization"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/components/Visualization.jsx:349
+#: frontend/src/metabase/visualizations/components/Visualization.jsx:356
 msgid "Could not display this chart with this data."
 msgstr ""
 
-#: frontend/src/metabase/visualizations/components/Visualization.jsx:449
+#: frontend/src/metabase/visualizations/components/Visualization.jsx:456
 msgid "No results!"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/components/Visualization.jsx:470
+#: frontend/src/metabase/visualizations/components/Visualization.jsx:477
 msgid "Still Waiting..."
 msgstr ""
 
-#: frontend/src/metabase/visualizations/components/Visualization.jsx:473
+#: frontend/src/metabase/visualizations/components/Visualization.jsx:480
 msgid "This usually takes an average of {0}."
 msgstr ""
 
-#: frontend/src/metabase/visualizations/components/Visualization.jsx:475
+#: frontend/src/metabase/visualizations/components/Visualization.jsx:482
 msgid "(This is a bit long for a dashboard)"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/components/Visualization.jsx:479
+#: frontend/src/metabase/visualizations/components/Visualization.jsx:486
 msgid "This is usually pretty fast but seems to be taking awhile right now."
 msgstr ""
 
 #: frontend/src/metabase/visualizations/components/settings/ChartSettingFieldPicker.jsx:14
 msgid "Select a field"
-msgstr ""
-
-#: frontend/src/metabase/visualizations/components/settings/ChartSettingFieldPicker.jsx:15
-msgid "No valid fields"
 msgstr ""
 
 #: frontend/src/metabase/visualizations/components/settings/ChartSettingFieldsPicker.jsx:42
@@ -6781,82 +7070,82 @@ msgstr ""
 msgid "Linear Interpolated"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:271
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:272
 msgid "X-axis scale"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:288
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:289
 msgid "Timeseries"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:291
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:309
-msgid "Linear"
-msgstr ""
-
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:293
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:292
 #: frontend/src/metabase/visualizations/lib/settings/graph.js:310
-msgid "Power"
+msgid "Linear"
 msgstr ""
 
 #: frontend/src/metabase/visualizations/lib/settings/graph.js:294
 #: frontend/src/metabase/visualizations/lib/settings/graph.js:311
+msgid "Power"
+msgstr ""
+
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:295
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:312
 msgid "Log"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:296
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:297
 msgid "Histogram"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:298
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:299
 msgid "Ordinal"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:304
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:305
 msgid "Y-axis scale"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:317
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:318
 msgid "Show x-axis line and marks"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:323
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:324
 msgid "Compact"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:324
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:325
 msgid "Rotate 45°"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:325
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:326
 msgid "Rotate 90°"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:332
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:333
 msgid "Show y-axis line and marks"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:344
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:345
 msgid "Auto y-axis range"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:388
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:389
 msgid "Use a split y-axis when necessary"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:395
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:396
 msgid "Show label on x-axis"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:401
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:402
 msgid "X-axis label"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:410
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:411
 msgid "Show label on y-axis"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:416
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:417
 msgid "Y-axis label"
 msgstr ""
 
@@ -6906,89 +7195,89 @@ msgstr ""
 msgid "line chart"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:206
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:211
 msgid "Please select longitude and latitude columns in the chart settings."
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:212
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:217
 msgid "Please select a region map."
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:216
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:221
 msgid "Please select region and metric columns in the chart settings."
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:33
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:31
 msgid "Map"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:47
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:45
 msgid "Map type"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:51
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:141
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:49
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:146
 msgid "Region map"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:52
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:50
 msgid "Pin map"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:91
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:96
 msgid "Pin type"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:96
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:101
 msgid "Tiles"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:97
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:102
 msgid "Markers"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:113
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:118
 msgid "Latitude field"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:123
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:128
 msgid "Longitude field"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:133
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:160
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:138
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:165
 msgid "Metric field"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:165
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:170
 msgid "Region field"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:174
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:179
 msgid "Radius"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:180
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:185
 msgid "Blur"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:186
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:191
 msgid "Min Opacity"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:192
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:197
 msgid "Max Zoom"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/ObjectDetail.jsx:169
+#: frontend/src/metabase/visualizations/visualizations/ObjectDetail.jsx:173
 msgid "No relationships found."
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/ObjectDetail.jsx:207
+#: frontend/src/metabase/visualizations/visualizations/ObjectDetail.jsx:211
 msgid "via {0}"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/ObjectDetail.jsx:285
+#: frontend/src/metabase/visualizations/visualizations/ObjectDetail.jsx:289
 msgid "This {0} is connected to:"
 msgstr ""
 
@@ -7000,7 +7289,7 @@ msgstr ""
 msgid "object"
 msgstr ""
 
-#: frontend/src/metabase/visualizations/visualizations/PieChart.jsx:234
+#: frontend/src/metabase/visualizations/visualizations/PieChart.jsx:256
 msgid "Total"
 msgstr ""
 
@@ -7090,6 +7379,46 @@ msgstr ""
 
 #: frontend/src/metabase/visualizations/visualizations/Table.jsx:67
 msgid "Fields to include"
+msgstr ""
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:167
+msgid "Write here, and use Markdown if you''d like"
+msgstr ""
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:73
+msgid "Vertical Alignment"
+msgstr ""
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:77
+msgid "Top"
+msgstr ""
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:78
+msgid "Middle"
+msgstr ""
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:79
+msgid "Bottom"
+msgstr ""
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:86
+msgid "Horizontal Alignment"
+msgstr ""
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:90
+msgid "Left"
+msgstr ""
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:91
+msgid "Center"
+msgstr ""
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:92
+msgid "Right"
+msgstr ""
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:99
+msgid "Show background"
 msgstr ""
 
 #: frontend/src/metabase/xray/components/ComparisonHeader.jsx:10
@@ -7338,6 +7667,188 @@ msgstr ""
 msgid "Generating your comparison..."
 msgstr ""
 
+#: src/metabase/api/automagic_dashboards.clj
+msgid "invalid show value"
+msgstr ""
+
+#: src/metabase/api/automagic_dashboards.clj
+msgid "invalid value for prefix"
+msgstr ""
+
+#: src/metabase/api/automagic_dashboards.clj
+msgid "invalid value for rule name"
+msgstr ""
+
+#: src/metabase/api/automagic_dashboards.clj
+msgid "value couldn''t be parsed as base64 encoded JSON"
+msgstr ""
+
+#: src/metabase/api/common.clj src/metabase/api/common/internal.clj
+msgid "Invalid field: {0}"
+msgstr ""
+
+#: src/metabase/api/common.clj
+msgid "Invalid value ''{0}'' for ''{1}'': {2}"
+msgstr ""
+
+#: src/metabase/api/common.clj
+msgid "must be one of: {0}"
+msgstr ""
+
+#: src/metabase/api/common.clj
+msgid "Invalid Request."
+msgstr ""
+
+#: src/metabase/api/common.clj
+msgid "Not found."
+msgstr ""
+
+#: src/metabase/api/common.clj
+msgid "You don''t have permissions to do that."
+msgstr ""
+
+#: src/metabase/api/common.clj
+msgid "Internal server error."
+msgstr ""
+
+#: src/metabase/api/common.clj
+msgid "Warning: endpoint {0}/{1} does not have a docstring."
+msgstr ""
+
+#: src/metabase/api/common.clj
+msgid "starting streaming request"
+msgstr ""
+
+#: src/metabase/api/common.clj
+msgid "connection closed, canceling request"
+msgstr ""
+
+#. a newline padding character as it's harmless and will allow us to check if the client is connected. If
+#. sending this character fails because the connection is closed, the chan will then close.  Newlines are
+#. no-ops when reading JSON which this depends upon.
+#: src/metabase/api/common.clj
+msgid "Response not ready, writing one byte & sleeping..."
+msgstr ""
+
+#: src/metabase/api/common.clj
+msgid "Public sharing is not enabled."
+msgstr ""
+
+#: src/metabase/api/common.clj
+msgid "Embedding is not enabled."
+msgstr ""
+
+#: src/metabase/api/common.clj
+msgid "The object has been archived."
+msgstr ""
+
+#: src/metabase/api/common/internal.clj
+msgid "We don't have a nice error message for schema: {0}."
+msgstr ""
+
+#: src/metabase/api/common/internal.clj
+msgid "Consider wrapping it in `su/with-api-error-message`."
+msgstr ""
+
+#: src/metabase/api/common/internal.clj
+msgid "Attempted to return a boolean as an API response. This is not allowed!"
+msgstr ""
+
+#: src/metabase/api/dataset.clj
+msgid "Source query for this query is Card {0}"
+msgstr ""
+
+#: src/metabase/api/dataset.clj
+msgid "Invalid export format: {0}"
+msgstr ""
+
+#: src/metabase/api/geojson.clj
+msgid "Invalid JSON URL or resource: {0}"
+msgstr ""
+
+#: src/metabase/api/geojson.clj
+msgid ""
+"JSON containing information about custom GeoJSON files for use in map "
+"visualizations instead of the default US State or World GeoJSON."
+msgstr ""
+
+#: src/metabase/api/geojson.clj
+msgid "Invalid custom GeoJSON key: {0}"
+msgstr ""
+
+#: src/metabase/api/getting_started.clj
+msgid "''Some things to know'' text field for the Getting Started guide."
+msgstr ""
+
+#: src/metabase/api/getting_started.clj
+msgid ""
+"Name of somebody users can contact for help in the Getting Started guide."
+msgstr ""
+
+#: src/metabase/api/getting_started.clj
+msgid ""
+"Email of somebody users can contact for help in the Getting Started guide."
+msgstr ""
+
+#. ...but if we *still* couldn't find a match, throw an Exception, because we don't want people
+#. trying to inject new params
+#: src/metabase/api/public.clj
+msgid "Invalid param: {0}"
+msgstr ""
+
+#: src/metabase/api/routes.clj
+msgid "API endpoint does not exist."
+msgstr ""
+
+#: src/metabase/api/session.clj
+msgid "Password did not match stored password."
+msgstr ""
+
+#: src/metabase/api/session.clj
+msgid "did not match stored password"
+msgstr ""
+
+#: src/metabase/api/session.clj
+msgid ""
+"Problem connecting to LDAP server, will fallback to local authentication {0}"
+msgstr ""
+
+#: src/metabase/api/session.clj
+msgid "Invalid reset token"
+msgstr ""
+
+#: src/metabase/api/session.clj
+msgid ""
+"Client ID for Google Auth SSO. If this is set, Google Auth is considered to "
+"be enabled."
+msgstr ""
+
+#: src/metabase/api/session.clj
+msgid ""
+"When set, allow users to sign up on their own if their Google account email "
+"address is from this domain."
+msgstr ""
+
+#: src/metabase/api/session.clj
+msgid "Invalid Google Auth token."
+msgstr ""
+
+#: src/metabase/api/session.clj
+msgid "Email is not verified."
+msgstr ""
+
+#. Use some wacky status code (428 - Precondition Required) so we will know when to so the error screen specific
+#. to this situation
+#: src/metabase/api/session.clj
+msgid ""
+"You''ll need an administrator to create a Metabase account before you can "
+"use Google to log in."
+msgstr ""
+
+#: src/metabase/api/session.clj
+msgid "Successfully authenticated Google Auth token for: {0} {1}"
+msgstr ""
+
 #: src/metabase/api/setup.clj
 msgid "Add a database"
 msgstr ""
@@ -7424,6 +7935,281 @@ msgid ""
 "can use while asking questions."
 msgstr ""
 
+#: src/metabase/api/table.clj
+msgid "Table ''{0}'' is now visible. Resyncing."
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "Auto bin"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "Don''t bin"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "Day"
+msgstr ""
+
+#. note the order of these options corresponds to the order they will be shown to the user in the UI
+#: src/metabase/api/table.clj
+msgid "Minute"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "Hour"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "Quarter"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "Minute of Hour"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "Hour of Day"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "Day of Week"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "Day of Month"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "Day of Year"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "Week of Year"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "Month of Year"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "Quarter of Year"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "10 bins"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "50 bins"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "100 bins"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "Bin every 0.1 degrees"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "Bin every 1 degree"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "Bin every 10 degrees"
+msgstr ""
+
+#: src/metabase/api/table.clj
+msgid "Bin every 20 degrees"
+msgstr ""
+
+#. returns `true` if successful -- see JavaDoc
+#: src/metabase/api/tiles.clj src/metabase/pulse/render.clj
+msgid "No appropriate image writer found!"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid " segment"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid " metric"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid " field"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid "Applying heuristic %s to %s."
+msgstr ""
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid "Dimensions bindings:n%s"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid "Using definitions:nMetrics:n%snFilters:n%s"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid "A closer look at "
+msgstr ""
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid "Show more about this"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid "Can't create dashboard for %s"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid " question"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/populate.clj
+msgid "Adding %s cards to dashboard %s:n%s"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "0 <= score <= %s"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "1 <= width <= %s"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "Valid metrics references"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "Valid filters references"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "Valid group references"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "Valid order_by references"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "Valid dashboard filters references"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "Valid dimension references"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "Valid card dimension references"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "Error parsing %s:n%s"
+msgstr ""
+
+#: src/metabase/cmd/reset_password.clj
+msgid "No user found with email address ''{0}''. "
+msgstr ""
+
+#: src/metabase/cmd/reset_password.clj
+msgid "Please check the spelling and try again."
+msgstr ""
+
+#: src/metabase/cmd/reset_password.clj
+msgid "Resetting password for {0}..."
+msgstr ""
+
+#: src/metabase/cmd/reset_password.clj
+msgid "OK [[[{0}]]]"
+msgstr ""
+
+#: src/metabase/cmd/reset_password.clj
+msgid "FAIL [[[{0}]]]"
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Hmm, we couldn''t connect to the database."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Make sure your host and port settings are correct"
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "We couldn''t connect to the ssh tunnel host."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Check the username, password."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Check the hostname and port."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Looks like the database name is incorrect."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "It looks like your host is invalid."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Please double-check it and try again."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Looks like your password is incorrect."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Looks like you forgot to enter your password."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Looks like your username is incorrect."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Looks like the username or password is incorrect."
+msgstr ""
+
+#. ## CONFIG
+#: src/metabase/driver.clj
+msgid ""
+"Connection timezone to use when executing queries. Defaults to system "
+"timezone."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Registered driver {0} {1}"
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "No -init-driver function found for ''{0}''"
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Unable to parse date string ''{0}'' for database engine ''{1}''"
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid ""
+"Don''t know how to map class ''{0}'' to a Field base_type, falling back to :"
+"type/*."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Failed to connect to database: {0}"
+msgstr ""
+
 #: src/metabase/driver/googleanalytics.clj
 msgid ""
 "You must enable the Google Analytics API. Use this link to go to the Google "
@@ -7434,6 +8220,20 @@ msgstr ""
 msgid ""
 "Running SQL queries against H2 databases using the default (admin) database "
 "user is forbidden."
+msgstr ""
+
+#: src/metabase/driver/sparksql.clj
+msgid ""
+"Error: metabase.driver.FixedHiveDriver is registered, but JDBC does not seem "
+"to be using it."
+msgstr ""
+
+#: src/metabase/driver/sparksql.clj
+msgid "Found metabase.driver.FixedHiveDriver."
+msgstr ""
+
+#: src/metabase/driver/sparksql.clj
+msgid "Successfully registered metabase.driver.FixedHiveDriver with JDBC."
 msgstr ""
 
 #. CONFIG
@@ -7476,6 +8276,15 @@ msgstr ""
 
 #: src/metabase/email.clj
 msgid "Error testing SMTP connection"
+msgstr ""
+
+#: src/metabase/feature_extraction/costs.clj
+msgid ""
+"Cap resorce expanditure for all x-rays. (exact, approximate, or extended)"
+msgstr ""
+
+#: src/metabase/feature_extraction/costs.clj
+msgid "Should x-raying be available at all?"
 msgstr ""
 
 #: src/metabase/integrations/ldap.clj
@@ -7541,6 +8350,12 @@ msgstr ""
 #. Should be in the form: {"cn=Some Group,dc=...": [1, 2, 3]} where keys are LDAP groups and values are lists of MB groups IDs
 #: src/metabase/integrations/ldap.clj
 msgid "JSON containing LDAP to Metabase group mappings."
+msgstr ""
+
+#. Define a setting which captures our Slack api token
+#: src/metabase/integrations/slack.clj
+msgid ""
+"Slack API bearer token obtained from https://api.slack.com/web#authentication"
 msgstr ""
 
 #: src/metabase/metabot.clj
@@ -7619,6 +8434,210 @@ msgstr ""
 
 #: src/metabase/metabot.clj
 msgid "MetaBot already running. Killing the previous WebSocket listener first."
+msgstr ""
+
+#: src/metabase/middleware.clj
+msgid "Base-64 encoded public key for this site's SSL certificate."
+msgstr ""
+
+#: src/metabase/middleware.clj
+msgid "Specify this to enable HTTP Public Key Pinning."
+msgstr ""
+
+#: src/metabase/middleware.clj
+msgid "See {0} for more information."
+msgstr ""
+
+#: src/metabase/models/card.clj
+msgid "Cannot calculate permissions due to circular references."
+msgstr ""
+
+#: src/metabase/models/card.clj
+msgid ""
+"This means a question is either using itself as a source or one or more "
+"questions are using each other as sources."
+msgstr ""
+
+#: src/metabase/models/card.clj
+msgid "Invalid query type: {0}"
+msgstr ""
+
+#: src/metabase/models/card.clj
+msgid "`card` is nil or empty. Cannot calculate permissions."
+msgstr ""
+
+#: src/metabase/models/collection.clj src/metabase/models/label.clj
+msgid "Name already taken"
+msgstr ""
+
+#: src/metabase/models/collection.clj
+msgid "A collection with this name already exists"
+msgstr ""
+
+#: src/metabase/models/collection.clj
+msgid "Invalid color"
+msgstr ""
+
+#: src/metabase/models/collection.clj
+msgid "must be a valid 6-character hex color code"
+msgstr ""
+
+#: src/metabase/models/collection.clj
+msgid "Collection name cannot be blank!"
+msgstr ""
+
+#: src/metabase/models/collection.clj
+msgid "cannot be blank"
+msgstr ""
+
+#: src/metabase/models/collection_revision.clj
+msgid "You cannot update a CollectionRevision!"
+msgstr ""
+
+#: src/metabase/models/field_values.clj
+msgid ""
+"Field {0} was previously automatically set to show a list widget, but now "
+"has {1} values."
+msgstr ""
+
+#: src/metabase/models/field_values.clj
+msgid "Switching Field to use a search widget instead."
+msgstr ""
+
+#: src/metabase/models/field_values.clj
+msgid "Storing updated FieldValues for Field {0}..."
+msgstr ""
+
+#: src/metabase/models/field_values.clj
+msgid "Storing FieldValues for Field {0}..."
+msgstr ""
+
+#: src/metabase/models/humanization.clj
+msgid ""
+"Metabase can attempt to transform your table and field names into more "
+"sensible, human-readable versions, e.g. \"somehorriblename\" becomes \"Some "
+"Horrible Name\"."
+msgstr ""
+
+#: src/metabase/models/humanization.clj
+msgid ""
+"This doesn’t work all that well if the names are in a language other than "
+"English, however."
+msgstr ""
+
+#: src/metabase/models/humanization.clj
+msgid "Do you want us to take a guess?"
+msgstr ""
+
+#: src/metabase/models/label.clj
+msgid "A label with this name already exists"
+msgstr ""
+
+#: src/metabase/models/permissions.clj
+msgid "You cannot create or revoke permissions for the 'Admin' group."
+msgstr ""
+
+#: src/metabase/models/permissions.clj
+msgid "Invalid permissions object path: ''{0}''."
+msgstr ""
+
+#: src/metabase/models/permissions.clj
+msgid "You cannot update a permissions entry!"
+msgstr ""
+
+#: src/metabase/models/permissions.clj
+msgid "Delete it and create a new one."
+msgstr ""
+
+#: src/metabase/models/permissions.clj
+msgid ""
+"Looks like someone else edited the permissions and your data is out of date."
+msgstr ""
+
+#: src/metabase/models/permissions.clj
+msgid "Please fetch new data and try again."
+msgstr ""
+
+#: src/metabase/models/permissions_group.clj
+msgid "Created magic permissions group ''{0}'' (ID = {1})"
+msgstr ""
+
+#: src/metabase/models/permissions_group.clj
+msgid "A group with that name already exists."
+msgstr ""
+
+#: src/metabase/models/permissions_group.clj
+msgid "You cannot edit or delete the ''{0}'' permissions group!"
+msgstr ""
+
+#: src/metabase/models/permissions_group_membership.clj
+msgid "You cannot add or remove users to/from the 'MetaBot' group."
+msgstr ""
+
+#: src/metabase/models/permissions_group_membership.clj
+msgid "You cannot add or remove users to/from the 'All Users' group."
+msgstr ""
+
+#: src/metabase/models/permissions_group_membership.clj
+msgid "You cannot remove the last member of the 'Admin' group!"
+msgstr ""
+
+#: src/metabase/models/permissions_revision.clj
+msgid "You cannot update a PermissionsRevision!"
+msgstr ""
+
+#: src/metabase/models/query_execution.clj
+msgid "You cannot update a QueryExecution!"
+msgstr ""
+
+#: src/metabase/models/revision.clj
+msgid "You cannot update a Revision!"
+msgstr ""
+
+#: src/metabase/models/setting.clj
+msgid "Setting {0} does not exist.nFound: {1}"
+msgstr ""
+
+#: src/metabase/models/setting.clj
+msgid ""
+"Invalid value for string: must be either \"true\" or \"false\" (case-"
+"insensitive)."
+msgstr ""
+
+#: src/metabase/plugins.clj
+msgid "Loading plugins in directory {0}..."
+msgstr ""
+
+#: src/metabase/plugins.clj
+msgid "Loading plugin {0}... "
+msgstr ""
+
+#: src/metabase/plugins.clj
+msgid ""
+"It looks like you have some external dependencies in your Metabase plugins "
+"directory."
+msgstr ""
+
+#: src/metabase/plugins.clj
+msgid ""
+"With Java 9 or higher, Metabase cannot automatically add them to your "
+"classpath."
+msgstr ""
+
+#: src/metabase/plugins.clj
+msgid ""
+"Instead, you should include them at launch with the -cp option. For example:"
+msgstr ""
+
+#: src/metabase/plugins.clj
+msgid ""
+"See https://metabase.com/docs/latest/operations-guide/start.html#java-"
+"versions for more details."
+msgstr ""
+
+#: src/metabase/plugins.clj
+msgid ""
+"(If you're already running Metabase this way, you can ignore this message.)"
 msgstr ""
 
 #: src/metabase/public_settings.clj
@@ -7728,6 +8747,42 @@ msgid ""
 "width (in degrees)."
 msgstr ""
 
+#: src/metabase/public_settings/metastore.clj
+msgid "Unable to validate token."
+msgstr ""
+
+#: src/metabase/public_settings/metastore.clj
+msgid "Error fetching token status:"
+msgstr ""
+
+#: src/metabase/public_settings/metastore.clj
+msgid "There was an error checking whether this token was valid."
+msgstr ""
+
+#: src/metabase/public_settings/metastore.clj
+msgid "Token validation timed out."
+msgstr ""
+
+#: src/metabase/public_settings/metastore.clj
+msgid "Invalid token: token isn't in the right format."
+msgstr ""
+
+#: src/metabase/public_settings/metastore.clj
+msgid "Checking with the MetaStore to see whether {0} is valid..."
+msgstr ""
+
+#: src/metabase/public_settings/metastore.clj
+msgid "Token for premium embedding. Go to the MetaStore to get yours!"
+msgstr ""
+
+#: src/metabase/public_settings/metastore.clj
+msgid "Token is valid."
+msgstr ""
+
+#: src/metabase/public_settings/metastore.clj
+msgid "Error setting premium embedding token"
+msgstr ""
+
 #: src/metabase/pulse.clj
 msgid "Unable to compare results to goal for alert."
 msgstr ""
@@ -7744,11 +8799,6 @@ msgstr ""
 msgid "Unrecognized channel type {0}"
 msgstr ""
 
-#. returns `true` if successful -- see JavaDoc
-#: src/metabase/pulse/render.clj
-msgid "No appropriate image writer found!"
-msgstr ""
-
 #: src/metabase/pulse/render.clj
 msgid "Card has errors: {0}"
 msgstr ""
@@ -7757,11 +8807,29 @@ msgstr ""
 msgid "Pulse card render error"
 msgstr ""
 
+#: src/metabase/query_processor/middleware/fetch_source_query.clj
+msgid "Trimming trailing comment from card with id {0}"
+msgstr ""
+
+#: src/metabase/query_processor/middleware/parameters/sql.clj
+msgid "Found ''{0}'' with no terminating ''{1}'' in query ''{2}''"
+msgstr ""
+
+#: src/metabase/query_processor/middleware/parameters/sql.clj
+msgid "Unable to substitute ''{0}'': param not specified.nFound: {1}"
+msgstr ""
+
 #. This is the very first log message that will get printed.  It's here because this is one of the very first
 #. namespaces that gets loaded, and the first that has access to the logger It shows up a solid 10-15 seconds before
 #. the "Starting Metabase in STANDALONE mode" message because so many other namespaces need to get loaded
 #: src/metabase/util.clj
 msgid "Loading Metabase..."
+msgstr ""
+
+#: src/metabase/util/embed.clj
+msgid ""
+"Secret key used to sign JSON Web Tokens for requests to `/api/embed` "
+"endpoints."
 msgstr ""
 
 #: src/metabase/util/schema.clj
@@ -7834,6 +8902,14 @@ msgstr ""
 
 #: src/metabase/util/schema.clj
 msgid "value must be a valid field type (keyword or string)."
+msgstr ""
+
+#: src/metabase/util/schema.clj
+msgid "Valid entity type (keyword or string)"
+msgstr ""
+
+#: src/metabase/util/schema.clj
+msgid "value must be a valid entity type (keyword or string)."
 msgstr ""
 
 #: src/metabase/util/schema.clj
