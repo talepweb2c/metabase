@@ -1464,7 +1464,6 @@ msgstr "Google hesabı e-posta adresleri şunlardan olursa, kullanıcıların ke
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:225
 msgid "\"Add bot integration\""
 msgstr "\"Bot entegrasyonu ekle\""
-""
 
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:240
 msgid "Answers sent right to your Slack #channels"
@@ -2734,7 +2733,6 @@ msgstr "Değiştir veya yeni olarak kaydet"
 #: frontend/src/metabase/containers/SaveQuestionModal.jsx:171
 msgid "Replace original question, \"${ this.props.originalCard.name }\""
 msgstr "Orijinal soruyu değiştirin, \"${ this.props.originalCard.name }\""
-""
 
 #: frontend/src/metabase/containers/SaveQuestionModal.jsx:176
 msgid "Save as new question"
@@ -4002,8 +4000,8 @@ msgstr "Bu açık bağlantıyı devre dışı bırakılsın mı?"
 #: frontend/src/metabase/public/components/widgets/SharingPane.jsx:77
 #, fuzzy
 msgid "This will cause the existing link to stop working. You can re-enable it, but when you do it will be a different link."
-msgstr "Bu, mevcut bağlantının çalışmayı durdurmasına neden olur. Bunu yeniden etkinleştirebilirsiniz, ancak yaptığınız zaman farklı bir bağlantı olacaktır."
-"\n"
+msgstr "Bu, mevcut bağlantının çalışmayı durdurmasına neden olur. Bunu yeniden etkinleştirebilirsiniz, ancak yaptığınız zaman farklı bir bağlantı olacaktır.\n"
+""
 
 #: frontend/src/metabase/public/components/widgets/SharingPane.jsx:117
 msgid "Public link"
@@ -5702,7 +5700,6 @@ msgstr "Buradan başlayın"
 #: frontend/src/metabase/reference/guide/GettingStartedGuide.jsx:149
 msgid "\"Recent orders.\""
 msgstr "\"Son siparişler.\""
-""
 
 #: frontend/src/metabase/reference/guide/GettingStartedGuide.jsx:162
 msgid "Help your team get started with your data."
@@ -7404,153 +7401,156 @@ msgstr "Metabase Yükleniyor..."
 
 #: frontend/src/metabase/admin/databases/components/CreatedDatabaseModal.jsx:22
 msgid "We took a look at your data, and we have some automated explorations that we can show you!."
-msgstr ""
+msgstr "Verilerinize bir göz attık ve size gösterebileceğimiz bazı otomatik keşiflerimiz var."
 
 #: frontend/src/metabase/admin/databases/components/CreatedDatabaseModal.jsx:27
 msgid "I'm good thanks"
-msgstr ""
+msgstr "Böyle iyiyim teşekkürler"
 
 #: frontend/src/metabase/admin/databases/components/CreatedDatabaseModal.jsx:32
 msgid "Explore this data"
-msgstr ""
+msgstr "Bu verileri keşfedin"
 
 #: frontend/src/metabase/admin/datamodel/components/ObjectRetireModal.jsx:33
 msgid "Retire this {0}?"
-msgstr ""
+msgstr "Bunu {0} emekli edin"
 
 #: frontend/src/metabase/admin/datamodel/components/ObjectRetireModal.jsx:38
 msgid "Saved questions and other things that depend on this {0} will continue to work, but this {1} will no longer be selectable from the query builder."
-msgstr ""
+msgstr "Kaydedilen sorular ve buna {0} bağlı diğer şeyler çalışmaya devam edecek, ancak bu {1} artık sorgu oluşturucudan seçilemeyecek."
 
 #: frontend/src/metabase/admin/datamodel/components/ObjectRetireModal.jsx:39
 msgid "If you're sure you want to retire this {0}, please write a quick explanation of why it's being retired:"
-msgstr ""
+msgstr "Bu {0} nesneyi emekli etmek istediğinizden eminseniz, lütfen neden emekli olduğunun basit bir açıklamasını yazınız:"
 
 #: frontend/src/metabase/admin/datamodel/components/ObjectRetireModal.jsx:43
 msgid "This will show up in the activity feed and in an email that will be sent to anyone on your team who created something that uses this {0}."
-msgstr ""
+msgstr "Bu, etkinlik özet akışında ve ekibinizdeki {0} kullanan herhangi bir şeyi oluşturan herkese gönderilecek bir e-postada görünecektir."
 
 #: frontend/src/metabase/admin/datamodel/containers/FieldApp.jsx:188
 msgid "{0} – Field Settings"
-msgstr ""
+msgstr "{0} - Saha Ayarları"
 
 #: frontend/src/metabase/admin/datamodel/containers/SegmentForm.jsx:122
 msgid "Select and add filters to create your new segment for the {0} table"
-msgstr ""
+msgstr "{0} tablosu için yeni parça oluşturmak üzere süzgeç seçip ekleyin"
 
 #: frontend/src/metabase/admin/people/components/GroupDetail.jsx:31
 msgid "All users belong to the {0} group and can't be removed from it. Setting permissions for this group is a great way to\n"
 "make sure you know what new Metabase users will be able to see."
-msgstr ""
+msgstr "Tüm kullanıcılar {0} grubuna ait ve bundan kaldırılamaz. Bu grup için izinleri ayarlamak yeni Metabase kullanıcılarının neler görebileceğini bilmeniz için harika bir yoldur."
 
 #: frontend/src/metabase/admin/people/components/GroupsListing.jsx:57
 msgid "Are you sure? All members of this group will lose any permissions settings they have based on this group.\n"
 "This can't be undone."
-msgstr ""
+msgstr "Emin misiniz? Bu grubun tüm üyeleri, bu gruba dayalı olarak sahip oldukları izin ayarlarını kaybedecek.\n"
+"Bu geri alınamaz."
 
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:203
 msgid "Edit {0}'s details"
-msgstr ""
+msgstr "{0} ayrıntılarını düzenle"
 
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:221
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:253
 msgid "{0} has been added"
-msgstr ""
+msgstr "{0} eklendi"
 
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:231
 msgid "We couldn’t send them an email invitation,\n"
 "so make sure to tell them to log in using {0}\n"
 "and this password we’ve generated for them:"
-msgstr ""
+msgstr "Onlara bir e-posta daveti gönderemedik.\n"
+"bu nedenle, {0} kullanarak giriş yapacaklarını ve onlar için oluşturduğumuz bu şifreyi bildirdiğinizden emin olun:"
 
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:240
 msgid "If you want to be able to send email invites, just go to the {0} page."
-msgstr ""
+msgstr "E-posta davetleri gönderebilmek istiyorsanız, sadece {0} sayfasına gidin."
 
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:265
 msgid "We’ve sent an invite to {0} with instructions to set their password."
-msgstr ""
+msgstr "Şifrelerini ayarlama talimatları ile birlikte {0} adresine davetiye gönderdik."
 
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:277
 msgid "We've re-sent {0}'s invite"
-msgstr ""
+msgstr "{0} için daveti tekrar gönderdik"
 
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:294
 msgid "Remove {0}?"
-msgstr ""
+msgstr "{0} kaldırılsın mı?"
 
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:305
 msgid "{0} won't be able to log in anymore. This can't be undone."
-msgstr ""
+msgstr "{0} artık giriş yapamayacak. Bu geri alınamaz."
 
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:319
 msgid "Reset {0}'s password?"
-msgstr ""
+msgstr "{0} şifresini sıfırlayın"
 
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:340
 #: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:364
 msgid "{0}'s password has been reset"
-msgstr ""
+msgstr "{0} 'un şifresi sıfırlandı"
 
 #: frontend/src/metabase/admin/permissions/components/PermissionsConfirm.jsx:71
 msgid " will no longer be able to "
-msgstr ""
+msgstr " artık mümkün olmayacak"
 
 #: frontend/src/metabase/admin/permissions/selectors.js:111
 msgid "The \"{0}\" group may have access to a different set of {1} than this group, which may give this group additional access to some {2}."
-msgstr ""
+msgstr "\"{0}\" grubu bu gruba göre {1} farklı bir kümeye erişebilir, bu da bu gruba bazı {2} düzeylerine ek erişim sağlayabilir."
 
 #: frontend/src/metabase/admin/permissions/selectors.js:116
 msgid "The \"{0}\" group has a higher level of access than this, which will override this setting. You should limit or revoke the \"{1}\" group's access to this item."
-msgstr ""
+msgstr "\"{0}\" grubu, bu ayarı geçersiz kılacak daha yüksek bir erişim düzeyine sahiptir. \"{1}\" grubunun bu öğeye erişimini sınırlandırmalı veya iptal etmelisiniz."
 
 #: frontend/src/metabase/admin/permissions/selectors.js:146
 msgid "Limit"
-msgstr ""
+msgstr "limit"
 
 #: frontend/src/metabase/admin/permissions/selectors.js:146
 msgid "Revoke"
-msgstr ""
+msgstr "geri almak"
 
 #: frontend/src/metabase/admin/permissions/selectors.js:148
 msgid "access even though \"{0}\" has greater access?"
-msgstr ""
+msgstr "\"{0}\" daha fazla erişime sahip olsa da erişim"
 
 #: frontend/src/metabase/admin/settings/components/SettingsSingleSignOnForm.jsx:126
 msgid "To allow users to sign in with Google you'll need to give Metabase a Google Developers console application client ID. It only takes a few steps and instructions on how to create a key can be found {0}"
-msgstr ""
+msgstr "Kullanıcıların Google ile oturum açmasına izin vermek için Metabase'e bir Google Developers konsol uygulaması istemci kimliği vermeniz gerekir. Sadece birkaç adım atılır ve bir anahtarın nasıl oluşturulacağı ile ilgili talimatlar {0} bulunabilir."
 
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:259
 msgid "Once you're there, give it a name and click {0}. Then copy and paste the Bot API Token into the field below. Once you are done, create a \"metabase_files\" channel in Slack. Metabase needs this to upload graphs."
-msgstr ""
+msgstr "Bir kez orada, bir isim verin ve {0} 'ı tıklayın. Ardından Bot API Jetonunu aşağıdaki alana kopyalayıp yapıştırın. İşiniz bittiğinde, Slack'de bir \"metabase_files\" kanalı oluşturun. Metatabanı, grafikleri yüklemek için buna ihtiyaç duyar."
 
 #: frontend/src/metabase/admin/settings/components/SettingsUpdatesForm.jsx:91
 msgid "You're running Metabase {0} which is the latest and greatest!"
-msgstr ""
+msgstr "En yeni ve en büyük olan {0} Metabase'i çalıştırıyorsunuz!"
 
 #: frontend/src/metabase/admin/settings/components/SettingsUpdatesForm.jsx:104
 msgid "Metabase {0} is available.  You're running {1}"
-msgstr ""
+msgstr "{0} Metabase mevcut. {1} kullanıyorsunuz"
 
 #: frontend/src/metabase/admin/settings/components/SettingsXrayForm.jsx:45
 msgid "{0} \"Extended\" is required for viewing time series x-rays."
-msgstr ""
+msgstr "Zaman serileri x-ışınlarını görüntülemek için {0} \"Genişletilmiş\" gereklidir."
 
 #: frontend/src/metabase/admin/settings/components/SettingsXrayForm.jsx:46
 msgid "Note"
-msgstr ""
+msgstr "Not"
 
 #: frontend/src/metabase/admin/settings/components/widgets/EmbeddingLegalese.jsx:19
+#, fuzzy
 msgid "In plain English, when you embed charts or dashboards from Metabase in your own application, that application isn't subject to the Affero General Public License that covers the rest of Metabase, provided you keep the Metabase logo and the \"Powered by Metabase\" visible on those embeds. You should, however, read the license text linked above as that is the actual license that you will be agreeing to by enabling this feature."
-msgstr ""
+msgstr "Düz İngilizce'de, kendi uygulamanızda metatabanından grafikler veya gösterge tabloları gömdüğünüzde, bu uygulama Metatabanı logosunu ve \"Metatabanı ile Güçlendirildi\" mesajını saklı tutmak koşuluyla, Metabase'in kalanını kapsayan Affero Genel Kamu Lisansına tabi değildir. Bu embedlerde. Bununla birlikte, yukarıda açıklanan lisans metnini, bu özelliği etkinleştirerek kabul edeceğiniz asıl lisans olduğundan okumalısınız."
 
 #: frontend/src/metabase/admin/settings/components/widgets/EmbeddingLevel.jsx:53
 msgid "Premium embedding lets you disable \"Powered by Metabase\" on your embedded dashboards and questions."
-msgstr ""
+msgstr "Ücretli yerleştirme, gömülü gösterge panolarınızda ve sorularınızda \"Metabase Tarafından Sağlandı\" seçeneğini devre dışı bırakmanızı sağlar."
 
 #: frontend/src/metabase/admin/settings/components/widgets/PublicLinksListing.jsx:122
 msgid "They won't work anymore, and can't be restored, but you can create new links."
-msgstr ""
+msgstr "Artık çalışmazlar ve geri yüklenemezler, ancak yeni bağlantılar oluşturabilirsiniz."
 
 #: frontend/src/metabase/admin/settings/containers/SettingsEditorApp.jsx:116
 msgid "Unknown setting {0}"
@@ -7582,15 +7582,15 @@ msgstr "{0} nesnesini arşivden çıkar"
 
 #: frontend/src/metabase/components/ChannelSetupModal.jsx:38
 msgid "To send {0}, you'll need to set up {1} integration."
-msgstr ""
+msgstr "{0} göndermek için {1} entegrasyon ayarlamalısınız."
 
 #: frontend/src/metabase/components/ChannelSetupModal.jsx:39
 msgid "To send {0}, an admin needs to set up {1} integration."
-msgstr ""
+msgstr "{0} göndermek için, bir yöneticinin {1} entegrasyonunu ayarlaması gerekiyor."
 
 #: frontend/src/metabase/components/DatabaseDetailsForm.jsx:261
 msgid "{0} to generate a Client ID and Client Secret for your project."
-msgstr ""
+msgstr "{0} projeniz için bir Müşteri Kimliği ve Müşteri Şifresi oluşturmak için."
 
 #: frontend/src/metabase/components/DatabaseDetailsForm.jsx:288
 msgid "{0} to get an auth code"
@@ -7598,7 +7598,7 @@ msgstr "Onay kodu almak için {0}"
 
 #: frontend/src/metabase/components/DatabaseDetailsForm.jsx:323
 msgid "{0} to go to the console if you haven't already done so."
-msgstr ""
+msgstr "Daha önce yapmadıysanız {0} konsoluna gitmek için."
 
 #: frontend/src/metabase/components/DeleteModalWithConfirm.jsx:79
 msgid "Delete this {0}"
@@ -7626,7 +7626,7 @@ msgstr "{0} tarafından soruldu"
 
 #: frontend/src/metabase/components/HistoryModal.jsx:70
 msgid "Reverted to an earlier revision and {0}"
-msgstr ""
+msgstr "Önceki bir revizyona dönüldü ve {0}"
 
 #: frontend/src/metabase/components/SchedulePicker.jsx:23
 msgid "Sunday"
@@ -7634,23 +7634,23 @@ msgstr "Pazar"
 
 #: frontend/src/metabase/containers/SaveQuestionModal.jsx:171
 msgid "Replace original question, \"{0}\""
-msgstr ""
+msgstr "Orijinal soruyu değiştir, \"{0}\""
 
 #: frontend/src/metabase/dashboard/containers/AutomaticDashboardApp.jsx:86
 msgid "View your recently created dashboard"
-msgstr ""
+msgstr "Yakın zamanda oluşturduğunuz gösterge panosunu görüntüleyin"
 
 #: frontend/src/metabase/dashboards/containers/Dashboards.jsx:191
 msgid "Put the charts and graphs you look at {0}frequently in a single, handy place."
-msgstr ""
+msgstr "{0} sıklıkta baktığınız grafikleri tek, kullanışlı bir yere koyun."
 
 #: frontend/src/metabase/dashboards/containers/DashboardsArchive.jsx:97
 msgid "No dashboards have been {0} archived yet"
-msgstr ""
+msgstr "Henüz hiç gösterge panosu {0} arşivlenmemiş"
 
 #: frontend/src/metabase/home/components/Activity.jsx:92
 msgid "did some super awesome stuff that's hard to describe"
-msgstr ""
+msgstr "tanımlaması zor bazı süper müthiş şeyler yaptım"
 
 #: frontend/src/metabase/home/components/Activity.jsx:427
 msgid "removed the filter {0}"
@@ -7658,19 +7658,19 @@ msgstr "{0} süzgecini kaldırdı"
 
 #: frontend/src/metabase/public/components/widgets/AdvancedEmbedPane.jsx:83
 msgid "You will need to publish this {0} before you can embed it in another application."
-msgstr ""
+msgstr "Başka bir uygulamaya yerleştirmeden önce bunu {0} yayınlamanız gerekir."
 
 #: frontend/src/metabase/public/components/widgets/AdvancedSettingsPane.jsx:84
 msgid "This {0} doesn't have any parameters to configure yet."
-msgstr ""
+msgstr "Bu {0} henüz yapılandırılacak parametreler içermiyor."
 
 #: frontend/src/metabase/public/components/widgets/AdvancedSettingsPane.jsx:128
 msgid "This will disable embedding for this {0}."
-msgstr ""
+msgstr "Bu, {0} için gömülmeyi devre dışı bırakacaktır."
 
 #: frontend/src/metabase/public/components/widgets/EmbedCodePane.jsx:63
 msgid "To embed this {0} in your application:"
-msgstr ""
+msgstr "Bu {0} gömüsünü uygulamanıza gömmek için:"
 
 #: frontend/src/metabase/public/components/widgets/EmbedCodePane.jsx:102
 msgid "More {0}"
@@ -7678,23 +7678,23 @@ msgstr "Daha fazla {0}"
 
 #: frontend/src/metabase/public/components/widgets/SharingPane.jsx:118
 msgid "Share this {0} with people who don't have a Metabase account using the URL below:"
-msgstr ""
+msgstr "Aşağıdaki {}}, aşağıdaki URL'yi kullanarak Metabase hesabına sahip olmayan kişilerle paylaşın:"
 
 #: frontend/src/metabase/public/components/widgets/SharingPane.jsx:159
 msgid "Embed this {0} in blog posts or web pages by copying and pasting this snippet:"
-msgstr ""
+msgstr "Bu snippet'i kopyalayıp yapıştırarak bunu {0} blog yayınlarına veya web sayfalarına ekleyin:"
 
 #: frontend/src/metabase/public/components/widgets/SharingPane.jsx:176
 msgid "Embed this {0} in an application"
-msgstr ""
+msgstr "Bu {0} uygulamasını bir uygulamaya gömün"
 
 #: frontend/src/metabase/public/components/widgets/SharingPane.jsx:177
 msgid "By integrating with your application server code, you can provide a secure stats {0} limited to a specific user, customer, organization, etc."
-msgstr ""
+msgstr "Uygulama sunucusu kodunuzla entegre olarak, belirli bir kullanıcı, müşteri, kuruluş vb. Ile sınırlı bir {0} güvenli istatistik sağlayabilirsiniz."
 
 #: frontend/src/metabase/pulse/components/PulseEdit.jsx:89
 msgid "This pulse will no longer be emailed to {0} {1}"
-msgstr ""
+msgstr "Bu darbe artık {0} {1} adresine e-postayla gönderilmeyecek"
 
 #: frontend/src/metabase/pulse/components/PulseEdit.jsx:91
 msgid "address"
@@ -7702,23 +7702,23 @@ msgstr "adres"
 
 #: frontend/src/metabase/pulse/components/PulseEdit.jsx:97
 msgid "Slack channel {0} will no longer get this pulse {1}"
-msgstr ""
+msgstr "Boş kanal {0} artık bu darbeyi {1} almayacak"
 
 #: frontend/src/metabase/pulse/components/PulseEdit.jsx:105
 msgid "Channel {0} will no longer receive this pulse {1}"
-msgstr ""
+msgstr "{0} kanalı artık bu atımı {1} almayacak"
 
 #: frontend/src/metabase/pulse/components/PulseEditCards.jsx:104
 msgid "We'll show the first 10 columns and 20 rows of this table in your Pulse. If you email this, we'll add a file attachment with all columns and up to 2,000 rows."
-msgstr ""
+msgstr "Bu tablonun ilk 10 sütununu ve 20 satırını Pulse’unuza göstereceğiz. Bunu e-posta ile gönderirseniz, tüm sütunlara ve 2.000 satıra kadar bir dosya eki ekleriz."
 
 #: frontend/src/metabase/pulse/components/PulseEditCards.jsx:119
 msgid "We recommend keeping pulses small and focused to help keep them digestible and useful to the whole team."
-msgstr ""
+msgstr "Bakliyatları küçük ve odaklanmış halde tutmanızı ve sindirilebilmesini ve tüm ekip için faydalı olmasını sağlamanızı öneririz."
 
 #: frontend/src/metabase/pulse/components/PulseEditChannels.jsx:224
 msgid "{0} will be sent at"
-msgstr ""
+msgstr "{0} adresine gönderilecek"
 
 #: frontend/src/metabase/pulse/components/PulseEditChannels.jsx:236
 msgid "Send to {0} now"
@@ -7726,19 +7726,19 @@ msgstr "Şimdi {0} tarafına gönder"
 
 #: frontend/src/metabase/pulse/components/PulseEditChannels.jsx:282
 msgid "{0} needs to be set up by an administrator."
-msgstr ""
+msgstr "{0} bir yönetici tarafından kurulmalıdır."
 
 #: frontend/src/metabase/pulse/components/PulseListChannel.jsx:105
 msgid "You get this {0}"
-msgstr ""
+msgstr "Bunu {0} aldınız"
 
 #: frontend/src/metabase/pulse/components/PulseListChannel.jsx:121
 msgid "Get this {0}"
-msgstr ""
+msgstr "Bunu {0} al"
 
 #: frontend/src/metabase/pulse/components/PulseListItem.jsx:60
 msgid "Pulse by {0}"
-msgstr ""
+msgstr "{0} tarafından nabız"
 
 #: frontend/src/metabase/qb/components/TimeseriesFilterWidget.jsx:100
 msgid "After {0}"
@@ -7754,11 +7754,11 @@ msgstr "{0} nesnesini gör"
 
 #: frontend/src/metabase/qb/components/actions/GenerateDashboardAction.jsx:25
 msgid "See an exploration of this question"
-msgstr ""
+msgstr "Bu sorunun bir araştırmasına bakın"
 
 #: frontend/src/metabase/qb/components/actions/PivotByAction.jsx:56
 msgid "Break out by {0}"
-msgstr ""
+msgstr "{0} üzerinden ayrıştırma"
 
 #: frontend/src/metabase/qb/components/actions/UnderlyingRecordsAction.jsx:23
 msgid "View the underlying {0} records"
@@ -7770,7 +7770,7 @@ msgstr "{0} nesnesini ışınla"
 
 #: frontend/src/metabase/qb/components/drill/QuickFilterDrill.jsx:56
 msgid "View this {0}'s {1}"
-msgstr ""
+msgstr "{0} için {1} görüntüle"
 
 #: frontend/src/metabase/qb/components/drill/UnderlyingRecordsDrill.jsx:35
 msgid "View {0} {1}"
@@ -7810,27 +7810,29 @@ msgstr "hedefine ulaştığı"
 
 #: frontend/src/metabase/query_builder/components/AlertModals.jsx:354
 msgid "This alert will no longer be emailed to {0}."
-msgstr ""
+msgstr "Bu uyarı artık {0} adresine e-postayla gönderilmeyecek."
 
 #: frontend/src/metabase/query_builder/components/AlertModals.jsx:360
 msgid "Slack channel {0} will no longer get this alert."
-msgstr ""
+msgstr "Slack kanalı {0} artık bu uyarıyı almayacak."
 
 #: frontend/src/metabase/query_builder/components/AlertModals.jsx:364
 msgid "Channel {0} will no longer receive this alert."
-msgstr ""
+msgstr "Kanal {0} artık bu uyarıyı almayacak."
 
 #: frontend/src/metabase/query_builder/components/AlertModals.jsx:650
+#, fuzzy
 msgid "{0} Goal-based alerts aren't yet supported for charts with more than one line, so this alert will be sent whenever the chart has {1}."
-msgstr ""
+msgstr "{0} Birden fazla satıra sahip grafikler için hedef tabanlı uyarılar henüz desteklenmiyor. Bu nedenle, {1} grafiği olduğunda bu uyarı gönderilecektir."
 
 #: frontend/src/metabase/query_builder/components/AlertModals.jsx:653
 msgid "results"
 msgstr "sonuçlar"
 
 #: frontend/src/metabase/query_builder/components/AlertModals.jsx:657
+#, fuzzy
 msgid "{0} This kind of alert is most useful when your saved question doesn’t {1} return any results, but you want to know when it does."
-msgstr ""
+msgstr "{0} Bu tür bir uyarı, kaydedilen sorunuzu {1} hiçbir sonuç döndürmediğinde, ancak ne zaman olduğunu bilmek istediğinizde en yararlıdır."
 
 #: frontend/src/metabase/query_builder/components/AlertModals.jsx:658
 msgid "Tip"
@@ -7842,27 +7844,27 @@ msgstr "genellikle"
 
 #: frontend/src/metabase/query_builder/components/NativeQueryEditor.jsx:339
 msgid "This question is written in {0}."
-msgstr ""
+msgstr "Bu soru {0} ile yazılmıştır."
 
 #: frontend/src/metabase/query_builder/components/QueryModeButton.jsx:58
 msgid "View the {0}"
-msgstr ""
+msgstr "{0} görüntüle"
 
 #: frontend/src/metabase/query_builder/components/QueryModeButton.jsx:59
 msgid "Switch to {0}"
-msgstr ""
+msgstr "{0} nesnesine geçin"
 
 #: frontend/src/metabase/query_builder/components/QueryModeButton.jsx:88
 msgid "{0} for this question"
-msgstr ""
+msgstr "Bu soru için {0}"
 
 #: frontend/src/metabase/query_builder/components/QueryModeButton.jsx:112
 msgid "Convert this question to {0}"
-msgstr ""
+msgstr "Bu soruyu {0} olarak dönüştür"
 
 #: frontend/src/metabase/query_builder/components/QueryVisualization.jsx:122
 msgid "This question will take approximately {0} to refresh"
-msgstr ""
+msgstr "Bu soru, yenilemek için yaklaşık {0} sürecek"
 
 #: frontend/src/metabase/query_builder/components/QueryVisualization.jsx:131
 msgid "Updated {0}"
@@ -7870,7 +7872,7 @@ msgstr "{0} güncellendi"
 
 #: frontend/src/metabase/query_builder/components/QueryVisualization.jsx:146
 msgid "Showing first {0} {1}"
-msgstr ""
+msgstr "İlk {0} {1} gösteriliyor"
 
 #: frontend/src/metabase/query_builder/components/QueryVisualization.jsx:148
 #: frontend/src/metabase/query_builder/components/QueryVisualization.jsx:151
@@ -7879,11 +7881,11 @@ msgstr "sıra"
 
 #: frontend/src/metabase/query_builder/components/QueryVisualization.jsx:149
 msgid "Showing {0} {1}"
-msgstr ""
+msgstr "{0} {1} gösteriliyor"
 
 #: frontend/src/metabase/query_builder/components/VisualizationResult.jsx:67
 msgid "You can also {0} when there are some results."
-msgstr ""
+msgstr "Bazı sonuçlar olduğunda {0} da yapabilirsiniz."
 
 #: frontend/src/metabase/query_builder/components/dataref/FieldPane.jsx:156
 msgid "Group by {0}"
@@ -7938,11 +7940,11 @@ msgstr "{0} gerçekleştirilmemiş"
 
 #: frontend/src/metabase/query_builder/components/template_tags/TagEditorHelp.jsx:114
 msgid "{0} creates a variable in this SQL template called \"variable_name\". Variables can be given types in the side panel, which changes their behavior. All variable types other than \"Field Filter\" will automatically cause a filter widget to be placed on this question; with Field Filters, this is optional. When this filter widget is filled in, that value replaces the variable in the SQL template."
-msgstr ""
+msgstr "{0}, \"variable_name\" adı verilen bu SQL şablonunda bir değişken oluşturur. Değişkenlere, yan panelde davranışlarını değiştiren tipler verilebilir. \"Alan Filtresi\" dışındaki tüm değişken türleri otomatik olarak bir filtre gerecinin bu soruya yerleştirilmesine neden olur; Alan Filtreleri ile, bu isteğe bağlıdır. Bu filtre gereci doldurulduğunda, bu değer, SQL şablonundaki değişkenin yerine geçer."
 
 #: frontend/src/metabase/query_builder/components/template_tags/TagEditorHelp.jsx:132
 msgid "brackets around a {0} create an optional clause in the template. If \"variable\" is set, then the entire clause is placed into the template. If not, then the entire clause is ignored."
-msgstr ""
+msgstr "{0} çevresindeki parantezler, şablonda isteğe bağlı bir öğe oluşturur. \"Değişken\" ayarlanırsa, tüm tümce şablona yerleştirilir. Değilse, tüm madde göz ardı edilir."
 
 #: frontend/src/metabase/questions/components/ActionHeader.jsx:25
 msgid "Select all {0}"
@@ -7958,19 +7960,19 @@ msgstr " {0} üzerinden"
 
 #: frontend/src/metabase/questions/components/LabelPicker.jsx:17
 msgid "Apply labels to {0} questions"
-msgstr ""
+msgstr "{0} sorularına etiketler uygulayın"
 
 #: frontend/src/metabase/questions/containers/EditLabels.jsx:121
 msgid "Delete label \"{0}\""
-msgstr ""
+msgstr "\"{0}\" etiketini sil"
 
 #: frontend/src/metabase/questions/questions.js:127
 msgid "{0} question was {1}"
-msgstr ""
+msgstr "{0} soru {1} idi"
 
 #: frontend/src/metabase/questions/questions.js:128
 msgid "{0} questions were {1}"
-msgstr ""
+msgstr "{0} soru {1} idi"
 
 #: frontend/src/metabase/reference/components/EditableReferenceHeader.jsx:96
 #: frontend/src/metabase/reference/components/ReferenceHeader.jsx:59
@@ -7979,19 +7981,19 @@ msgstr "{0} bunu gör"
 
 #: frontend/src/metabase/reference/components/Formula.jsx:53
 msgid "View the {0} formula"
-msgstr ""
+msgstr "{0} formülünü görüntüle"
 
 #: frontend/src/metabase/reference/components/GuideDetail.jsx:80
 msgid "Why this {0} is important"
-msgstr ""
+msgstr "Bu neden {0} önemlidir?"
 
 #: frontend/src/metabase/reference/components/GuideDetail.jsx:81
 msgid "Why this {0} is interesting"
-msgstr ""
+msgstr "Neden bu {0} ilginç"
 
 #: frontend/src/metabase/reference/components/GuideDetail.jsx:93
 msgid "Things to be aware of about this {0}"
-msgstr ""
+msgstr "Bu konuda bilinmesi gerekenler {0}"
 
 #: frontend/src/metabase/reference/components/GuideDetail.jsx:112
 msgid "By {0}"
@@ -7999,11 +8001,11 @@ msgstr "{0} üzerinden"
 
 #: frontend/src/metabase/reference/components/GuideDetailEditor.jsx:156
 msgid "What is useful or interesting about this {0}?"
-msgstr ""
+msgstr "Bu {0} hakkında yararlı veya ilginç olan nedir?"
 
 #: frontend/src/metabase/reference/components/GuideDetailEditor.jsx:170
 msgid "Anything users should be aware of about this {0}?"
-msgstr ""
+msgstr "Kullanıcıların bu {0} hakkında farkında olmaları gereken herhangi bir şey var mı?"
 
 #: frontend/src/metabase/reference/databases/DatabaseSidebar.jsx:33
 #: frontend/src/metabase/reference/databases/TableList.jsx:111
@@ -8017,7 +8019,7 @@ msgstr "{0} içerisindeki alanlar"
 
 #: frontend/src/metabase/reference/databases/FieldSidebar.jsx:53
 msgid "See an exploration of this field"
-msgstr ""
+msgstr "Bu alanın keşfini görün"
 
 #: frontend/src/metabase/reference/databases/TableDetail.jsx:38
 msgid "Count of {0}"
@@ -8025,14 +8027,14 @@ msgstr "{0} sayısı"
 
 #: frontend/src/metabase/reference/databases/TableDetail.jsx:47
 msgid "See raw data for {0}"
-msgstr ""
+msgstr "{0} için ham verileri görün"
 
 #: frontend/src/metabase/reference/databases/TableQuestions.jsx:71
 #: frontend/src/metabase/reference/metrics/MetricQuestions.jsx:75
 #: frontend/src/metabase/reference/metrics/MetricSidebar.jsx:33
 #: frontend/src/metabase/reference/segments/SegmentQuestions.jsx:74
 msgid "Questions about {0}"
-msgstr ""
+msgstr "{0} ile ilgili sorular"
 
 #: frontend/src/metabase/reference/databases/TableQuestions.jsx:97
 #: frontend/src/metabase/reference/metrics/MetricQuestions.jsx:100
@@ -8042,11 +8044,12 @@ msgstr "{1} tarafından {0} oluşturuldu"
 
 #: frontend/src/metabase/reference/databases/TableSidebar.jsx:51
 msgid "See an exploration of this table"
-msgstr ""
+msgstr "Bu tablonun keşfini görün"
 
 #: frontend/src/metabase/reference/guide/GettingStartedGuide.jsx:267
+#, fuzzy
 msgid "Segments and tables are the building blocks of your company's data. Tables are collections of the raw information while segments are specific slices with specific meanings, like {0}"
-msgstr ""
+msgstr "Segmentler ve tablolar, şirket verilerinizin yapı taşlarıdır. Tablolar, ham bilgilerin koleksiyonlarıdır; segmentler ise, {0} gibi spesifik anlamlara sahip belirli dilimlerdir."
 
 #: frontend/src/metabase/reference/guide/GettingStartedGuide.jsx:329
 msgid "Contact {0}"
@@ -8060,23 +8063,23 @@ msgstr "{0} için revizyon geçmişi"
 
 #: frontend/src/metabase/reference/metrics/MetricSidebar.jsx:39
 msgid "See an exploration of this metric"
-msgstr ""
+msgstr "Bu ölçütün incelemesini görün"
 
 #: frontend/src/metabase/reference/segments/SegmentSidebar.jsx:45
 msgid "Create a dashboard based on this segment"
-msgstr ""
+msgstr "Bu parçaya dayalı bir gösterge panosu oluşturun"
 
 #: frontend/src/metabase/setup/components/DatabaseConnectionStep.jsx:125
 msgid "Select the type of Database you use"
-msgstr ""
+msgstr "Kullandığınız Veritabanı türünü seçin"
 
 #: frontend/src/metabase/setup/components/DatabaseConnectionStep.jsx:146
 msgid "Connecting to {0}"
-msgstr ""
+msgstr "{0} öğesine bağlanıyor"
 
 #: frontend/src/metabase/setup/components/PreferencesStep.jsx:105
 msgid "Metabase {0} collects anything about your data or question results."
-msgstr ""
+msgstr "Metabase {0}, verileriniz veya soru sonuçlarınızla ilgili bir şeyler toplar."
 
 #: frontend/src/metabase/setup/components/UserStep.jsx:153
 msgid "Hi, {0}. nice to meet you!"
@@ -8104,15 +8107,15 @@ msgstr "Metabot trendlere ve aykırılara bakıyor…"
 
 #: frontend/src/metabase/setup/containers/PostSetupApp.jsx:132
 msgid "This seems to be taking a while. In the meantime, you can check out one of these example explorations to see what Metabase can do for you."
-msgstr ""
+msgstr "Bu biraz zaman alıyor gibi görünüyor. Bu arada, Metabase'in sizin için neler yapabileceğini görmek için bu örnek aramalardan birini inceleyebilirsiniz."
 
 #: frontend/src/metabase/setup/containers/PostSetupApp.jsx:143
 msgid "Once you connect your own data, I can show you some automatic explorations called x-rays. Here are some examples with sample data."
-msgstr ""
+msgstr "Kendi verilerinizi bağladıktan sonra, size x-ışınları denen bazı otomatik keşifler gösterebilirim. Burada, örnek verilerle ilgili bazı örnekler görünüyor."
 
 #: frontend/src/metabase/setup/containers/PostSetupApp.jsx:144
 msgid "I took a look at the data you just connected, and I put together some explorations of interesting metrics I found. Hope you like them!"
-msgstr ""
+msgstr "Yeni bağlandığınız verilere göz attım ve bulduğum ilginç ölçütlere ait keşifleri bir araya getirdim. Umarım onları beğenirsin!"
 
 #: frontend/src/metabase/visualizations/components/ChartSettings.jsx:151
 msgid "Customize this {0}"
@@ -8132,7 +8135,7 @@ msgstr "Bu genelde ortalama {0} zaman alacak."
 
 #: frontend/src/metabase/visualizations/components/Visualization.jsx:479
 msgid "This is usually pretty fast but seems to be taking awhile right now."
-msgstr ""
+msgstr "Bu genellikle oldukça hızlıdır ancak şu anda bir süredir devam ediyor gibi görünüyor."
 
 #: frontend/src/metabase/visualizations/index.js:66
 msgid "No visualization for {0}"
@@ -8140,19 +8143,19 @@ msgstr "{0} için görselleştirme yok"
 
 #: frontend/src/metabase/visualizations/lib/LineAreaBarRenderer.js:74
 msgid "\"{0}\" is an unaggregated field: if it has more than one value at a point on the x-axis, the values will be summed."
-msgstr ""
+msgstr "\"{0}\", ayrılmamış bir alandır: eğer x ekseni üzerindeki bir noktada birden fazla değere sahipse, değerler toplanır."
 
 #: frontend/src/metabase/visualizations/lib/LineAreaBarRenderer.js:94
 msgid "This chart type doesn't support more than {0} series of data."
-msgstr ""
+msgstr "Bu grafik türü, {0} veri dizisinden daha fazlasını desteklemiyor."
 
 #: frontend/src/metabase/visualizations/lib/errors.js:11
 msgid "Doh! The data from your query doesn't fit the chosen display choice. This visualization requires at least {0} {1} of data."
-msgstr ""
+msgstr "Doh! Sorgunuzdaki veriler seçilen ekran seçimine uymuyor. Bu görselleştirme en az {0} {1} veri gerektirir."
 
 #: frontend/src/metabase/visualizations/lib/errors.js:20
 msgid "No dice. We have {0} data {1} to show and that's not enough for this visualization."
-msgstr ""
+msgstr "Nafile. Gösterilecek {0} veri {1} var ve bu görselleştirme için yeterli değil."
 
 #: frontend/src/metabase/visualizations/lib/fill_data.js:38
 msgid "xValues missing!"
@@ -8184,15 +8187,15 @@ msgstr "{0} hedefi"
 
 #: frontend/src/metabase/xray/components/InsightCard.jsx:45
 msgid "Most of the values for {0} are between {1} and {2}."
-msgstr ""
+msgstr "{0} için değerlerin çoğu {1} ve {2} arasındadır."
 
 #: frontend/src/metabase/xray/components/InsightCard.jsx:72
 msgid "You have {0} missing (null) values in your data"
-msgstr ""
+msgstr "Verilerinizde {0} eksik (boş) değer var"
 
 #: frontend/src/metabase/xray/components/InsightCard.jsx:105
 msgid "You have {0} zeros in your data. They may be stand-ins for missing data, or might indicate some other abnormality."
-msgstr ""
+msgstr "Verilerinizde {0} sıfır var. Eksik veriler için destek olabilirler veya başka bir anormallik gösterebilirler."
 
 #: frontend/src/metabase/xray/components/InsightCard.jsx:181
 msgid "increasingly"
@@ -8216,7 +8219,7 @@ msgstr "zamanla"
 
 #: frontend/src/metabase/xray/components/InsightCard.jsx:210
 msgid "Your data has a {0} seasonal component."
-msgstr ""
+msgstr "Verileriniz {0} mevsimsel bileşenine sahip."
 
 #: frontend/src/metabase/xray/components/InsightCard.jsx:339
 msgid "Your data seems to be {0} {1}."
@@ -8232,44 +8235,44 @@ msgstr "Aah! :cry:n> {0}"
 
 #: src/metabase/public_settings.clj
 msgid "The absolute maximum time to keep any cached query results, in seconds."
-msgstr ""
+msgstr "Önbelleğe alınmış sorgu sonuçlarının saniye cinsinden tutulması için mutlak en fazla süre."
 
 #. returns `true` if successful -- see JavaDoc
 #: src/metabase/pulse/render.clj
 msgid "No appropriate image writer found!"
-msgstr ""
+msgstr "Uygun bir resim yazarı bulunamadı!"
 
 #: src/metabase/util/schema.clj
 msgid "value must be an integer."
-msgstr ""
+msgstr "değer bir tamsayı olmalıdır."
 
 #: src/metabase/util/schema.clj
 msgid "value must be a string."
-msgstr ""
+msgstr "değer bir metin olmalı."
 
 #: src/metabase/util/schema.clj
 msgid "value must be a boolean."
-msgstr ""
+msgstr "değer bir mantıksal değer olmalıdır."
 
 #: src/metabase/util/schema.clj
 msgid "value must be a string that matches the regex `{0}`."
-msgstr ""
+msgstr "değer, `{0}` regexi ile eşleşen bir metin olmalıdır."
 
 #: src/metabase/util/schema.clj
 msgid "value may be nil, or if non-nil, {0}"
-msgstr ""
+msgstr "değer boş olabilir veya boş değilse, {0}"
 
 #: src/metabase/util/schema.clj
 msgid "value must be one of: {0}."
-msgstr ""
+msgstr "değer şunlardan biri olmalıdır: {0}."
 
 #: src/metabase/util/schema.clj
 msgid "value must satisfy one of the following requirements: "
-msgstr ""
+msgstr "değer, aşağıdaki gereksinimlerden birini karşılamalıdır:"
 
 #: src/metabase/util/schema.clj
 msgid "value must be an array."
-msgstr ""
+msgstr "değer bir dizi olmalıdır."
 
 #: src/metabase/util/schema.clj
 msgid "Each {0}"
@@ -8277,39 +8280,39 @@ msgstr "Her {0}"
 
 #: src/metabase/util/schema.clj
 msgid "The array cannot be empty."
-msgstr ""
+msgstr "Dizi boş olamaz."
 
 #: src/metabase/util/schema.clj
 msgid "value must be a non-blank string."
-msgstr ""
+msgstr "değer boş olmayan bir metin olmalıdır."
 
 #: src/metabase/util/schema.clj
 msgid "Integer greater than zero"
-msgstr ""
+msgstr "Sıfırdan büyük tamsayı"
 
 #: src/metabase/util/schema.clj
 msgid "value must be an integer greater than zero."
-msgstr ""
+msgstr "değer sıfırdan büyük bir tamsayı olmalıdır."
 
 #: src/metabase/util/schema.clj
 msgid "Keyword or string"
-msgstr ""
+msgstr "Anahtar kelime veya metin"
 
 #: src/metabase/util/schema.clj
 msgid "Valid field type"
-msgstr ""
+msgstr "Geçerli alan türü"
 
 #: src/metabase/util/schema.clj
 msgid "value must be a valid field type."
-msgstr ""
+msgstr "Değer geçerli bir alan türü olmalıdır."
 
 #: src/metabase/util/schema.clj
 msgid "Valid field type (keyword or string)"
-msgstr ""
+msgstr "Geçerli alan türü (anahtar kelime veya metin)"
 
 #: src/metabase/util/schema.clj
 msgid "value must be a valid field type (keyword or string)."
-msgstr ""
+msgstr "değer geçerli bir alan türü olmalıdır (anahtar kelime veya metin)."
 
 #: src/metabase/util/schema.clj
 msgid "Valid map"
@@ -8317,7 +8320,7 @@ msgstr "Geçerli harita"
 
 #: src/metabase/util/schema.clj
 msgid "value must be a map."
-msgstr ""
+msgstr "değer bir eşlem olmalıdır."
 
 #: src/metabase/util/schema.clj
 msgid "Valid email address"
@@ -8325,7 +8328,7 @@ msgstr "Geçerli e-posta adresi"
 
 #: src/metabase/util/schema.clj
 msgid "value must be a valid email address."
-msgstr ""
+msgstr "değer geçerli bir e-posta adresi olmalıdır."
 
 #: src/metabase/util/schema.clj
 msgid "Insufficient password strength"
@@ -8333,21 +8336,21 @@ msgstr "Yetersiz şifre güvenilirliği"
 
 #: src/metabase/util/schema.clj
 msgid "value must be a valid integer."
-msgstr ""
+msgstr "değer geçerli bir tamsayı olmalıdır."
 
 #: src/metabase/util/schema.clj
 msgid "value must be a valid integer greater than zero."
-msgstr ""
+msgstr "değer, sıfırdan büyük geçerli bir tamsayı olmalıdır."
 
 #: src/metabase/util/schema.clj
 msgid "value must be a valid boolean string (''true'' or ''false'')."
-msgstr ""
+msgstr "değer geçerli bir boole dizgisi olmalıdır ('' true '' veya '' false '')."
 
 #: src/metabase/util/schema.clj
 msgid "value must be a valid JSON string."
-msgstr ""
+msgstr "değer geçerli bir JSON dizesi olmalıdır."
 
 #: src/metabase/util/schema.clj
 msgid "value must be a valid embedding params map."
-msgstr ""
+msgstr "Değer geçerli bir gömme params haritası olmalıdır."
 
