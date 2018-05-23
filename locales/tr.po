@@ -31,14 +31,15 @@ msgstr "Metaveriler hakkında eğitimli tahminler yapmak için\n"
 " için Veri Modeli bölümünde ${ linkViewDatabase }."
 
 #: frontend/src/metabase/admin/people/components/GroupsListing.jsx:135
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:226
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:258
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:345
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:365
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:225
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:257
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:344
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:364
 #: frontend/src/metabase/components/HeaderModal.jsx:43
+#: frontend/src/metabase/dashboard/components/AddSeriesModal.jsx:281
 #: frontend/src/metabase/parameters/components/widgets/CategoryWidget.jsx:106
 #: frontend/src/metabase/query_builder/components/AggregationPopover.jsx:298
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:182
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:185
 #: frontend/src/metabase/query_builder/components/expressions/ExpressionWidget.jsx:96
 #: frontend/src/metabase/visualizations/components/ChartSettings.jsx:201
 msgid "Done"
@@ -54,6 +55,8 @@ msgstr "Bir veritabanı türü seç"
 #: frontend/src/metabase/admin/settings/components/widgets/LdapGroupMappingsWidget.jsx:175
 #: frontend/src/metabase/components/ActionButton.jsx:51
 #: frontend/src/metabase/components/ButtonWithStatus.jsx:6
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:177
+#: frontend/src/metabase/query_builder/components/QueryHeader.jsx:216
 #: frontend/src/metabase/reference/components/EditHeader.jsx:54
 #: frontend/src/metabase/reference/components/EditHeader.jsx:69
 #: frontend/src/metabase/user/components/SetUserPassword.jsx:167
@@ -119,8 +122,8 @@ msgid "Never, I'll do this manually if I need to"
 msgstr "Asla, ihtiyacım olursa bunu manuel olarak yapacağım"
 
 #: frontend/src/metabase/admin/databases/components/DatabaseSchedulingForm.jsx:220
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:245
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:258
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:250
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:259
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:218
 #: frontend/src/metabase/components/ActionButton.jsx:52
 #: frontend/src/metabase/components/ButtonWithStatus.jsx:7
@@ -170,8 +173,8 @@ msgstr "bu kutuda:"
 #: frontend/src/metabase/admin/datamodel/containers/SegmentForm.jsx:93
 #: frontend/src/metabase/admin/people/components/AddRow.jsx:27
 #: frontend/src/metabase/admin/people/components/EditUserForm.jsx:234
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:296
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:321
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:295
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:320
 #: frontend/src/metabase/admin/permissions/components/PermissionsEditor.jsx:49
 #: frontend/src/metabase/admin/permissions/components/PermissionsEditor.jsx:52
 #: frontend/src/metabase/admin/permissions/selectors.js:152
@@ -186,15 +189,17 @@ msgstr "bu kutuda:"
 #: frontend/src/metabase/components/DeleteModalWithConfirm.jsx:71
 #: frontend/src/metabase/components/HeaderModal.jsx:49
 #: frontend/src/metabase/containers/SaveQuestionModal.jsx:194
+#: frontend/src/metabase/dashboard/components/AddSeriesModal.jsx:288
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:159
+#: frontend/src/metabase/dashboard/components/RemoveFromDashboardModal.jsx:42
 #: frontend/src/metabase/pulse/components/PulseEdit.jsx:199
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:180
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:334
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:183
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:343
 #: frontend/src/metabase/query_builder/components/RunButton.jsx:24
 #: frontend/src/metabase/query_builder/components/expressions/ExpressionWidget.jsx:83
 #: frontend/src/metabase/query_builder/containers/ArchiveQuestionModal.jsx:48
 #: frontend/src/metabase/questions/containers/ArchiveCollectionWidget.jsx:50
 #: frontend/src/metabase/questions/containers/CollectionEditorForm.jsx:49
-#: frontend/src/metabase/questions/containers/EditLabels.jsx:110
 #: frontend/src/metabase/questions/containers/MoveToCollection.jsx:61
 #: frontend/src/metabase/reference/components/EditHeader.jsx:34
 #: frontend/src/metabase/reference/components/RevisionMessageModal.jsx:52
@@ -216,7 +221,7 @@ msgstr "Sil"
 #: frontend/src/metabase/nav/containers/Navbar.jsx:111
 #: frontend/src/metabase/reference/databases/DatabaseSidebar.jsx:18
 #: frontend/src/metabase/reference/databases/TableSidebar.jsx:18
-#: frontend/src/metabase/routes.jsx:381
+#: frontend/src/metabase/routes.jsx:377
 msgid "Databases"
 msgstr "Veritabanları"
 
@@ -236,11 +241,11 @@ msgstr "Zamanlama"
 #: frontend/src/metabase/admin/datamodel/containers/MetricForm.jsx:78
 #: frontend/src/metabase/admin/datamodel/containers/SegmentForm.jsx:84
 #: frontend/src/metabase/admin/people/components/EditUserForm.jsx:237
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:244
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:257
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:249
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:258
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:217
 #: frontend/src/metabase/pulse/components/PulseEdit.jsx:194
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:336
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:345
 #: frontend/src/metabase/reference/components/RevisionMessageModal.jsx:47
 msgid "Save changes"
 msgstr "Değişiklikleri kaydet"
@@ -290,7 +295,7 @@ msgstr "Tarama tetiklendi!"
 
 #: frontend/src/metabase/admin/databases/containers/DatabaseEditApp.jsx:227
 #: frontend/src/metabase/pulse/components/PulseEdit.jsx:165
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:379
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:388
 msgid "Danger Zone"
 msgstr "Tehlike Bölgesi"
 
@@ -310,7 +315,7 @@ msgstr "Veritabanı ekle"
 #: frontend/src/metabase/admin/databases/containers/DatabaseListApp.jsx:85
 #: frontend/src/metabase/admin/datamodel/components/database/MetricsList.jsx:36
 #: frontend/src/metabase/admin/datamodel/components/database/SegmentsList.jsx:36
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:418
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:415
 #: frontend/src/metabase/admin/settings/components/widgets/CustomGeoJSONWidget.jsx:183
 #: frontend/src/metabase/admin/settings/components/widgets/PublicLinksListing.jsx:91
 #: frontend/src/metabase/components/CreateDashboardModal.jsx:90
@@ -318,7 +323,6 @@ msgstr "Veritabanı ekle"
 #: frontend/src/metabase/containers/EntitySearch.jsx:24
 #: frontend/src/metabase/containers/SaveQuestionModal.jsx:215
 #: frontend/src/metabase/questions/containers/CollectionEditorForm.jsx:79
-#: frontend/src/metabase/questions/containers/LabelEditorForm.jsx:60
 #: frontend/src/metabase/reference/guide/GettingStartedGuideEditForm.jsx:463
 #: frontend/src/metabase/visualizations/visualizations/Scalar.jsx:62
 msgid "Name"
@@ -353,10 +357,10 @@ msgid "Successfully saved!"
 msgstr "Başarıyla kaydedildi!"
 
 #: frontend/src/metabase/admin/datamodel/components/ObjectActionSelect.jsx:44
+#: frontend/src/metabase/dashboard/components/DashCard.jsx:256
 #: frontend/src/metabase/parameters/components/ParameterWidget.jsx:173
 #: frontend/src/metabase/pulse/components/PulseListItem.jsx:55
 #: frontend/src/metabase/query_builder/components/AlertListPopoverContent.jsx:205
-#: frontend/src/metabase/questions/containers/EditLabels.jsx:119
 #: frontend/src/metabase/reference/components/EditButton.jsx:18
 msgid "Edit"
 msgstr "Düzenle"
@@ -440,7 +444,7 @@ msgid "Column"
 msgstr "Sütun"
 
 #: frontend/src/metabase/admin/datamodel/components/database/ColumnsList.jsx:24
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:119
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:121
 #: frontend/src/metabase/admin/datamodel/containers/FieldApp.jsx:206
 msgid "Visibility"
 msgstr "Görünürlük"
@@ -470,39 +474,41 @@ msgstr "İlave bilgi"
 msgid "Find a schema"
 msgstr "Bir şema bul"
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:80
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:82
 msgid "Why Hide?"
 msgstr "Neden Gizli"
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:81
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:83
 msgid "Technical Data"
 msgstr "Teknik veri"
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:82
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:84
 msgid "Irrelevant/Cruft"
 msgstr "Alakasız "
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:88
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:90
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTableList.jsx:85
 msgid "Queryable"
 msgstr "Sorulabilir"
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:89
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:91
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTableList.jsx:93
 msgid "Hidden"
 msgstr "Gizli"
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:115
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:117
 msgid "No table description yet"
 msgstr "Henüz tablo açıklaması yok"
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:122
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTable.jsx:124
 msgid "Metadata Strength"
 msgstr "Meta Veri Gücü"
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTableList.jsx:104
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTableList.jsx:109
 msgid "Find a table"
 msgstr "Bir tablo bul"
 
-#: frontend/src/metabase/admin/datamodel/components/database/MetadataTableList.jsx:117
+#: frontend/src/metabase/admin/datamodel/components/database/MetadataTableList.jsx:122
 msgid "Schemas"
 msgstr "Şemalar"
 
@@ -843,10 +849,10 @@ msgid "This will show up in the revision history for this segment to help everyo
 msgstr "Bu, herkesin her şeyin neden değiştiğini hatırlamasına yardımcı olmak için bu bölümün revizyon geçmişinde görünecek"
 
 #: frontend/src/metabase/admin/datamodel/containers/TableSettingsApp.jsx:91
-#: frontend/src/metabase/admin/settings/containers/SettingsEditorApp.jsx:272
+#: frontend/src/metabase/admin/settings/containers/SettingsEditorApp.jsx:274
 #: frontend/src/metabase/nav/containers/Navbar.jsx:96
 #: frontend/src/metabase/query_builder/components/template_tags/TagEditorSidebar.jsx:99
-#: frontend/src/metabase/routes.jsx:424
+#: frontend/src/metabase/routes.jsx:420
 msgid "Settings"
 msgstr "Ayarlar"
 
@@ -860,8 +866,9 @@ msgid "Re-scan this table"
 msgstr "Bu tabloyu yeniden tara"
 
 #: frontend/src/metabase/admin/people/components/AddRow.jsx:34
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:188
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:187
 #: frontend/src/metabase/admin/settings/components/widgets/LdapGroupMappingsWidget.jsx:246
+#: frontend/src/metabase/dashboard/components/DashCard.jsx:256
 msgid "Add"
 msgstr "Ekle"
 
@@ -924,8 +931,8 @@ msgid "Members"
 msgstr "Üyeler"
 
 #: frontend/src/metabase/admin/people/components/GroupDetail.jsx:176
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:420
-#: frontend/src/metabase/admin/settings/selectors.js:104
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:417
+#: frontend/src/metabase/admin/settings/selectors.js:107
 #: frontend/src/metabase/lib/core.js:50
 #: frontend/src/metabase/pulse/components/PulseEditChannels.jsx:296
 msgid "Email"
@@ -936,11 +943,11 @@ msgid "A group is only as good as its members."
 msgstr "Bir grup sadece üyeleri kadar iyidir."
 
 #: frontend/src/metabase/admin/people/components/GroupSummary.jsx:16
-#: frontend/src/metabase/routes.jsx:378
+#: frontend/src/metabase/routes.jsx:374
 msgid "Admin"
 msgstr "Yönetici"
 
-#: frontend/src/metabase/admin/people/components/GroupSummary.jsx:36
+#: frontend/src/metabase/admin/people/components/GroupSummary.jsx:38
 msgid "Default"
 msgstr "Varsayılan"
 
@@ -983,9 +990,9 @@ msgstr "Grup ismi"
 
 #: frontend/src/metabase/admin/people/components/GroupsListing.jsx:389
 #: frontend/src/metabase/admin/people/containers/AdminPeopleApp.jsx:25
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:421
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:418
 #: frontend/src/metabase/admin/settings/components/widgets/LdapGroupMappingsWidget.jsx:147
-#: frontend/src/metabase/routes.jsx:417
+#: frontend/src/metabase/routes.jsx:413
 msgid "Groups"
 msgstr "Gruplar"
 
@@ -1011,15 +1018,16 @@ msgid "Reset Password"
 msgstr "Şifreyi yenile"
 
 #: frontend/src/metabase/admin/people/components/UserActionsSelect.jsx:97
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:300
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:299
 #: frontend/src/metabase/admin/settings/components/widgets/CustomGeoJSONWidget.jsx:201
 #: frontend/src/metabase/admin/settings/components/widgets/LdapGroupMappingsWidget.jsx:320
+#: frontend/src/metabase/dashboard/components/RemoveFromDashboardModal.jsx:48
 #: frontend/src/metabase/parameters/components/ParameterWidget.jsx:177
 #: frontend/src/metabase/query_builder/components/expressions/ExpressionWidget.jsx:104
 msgid "Remove"
 msgstr "Kaldır"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:186
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:185
 msgid "Who do you want to add?"
 msgstr "Kimi eklemek istiyorsunuz?"
 
@@ -1028,7 +1036,7 @@ msgstr "Kimi eklemek istiyorsunuz?"
 msgid "Edit ${ user.first_name }'s details"
 msgstr "${ user.first_name } 'in ayrıntılarını düzenle"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:215
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:214
 msgid "Email Settings"
 msgstr "e mail ayarları"
 
@@ -1038,8 +1046,8 @@ msgstr "e mail ayarları"
 msgid "${ user.first_name } has been added"
 msgstr "${ user.first_name } eklendi"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:225
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:257
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:224
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:256
 msgid "Add another person"
 msgstr "Başka bir kişi ekle"
 
@@ -1062,13 +1070,13 @@ msgstr "Parolarını ayarlama talimatları ile ${ userEmail } adresine davetiye 
 msgid "We've re-sent ${ user.first_name }'s invite"
 msgstr "${ user.first_name } adlı kullanıcının davetini tekrar gönderdik"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:279
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:278
 #: frontend/src/metabase/query_builder/components/SavedQuestionIntroModal.jsx:22
 #: frontend/src/metabase/tutorial/Tutorial.jsx:245
 msgid "Okay"
 msgstr "Tamam"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:283
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:282
 msgid "Any previous email invites they have will no longer work."
 msgstr "Sahip oldukları önceki e-posta davetleri artık çalışmayacak."
 
@@ -1084,12 +1092,13 @@ msgstr "${ user.first_name } artık giriş yapamayacak. Bu geri alınamaz."
 msgid "Reset ${ user.first_name }'s password?"
 msgstr "${ user.first_name } şifresini sıfırlayın"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:325
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:324
 msgid "Reset"
 msgstr "Reset"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:329
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:328
 #: frontend/src/metabase/components/ConfirmContent.jsx:10
+#: frontend/src/metabase/dashboard/components/ArchiveDashboardModal.jsx:47
 msgid "Are you sure you want to do this?"
 msgstr "Bunu yapmak istediğinize emin misiniz?"
 
@@ -1098,38 +1107,38 @@ msgstr "Bunu yapmak istediğinize emin misiniz?"
 msgid "${ user.first_name }'s password has been reset"
 msgstr "${ user.first_name } 'nin şifresi sıfırlandı"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:350
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:349
 msgid "Here’s a temporary password they can use to log in and then change their password."
 msgstr "İşte giriş yapmak ve şifrelerini değiştirmek için kullanabilecekleri geçici bir şifre."
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:368
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:367
 msgid "We've sent them an email with instructions for creating a new password."
 msgstr "Yeni bir şifre oluşturma ile ilgili talimatlar içeren bir e-posta gönderdik."
 
 #: frontend/src/metabase/admin/people/containers/AdminPeopleApp.jsx:24
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:408
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:405
 #: frontend/src/metabase/nav/containers/Navbar.jsx:101
-#: frontend/src/metabase/routes.jsx:415
+#: frontend/src/metabase/routes.jsx:411
 msgid "People"
 msgstr "Kişiler"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:409
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:406
 msgid "Add someone"
 msgstr "Birini ekle"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:422
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:419
 msgid "Last Login"
 msgstr "Son giriş"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:444
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:441
 msgid "Signed up via Google"
 msgstr "Google üzerinden kaydoldu"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:449
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:446
 msgid "Signed up via LDAP"
 msgstr "LDAP ile kaydoldu"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:464
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:461
 msgid "Never"
 msgstr "Asla"
 
@@ -1349,8 +1358,8 @@ msgid "Configure"
 msgstr "Yapılandır"
 
 #: frontend/src/metabase/admin/settings/components/SettingsAuthenticationOptions.jsx:23
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:270
-#: frontend/src/metabase/admin/settings/selectors.js:194
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:271
+#: frontend/src/metabase/admin/settings/selectors.js:201
 msgid "LDAP"
 msgstr "LDAP"
 
@@ -1359,68 +1368,68 @@ msgstr "LDAP"
 msgid "Allows users within your LDAP directory to log in to Metabase with their LDAP credentials, and allows automatic mapping of LDAP groups to Metabase groups."
 msgstr "LDAP dizininizdeki kullanıcıların, LDAP kimlik bilgileriyle Metabasenda oturum açmasına ve LDAP gruplarının Metabase gruplarına otomatik olarak eşlenmesini sağlar."
 
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:75
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:71
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:74
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:72
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:67
-#: frontend/src/metabase/admin/settings/selectors.js:150
+#: frontend/src/metabase/admin/settings/selectors.js:154
 msgid "That's not a valid email address"
 msgstr "Bu geçerli bir e-posta adresi değil"
 
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:79
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:75
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:78
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:76
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:71
 msgid "That's not a valid integer"
 msgstr "Bu geçerli bir tam sayı değil"
 
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:133
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:136
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:132
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:137
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:128
 msgid "Looks like we ran into some problems"
 msgstr "Görünüşe göre bazı problemlerle karşılaştık"
 
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:238
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:243
 msgid "Send test email"
 msgstr "Test e-postası gönder"
 
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:239
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:244
 msgid "Sending..."
 msgstr "Gönderiliyor..."
 
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:240
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:245
 msgid "Sent!"
 msgstr "Gönderilen!"
 
-#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:246
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:259
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:251
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:260
 #: frontend/src/metabase/admin/settings/components/SettingsSingleSignOnForm.jsx:156
 #: frontend/src/metabase/admin/settings/components/SettingsSlackForm.jsx:219
 msgid "Changes saved!"
 msgstr "Değişiklikler kaydedildi!"
 
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:80
-#: frontend/src/metabase/admin/settings/selectors.js:246
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:81
+#: frontend/src/metabase/admin/settings/selectors.js:254
 msgid "Check your parentheses"
 msgstr "Parantezlerinizi kontrol edin"
 
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:269
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:270
 #: frontend/src/metabase/admin/settings/components/SettingsSingleSignOnForm.jsx:116
-#: frontend/src/metabase/admin/settings/selectors.js:190
+#: frontend/src/metabase/admin/settings/selectors.js:196
 msgid "Authentication"
 msgstr "Doğrulama"
 
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:274
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:275
 msgid "Server Settings"
 msgstr "Sunucu Ayarları"
 
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:276
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:277
 msgid "User Schema"
 msgstr "Kullanıcı Şeması"
 
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:285
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:286
 msgid "Attributes"
 msgstr "Öznitellikler"
 
-#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:292
+#: frontend/src/metabase/admin/settings/components/SettingsLdapForm.jsx:293
 msgid "Group Schema"
 msgstr "Grup Şeması"
 
@@ -1532,7 +1541,8 @@ msgid "Delete custom map"
 msgstr "Özel haritayı sil"
 
 #: frontend/src/metabase/admin/settings/components/widgets/CustomGeoJSONWidget.jsx:226
-#: frontend/src/metabase/parameters/components/ParameterValueWidget.jsx:244
+#: frontend/src/metabase/dashboard/containers/DashCardCardParameterMapper.jsx:187
+#: frontend/src/metabase/parameters/components/ParameterValueWidget.jsx:239
 #: frontend/src/metabase/query_builder/components/template_tags/TagEditorParam.jsx:142
 #: frontend/src/metabase/query_builder/components/template_tags/TagEditorParam.jsx:184
 msgid "Select…"
@@ -1720,13 +1730,13 @@ msgid "Generate Key"
 msgstr "Anahtar Üret"
 
 #: frontend/src/metabase/admin/settings/components/widgets/SettingToggle.jsx:11
-#: frontend/src/metabase/admin/settings/selectors.js:75
-#: frontend/src/metabase/admin/settings/selectors.js:84
+#: frontend/src/metabase/admin/settings/selectors.js:77
+#: frontend/src/metabase/admin/settings/selectors.js:86
 msgid "Enabled"
 msgstr "Etkin"
 
 #: frontend/src/metabase/admin/settings/components/widgets/SettingToggle.jsx:11
-#: frontend/src/metabase/admin/settings/selectors.js:80
+#: frontend/src/metabase/admin/settings/selectors.js:82
 #: frontend/src/metabase/public/components/widgets/AdvancedSettingsPane.jsx:104
 msgid "Disabled"
 msgstr "engelli"
@@ -1739,158 +1749,158 @@ msgstr "Bilinmeyen ayar ${ key }"
 msgid "Setup"
 msgstr "Kurulum"
 
-#: frontend/src/metabase/admin/settings/selectors.js:26
+#: frontend/src/metabase/admin/settings/selectors.js:27
 msgid "General"
 msgstr "Genel"
 
-#: frontend/src/metabase/admin/settings/selectors.js:30
+#: frontend/src/metabase/admin/settings/selectors.js:32
 msgid "Site Name"
 msgstr "Site Adı"
 
-#: frontend/src/metabase/admin/settings/selectors.js:35
+#: frontend/src/metabase/admin/settings/selectors.js:37
 msgid "Site URL"
 msgstr "Site URL'si"
 
-#: frontend/src/metabase/admin/settings/selectors.js:40
+#: frontend/src/metabase/admin/settings/selectors.js:42
 msgid "Email Address for Help Requests"
 msgstr "Yardım İstekleri için E-posta Adresi"
 
-#: frontend/src/metabase/admin/settings/selectors.js:45
+#: frontend/src/metabase/admin/settings/selectors.js:47
 msgid "Report Timezone"
 msgstr "Saat Dilimini Bildir"
 
-#: frontend/src/metabase/admin/settings/selectors.js:48
+#: frontend/src/metabase/admin/settings/selectors.js:50
 msgid "Database Default"
 msgstr "Veritabanı Varsayılanı"
 
-#: frontend/src/metabase/admin/settings/selectors.js:51
+#: frontend/src/metabase/admin/settings/selectors.js:53
 msgid "Select a timezone"
 msgstr "Bir saat dilimi seçin"
 
-#: frontend/src/metabase/admin/settings/selectors.js:52
+#: frontend/src/metabase/admin/settings/selectors.js:54
 msgid "Not all databases support timezones, in which case this setting won't take effect."
 msgstr "Tüm veritabanları saat dilimlerini desteklemez, bu durumda bu ayar geçerli olmaz."
 
-#: frontend/src/metabase/admin/settings/selectors.js:57
+#: frontend/src/metabase/admin/settings/selectors.js:59
 msgid "Language"
 msgstr "Dil"
 
-#: frontend/src/metabase/admin/settings/selectors.js:62
+#: frontend/src/metabase/admin/settings/selectors.js:64
 msgid "Select a language"
 msgstr "Bir dil seç"
 
-#: frontend/src/metabase/admin/settings/selectors.js:67
+#: frontend/src/metabase/admin/settings/selectors.js:69
 msgid "Anonymous Tracking"
 msgstr "Anonim İzleme"
 
-#: frontend/src/metabase/admin/settings/selectors.js:72
+#: frontend/src/metabase/admin/settings/selectors.js:74
 msgid "Friendly Table and Field Names"
 msgstr "Dostu Tablo ve Alan İsimleri"
 
-#: frontend/src/metabase/admin/settings/selectors.js:78
+#: frontend/src/metabase/admin/settings/selectors.js:80
 msgid "Only replace underscores and dashes with spaces"
 msgstr "Alt çizgi ve tire işaretlerini yalnızca boşluklarla değiştirin"
 
-#: frontend/src/metabase/admin/settings/selectors.js:88
+#: frontend/src/metabase/admin/settings/selectors.js:90
 msgid "Enable Nested Queries"
 msgstr "İç İçe Sorguları Etkinleştir"
 
-#: frontend/src/metabase/admin/settings/selectors.js:94
+#: frontend/src/metabase/admin/settings/selectors.js:96
 msgid "Updates"
 msgstr "Güncellemeler"
 
-#: frontend/src/metabase/admin/settings/selectors.js:98
+#: frontend/src/metabase/admin/settings/selectors.js:101
 msgid "Check for updates"
 msgstr "Güncellemeleri kontrol et"
 
-#: frontend/src/metabase/admin/settings/selectors.js:108
+#: frontend/src/metabase/admin/settings/selectors.js:112
 msgid "SMTP Host"
 msgstr "SMTP Alanadı"
 
-#: frontend/src/metabase/admin/settings/selectors.js:116
+#: frontend/src/metabase/admin/settings/selectors.js:120
 msgid "SMTP Port"
 msgstr "SMTP Portu"
 
-#: frontend/src/metabase/admin/settings/selectors.js:120
-#: frontend/src/metabase/admin/settings/selectors.js:216
+#: frontend/src/metabase/admin/settings/selectors.js:124
+#: frontend/src/metabase/admin/settings/selectors.js:224
 msgid "That's not a valid port number"
 msgstr "Bu geçerli bir port numarası değil"
 
-#: frontend/src/metabase/admin/settings/selectors.js:124
+#: frontend/src/metabase/admin/settings/selectors.js:128
 msgid "SMTP Security"
 msgstr "SMTP Güvenliği"
 
-#: frontend/src/metabase/admin/settings/selectors.js:132
+#: frontend/src/metabase/admin/settings/selectors.js:136
 msgid "SMTP Username"
 msgstr "SMTP Kullanıcı Adı"
 
-#: frontend/src/metabase/admin/settings/selectors.js:139
+#: frontend/src/metabase/admin/settings/selectors.js:143
 msgid "SMTP Password"
 msgstr "SMTP Şifresi"
 
-#: frontend/src/metabase/admin/settings/selectors.js:146
+#: frontend/src/metabase/admin/settings/selectors.js:150
 msgid "From Address"
 msgstr "Adresten"
 
-#: frontend/src/metabase/admin/settings/selectors.js:159
+#: frontend/src/metabase/admin/settings/selectors.js:164
 msgid "Slack API Token"
 msgstr "Slack API Anahtarı"
 
-#: frontend/src/metabase/admin/settings/selectors.js:161
+#: frontend/src/metabase/admin/settings/selectors.js:166
 msgid "Enter the token you received from Slack"
 msgstr "Slack'ten aldığınız jetonu girin"
 
-#: frontend/src/metabase/admin/settings/selectors.js:178
+#: frontend/src/metabase/admin/settings/selectors.js:183
 msgid "Single Sign-On"
 msgstr "Tek Giriş"
 
-#: frontend/src/metabase/admin/settings/selectors.js:199
+#: frontend/src/metabase/admin/settings/selectors.js:207
 msgid "LDAP Authentication"
 msgstr "LDAP Kimlik Doğrulama"
 
-#: frontend/src/metabase/admin/settings/selectors.js:205
+#: frontend/src/metabase/admin/settings/selectors.js:213
 msgid "LDAP Host"
 msgstr "LDAP Alanadı"
 
-#: frontend/src/metabase/admin/settings/selectors.js:213
+#: frontend/src/metabase/admin/settings/selectors.js:221
 msgid "LDAP Port"
 msgstr "LDAP Portu"
 
-#: frontend/src/metabase/admin/settings/selectors.js:220
+#: frontend/src/metabase/admin/settings/selectors.js:228
 msgid "LDAP Security"
 msgstr "LDAP Güvenliği"
 
-#: frontend/src/metabase/admin/settings/selectors.js:228
+#: frontend/src/metabase/admin/settings/selectors.js:236
 msgid "Username or DN"
 msgstr "Kullanıcı Adı veya DN"
 
-#: frontend/src/metabase/admin/settings/selectors.js:233
+#: frontend/src/metabase/admin/settings/selectors.js:241
 #: frontend/src/metabase/auth/containers/LoginApp.jsx:186
 #: frontend/src/metabase/user/components/UserSettings.jsx:72
 msgid "Password"
 msgstr "Şifre"
 
-#: frontend/src/metabase/admin/settings/selectors.js:238
+#: frontend/src/metabase/admin/settings/selectors.js:246
 msgid "User search base"
 msgstr "Kullanıcı arama tabanı"
 
-#: frontend/src/metabase/admin/settings/selectors.js:244
+#: frontend/src/metabase/admin/settings/selectors.js:252
 msgid "User filter"
 msgstr "Kullanıcı filtresi"
 
-#: frontend/src/metabase/admin/settings/selectors.js:250
+#: frontend/src/metabase/admin/settings/selectors.js:258
 msgid "Email attribute"
 msgstr "Email özelliği"
 
-#: frontend/src/metabase/admin/settings/selectors.js:255
+#: frontend/src/metabase/admin/settings/selectors.js:263
 msgid "First name attribute"
 msgstr "İlk özellik"
 
-#: frontend/src/metabase/admin/settings/selectors.js:260
+#: frontend/src/metabase/admin/settings/selectors.js:268
 msgid "Last name attribute"
 msgstr "Soyadı özniteliği"
 
-#: frontend/src/metabase/admin/settings/selectors.js:265
+#: frontend/src/metabase/admin/settings/selectors.js:273
 msgid "Synchronize group memberships"
 msgstr "Grup üyeliklerini senkronize et"
 
@@ -1898,87 +1908,87 @@ msgstr "Grup üyeliklerini senkronize et"
 msgid "\"Group search base"
 msgstr "\"Grup arama tabanı"
 
-#: frontend/src/metabase/admin/settings/selectors.js:280
+#: frontend/src/metabase/admin/settings/selectors.js:288
 msgid "Maps"
 msgstr "Haritalar"
 
-#: frontend/src/metabase/admin/settings/selectors.js:284
+#: frontend/src/metabase/admin/settings/selectors.js:293
 msgid "Map tile server URL"
 msgstr "Harita döşeme sunucusu URL'si"
 
-#: frontend/src/metabase/admin/settings/selectors.js:285
+#: frontend/src/metabase/admin/settings/selectors.js:294
 msgid "Metabase uses OpenStreetMaps by default."
 msgstr "Metabase varsayılan olarak OpenStreetMaps kullanır."
 
-#: frontend/src/metabase/admin/settings/selectors.js:290
+#: frontend/src/metabase/admin/settings/selectors.js:299
 msgid "Custom Maps"
 msgstr "Özel Haritalar"
 
-#: frontend/src/metabase/admin/settings/selectors.js:291
+#: frontend/src/metabase/admin/settings/selectors.js:300
 msgid "Add your own GeoJSON files to enable different region map visualizations"
 msgstr "Farklı bölge haritası görselleştirmelerini etkinleştirmek için kendi GeoJSON dosyalarınızı ekleyin"
 
-#: frontend/src/metabase/admin/settings/selectors.js:298
+#: frontend/src/metabase/admin/settings/selectors.js:307
 msgid "Public Sharing"
 msgstr "Açık Paylaşım"
 
-#: frontend/src/metabase/admin/settings/selectors.js:302
+#: frontend/src/metabase/admin/settings/selectors.js:312
 msgid "Enable Public Sharing"
 msgstr "Açık Paylaşımı Etkinleştir"
 
-#: frontend/src/metabase/admin/settings/selectors.js:307
+#: frontend/src/metabase/admin/settings/selectors.js:317
 msgid "Shared Dashboards"
 msgstr "Paylaşılan Gösterge Panoları"
 
-#: frontend/src/metabase/admin/settings/selectors.js:313
+#: frontend/src/metabase/admin/settings/selectors.js:323
 msgid "Shared Questions"
 msgstr "Paylaşılan Sorular"
 
-#: frontend/src/metabase/admin/settings/selectors.js:320
+#: frontend/src/metabase/admin/settings/selectors.js:330
 msgid "Embedding in other Applications"
 msgstr "Diğer Uygulamalarda Katıştırma"
 
-#: frontend/src/metabase/admin/settings/selectors.js:346
+#: frontend/src/metabase/admin/settings/selectors.js:357
 msgid "Enable Embedding Metabase in other Applications"
 msgstr "Metabasenı Diğer Uygulamalara Gömme özelliğini Etkinleştir"
 
-#: frontend/src/metabase/admin/settings/selectors.js:356
+#: frontend/src/metabase/admin/settings/selectors.js:367
 msgid "Embedding secret key"
 msgstr "Gizli anahtarı gömme"
 
-#: frontend/src/metabase/admin/settings/selectors.js:362
+#: frontend/src/metabase/admin/settings/selectors.js:373
 msgid "Embedded Dashboards"
 msgstr "Gömülü Gösterge Panoları"
 
-#: frontend/src/metabase/admin/settings/selectors.js:368
+#: frontend/src/metabase/admin/settings/selectors.js:379
 msgid "Embedded Questions"
 msgstr "Gömülü Sorular"
 
-#: frontend/src/metabase/admin/settings/selectors.js:375
+#: frontend/src/metabase/admin/settings/selectors.js:386
 msgid "Caching"
 msgstr "Caching"
 
-#: frontend/src/metabase/admin/settings/selectors.js:379
+#: frontend/src/metabase/admin/settings/selectors.js:391
 msgid "Enable Caching"
 msgstr "Önbelleğe almayı etkinleştir"
 
-#: frontend/src/metabase/admin/settings/selectors.js:384
+#: frontend/src/metabase/admin/settings/selectors.js:396
 msgid "Minimum Query Duration"
 msgstr "Minimum Sorgu Süresi"
 
-#: frontend/src/metabase/admin/settings/selectors.js:391
+#: frontend/src/metabase/admin/settings/selectors.js:403
 msgid "Cache Time-To-Live (TTL) multiplier"
 msgstr "Önbellek Zaman-Canlı (TTL) çarpanı"
 
-#: frontend/src/metabase/admin/settings/selectors.js:398
+#: frontend/src/metabase/admin/settings/selectors.js:410
 msgid "Max Cache Entry Size"
 msgstr "Maksimum Önbellek Giriş Boyutu"
 
-#: frontend/src/metabase/admin/settings/selectors.js:406
+#: frontend/src/metabase/admin/settings/selectors.js:418
 msgid "X-Rays"
 msgstr "X-Işınları"
 
-#: frontend/src/metabase/admin/settings/selectors.js:410
+#: frontend/src/metabase/admin/settings/selectors.js:423
 msgid "Enable X-Rays"
 msgstr "X-Işınlarını Etkinleştir"
 
@@ -2060,7 +2070,7 @@ msgstr "Beni Hatırla:"
 msgid "I seem to have forgotten my password"
 msgstr "Şifremi unuttum galiba"
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:112
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:118
 msgid "Whoops, that's an expired link"
 msgstr "Oops, bu bağlantının süresi dolmuş"
 
@@ -2070,7 +2080,7 @@ msgid "For security reasons, password reset links expire after a little while. I
 "to reset your password, you can <Link to=\"/auth/forgot_password\" className=\"link\">request a new reset email</Link>."
 msgstr "Güvenlik nedeniyle, şifre sıfırlama bağlantıları bir süre sonra sona erer. Hala şifrenizi sıfırlamanız gerekiyorsa, <Link to = \"/ auth / forgot_password\" className = \"link\"> yeni bir sıfırlama e-postası isteyin </ Link>."
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:139
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:145
 #: frontend/src/metabase/user/components/SetUserPassword.jsx:122
 msgid "New password"
 msgstr "Yeni şifre"
@@ -2079,35 +2089,36 @@ msgstr "Yeni şifre"
 msgid "To keep your data secure, passwords ${ passwordComplexity }"
 msgstr "Verilerinizi güvende tutmak için şifreler ${ passwordComplexity }"
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:155
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:161
 msgid "Create a new password"
 msgstr "Yeni bir şifre oluştur"
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:162
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:168
 #: frontend/src/metabase/user/components/SetUserPassword.jsx:137
 msgid "Make sure its secure like the instructions above"
 msgstr "Yukarıdaki talimatlar gibi güvenli olduğundan emin olun"
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:176
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:182
 #: frontend/src/metabase/user/components/SetUserPassword.jsx:146
 msgid "Confirm new password"
 msgstr "Yeni şifreyi onayla"
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:183
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:189
 #: frontend/src/metabase/user/components/SetUserPassword.jsx:155
 msgid "Make sure it matches the one you just entered"
 msgstr "Az önce girdiğiniz ile eşleştiğinden emin olun."
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:208
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:214
 msgid "Your password has been reset."
 msgstr "Şifreniz sıfırlandı."
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:214
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:219
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:220
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:225
 msgid "Sign in with your new password"
 msgstr "Yeni şifrenizle giriş yapın"
 
 #: frontend/src/metabase/components/ActionButton.jsx:53
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:179
 #: frontend/src/metabase/pulse/components/PulseEdit.jsx:196
 #: frontend/src/metabase/query_builder/components/QueryHeader.jsx:269
 msgid "Save failed"
@@ -2115,6 +2126,8 @@ msgstr "Kayıt başarısız"
 
 #: frontend/src/metabase/components/ActionButton.jsx:54
 #: frontend/src/metabase/components/SaveStatus.jsx:60
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:180
+#: frontend/src/metabase/dashboard/containers/AutomaticDashboardApp.jsx:115
 #: frontend/src/metabase/pulse/components/PulseEdit.jsx:197
 #: frontend/src/metabase/query_builder/components/QueryHeader.jsx:243
 #: frontend/src/metabase/query_builder/components/QueryHeader.jsx:270
@@ -2129,7 +2142,7 @@ msgstr "Tamam"
 msgid "This ${ entityName } has been archived"
 msgstr "Bu ${ entityName } arşivlendi"
 
-#: frontend/src/metabase/components/Archived.jsx:15
+#: frontend/src/metabase/components/Archived.jsx:18
 #: frontend/src/metabase/dashboards/containers/Dashboards.jsx:171
 #: frontend/src/metabase/questions/containers/QuestionIndex.jsx:98
 msgid "View the archive"
@@ -2157,31 +2170,31 @@ msgstr "Kaydedildi!"
 msgid "Saving failed."
 msgstr "Kaydetme başarısız oldu."
 
-#: frontend/src/metabase/components/Calendar.jsx:109
+#: frontend/src/metabase/components/Calendar.jsx:119
 msgid "Su"
 msgstr "Pz"
 
-#: frontend/src/metabase/components/Calendar.jsx:109
+#: frontend/src/metabase/components/Calendar.jsx:119
 msgid "Mo"
 msgstr "Pzt"
 
-#: frontend/src/metabase/components/Calendar.jsx:109
+#: frontend/src/metabase/components/Calendar.jsx:119
 msgid "Tu"
 msgstr "Sa"
 
-#: frontend/src/metabase/components/Calendar.jsx:109
+#: frontend/src/metabase/components/Calendar.jsx:119
 msgid "We"
 msgstr "Ça"
 
-#: frontend/src/metabase/components/Calendar.jsx:109
+#: frontend/src/metabase/components/Calendar.jsx:119
 msgid "Th"
 msgstr "Pe"
 
-#: frontend/src/metabase/components/Calendar.jsx:109
+#: frontend/src/metabase/components/Calendar.jsx:119
 msgid "Fr"
 msgstr "Cu"
 
-#: frontend/src/metabase/components/Calendar.jsx:109
+#: frontend/src/metabase/components/Calendar.jsx:119
 msgid "Sa"
 msgstr "Cmt"
 
@@ -2220,7 +2233,7 @@ msgstr "Gösterge tablonuzun adı nedir?"
 
 #: frontend/src/metabase/components/CreateDashboardModal.jsx:105
 #: frontend/src/metabase/containers/SaveQuestionModal.jsx:229
-#: frontend/src/metabase/lib/core.js:45
+#: frontend/src/metabase/lib/core.js:45 frontend/src/metabase/lib/core.js:180
 #: frontend/src/metabase/questions/containers/CollectionEditorForm.jsx:87
 #: frontend/src/metabase/reference/databases/DatabaseDetail.jsx:156
 #: frontend/src/metabase/reference/databases/FieldDetail.jsx:211
@@ -2342,11 +2355,10 @@ msgstr "Eylemi taşı"
 #: frontend/src/metabase/query_builder/containers/ArchiveQuestionModal.jsx:40
 #: frontend/src/metabase/query_builder/containers/ArchiveQuestionModal.jsx:53
 #: frontend/src/metabase/questions/components/ActionHeader.jsx:71
-#: frontend/src/metabase/questions/components/Item.jsx:106
+#: frontend/src/metabase/questions/components/Item.jsx:133
 #: frontend/src/metabase/questions/containers/Archive.jsx:61
 #: frontend/src/metabase/questions/containers/ArchiveCollectionWidget.jsx:51
-#: frontend/src/metabase/questions/containers/EntityList.jsx:100
-#: frontend/src/metabase/questions/selectors.js:223
+#: frontend/src/metabase/questions/containers/EntityList.jsx:102
 #: frontend/src/metabase/routes.jsx:255
 msgid "Archive"
 msgstr "Arşiv"
@@ -2393,7 +2405,7 @@ msgstr "Bununla ilgili uyarılar alın"
 msgid "View the SQL"
 msgstr "SQL'i görüntüle"
 
-#: frontend/src/metabase/components/FieldValuesWidget.jsx:237
+#: frontend/src/metabase/components/FieldValuesWidget.jsx:234
 msgid "Search the list"
 msgstr "Listeyi ara"
 
@@ -2401,23 +2413,23 @@ msgstr "Listeyi ara"
 msgid "Search by ${ searchFieldName }"
 msgstr "${ searchFieldName } ile ara"
 
-#: frontend/src/metabase/components/FieldValuesWidget.jsx:243
+#: frontend/src/metabase/components/FieldValuesWidget.jsx:240
 msgid " or enter an ID"
 msgstr "Bir kimlik gir"
 
-#: frontend/src/metabase/components/FieldValuesWidget.jsx:247
+#: frontend/src/metabase/components/FieldValuesWidget.jsx:244
 msgid "Enter an ID"
 msgstr "Bir kimlik girin"
 
-#: frontend/src/metabase/components/FieldValuesWidget.jsx:249
+#: frontend/src/metabase/components/FieldValuesWidget.jsx:246
 msgid "Enter a number"
 msgstr "Bir numara giriniz"
 
-#: frontend/src/metabase/components/FieldValuesWidget.jsx:251
+#: frontend/src/metabase/components/FieldValuesWidget.jsx:248
 msgid "Enter some text"
 msgstr "Bir metin girin"
 
-#: frontend/src/metabase/components/FieldValuesWidget.jsx:365
+#: frontend/src/metabase/components/FieldValuesWidget.jsx:362
 msgid "Including every option in your filter probably won’t do much…"
 msgstr "Filtrenizdeki her seçeneği dahil etmek muhtemelen pek bir şey yapmaz…"
 
@@ -2429,7 +2441,7 @@ msgstr "Eşleşen sonuç bulunamadı"
 #: frontend/src/metabase/components/HeaderBar.jsx:45
 #: frontend/src/metabase/components/ListItem.jsx:37
 #: frontend/src/metabase/components/SortableItemList.jsx:78
-#: frontend/src/metabase/questions/components/Item.jsx:191
+#: frontend/src/metabase/questions/components/Item.jsx:215
 #: frontend/src/metabase/reference/components/Detail.jsx:47
 #: frontend/src/metabase/reference/databases/DatabaseDetail.jsx:158
 #: frontend/src/metabase/reference/databases/FieldDetail.jsx:213
@@ -2465,8 +2477,9 @@ msgid "Reverted to an earlier revision and ${ revision.description }"
 msgstr "Önceki bir revizyona ve ${ revision.description } 'a döndü"
 
 #: frontend/src/metabase/components/HistoryModal.jsx:80
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:287
 #: frontend/src/metabase/query_builder/components/QueryHeader.jsx:392
-#: frontend/src/metabase/reference/segments/SegmentSidebar.jsx:60
+#: frontend/src/metabase/reference/segments/SegmentSidebar.jsx:54
 msgid "Revision history"
 msgstr "Revizyon Geçmişi"
 
@@ -2503,7 +2516,7 @@ msgstr "Geri alındı"
 msgid "Back"
 msgstr "Geri"
 
-#: frontend/src/metabase/components/ListSearchField.jsx:18
+#: frontend/src/metabase/components/ListSearchField.jsx:19
 msgid "Find..."
 msgstr "Bul..."
 
@@ -2531,31 +2544,31 @@ msgstr "Abone ol"
 msgid "You're subscribed. Thanks for using Metabase!"
 msgstr "Abone oldunuz. Metabase'i kullandığınız için teşekkürler!"
 
-#: frontend/src/metabase/components/NotFound.jsx:11
+#: frontend/src/metabase/components/NotFound.jsx:13
 msgid "We're a little lost..."
 msgstr "Biraz kaybolduk..."
 
-#: frontend/src/metabase/components/NotFound.jsx:13
+#: frontend/src/metabase/components/NotFound.jsx:15
 msgid "The page you asked for couldn't be found"
 msgstr "İstediğiniz sayfa bulunamadı"
 
-#: frontend/src/metabase/components/NotFound.jsx:15
+#: frontend/src/metabase/components/NotFound.jsx:17
 msgid "You might've been tricked by a ninja, but in all likelihood, you were just given a bad link."
 msgstr "Bir ninja tarafından kandırılmış olabilirsiniz, ama her halükarda, sadece kötü bir bağlantı verildi."
 
-#: frontend/src/metabase/components/NotFound.jsx:16
+#: frontend/src/metabase/components/NotFound.jsx:18
 msgid "You can always:"
 msgstr "Her zaman:"
 
-#: frontend/src/metabase/components/NotFound.jsx:19
+#: frontend/src/metabase/components/NotFound.jsx:21
 msgid "Ask a new question."
 msgstr "Yeni bir soru sorun."
 
-#: frontend/src/metabase/components/NotFound.jsx:21
+#: frontend/src/metabase/components/NotFound.jsx:23
 msgid "or"
 msgstr "veya"
 
-#: frontend/src/metabase/components/NotFound.jsx:29
+#: frontend/src/metabase/components/NotFound.jsx:31
 msgid "Take a kitten break."
 msgstr "Kısa bir mola ver."
 
@@ -2564,14 +2577,14 @@ msgid "Temporary Password"
 msgstr "geçici şifre"
 
 #: frontend/src/metabase/components/PasswordReveal.jsx:67
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:321
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:336
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:322
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:337
 msgid "Hide"
 msgstr "Saklamak"
 
 #: frontend/src/metabase/components/PasswordReveal.jsx:67
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:322
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:337
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:323
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:338
 msgid "Show"
 msgstr "Göstermek"
 
@@ -2672,7 +2685,7 @@ msgstr "seçilmiş"
 msgid "Nothing to select"
 msgstr "Seçecek bir şey yok"
 
-#: frontend/src/metabase/components/Unauthorized.jsx:10
+#: frontend/src/metabase/components/Unauthorized.jsx:12
 msgid "Sorry, you don’t have permission to see that."
 msgstr "Üzgünüz, bunu görme izniniz yok."
 
@@ -2766,17 +2779,17 @@ msgstr "Geri alma"
 
 #: frontend/src/metabase/dashboards/components/DashboardList.jsx:40
 #: frontend/src/metabase/questions/components/ActionHeader.jsx:71
-#: frontend/src/metabase/questions/components/Item.jsx:106
+#: frontend/src/metabase/questions/components/Item.jsx:133
 msgid "Unarchive"
 msgstr "Arşivi geri al"
 
 #: frontend/src/metabase/dashboards/components/DashboardList.jsx:57
-#: frontend/src/metabase/questions/components/Item.jsx:170
+#: frontend/src/metabase/questions/components/Item.jsx:195
 msgid "Unfavorite"
 msgstr "Sık kullanılanlardan kaldır"
 
 #: frontend/src/metabase/dashboards/components/DashboardList.jsx:57
-#: frontend/src/metabase/questions/components/Item.jsx:170
+#: frontend/src/metabase/questions/components/Item.jsx:195
 msgid "Favorite"
 msgstr "Sık kullan"
 
@@ -2785,14 +2798,12 @@ msgid "All dashboards"
 msgstr "Tüm gösterge panoları"
 
 #: frontend/src/metabase/dashboards/containers/Dashboards.jsx:52
-#: frontend/src/metabase/questions/containers/EntityList.jsx:76
-#: frontend/src/metabase/questions/selectors.js:155
+#: frontend/src/metabase/questions/containers/EntityList.jsx:78
 msgid "Favorites"
 msgstr "Sık kullanılanlar"
 
 #: frontend/src/metabase/dashboards/containers/Dashboards.jsx:58
-#: frontend/src/metabase/questions/containers/EntityList.jsx:88
-#: frontend/src/metabase/questions/selectors.js:157
+#: frontend/src/metabase/questions/containers/EntityList.jsx:90
 msgid "Saved by me"
 msgstr "Beni kurtardı"
 
@@ -2873,7 +2884,7 @@ msgid "removed a question from the dashboard - "
 msgstr "panodan bir soru kaldırıldı"
 
 #: frontend/src/metabase/home/components/Activity.jsx:234
-#: frontend/src/metabase/visualizations/visualizations/ObjectDetail.jsx:267
+#: frontend/src/metabase/visualizations/visualizations/ObjectDetail.jsx:271
 msgid "Unknown"
 msgstr "Bilinmeyen"
 
@@ -2904,6 +2915,7 @@ msgstr "␣nesnesine␣"
 #: frontend/src/metabase/home/components/Activity.jsx:323
 #: frontend/src/metabase/home/components/Activity.jsx:373
 #: frontend/src/metabase/home/components/Activity.jsx:414
+#: src/metabase/automagic_dashboards/core.clj
 msgid " table"
 msgstr "␣tablo"
 
@@ -3098,27 +3110,27 @@ msgstr "UNIX Zaman Damgası (Milisaniye)"
 msgid "Zip Code"
 msgstr "Posta Kodu"
 
-#: frontend/src/metabase/lib/core.js:213
+#: frontend/src/metabase/lib/core.js:313
 msgid "Everywhere"
 msgstr "Her yerde"
 
-#: frontend/src/metabase/lib/core.js:214
+#: frontend/src/metabase/lib/core.js:314
 msgid "The default setting. This field will be displayed normally in tables and charts."
 msgstr "Varsayılan ayar. Bu alan normalde tablolarda ve grafiklerde gösterilecektir."
 
-#: frontend/src/metabase/lib/core.js:218
+#: frontend/src/metabase/lib/core.js:318
 msgid "Only in Detail Views"
 msgstr "Sadece Detay Görünümlerinde"
 
-#: frontend/src/metabase/lib/core.js:219
+#: frontend/src/metabase/lib/core.js:319
 msgid "This field will only be displayed when viewing the details of a single record. Use this for information that's lengthy or that isn't useful in a table or chart."
 msgstr "Bu alan sadece tek bir kaydın ayrıntılarını görüntülerken görüntülenir. Bir tablo veya grafikte uzun ya da kullanışlı olmayan bilgiler için bunu kullanın."
 
-#: frontend/src/metabase/lib/core.js:223
+#: frontend/src/metabase/lib/core.js:323
 msgid "Do Not Include"
 msgstr "Dahil Etme"
 
-#: frontend/src/metabase/lib/core.js:224
+#: frontend/src/metabase/lib/core.js:324
 msgid "Metabase will never retrieve this field. Use this for sensitive or irrelevant information."
 msgstr "Metabase bu alanı asla almayacak. Hassas veya alakasız bilgiler için bunu kullanın."
 
@@ -3159,13 +3171,13 @@ msgstr "Ortalama"
 
 #: frontend/src/metabase/lib/expressions/config.js:14
 #: frontend/src/metabase/qb/components/drill/SummarizeColumnDrill.js:25
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:350
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:351
 msgid "Min"
 msgstr "En Az"
 
 #: frontend/src/metabase/lib/expressions/config.js:15
 #: frontend/src/metabase/qb/components/drill/SummarizeColumnDrill.js:29
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:358
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:359
 msgid "Max"
 msgstr "En Fazla"
 
@@ -3173,19 +3185,19 @@ msgstr "En Fazla"
 msgid "sad sad panda, lexing errors detected"
 msgstr "derleme hataları tespit edildi"
 
-#: frontend/src/metabase/lib/formatting.js:454
+#: frontend/src/metabase/lib/formatting.js:448
 msgid "second"
 msgstr "saniye"
 
-#: frontend/src/metabase/lib/formatting.js:455
+#: frontend/src/metabase/lib/formatting.js:449
 msgid "seconds"
 msgstr "saniye"
 
-#: frontend/src/metabase/lib/formatting.js:459
+#: frontend/src/metabase/lib/formatting.js:453
 msgid "minute"
 msgstr "dakika"
 
-#: frontend/src/metabase/lib/formatting.js:460
+#: frontend/src/metabase/lib/formatting.js:454
 msgid "minutes"
 msgstr "dakika"
 
@@ -3223,7 +3235,7 @@ msgid "What do you want to find out?"
 msgstr "Ne bulmak istiyorsunuz?"
 
 #: frontend/src/metabase/lib/query.js:607
-#: frontend/src/metabase/lib/schema_metadata.js:412
+#: frontend/src/metabase/lib/schema_metadata.js:428
 #: frontend/src/metabase/query_builder/components/GuiQueryEditor.jsx:244
 msgid "Raw data"
 msgstr "Ham veri"
@@ -3284,23 +3296,23 @@ msgstr "Doğru"
 msgid "False"
 msgstr "Yanlış"
 
-#: frontend/src/metabase/lib/schema_metadata.js:273
+#: frontend/src/metabase/lib/schema_metadata.js:282
 msgid "Select longitude field"
 msgstr "Boylam alanını seç"
 
-#: frontend/src/metabase/lib/schema_metadata.js:274
+#: frontend/src/metabase/lib/schema_metadata.js:283
 msgid "Enter upper latitude"
 msgstr "Üst enlemi girin"
 
-#: frontend/src/metabase/lib/schema_metadata.js:275
+#: frontend/src/metabase/lib/schema_metadata.js:284
 msgid "Enter left longitude"
 msgstr "Sol boylamı girin"
 
-#: frontend/src/metabase/lib/schema_metadata.js:276
+#: frontend/src/metabase/lib/schema_metadata.js:285
 msgid "Enter lower latitude"
 msgstr "Alt enlemi girin"
 
-#: frontend/src/metabase/lib/schema_metadata.js:277
+#: frontend/src/metabase/lib/schema_metadata.js:286
 msgid "Enter right longitude"
 msgstr "Sağ boylamı girin"
 
@@ -3312,179 +3324,179 @@ msgstr "Eşit"
 msgid "Not equal"
 msgstr "Eşit değil"
 
-#: frontend/src/metabase/lib/schema_metadata.js:317
+#: frontend/src/metabase/lib/schema_metadata.js:333
 msgid "Greater than"
 msgstr "Daha büyük"
 
-#: frontend/src/metabase/lib/schema_metadata.js:318
+#: frontend/src/metabase/lib/schema_metadata.js:334
 msgid "Less than"
 msgstr "Daha az"
 
-#: frontend/src/metabase/lib/schema_metadata.js:319
-#: frontend/src/metabase/lib/schema_metadata.js:345
+#: frontend/src/metabase/lib/schema_metadata.js:335
+#: frontend/src/metabase/lib/schema_metadata.js:361
 #: frontend/src/metabase/query_builder/components/filters/pickers/DatePicker.jsx:289
 #: frontend/src/metabase/query_builder/components/filters/pickers/TimePicker.jsx:96
 msgid "Between"
 msgstr "Arasında"
 
-#: frontend/src/metabase/lib/schema_metadata.js:320
+#: frontend/src/metabase/lib/schema_metadata.js:336
 msgid "Greater than or equal to"
 msgstr "Daha büyük veya eşit"
 
-#: frontend/src/metabase/lib/schema_metadata.js:321
+#: frontend/src/metabase/lib/schema_metadata.js:337
 msgid "Less than or equal to"
 msgstr "Daha az veya eşit"
 
-#: frontend/src/metabase/lib/schema_metadata.js:308
-#: frontend/src/metabase/lib/schema_metadata.js:322
-#: frontend/src/metabase/lib/schema_metadata.js:330
+#: frontend/src/metabase/lib/schema_metadata.js:324
 #: frontend/src/metabase/lib/schema_metadata.js:338
 #: frontend/src/metabase/lib/schema_metadata.js:346
-#: frontend/src/metabase/lib/schema_metadata.js:352
+#: frontend/src/metabase/lib/schema_metadata.js:354
 #: frontend/src/metabase/lib/schema_metadata.js:362
+#: frontend/src/metabase/lib/schema_metadata.js:368
+#: frontend/src/metabase/lib/schema_metadata.js:378
 msgid "Is empty"
 msgstr "Boş"
 
-#: frontend/src/metabase/lib/schema_metadata.js:309
-#: frontend/src/metabase/lib/schema_metadata.js:323
-#: frontend/src/metabase/lib/schema_metadata.js:331
+#: frontend/src/metabase/lib/schema_metadata.js:325
 #: frontend/src/metabase/lib/schema_metadata.js:339
 #: frontend/src/metabase/lib/schema_metadata.js:347
-#: frontend/src/metabase/lib/schema_metadata.js:353
+#: frontend/src/metabase/lib/schema_metadata.js:355
 #: frontend/src/metabase/lib/schema_metadata.js:363
+#: frontend/src/metabase/lib/schema_metadata.js:369
+#: frontend/src/metabase/lib/schema_metadata.js:379
 msgid "Not empty"
 msgstr "Boş değil"
 
-#: frontend/src/metabase/lib/schema_metadata.js:306
-#: frontend/src/metabase/lib/schema_metadata.js:326
-#: frontend/src/metabase/lib/schema_metadata.js:336
+#: frontend/src/metabase/lib/schema_metadata.js:322
 #: frontend/src/metabase/lib/schema_metadata.js:342
-#: frontend/src/metabase/lib/schema_metadata.js:350
-#: frontend/src/metabase/lib/schema_metadata.js:356
-#: frontend/src/metabase/lib/schema_metadata.js:361
+#: frontend/src/metabase/lib/schema_metadata.js:352
+#: frontend/src/metabase/lib/schema_metadata.js:358
+#: frontend/src/metabase/lib/schema_metadata.js:366
+#: frontend/src/metabase/lib/schema_metadata.js:372
+#: frontend/src/metabase/lib/schema_metadata.js:377
 msgid "Is"
 msgstr "mı"
 
-#: frontend/src/metabase/lib/schema_metadata.js:307
-#: frontend/src/metabase/lib/schema_metadata.js:327
-#: frontend/src/metabase/lib/schema_metadata.js:337
-#: frontend/src/metabase/lib/schema_metadata.js:351
-#: frontend/src/metabase/lib/schema_metadata.js:357
+#: frontend/src/metabase/lib/schema_metadata.js:323
+#: frontend/src/metabase/lib/schema_metadata.js:343
+#: frontend/src/metabase/lib/schema_metadata.js:353
+#: frontend/src/metabase/lib/schema_metadata.js:367
+#: frontend/src/metabase/lib/schema_metadata.js:373
 msgid "Is not"
 msgstr "Değil"
 
-#: frontend/src/metabase/lib/schema_metadata.js:328
+#: frontend/src/metabase/lib/schema_metadata.js:344
 msgid "Contains"
 msgstr "İçeren"
 
-#: frontend/src/metabase/lib/schema_metadata.js:329
+#: frontend/src/metabase/lib/schema_metadata.js:345
 msgid "Does not contain"
 msgstr "İçermiyor"
 
-#: frontend/src/metabase/lib/schema_metadata.js:332
+#: frontend/src/metabase/lib/schema_metadata.js:348
 msgid "Starts with"
 msgstr "İle başlar"
 
-#: frontend/src/metabase/lib/schema_metadata.js:333
+#: frontend/src/metabase/lib/schema_metadata.js:349
 msgid "Ends with"
 msgstr "Ile biter"
 
-#: frontend/src/metabase/lib/schema_metadata.js:343
+#: frontend/src/metabase/lib/schema_metadata.js:359
 #: frontend/src/metabase/query_builder/components/filters/pickers/DatePicker.jsx:268
 #: frontend/src/metabase/query_builder/components/filters/pickers/TimePicker.jsx:74
 msgid "Before"
 msgstr "Önce"
 
-#: frontend/src/metabase/lib/schema_metadata.js:344
+#: frontend/src/metabase/lib/schema_metadata.js:360
 #: frontend/src/metabase/query_builder/components/filters/pickers/DatePicker.jsx:275
 #: frontend/src/metabase/query_builder/components/filters/pickers/TimePicker.jsx:85
 msgid "After"
 msgstr "Sonra"
 
-#: frontend/src/metabase/lib/schema_metadata.js:358
+#: frontend/src/metabase/lib/schema_metadata.js:374
 msgid "Inside"
 msgstr "içeride"
 
-#: frontend/src/metabase/lib/schema_metadata.js:414
+#: frontend/src/metabase/lib/schema_metadata.js:430
 msgid "Just a table with the rows in the answer, no additional operations."
 msgstr "Sadece cevapta satırları olan bir tablo, ek işlem yok."
 
-#: frontend/src/metabase/lib/schema_metadata.js:420
+#: frontend/src/metabase/lib/schema_metadata.js:436
 msgid "Count of rows"
 msgstr "Satır sayısı"
 
-#: frontend/src/metabase/lib/schema_metadata.js:422
+#: frontend/src/metabase/lib/schema_metadata.js:438
 msgid "Total number of rows in the answer."
 msgstr "Yanıttaki toplam satır sayısı."
 
-#: frontend/src/metabase/lib/schema_metadata.js:428
+#: frontend/src/metabase/lib/schema_metadata.js:444
 msgid "Sum of ..."
 msgstr "... toplamı"
 
-#: frontend/src/metabase/lib/schema_metadata.js:430
+#: frontend/src/metabase/lib/schema_metadata.js:446
 msgid "Sum of all the values of a column."
 msgstr "Bir sütunun tüm değerlerinin toplamı."
 
-#: frontend/src/metabase/lib/schema_metadata.js:436
+#: frontend/src/metabase/lib/schema_metadata.js:452
 msgid "Average of ..."
 msgstr "... ortalaması"
 
-#: frontend/src/metabase/lib/schema_metadata.js:438
+#: frontend/src/metabase/lib/schema_metadata.js:454
 msgid "Average of all the values of a column"
 msgstr "Bir sütunun tüm değerlerinin ortalaması"
 
-#: frontend/src/metabase/lib/schema_metadata.js:444
+#: frontend/src/metabase/lib/schema_metadata.js:460
 msgid "Number of distinct values of ..."
 msgstr "... tekil değerlerin sayısı"
 
-#: frontend/src/metabase/lib/schema_metadata.js:446
+#: frontend/src/metabase/lib/schema_metadata.js:462
 msgid "Number of unique values of a column among all the rows in the answer."
 msgstr "Yanıttaki tüm satırlar arasında bir sütunun benzersiz değerlerinin sayısı."
 
-#: frontend/src/metabase/lib/schema_metadata.js:452
+#: frontend/src/metabase/lib/schema_metadata.js:468
 msgid "Cumulative sum of ..."
 msgstr "... birikmeli toplamı"
 
-#: frontend/src/metabase/lib/schema_metadata.js:454
+#: frontend/src/metabase/lib/schema_metadata.js:470
 #, fuzzy
 msgid "Additive sum of all the values of a column.\\ne.x. total revenue over time."
 msgstr "Bir sütunun tüm değerlerinin toplamı. \\ ne.x. Zaman içinde toplam gelir."
 
-#: frontend/src/metabase/lib/schema_metadata.js:460
+#: frontend/src/metabase/lib/schema_metadata.js:476
 msgid "Cumulative count of rows"
 msgstr "Kümülatif satır sayısı"
 
-#: frontend/src/metabase/lib/schema_metadata.js:462
+#: frontend/src/metabase/lib/schema_metadata.js:478
 #, fuzzy
 msgid "Additive count of the number of rows.\\ne.x. total number of sales over time."
 msgstr "Satırların sayısının toplam sayısı. \\ ne.x. Zaman içinde toplam satış sayısı."
 
-#: frontend/src/metabase/lib/schema_metadata.js:468
+#: frontend/src/metabase/lib/schema_metadata.js:484
 msgid "Standard deviation of ..."
 msgstr "... standart sapması"
 
-#: frontend/src/metabase/lib/schema_metadata.js:470
+#: frontend/src/metabase/lib/schema_metadata.js:486
 #, fuzzy
 msgid "Number which expresses how much the values of a column vary among all rows in the answer."
 msgstr "Bir sütunun değerlerinin ne kadarının cevabın tüm satırları arasında değiştiğini ifade eden sayı."
 
-#: frontend/src/metabase/lib/schema_metadata.js:476
+#: frontend/src/metabase/lib/schema_metadata.js:492
 msgid "Minimum of ..."
 msgstr "... en azı"
 
-#: frontend/src/metabase/lib/schema_metadata.js:478
+#: frontend/src/metabase/lib/schema_metadata.js:494
 msgid "Minimum value of a column"
 msgstr "Bir sütunun en az değeri"
 
-#: frontend/src/metabase/lib/schema_metadata.js:484
+#: frontend/src/metabase/lib/schema_metadata.js:500
 msgid "Maximum of ..."
 msgstr "... en fazlası"
 
-#: frontend/src/metabase/lib/schema_metadata.js:486
+#: frontend/src/metabase/lib/schema_metadata.js:502
 msgid "Maximum value of a column"
 msgstr "Bir sütunun en fazla değeri"
 
-#: frontend/src/metabase/lib/schema_metadata.js:494
+#: frontend/src/metabase/lib/schema_metadata.js:510
 msgid "Break out by dimension"
 msgstr "Boyuta göre ayır"
 
@@ -3712,7 +3724,7 @@ msgstr "Sorular"
 
 #: frontend/src/metabase/nav/containers/Navbar.jsx:179
 #: frontend/src/metabase/pulse/components/PulseList.jsx:46
-#: frontend/src/metabase/routes.jsx:367
+#: frontend/src/metabase/routes.jsx:363
 msgid "Pulses"
 msgstr "Nabızlar"
 
@@ -3774,12 +3786,12 @@ msgstr "Yerel sorgu"
 msgid "For more complicated questions, you can write your own SQL or native query."
 msgstr "Daha karmaşık sorular için kendi SQL veya yerel sorgunuzu yazabilirsiniz."
 
-#: frontend/src/metabase/parameters/components/ParameterValueWidget.jsx:243
+#: frontend/src/metabase/parameters/components/ParameterValueWidget.jsx:238
 msgid "Select a default value…"
 msgstr "Bir varsayılan değer seç…"
 
 #: frontend/src/metabase/parameters/components/widgets/DateAllOptionsWidget.jsx:147
-#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:383
+#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:390
 msgid "Update filter"
 msgstr "Filtreyi güncelle"
 
@@ -3803,16 +3815,19 @@ msgstr "30 gün sonra"
 
 #: frontend/src/metabase/parameters/components/widgets/DateRelativeWidget.jsx:24
 #: frontend/src/metabase/parameters/components/widgets/DateRelativeWidget.jsx:29
+#: src/metabase/api/table.clj
 msgid "Week"
 msgstr "Hafta"
 
 #: frontend/src/metabase/parameters/components/widgets/DateRelativeWidget.jsx:25
 #: frontend/src/metabase/parameters/components/widgets/DateRelativeWidget.jsx:30
+#: src/metabase/api/table.clj
 msgid "Month"
 msgstr "Ay"
 
 #: frontend/src/metabase/parameters/components/widgets/DateRelativeWidget.jsx:26
 #: frontend/src/metabase/parameters/components/widgets/DateRelativeWidget.jsx:31
+#: src/metabase/api/table.clj
 msgid "Year"
 msgstr "Yıl"
 
@@ -3904,6 +3919,7 @@ msgstr "kod"
 msgid "Style"
 msgstr "stil"
 
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:252
 #: frontend/src/metabase/public/components/widgets/AdvancedSettingsPane.jsx:79
 msgid "Parameters"
 msgstr "Parametreler"
@@ -3957,6 +3973,7 @@ msgstr "karanlık"
 msgid "Border"
 msgstr "sınır"
 
+#: frontend/src/metabase/lib/core.js:185
 #: frontend/src/metabase/public/components/widgets/DisplayOptionsPane.jsx:49
 #: frontend/src/metabase/visualizations/lib/settings.js:159
 msgid "Title"
@@ -4111,6 +4128,7 @@ msgstr "Bu Adımı Sil"
 msgid "Create pulse"
 msgstr "Yeni adım oluştur"
 
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:178
 #: frontend/src/metabase/pulse/components/PulseEdit.jsx:195
 #: frontend/src/metabase/query_builder/components/QueryHeader.jsx:268
 msgid "Saving…"
@@ -4122,7 +4140,7 @@ msgstr "Ek dosya"
 
 #: frontend/src/metabase/pulse/components/PulseEditCards.jsx:103
 #: frontend/src/metabase/pulse/components/PulseEditCards.jsx:110
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:651
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:660
 msgid "Heads up"
 msgstr "Dikkat et"
 
@@ -4348,7 +4366,7 @@ msgstr "yükselen"
 msgid "Descending"
 msgstr "Azalan"
 
-#: frontend/src/metabase/qb/components/drill/SummarizeColumnByTimeDrill.js:44
+#: frontend/src/metabase/qb/components/drill/SummarizeColumnByTimeDrill.js:47
 msgid "by time"
 msgstr "zamanla"
 
@@ -4360,10 +4378,12 @@ msgstr "Ort"
 msgid "Distincts"
 msgstr "Tekiller"
 
+#: frontend/src/metabase/qb/components/drill/AutomaticDashboardDrill.jsx:32
 #: frontend/src/metabase/qb/components/drill/UnderlyingRecordsDrill.jsx:30
 msgid "these"
 msgstr "bunlar"
 
+#: frontend/src/metabase/qb/components/drill/AutomaticDashboardDrill.jsx:32
 #: frontend/src/metabase/qb/components/drill/UnderlyingRecordsDrill.jsx:30
 msgid "this"
 msgstr "bu"
@@ -4424,19 +4444,19 @@ msgstr "${ creator } adlı kullanıcının uyarılarını alıyorsunuz"
 msgid "${ creator } set up an alert"
 msgstr "${ creator } bir uyarı oluşturdu"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:149
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:152
 msgid "alerts"
 msgstr "uyarılar"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:172
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:175
 msgid "Let's set up your alert"
 msgstr "Hadi uyarınızı ayarlayalım"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:203
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:206
 msgid "The wide world of alerts"
 msgstr "Uyarılar dünyası"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:204
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:207
 msgid "There are a few different kinds of alerts you can get"
 msgstr "Alabileceğiniz birkaç farklı uyarı var."
 
@@ -4452,15 +4472,15 @@ msgstr "Bir satır veya çubuk <strong> bir hedef çizgiyi geçtiğinde </ stron
 msgid "When a progress bar <strong>reaches its goal</strong>"
 msgstr "Bir satır veya çubuk <strong> bir hedef çizgiyi geçtiğinde </ strong>"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:248
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:251
 msgid "Set up an alert"
 msgstr "Bir uyarı ayarla"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:311
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:320
 msgid "Edit your alert"
 msgstr "Uyarınızı düzenleyin"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:311
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:320
 msgid "Edit alert"
 msgstr "Uyarıyı düzenle"
 
@@ -4476,63 +4496,63 @@ msgstr "Slack kanal ${ slackChannelDetails } artık bu uyarıyı almayacak."
 msgid "Channel ${ channelType } will no longer receive this alert."
 msgstr "Kanal ${ channelType } artık bu uyarıyı almayacak."
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:381
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:390
 msgid "Delete this alert"
 msgstr "Bu uyarıyı sil"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:383
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:392
 msgid "Stop delivery and delete this alert. There's no undo, so be careful."
 msgstr "Teslim işlemini durdurun ve bu uyarıyı silin. Geri alma yok, o yüzden dikkatli ol."
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:391
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:400
 msgid "Delete this alert?"
 msgstr "Bu uyarıyı silinsin mi?"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:475
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:484
 msgid "Alert me when the line…"
 msgstr "Satır beni uyarsa…"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:476
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:485
 msgid "Alert me when the progress bar…"
 msgstr "İlerleme çubuğu olduğunda beni uyar."
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:479
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:488
 msgid "Goes above the goal line"
 msgstr "Gol çizgisinin üzerinde gider"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:479
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:488
 msgid "Reaches the goal"
 msgstr "Hedefe ulaşır"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:482
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:491
 msgid "Goes below the goal line"
 msgstr "Gol çizgisinin altına gider"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:482
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:491
 msgid "Goes below the goal"
 msgstr "Hedefin altında gider"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:490
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:499
 msgid "The first time it crosses, or every time?"
 msgstr "İlk kez mi geçiyor, ya da her seferinde mi?"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:491
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:500
 msgid "The first time it reaches the goal, or every time?"
 msgstr "İlk defa hedefe mi, yoksa her sefere mi?"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:493
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:502
 msgid "The first time"
 msgstr "İlk defa"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:494
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:503
 msgid "Every time"
 msgstr "Her zaman"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:597
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:606
 msgid "Where do you want to send these alerts?"
 msgstr "Bu uyarıları nereye göndermek istiyorsunuz?"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:608
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:617
 msgid "Email alerts to:"
 msgstr "E-posta uyarıları:"
 
@@ -4817,43 +4837,43 @@ msgstr "Afedersiniz. Bir şeyler yanlış gitti."
 msgid "Group time by"
 msgstr "Zamanı olarak grupla "
 
-#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:45
+#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:46
 msgid "Your question took too long"
 msgstr "Senin sorun çok uzun sürdü"
 
-#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:46
+#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:47
 msgid "We didn't get an answer back from your database in time, so we had to stop. You can try again in a minute, or if the problem persists, you can email an admin to let them know."
 msgstr "Veritabanından zamanında bir cevap almadık, bu yüzden durmak zorunda kaldık. Bir dakika sonra tekrar deneyebilir veya sorun devam ederse, bir yöneticiye bildirmek için e-posta gönderebilirsiniz."
 
-#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:54
+#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:55
 msgid "We're experiencing server issues"
 msgstr "Sunucu sorunları yaşıyoruz"
 
-#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:55
+#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:56
 msgid "Try refreshing the page after waiting a minute or two. If the problem persists we'd recommend you contact an admin."
 msgstr "Bir ya da iki dakika bekledikten sonra sayfayı yenilemeyi deneyin. Sorun devam ederse, bir yöneticiye başvurmanızı öneririz."
 
-#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:87
+#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:88
 msgid "There was a problem with your question"
 msgstr "Sorunuzla ilgili bir sorun oluştu"
 
-#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:88
+#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:89
 msgid "Most of the time this is caused by an invalid selection or bad input value. Double check your inputs and retry your query."
 msgstr "Çoğu zaman geçersiz seçim veya kötü giriş değeri neden olur. Girişlerinizi iki kez kontrol edin ve sorgunuzu tekrar deneyin."
 
-#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:93
+#: frontend/src/metabase/components/ErrorDetails.jsx:20
 msgid "Show error details"
 msgstr "Hata ayrıntılarını"
 
-#: frontend/src/metabase/query_builder/components/VisualizationError.jsx:99
+#: frontend/src/metabase/components/ErrorDetails.jsx:26
 msgid "Here's the full error message"
 msgstr "İşte tam hata mesajı"
 
-#: frontend/src/metabase/query_builder/components/VisualizationResult.jsx:69
+#: frontend/src/metabase/query_builder/components/VisualizationResult.jsx:68
 msgid "get an alert"
 msgstr "bir uyarı al"
 
-#: frontend/src/metabase/query_builder/components/VisualizationResult.jsx:61
+#: frontend/src/metabase/query_builder/components/VisualizationResult.jsx:60
 msgid "This may be the answer you’re looking for. If not, try removing or changing your filters to make them less specific."
 msgstr "Aradığın cevap bu olabilir. Aksi halde, filtrelerinizi daha az spesifik hale getirmek için kaldırmayı veya değiştirmeyi deneyin."
 
@@ -4861,7 +4881,7 @@ msgstr "Aradığın cevap bu olabilir. Aksi halde, filtrelerinizi daha az spesif
 msgid "You can also ${ getAnAlertLink } when there are any results."
 msgstr "Herhangi bir sonuç olduğunda ${ getAnAlertLink } da alabilirsiniz."
 
-#: frontend/src/metabase/query_builder/components/VisualizationResult.jsx:78
+#: frontend/src/metabase/query_builder/components/VisualizationResult.jsx:77
 msgid "Back to last run"
 msgstr "Son koşuya dönüş"
 
@@ -4870,7 +4890,7 @@ msgid "Visualization"
 msgstr "görüntüleme"
 
 #: frontend/src/metabase/query_builder/components/dataref/DetailPane.jsx:17
-#: frontend/src/metabase/query_builder/components/dataref/TablePane.jsx:146
+#: frontend/src/metabase/query_builder/components/dataref/TablePane.jsx:148
 msgid "No description set."
 msgstr "Açıklama ayarlanmamış."
 
@@ -4940,7 +4960,7 @@ msgstr "Tablo yüklenirken bir hata oluştu"
 msgid "See the raw data for ${ table.display_name }"
 msgstr "${ table.display_name } için ham verilere bakın"
 
-#: frontend/src/metabase/query_builder/components/dataref/TablePane.jsx:199
+#: frontend/src/metabase/query_builder/components/dataref/TablePane.jsx:202
 msgid "More"
 msgstr "Daha"
 
@@ -5019,11 +5039,11 @@ msgstr "bu saat"
 msgid "not implemented ${ operatorField.type }"
 msgstr "uygulanmadı ${ operatorField.type }"
 
-#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:279
+#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:286
 msgid "true"
 msgstr "doğru"
 
-#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:279
+#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:286
 msgid "false"
 msgstr "yanlış"
 
@@ -5031,11 +5051,11 @@ msgstr "yanlış"
 msgid "Options"
 msgstr "Seçenekler"
 
-#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:383
+#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:390
 msgid "Add filter"
 msgstr "Filtre ekle"
 
-#: frontend/src/metabase/query_builder/components/filters/FilterWidget.jsx:140
+#: frontend/src/metabase/query_builder/components/filters/FilterWidget.jsx:151
 msgid "Matches"
 msgstr "Maçlar"
 
@@ -5193,15 +5213,16 @@ msgstr "Koleksiyon izinlerini ayarla"
 msgid "New collection"
 msgstr "Yeni derleme"
 
+#: frontend/src/metabase/dashboard/components/AddSeriesModal.jsx:309
 #: frontend/src/metabase/questions/components/ExpandingSearchField.jsx:93
 msgid "Search for a question"
 msgstr "Bir soru arayın"
 
-#: frontend/src/metabase/questions/components/Item.jsx:92
+#: frontend/src/metabase/questions/components/Item.jsx:119
 msgid "Move to a collection"
 msgstr "Bir koleksiyona taşı"
 
-#: frontend/src/metabase/questions/components/Item.jsx:209
+#: frontend/src/metabase/questions/components/Item.jsx:233
 msgid "Created"
 msgstr "düzenlendi"
 
@@ -5222,12 +5243,10 @@ msgid "Label as"
 msgstr "Olarak etiketle"
 
 #: frontend/src/metabase/questions/components/LabelPicker.jsx:51
-#: frontend/src/metabase/questions/containers/EditLabels.jsx:73
 msgid "Add and edit labels"
 msgstr "Etiket ekle ve düzenle"
 
 #: frontend/src/metabase/questions/components/LabelPicker.jsx:53
-#: frontend/src/metabase/questions/containers/EditLabels.jsx:77
 msgid "In an upcoming release, Labels will be removed in favor of Collections."
 msgstr "Yaklaşan bir sürümde, Etiketler Koleksiyonlar lehine kaldırılacak."
 
@@ -5304,46 +5323,43 @@ msgstr "\"${ label.name }\" etiketini sil"
 msgid "Create labels to group and manage questions."
 msgstr "Soruları gruplamak ve yönetmek için etiketler oluşturun."
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:70
-#: frontend/src/metabase/questions/selectors.js:154
+#: frontend/src/metabase/questions/containers/EntityList.jsx:72
 msgid "All questions"
 msgstr "Tüm sorular"
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:72
+#: frontend/src/metabase/questions/containers/EntityList.jsx:74
 msgid "No questions have been saved yet."
 msgstr "Henüz bir soru kaydedilmedi."
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:78
+#: frontend/src/metabase/questions/containers/EntityList.jsx:80
 msgid "You haven't favorited any questions yet."
 msgstr "Henüz herhangi bir soruyu sık kullanılanlara eklemediniz."
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:82
-#: frontend/src/metabase/questions/selectors.js:156
+#: frontend/src/metabase/questions/containers/EntityList.jsx:84
 msgid "Recently viewed"
 msgstr "Son görüntülenen"
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:84
+#: frontend/src/metabase/questions/containers/EntityList.jsx:86
 msgid "You haven't viewed any questions recently."
 msgstr "Yakın zamanda herhangi bir soruya bakmadınız."
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:90
+#: frontend/src/metabase/questions/containers/EntityList.jsx:92
 msgid "You haven't saved any questions yet."
 msgstr "Henüz herhangi bir soru kaydetmediniz."
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:94
-#: frontend/src/metabase/questions/selectors.js:158
+#: frontend/src/metabase/questions/containers/EntityList.jsx:96
 msgid "Most popular"
 msgstr "En popüler"
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:96
+#: frontend/src/metabase/questions/containers/EntityList.jsx:98
 msgid "The most-viewed questions across your company will show up here."
 msgstr "Şirketinizdeki en çok görüntülenen sorular burada gösterilecek."
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:102
+#: frontend/src/metabase/questions/containers/EntityList.jsx:104
 msgid "If you no longer need a question, you can archive it."
 msgstr "Artık bir soruya ihtiyacınız yoksa arşivleyebilirsiniz."
 
-#: frontend/src/metabase/questions/containers/EntityList.jsx:108
+#: frontend/src/metabase/questions/containers/EntityList.jsx:110
 msgid "There aren't any questions matching that criteria."
 msgstr "Bu kriterle eşleşen herhangi bir soru yok."
 
@@ -5688,7 +5704,7 @@ msgstr "Bu tablodaki alanlar"
 msgid "Questions about this table"
 msgstr "Bu tabloyla ilgili sorular"
 
-#: frontend/src/metabase/reference/databases/TableSidebar.jsx:58
+#: frontend/src/metabase/reference/databases/TableSidebar.jsx:51
 msgid "X-ray this table"
 msgstr "Bu tabloyu x-ışınla"
 
@@ -5983,11 +5999,11 @@ msgstr "Bu segmentteki alanlar"
 msgid "Questions about this segment"
 msgstr "Bu segmentle ilgili sorular"
 
-#: frontend/src/metabase/reference/segments/SegmentSidebar.jsx:52
+#: frontend/src/metabase/reference/segments/SegmentSidebar.jsx:45
 msgid "X-ray this segment"
 msgstr "X-ışını bu segmentte"
 
-#: frontend/src/metabase/routes.jsx:195
+#: frontend/src/metabase/routes.jsx:194
 msgid "Login"
 msgstr "Oturum aç"
 
@@ -5999,13 +6015,13 @@ msgstr "Gösterge Panosu"
 msgid "Search"
 msgstr "Arama"
 
-#: frontend/src/metabase/routes.jsx:351
+#: frontend/src/metabase/routes.jsx:347
 #: frontend/src/metabase/xray/containers/TableXRay.jsx:119
 msgid "XRay"
 msgstr "XIşını"
 
 #: frontend/src/metabase/nav/containers/Navbar.jsx:106
-#: frontend/src/metabase/routes.jsx:387
+#: frontend/src/metabase/routes.jsx:383
 msgid "Data Model"
 msgstr "Veri örneği"
 
@@ -6077,31 +6093,31 @@ msgstr "Koleksiyon, yönetici ayarlarınızdaki herhangi bir noktada kapatılabi
 msgid "If you feel stuck"
 msgstr "Sıkışmış hissediyorsan"
 
-#: frontend/src/metabase/setup/components/Setup.jsx:50
+#: frontend/src/metabase/setup/components/Setup.jsx:52
 msgid "our getting started guide"
 msgstr "başlangıç ​​kılavuzumuz"
 
-#: frontend/src/metabase/setup/components/Setup.jsx:51
+#: frontend/src/metabase/setup/components/Setup.jsx:53
 msgid "is just a click away."
 msgstr "sadece bir tık uzakta."
 
-#: frontend/src/metabase/setup/components/Setup.jsx:93
+#: frontend/src/metabase/setup/components/Setup.jsx:95
 msgid "Welcome to Metabase"
 msgstr "Metabase'e Hoşgeldiniz"
 
-#: frontend/src/metabase/setup/components/Setup.jsx:94
+#: frontend/src/metabase/setup/components/Setup.jsx:96
 msgid "Looks like everything is working. Now let’s get to know you, connect to your data, and start finding you some answers!"
 msgstr "Her şey çalışıyor gibi görünüyor. Şimdi sizi tanıyalım, verilerinize bağlanın ve size bazı cevaplar bulmaya başlayın!"
 
-#: frontend/src/metabase/setup/components/Setup.jsx:98
+#: frontend/src/metabase/setup/components/Setup.jsx:100
 msgid "Let's get started"
 msgstr "Başlayalım"
 
-#: frontend/src/metabase/setup/components/Setup.jsx:143
+#: frontend/src/metabase/setup/components/Setup.jsx:145
 msgid "You're all set up!"
 msgstr "Her şey hazır!"
 
-#: frontend/src/metabase/setup/components/Setup.jsx:154
+#: frontend/src/metabase/setup/components/Setup.jsx:156
 msgid "Take me to Metabase"
 msgstr "Beni Metabasena götür"
 
@@ -6315,7 +6331,7 @@ msgstr "Filtreyi iptal et"
 msgid "Pin Map"
 msgstr "Pin Haritası"
 
-#: frontend/src/metabase/visualizations/components/TableInteractive.jsx:310
+#: frontend/src/metabase/visualizations/components/TableInteractive.jsx:315
 msgid "Unset"
 msgstr "ayarını kaldır"
 
@@ -6327,19 +6343,19 @@ msgstr "${ rows.length } arasındaki ${ startText } - ${ endText } satırları"
 msgid "Data truncated to ${ dataRowsNumber } rows."
 msgstr "Veriler ${ dataRowsNumber } satırına kesildi."
 
-#: frontend/src/metabase/visualizations/components/Visualization.jsx:342
+#: frontend/src/metabase/visualizations/components/Visualization.jsx:349
 msgid "Could not find visualization"
 msgstr "Görselleştirme bulunamadı"
 
-#: frontend/src/metabase/visualizations/components/Visualization.jsx:349
+#: frontend/src/metabase/visualizations/components/Visualization.jsx:356
 msgid "Could not display this chart with this data."
 msgstr "Bu grafik bu verilerle görüntülenemedi."
 
-#: frontend/src/metabase/visualizations/components/Visualization.jsx:449
+#: frontend/src/metabase/visualizations/components/Visualization.jsx:456
 msgid "No results!"
 msgstr "Sonuç yok!"
 
-#: frontend/src/metabase/visualizations/components/Visualization.jsx:470
+#: frontend/src/metabase/visualizations/components/Visualization.jsx:477
 msgid "Still Waiting..."
 msgstr "Hala bekliyorum..."
 
@@ -6347,7 +6363,7 @@ msgstr "Hala bekliyorum..."
 msgid "This usually takes an average of ${ durationExpected }."
 msgstr "Bu genellikle ortalama ${ durationExpected } alır."
 
-#: frontend/src/metabase/visualizations/components/Visualization.jsx:475
+#: frontend/src/metabase/visualizations/components/Visualization.jsx:482
 msgid "(This is a bit long for a dashboard)"
 msgstr "(Bu bir gösterge paneli için biraz uzun)"
 
@@ -6359,6 +6375,7 @@ msgstr "Bu genellikle oldukça hızlı, ancak şu anda bir süredir devam ediyor
 msgid "Select a field"
 msgstr "Bir alan seç"
 
+#: frontend/src/metabase/dashboard/containers/DashCardCardParameterMapper.jsx:186
 #: frontend/src/metabase/visualizations/components/settings/ChartSettingFieldPicker.jsx:15
 msgid "No valid fields"
 msgstr "Geçerli alan yok"
@@ -6500,70 +6517,70 @@ msgstr "Hiçbir şey değil"
 msgid "Linear Interpolated"
 msgstr "Doğrusal İnterpolasyon"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:271
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:272
 msgid "X-axis scale"
 msgstr "X ekseni ölçeği"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:288
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:289
 msgid "Timeseries"
 msgstr "Zaman Serisi"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:291
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:309
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:292
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:310
 msgid "Linear"
 msgstr "Doğrusal"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:293
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:310
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:294
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:311
 msgid "Power"
 msgstr "Güç"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:294
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:311
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:295
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:312
 msgid "Log"
 msgstr "Giriş"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:296
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:297
 msgid "Histogram"
 msgstr "Histogram"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:298
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:299
 msgid "Ordinal"
 msgstr "sıra"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:304
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:305
 msgid "Y-axis scale"
 msgstr "Y ekseni ölçeği"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:317
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:318
 msgid "Show x-axis line and marks"
 msgstr "X ekseni çizgisini ve işaretlerini göster"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:332
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:333
 msgid "Show y-axis line and marks"
 msgstr "Y ekseni satırını ve işaretlerini göster"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:344
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:345
 msgid "Auto y-axis range"
 msgstr "Otomatik y ekseni aralığı"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:388
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:389
 msgid "Use a split y-axis when necessary"
 msgstr "Gerektiğinde bölünmüş bir y ekseni kullanın"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:395
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:396
 msgid "Show label on x-axis"
 msgstr "X ekseni üzerindeki etiketi göster"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:401
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:402
 msgid "X-axis label"
 msgstr "X ekseni etiketi"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:410
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:411
 msgid "Show label on y-axis"
 msgstr "Y ekseninde etiketi göster"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:416
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:417
 msgid "Y-axis label"
 msgstr "Y ekseni etiketi"
 
@@ -6613,81 +6630,81 @@ msgstr "Grafik çubuğu"
 msgid "line chart"
 msgstr "çizgi grafik"
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:206
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:211
 msgid "Please select longitude and latitude columns in the chart settings."
 msgstr "Grafik ayarlarında boylam ve enlem sütunlarını seçiniz."
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:212
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:217
 msgid "Please select a region map."
 msgstr "Lütfen bir bölge haritası seçin."
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:216
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:221
 msgid "Please select region and metric columns in the chart settings."
 msgstr "Grafik ayarlarında lütfen bölge ve ölçüt sütunları seçin."
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:33
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:31
 msgid "Map"
 msgstr "Harita"
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:47
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:45
 msgid "Map type"
 msgstr "Harita türü"
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:51
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:141
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:49
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:146
 msgid "Region map"
 msgstr "Bölge haritası"
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:52
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:50
 msgid "Pin map"
 msgstr "PIN haritası"
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:91
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:96
 msgid "Pin type"
 msgstr "Pin tipi"
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:96
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:101
 msgid "Tiles"
 msgstr "Fayans"
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:97
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:102
 msgid "Markers"
 msgstr "İşaretleyiciler"
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:113
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:118
 msgid "Latitude field"
 msgstr "Enlem alanı"
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:123
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:128
 msgid "Longitude field"
 msgstr "Boylam alanı"
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:133
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:160
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:138
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:165
 msgid "Metric field"
 msgstr "Ölçüt alanı"
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:165
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:170
 msgid "Region field"
 msgstr "Bölge alanı"
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:174
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:179
 msgid "Radius"
 msgstr "yarıçap"
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:180
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:185
 msgid "Blur"
 msgstr "Bulanıklık"
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:186
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:191
 msgid "Min Opacity"
 msgstr "Min Opaklık"
 
-#: frontend/src/metabase/visualizations/visualizations/Map.jsx:192
+#: frontend/src/metabase/visualizations/visualizations/Map.jsx:197
 msgid "Max Zoom"
 msgstr "Maksimum Zum"
 
-#: frontend/src/metabase/visualizations/visualizations/ObjectDetail.jsx:169
+#: frontend/src/metabase/visualizations/visualizations/ObjectDetail.jsx:173
 msgid "No relationships found."
 msgstr "İlişki bulunamadı."
 
@@ -6707,7 +6724,7 @@ msgstr "Nesne detay"
 msgid "object"
 msgstr "nesne"
 
-#: frontend/src/metabase/visualizations/visualizations/PieChart.jsx:234
+#: frontend/src/metabase/visualizations/visualizations/PieChart.jsx:256
 msgid "Total"
 msgstr "Toplam"
 
@@ -7446,48 +7463,48 @@ msgid "Are you sure? All members of this group will lose any permissions setting
 msgstr "Emin misiniz? Bu grubun tüm üyeleri, bu gruba dayalı olarak sahip oldukları izin ayarlarını kaybedecek.\n"
 "Bu geri alınamaz."
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:203
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:202
 msgid "Edit {0}'s details"
 msgstr "{0} ayrıntılarını düzenle"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:221
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:253
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:220
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:252
 msgid "{0} has been added"
 msgstr "{0} eklendi"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:231
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:230
 msgid "We couldn’t send them an email invitation,\n"
 "so make sure to tell them to log in using {0}\n"
 "and this password we’ve generated for them:"
 msgstr "Onlara bir e-posta daveti gönderemedik.\n"
 "bu nedenle, {0} kullanarak giriş yapacaklarını ve onlar için oluşturduğumuz bu şifreyi bildirdiğinizden emin olun:"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:240
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:239
 msgid "If you want to be able to send email invites, just go to the {0} page."
 msgstr "E-posta davetleri gönderebilmek istiyorsanız, sadece {0} sayfasına gidin."
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:265
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:264
 msgid "We’ve sent an invite to {0} with instructions to set their password."
 msgstr "Şifrelerini ayarlama talimatları ile birlikte {0} adresine davetiye gönderdik."
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:277
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:276
 msgid "We've re-sent {0}'s invite"
 msgstr "{0} için daveti tekrar gönderdik"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:294
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:293
 msgid "Remove {0}?"
 msgstr "{0} kaldırılsın mı?"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:305
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:304
 msgid "{0} won't be able to log in anymore. This can't be undone."
 msgstr "{0} artık giriş yapamayacak. Bu geri alınamaz."
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:319
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:318
 msgid "Reset {0}'s password?"
 msgstr "{0} şifresini sıfırlayın"
 
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:340
-#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:364
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:339
+#: frontend/src/metabase/admin/people/containers/PeopleListingApp.jsx:363
 msgid "{0}'s password has been reset"
 msgstr "{0} 'un şifresi sıfırlandı"
 
@@ -7552,11 +7569,11 @@ msgstr "Ücretli yerleştirme, gömülü gösterge panolarınızda ve soruların
 msgid "They won't work anymore, and can't be restored, but you can create new links."
 msgstr "Artık çalışmazlar ve geri yüklenemezler, ancak yeni bağlantılar oluşturabilirsiniz."
 
-#: frontend/src/metabase/admin/settings/containers/SettingsEditorApp.jsx:116
+#: frontend/src/metabase/admin/settings/containers/SettingsEditorApp.jsx:117
 msgid "Unknown setting {0}"
 msgstr "Bilinmeyen ayar {0}"
 
-#: frontend/src/metabase/admin/settings/selectors.js:271
+#: frontend/src/metabase/admin/settings/selectors.js:279
 msgid "Group search base"
 msgstr "Grup arama tabanı"
 
@@ -7568,11 +7585,11 @@ msgstr "{0} ile giriş yap"
 msgid "Sign in"
 msgstr "Giriş yap"
 
-#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:141
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:147
 msgid "To keep your data secure, passwords {0}"
 msgstr "Verilerinizi korumak için, şifreleriniz {0}"
 
-#: frontend/src/metabase/components/Archived.jsx:10
+#: frontend/src/metabase/components/Archived.jsx:13
 msgid "This {0} has been archived"
 msgstr "Bu {0} arşivlendi"
 
@@ -7604,15 +7621,15 @@ msgstr "Daha önce yapmadıysanız {0} konsoluna gitmek için."
 msgid "Delete this {0}"
 msgstr "{0} nesnesini sil"
 
-#: frontend/src/metabase/components/ExplorePane.jsx:13
+#: frontend/src/metabase/components/ExplorePane.jsx:15
 msgid "Hi, Metabot here."
 msgstr "Merhaba, Metabot burada."
 
-#: frontend/src/metabase/components/FieldValuesWidget.jsx:241
+#: frontend/src/metabase/components/FieldValuesWidget.jsx:238
 msgid "Search by {0}"
 msgstr "{0} değerine göre ara"
 
-#: frontend/src/metabase/components/FieldValuesWidget.jsx:357
+#: frontend/src/metabase/components/FieldValuesWidget.jsx:354
 msgid "No matching {0} found."
 msgstr "Eşleşen {0} bulunamadı."
 
@@ -7752,7 +7769,7 @@ msgstr "{0} öncesi"
 msgid "View {0}"
 msgstr "{0} nesnesini gör"
 
-#: frontend/src/metabase/qb/components/actions/GenerateDashboardAction.jsx:25
+#: frontend/src/metabase/qb/components/actions/GenerateDashboardAction.jsx:36
 msgid "See an exploration of this question"
 msgstr "Bu sorunun bir araştırmasına bakın"
 
@@ -7784,61 +7801,61 @@ msgstr "{0} nesnesi ile ilgili uyarıları alıyorsunuz"
 msgid "{0} set up an alert"
 msgstr "Uyarı oluşturmak için {0}"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:217
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:220
 msgid "When a raw data question {0}"
 msgstr "Bir ham veri sorusu {0} zaman"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:218
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:221
 msgid "returns any results"
 msgstr "herhangi bir sonuç döndüğü"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:228
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:231
 msgid "When a line or bar {0}"
 msgstr "Bir çizgi ya da çubuk {0} zaman"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:229
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:232
 msgid "crosses a goal line"
 msgstr "hedef çizgisini geçtiği"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:239
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:242
 msgid "When a progress bar {0}"
 msgstr "Bir ilerleme çubuğu {0} zaman"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:240
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:243
 msgid "reaches its goal"
 msgstr "hedefine ulaştığı"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:354
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:363
 msgid "This alert will no longer be emailed to {0}."
 msgstr "Bu uyarı artık {0} adresine e-postayla gönderilmeyecek."
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:360
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:369
 msgid "Slack channel {0} will no longer get this alert."
 msgstr "Slack kanalı {0} artık bu uyarıyı almayacak."
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:364
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:373
 msgid "Channel {0} will no longer receive this alert."
 msgstr "Kanal {0} artık bu uyarıyı almayacak."
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:650
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:659
 #, fuzzy
 msgid "{0} Goal-based alerts aren't yet supported for charts with more than one line, so this alert will be sent whenever the chart has {1}."
 msgstr "{0} Birden fazla satıra sahip grafikler için hedef tabanlı uyarılar henüz desteklenmiyor. Bu nedenle, {1} grafiği olduğunda bu uyarı gönderilecektir."
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:653
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:662
 msgid "results"
 msgstr "sonuçlar"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:657
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:666
 #, fuzzy
 msgid "{0} This kind of alert is most useful when your saved question doesn’t {1} return any results, but you want to know when it does."
 msgstr "{0} Bu tür bir uyarı, kaydedilen sorunuzu {1} hiçbir sonuç döndürmediğinde, ancak ne zaman olduğunu bilmek istediğinizde en yararlıdır."
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:658
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:667
 msgid "Tip"
 msgstr "İpucu"
 
-#: frontend/src/metabase/query_builder/components/AlertModals.jsx:660
+#: frontend/src/metabase/query_builder/components/AlertModals.jsx:669
 msgid "usually"
 msgstr "genellikle"
 
@@ -7883,7 +7900,7 @@ msgstr "sıra"
 msgid "Showing {0} {1}"
 msgstr "{0} {1} gösteriliyor"
 
-#: frontend/src/metabase/query_builder/components/VisualizationResult.jsx:67
+#: frontend/src/metabase/query_builder/components/VisualizationResult.jsx:66
 msgid "You can also {0} when there are some results."
 msgstr "Bazı sonuçlar olduğunda {0} da yapabilirsiniz."
 
@@ -7934,7 +7951,7 @@ msgstr "{0} için ham veriyi gör"
 msgid "Include {0}"
 msgstr "{0} içersin"
 
-#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:278
+#: frontend/src/metabase/query_builder/components/filters/FilterPopover.jsx:285
 msgid "not implemented {0}"
 msgstr "{0} gerçekleştirilmemiş"
 
@@ -7954,7 +7971,7 @@ msgstr "{0} tümünü seç"
 msgid "{0} selected"
 msgstr "{0} seçili"
 
-#: frontend/src/metabase/questions/components/Item.jsx:209
+#: frontend/src/metabase/questions/components/Item.jsx:233
 msgid " by {0}"
 msgstr " {0} üzerinden"
 
@@ -8056,7 +8073,7 @@ msgid "Contact {0}"
 msgstr "{0} iletişime geç"
 
 #: frontend/src/metabase/reference/metrics/MetricRevisions.jsx:88
-#: frontend/src/metabase/reference/metrics/MetricSidebar.jsx:47
+#: frontend/src/metabase/reference/metrics/MetricSidebar.jsx:53
 #: frontend/src/metabase/reference/segments/SegmentRevisions.jsx:88
 msgid "Revision history for {0}"
 msgstr "{0} için revizyon geçmişi"
@@ -8085,31 +8102,31 @@ msgstr "Metabase {0}, verileriniz veya soru sonuçlarınızla ilgili bir şeyler
 msgid "Hi, {0}. nice to meet you!"
 msgstr "Merhaba, {0}. Görüştüğümüze memnun oldum!"
 
-#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:19
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:23
 msgid "Metabot is admiring your integers…"
 msgstr "Metabot tamsayılarınızı takdir ediyor…"
 
-#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:20
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:24
 msgid "Metabot is performing billions of differential equations…"
 msgstr "Metabot milyarlarca diferansiyel denklem çözüyor…"
 
-#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:21
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:25
 msgid "Metabot is doing science…"
 msgstr "Metabot bilim yapıyor…"
 
-#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:22
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:26
 msgid "Metabot is checking out your metrics…"
 msgstr "Metabot ölçütlerinizi kontrol ediyor…"
 
-#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:23
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:27
 msgid "Metabot is looking for trends and outliers…"
 msgstr "Metabot trendlere ve aykırılara bakıyor…"
 
-#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:132
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:160
 msgid "This seems to be taking a while. In the meantime, you can check out one of these example explorations to see what Metabase can do for you."
 msgstr "Bu biraz zaman alıyor gibi görünüyor. Bu arada, Metabase'in sizin için neler yapabileceğini görmek için bu örnek aramalardan birini inceleyebilirsiniz."
 
-#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:143
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:171
 msgid "Once you connect your own data, I can show you some automatic explorations called x-rays. Here are some examples with sample data."
 msgstr "Kendi verilerinizi bağladıktan sonra, size x-ışınları denen bazı otomatik keşifler gösterebilirim. Burada, örnek verilerle ilgili bazı örnekler görünüyor."
 
@@ -8121,19 +8138,19 @@ msgstr "Yeni bağlandığınız verilere göz attım ve bulduğum ilginç ölç�
 msgid "Customize this {0}"
 msgstr "{0} bunu özelleştir"
 
-#: frontend/src/metabase/visualizations/components/TableSimple.jsx:216
+#: frontend/src/metabase/visualizations/components/TableSimple.jsx:218
 msgid "Rows {0}-{1} of {2}"
 msgstr "{0}-{1} satırları, toplam {2}"
 
-#: frontend/src/metabase/visualizations/components/Visualization.jsx:179
+#: frontend/src/metabase/visualizations/components/Visualization.jsx:186
 msgid "Data truncated to {0} rows."
 msgstr "Veri {0} satırda kesildi."
 
-#: frontend/src/metabase/visualizations/components/Visualization.jsx:473
+#: frontend/src/metabase/visualizations/components/Visualization.jsx:480
 msgid "This usually takes an average of {0}."
 msgstr "Bu genelde ortalama {0} zaman alacak."
 
-#: frontend/src/metabase/visualizations/components/Visualization.jsx:479
+#: frontend/src/metabase/visualizations/components/Visualization.jsx:486
 msgid "This is usually pretty fast but seems to be taking awhile right now."
 msgstr "Bu genellikle oldukça hızlıdır ancak şu anda bir süredir devam ediyor gibi görünüyor."
 
@@ -8161,23 +8178,23 @@ msgstr "Nafile. Gösterilecek {0} veri {1} var ve bu görselleştirme için yete
 msgid "xValues missing!"
 msgstr "xDeğerleri yok!"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:323
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:324
 msgid "Compact"
 msgstr "Sıkıştır"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:324
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:325
 msgid "Rotate 45°"
 msgstr "45° döndür"
 
-#: frontend/src/metabase/visualizations/lib/settings/graph.js:325
+#: frontend/src/metabase/visualizations/lib/settings/graph.js:326
 msgid "Rotate 90°"
 msgstr "90° döndür"
 
-#: frontend/src/metabase/visualizations/visualizations/ObjectDetail.jsx:207
+#: frontend/src/metabase/visualizations/visualizations/ObjectDetail.jsx:211
 msgid "via {0}"
 msgstr "{0} aracılığıyla"
 
-#: frontend/src/metabase/visualizations/visualizations/ObjectDetail.jsx:285
+#: frontend/src/metabase/visualizations/visualizations/ObjectDetail.jsx:289
 msgid "This {0} is connected to:"
 msgstr "Bu {0} bağlandı:"
 
@@ -8238,7 +8255,7 @@ msgid "The absolute maximum time to keep any cached query results, in seconds."
 msgstr "Önbelleğe alınmış sorgu sonuçlarının saniye cinsinden tutulması için mutlak en fazla süre."
 
 #. returns `true` if successful -- see JavaDoc
-#: src/metabase/pulse/render.clj
+#: src/metabase/api/tiles.clj src/metabase/pulse/render.clj
 msgid "No appropriate image writer found!"
 msgstr "Uygun bir resim yazarı bulunamadı!"
 
@@ -8353,4 +8370,1099 @@ msgstr "değer geçerli bir JSON dizesi olmalıdır."
 #: src/metabase/util/schema.clj
 msgid "value must be a valid embedding params map."
 msgstr "Değer geçerli bir gömme params haritası olmalıdır."
+
+#: frontend/src/metabase/admin/databases/components/CreatedDatabaseModal.jsx:22
+msgid "We took a look at your data, and we have some automated explorations that we can show you!"
+msgstr "Verilerinize bir göz attık ve size gösterebileceğimiz bazı otomatik keşiflerimiz var!"
+
+#: frontend/src/metabase/admin/datamodel/containers/FieldApp.jsx:42
+msgid "Search box"
+msgstr "Arama kutusu"
+
+#: frontend/src/metabase/admin/datamodel/containers/FieldApp.jsx:43
+msgid "A list of all values"
+msgstr "Tüm değerlerin listesi"
+
+#: frontend/src/metabase/admin/datamodel/containers/FieldApp.jsx:44
+msgid "Plain input box"
+msgstr "Düz giriş kutusu"
+
+#: frontend/src/metabase/admin/people/components/GroupSummary.jsx:22
+msgid "other"
+msgstr "diğer"
+
+#: frontend/src/metabase/admin/settings/components/SettingsEmailForm.jsx:287
+msgid "Clear"
+msgstr "Açık"
+
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:100
+msgid "request a new reset email"
+msgstr "yeni bir sıfırlama e-postası iste"
+
+#: frontend/src/metabase/auth/containers/PasswordResetApp.jsx:120
+msgid "For security reasons, password reset links expire after a little while. If you still need\n"
+"to reset your password, you can {0}."
+msgstr "Güvenlik nedeniyle, şifre sıfırlama bağlantıları bir süre sonra sona erer. Hala ihtiyacın varsa, şifreni sıfırlamak için yapabileceklerin: {0}."
+
+#: frontend/src/metabase/components/DatabaseDetailsForm.jsx:245
+msgid "By default, Metabase does a lightweight hourly sync and an intensive daily scan of field values.\n"
+"If you have a large database, we recommend turning this on and reviewing when and how often the field value scans happen."
+msgstr "Varsayılan olarak, Metabase hafif bir saatlik senkronizasyon ve yoğun bir günlük alan alanı taraması yapar.\n"
+"Büyük bir veritabanınız varsa bunu açmanızı ve alan değeri taramalarının ne zaman ve ne sıklıkta gerçekleştiğini gözden geçirmenizi öneririz."
+
+#: frontend/src/metabase/components/GenericError.jsx:8
+msgid "Something's gone wrong"
+msgstr "Bir şeyler ters gitti"
+
+#: frontend/src/metabase/components/GenericError.jsx:9
+msgid "We've run into an error. You can try refreshing the page, or just go back."
+msgstr "Bir hatayla karşılaştık. Sayfayı yenilemeyi deneyebilir veya sadece geri dönebilirsiniz."
+
+#: frontend/src/metabase/components/SortableItemList.jsx:47
+#: frontend/src/metabase/questions/containers/AddToDashboard.jsx:115
+msgid "Sort by"
+msgstr "Göre sırala"
+
+#: frontend/src/metabase/dashboard/components/AddSeriesModal.jsx:269
+msgid "Applying Question"
+msgstr "Soru uygulanıyor"
+
+#: frontend/src/metabase/dashboard/components/AddSeriesModal.jsx:273
+msgid "That question isn't compatible"
+msgstr "Bu soru uyumlu değil"
+
+#: frontend/src/metabase/dashboard/components/AddSeriesModal.jsx:338
+msgid "We're not sure if this question is compatible"
+msgstr "Bu sorunun uyumlu olup olmadığından emin değiliz."
+
+#: frontend/src/metabase/dashboard/components/ArchiveDashboardModal.jsx:45
+msgid "Archive Dashboard"
+msgstr "Gösterge Panosunu Arşivle"
+
+#: frontend/src/metabase/dashboard/components/DashCardParameterMapper.jsx:17
+msgid "Make sure to make a selection for each series, or the filter won't work on this card."
+msgstr "Her seri için seçim yaptığınızdan emin olun, aksi takdirde filtre bu kartta çalışmayacaktır."
+
+#: frontend/src/metabase/dashboard/components/Dashboard.jsx:284
+msgid "This dashboard is looking empty."
+msgstr "Bu gösterge panosu boş görünüyor."
+
+#: frontend/src/metabase/dashboard/components/Dashboard.jsx:287
+msgid "Add a question to start making it useful!"
+msgstr "Kullanmaya başlamak için bir soru ekleyin!"
+
+#: frontend/src/metabase/dashboard/components/DashboardActions.jsx:36
+msgid "Daytime mode"
+msgstr "Gündüz modu"
+
+#: frontend/src/metabase/dashboard/components/DashboardActions.jsx:36
+msgid "Nighttime mode"
+msgstr "Gece modu"
+
+#: frontend/src/metabase/dashboard/components/DashboardActions.jsx:53
+msgid "Exit fullscreen"
+msgstr "Tam ekrandan çık"
+
+#: frontend/src/metabase/dashboard/components/DashboardActions.jsx:53
+msgid "Enter fullscreen"
+msgstr "Tam ekran yap"
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:214
+msgid "Add a question"
+msgstr "Bir soru ekle"
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:217
+msgid "Add a question to this dashboard"
+msgstr "Bu panoya bir soru ekleyin"
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:246
+msgid "Add a filter"
+msgstr "Süzgeç ekle"
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:273
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:277
+msgid "Add a text box"
+msgstr "Bir metin kutusu ekle"
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:300
+msgid "Edit dashboard"
+msgstr "Gösterge panosunu düzenle"
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:304
+msgid "Edit Dashboard Layout"
+msgstr "Gösterge Panosu Düzenini Düzenle"
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:338
+msgid "You are editing a dashboard"
+msgstr "Bir gösterge panosu düzenliyorsunuz"
+
+#: frontend/src/metabase/dashboard/components/DashboardHeader.jsx:343
+msgid "Select the field that should be filtered for each card"
+msgstr "Her kart için süzülmesi gereken alanı seçin"
+
+#: frontend/src/metabase/dashboard/components/ParametersPopover.jsx:82
+msgid "What do you want to filter?"
+msgstr "Neyi süzmek istiyorsunuz?"
+
+#: frontend/src/metabase/dashboard/components/ParametersPopover.jsx:115
+msgid "What kind of filter?"
+msgstr "Ne tür bir süzgeç?"
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:13
+msgid "Off"
+msgstr "kapalı"
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:14
+msgid "1 minute"
+msgstr "1 dakika"
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:15
+msgid "5 minutes"
+msgstr "5 dakika"
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:16
+msgid "10 minutes"
+msgstr "10 dakika"
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:17
+msgid "15 minutes"
+msgstr "15 dakika"
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:18
+msgid "30 minutes"
+msgstr "30 dakika"
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:19
+msgid "60 minutes"
+msgstr "60 dakika"
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:31
+msgid "Auto-refresh"
+msgstr "Otomatik-yenile"
+
+#: frontend/src/metabase/dashboard/components/RefreshWidget.jsx:37
+msgid "Refreshing in"
+msgstr "İçinde yenileniyor"
+
+#: frontend/src/metabase/dashboard/components/RemoveFromDashboardModal.jsx:37
+msgid "Remove this question?"
+msgstr "Bu soruyu kaldırılsın mı?"
+
+#: frontend/src/metabase/dashboard/containers/AutomaticDashboardApp.jsx:69
+msgid "Your dashboard was saved"
+msgstr "Gösterge panonuz kaydedildi"
+
+#: frontend/src/metabase/dashboard/containers/AutomaticDashboardApp.jsx:74
+msgid "See it"
+msgstr "Gör"
+
+#: frontend/src/metabase/dashboard/containers/AutomaticDashboardApp.jsx:123
+msgid "Save this"
+msgstr "Bunu kaydet"
+
+#: frontend/src/metabase/dashboard/containers/DashCardCardParameterMapper.jsx:140
+msgid "This card doesn't have any fields or parameters that can be mapped to this parameter type."
+msgstr "Bu kartın, bu parametre türüne eşlenebilecek herhangi bir alanı veya parametresi yoktur."
+
+#: frontend/src/metabase/dashboard/containers/DashCardCardParameterMapper.jsx:142
+msgid "The values in this field don't overlap with the values of any other fields you've chosen."
+msgstr "Bu alandaki değerler, seçtiğiniz diğer alanların değerleriyle örtüşmez."
+
+#: frontend/src/metabase/lib/core.js:8 frontend/src/metabase/lib/core.js:14
+#: frontend/src/metabase/lib/core.js:20
+msgid "Overall Row"
+msgstr "Tümü Satırı"
+
+#: frontend/src/metabase/lib/core.js:26 frontend/src/metabase/lib/core.js:31
+#: frontend/src/metabase/lib/core.js:36 frontend/src/metabase/lib/core.js:41
+#: frontend/src/metabase/lib/core.js:46 frontend/src/metabase/lib/core.js:51
+#: frontend/src/metabase/lib/core.js:56 frontend/src/metabase/lib/core.js:61
+#: frontend/src/metabase/lib/core.js:66 frontend/src/metabase/lib/core.js:71
+#: frontend/src/metabase/lib/core.js:76 frontend/src/metabase/lib/core.js:81
+#: frontend/src/metabase/lib/core.js:86 frontend/src/metabase/lib/core.js:91
+#: frontend/src/metabase/lib/core.js:96 frontend/src/metabase/lib/core.js:101
+#: frontend/src/metabase/lib/core.js:106 frontend/src/metabase/lib/core.js:111
+#: frontend/src/metabase/lib/core.js:116 frontend/src/metabase/lib/core.js:121
+#: frontend/src/metabase/lib/core.js:126 frontend/src/metabase/lib/core.js:131
+#: frontend/src/metabase/lib/core.js:136 frontend/src/metabase/lib/core.js:141
+#: frontend/src/metabase/lib/core.js:146 frontend/src/metabase/lib/core.js:151
+#: frontend/src/metabase/lib/core.js:156 frontend/src/metabase/lib/core.js:161
+#: frontend/src/metabase/lib/core.js:166 frontend/src/metabase/lib/core.js:171
+#: frontend/src/metabase/lib/core.js:176 frontend/src/metabase/lib/core.js:181
+#: frontend/src/metabase/lib/core.js:186 frontend/src/metabase/lib/core.js:191
+#: frontend/src/metabase/lib/core.js:196 frontend/src/metabase/lib/core.js:201
+#: frontend/src/metabase/lib/core.js:206
+msgid "Common"
+msgstr "Ortak"
+
+#: frontend/src/metabase/lib/core.js:110
+msgid "Quantity"
+msgstr "Miktar"
+
+#: frontend/src/metabase/lib/core.js:115
+msgid "Income"
+msgstr "Gelir"
+
+#: frontend/src/metabase/lib/core.js:120
+msgid "Discount"
+msgstr "İndirim"
+
+#: frontend/src/metabase/lib/core.js:125
+msgid "Creation timestamp"
+msgstr "Oluşturma zaman damgası"
+
+#: frontend/src/metabase/lib/core.js:130
+msgid "Product"
+msgstr "Ürün"
+
+#: frontend/src/metabase/lib/core.js:135
+msgid "User"
+msgstr "Kullanıcı"
+
+#: frontend/src/metabase/lib/core.js:140
+msgid "Source"
+msgstr "Kaynak"
+
+#: frontend/src/metabase/lib/core.js:145
+msgid "Price"
+msgstr "Fiyat"
+
+#: frontend/src/metabase/lib/core.js:150
+msgid "Join timestamp"
+msgstr "Katılma zaman damgası"
+
+#: frontend/src/metabase/lib/core.js:155
+msgid "Share"
+msgstr "Pay"
+
+#: frontend/src/metabase/lib/core.js:160
+msgid "Owner"
+msgstr "Sahip"
+
+#: frontend/src/metabase/lib/core.js:165
+msgid "Company"
+msgstr "Şirket"
+
+#: frontend/src/metabase/lib/core.js:170
+msgid "Subscription"
+msgstr "Abone"
+
+#: frontend/src/metabase/lib/core.js:175
+msgid "Score"
+msgstr "Puan"
+
+#: frontend/src/metabase/lib/core.js:190
+msgid "Comment"
+msgstr "Yorum"
+
+#: frontend/src/metabase/lib/core.js:195
+msgid "Cost"
+msgstr "Maliyet"
+
+#: frontend/src/metabase/lib/core.js:200
+msgid "Gross margin"
+msgstr "Brüt kar marjı"
+
+#: frontend/src/metabase/lib/core.js:205
+msgid "Birthday"
+msgstr "Doğum günü"
+
+#: frontend/src/metabase/lib/schema_metadata.js:331
+msgid "Equal to"
+msgstr "Eşittir"
+
+#: frontend/src/metabase/lib/schema_metadata.js:332
+msgid "Not equal to"
+msgstr "Eşit değildir"
+
+#: frontend/src/metabase/qb/components/TimeseriesFilterWidget.jsx:154
+msgid "Apply"
+msgstr "Uygula"
+
+#: frontend/src/metabase/qb/components/actions/XRayCard.jsx:19
+msgid "Analyze this question"
+msgstr "Bu soruyu analiz et"
+
+#: frontend/src/metabase/qb/components/drill/AutomaticDashboardDrill.jsx:32
+msgid "X-ray {0} {1}"
+msgstr "X-ışını {0} {1}"
+
+#: frontend/src/metabase/query_builder/components/expressions/ExpressionWidget.jsx:57
+msgid "Think of this as being kind of like writing a formula in a spreadsheet program: you can use numbers, fields in this table, mathematical symbols like +, and some functions. So you could type something like Subtotal - Cost."
+msgstr "Bunu bir e-tablo programında formül yazmak gibi bir şey olarak düşünün: bu tablodaki sayıları, alanları, + gibi matematiksel simgeleri ve bazı işlevleri kullanabilirsiniz. Böylece Alttoplam - Maliyet gibi bir şey yazabilirsiniz."
+
+#: frontend/src/metabase/reference/databases/FieldSidebar.jsx:53
+msgid "X-ray this field"
+msgstr "Bu alanı x-ışınla"
+
+#: frontend/src/metabase/reference/metrics/MetricSidebar.jsx:45
+msgid "X-ray this metric"
+msgstr "Bu ölçütü x-ışınla"
+
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:28
+msgid "Metabot is consulting the quantum abacus…"
+msgstr "Metabot kuantum abaküse danışıyor…"
+
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:29
+msgid "Metabot is feeling pretty good about all this…"
+msgstr "Metabot, bu konuda oldukça iyi hissetmekte…"
+
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:140
+msgid "We’ll show you some interesting explorations of your data in\n"
+"just a few minutes."
+msgstr "Verilerinizin bazı ilginç keşiflerini sadece birkaç dakika içinde size göstereceğiz."
+
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:172
+msgid "I took a look at the data you just connected, and I have some explorations of interesting things I found. Hope you like them!"
+msgstr "Bağladığın verilere bir baktım ve bazı ilginç şeyleri keşfettim. Umarım onları beğenirsin!"
+
+#: frontend/src/metabase/setup/containers/PostSetupApp.jsx:182
+msgid "I'm done exploring for now"
+msgstr "Şimdilik keşif bitti"
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:167
+msgid "Write here, and use Markdown if you''d like"
+msgstr "Buraya yaz ve istersen Markdown kullan."
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:73
+msgid "Vertical Alignment"
+msgstr "Dikey Hizalama"
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:77
+msgid "Top"
+msgstr "Üst"
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:78
+msgid "Middle"
+msgstr "Orta"
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:79
+msgid "Bottom"
+msgstr "Alt"
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:86
+msgid "Horizontal Alignment"
+msgstr "Yatay Hizalama"
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:90
+msgid "Left"
+msgstr "Sol"
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:91
+msgid "Center"
+msgstr "Merkez"
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:92
+msgid "Right"
+msgstr "Sağ"
+
+#: frontend/src/metabase/visualizations/visualizations/Text.jsx:99
+msgid "Show background"
+msgstr "Arka planı göster"
+
+#: src/metabase/api/automagic_dashboards.clj
+msgid "invalid show value"
+msgstr "geçersiz gösterim değeri"
+
+#: src/metabase/api/automagic_dashboards.clj
+msgid "invalid value for prefix"
+msgstr "önek için geçersiz değer"
+
+#: src/metabase/api/automagic_dashboards.clj
+msgid "invalid value for rule name"
+msgstr "kural adı için geçersiz değer"
+
+#: src/metabase/api/automagic_dashboards.clj
+msgid "value couldn''t be parsed as base64 encoded JSON"
+msgstr "değer base64 kodlu JSON olarak ayrıştırılamadı"
+
+#: src/metabase/api/common.clj src/metabase/api/common/internal.clj
+msgid "Invalid field: {0}"
+msgstr "Geçersiz alan: {0}"
+
+#: src/metabase/api/common.clj
+msgid "Invalid value ''{0}'' for ''{1}'': {2}"
+msgstr "''{1}'': {2} için geçersiz ''{0}'' değeri"
+
+#: src/metabase/api/common.clj
+msgid "must be one of: {0}"
+msgstr "şunlardan biri olmalıdır: {0}"
+
+#: src/metabase/api/common.clj
+msgid "Invalid Request."
+msgstr "Geçersiz istek."
+
+#: src/metabase/api/common.clj
+msgid "Not found."
+msgstr "Bulunamadı."
+
+#: src/metabase/api/common.clj
+msgid "You don''t have permissions to do that."
+msgstr "Bunu yapmak için izniniz yok."
+
+#: src/metabase/api/common.clj
+msgid "Internal server error."
+msgstr "İç sunucu hatası."
+
+#: src/metabase/api/common.clj
+msgid "Warning: endpoint {0}/{1} does not have a docstring."
+msgstr "Uyarı: {0}/{1} bitiş noktasında bir belgemetin yok."
+
+#: src/metabase/api/common.clj
+msgid "starting streaming request"
+msgstr "akış isteği başlatılıyor"
+
+#: src/metabase/api/common.clj
+msgid "connection closed, canceling request"
+msgstr "bağlantı kapatıldı, istek iptal edildi"
+
+#. a newline padding character as it's harmless and will allow us to check if the client is connected. If
+#. sending this character fails because the connection is closed, the chan will then close.  Newlines are
+#. no-ops when reading JSON which this depends upon.
+#: src/metabase/api/common.clj
+msgid "Response not ready, writing one byte & sleeping..."
+msgstr "Yanıt hazır değil, bir bayt yazıyor ve uyuyor..."
+
+#: src/metabase/api/common.clj
+msgid "Public sharing is not enabled."
+msgstr "Genel paylaşım etkinleştirilmemiş."
+
+#: src/metabase/api/common.clj
+msgid "Embedding is not enabled."
+msgstr "Gömme etkin değil."
+
+#: src/metabase/api/common.clj
+msgid "The object has been archived."
+msgstr "Nesne arşivlendi."
+
+#: src/metabase/api/common/internal.clj
+msgid "We don't have a nice error message for schema: {0}."
+msgstr "Şema için güzel bir hata mesajımız yok: {0}."
+
+#: src/metabase/api/common/internal.clj
+msgid "Consider wrapping it in `su/with-api-error-message`."
+msgstr "Bunu `su/api-error-message` mesajında ​​saklamayı düşünün."
+
+#: src/metabase/api/common/internal.clj
+msgid "Attempted to return a boolean as an API response. This is not allowed!"
+msgstr "Bir mantıksal değeri API yanıtı olarak döndürme girişiminde bulundu. Buna izin verilmiyor!"
+
+#: src/metabase/api/dataset.clj
+msgid "Source query for this query is Card {0}"
+msgstr "Bu sorgu için kaynak sorgusu Kartı {0}"
+
+#: src/metabase/api/dataset.clj
+msgid "Invalid export format: {0}"
+msgstr "Geçersiz dışa aktarma biçimi: {0}"
+
+#: src/metabase/api/geojson.clj
+msgid "Invalid JSON URL or resource: {0}"
+msgstr "Geçersiz JSON URL'si veya kaynağı: {0}"
+
+#: src/metabase/api/geojson.clj
+msgid "JSON containing information about custom GeoJSON files for use in map visualizations instead of the default US State or World GeoJSON."
+msgstr "JSON varsayılan ABD Eyaleti veya dünya GeoJSON'u yerine harita görselleştirmelerinde kullanılmak üzere özel GeoJSON dosyaları hakkında bilgi içerir."
+
+#: src/metabase/api/geojson.clj
+msgid "Invalid custom GeoJSON key: {0}"
+msgstr "Geçersiz özel GeoJSON anahtarı: {0}"
+
+#: src/metabase/api/getting_started.clj
+msgid "''Some things to know'' text field for the Getting Started guide."
+msgstr "Başlarken kılavuzu için ''Bilmeniz gereken bazı şeyler'' metin alanı."
+
+#: src/metabase/api/getting_started.clj
+msgid "Name of somebody users can contact for help in the Getting Started guide."
+msgstr "Bir kullanıcı adı, Başlangıç ​​Kılavuzunda yardım için başvurulabilir."
+
+#: src/metabase/api/getting_started.clj
+msgid "Email of somebody users can contact for help in the Getting Started guide."
+msgstr "Bir kullanıcı e-postası, Başlangıç ​​Kılavuzundaki yardım için iletişime geçilebilir."
+
+#. ...but if we *still* couldn't find a match, throw an Exception, because we don't want people
+#. trying to inject new params
+#: src/metabase/api/public.clj
+msgid "Invalid param: {0}"
+msgstr "Geçersiz parametre: {0}"
+
+#: src/metabase/api/routes.clj
+msgid "API endpoint does not exist."
+msgstr "API son noktası mevcut değil."
+
+#: src/metabase/api/session.clj
+msgid "Password did not match stored password."
+msgstr "Şifre saklanan şifreyle eşleşmedi."
+
+#: src/metabase/api/session.clj
+msgid "did not match stored password"
+msgstr "kayıtlı şifre eşleşmedi"
+
+#: src/metabase/api/session.clj
+msgid "Problem connecting to LDAP server, will fallback to local authentication {0}"
+msgstr "LDAP sunucusuna bağlanırken sorun, yerel kimlik doğrulamaya geri dönülücektir {0}"
+
+#: src/metabase/api/session.clj
+msgid "Invalid reset token"
+msgstr "Geçersiz sıfırlama jetonu"
+
+#: src/metabase/api/session.clj
+msgid "Client ID for Google Auth SSO. If this is set, Google Auth is considered to be enabled."
+msgstr "Google Auth SSO için Müşteri Kimliği. Bu ayarlanmışsa, Google Auth etkinleştirilmiş olarak kabul edilir."
+
+#: src/metabase/api/session.clj
+msgid "When set, allow users to sign up on their own if their Google account email address is from this domain."
+msgstr "Ayarlandığında, kullanıcıların Google hesabı e-posta adresleri bu alan adından geliyorsa kendi başlarına kayıt olmalarına izin verin."
+
+#: src/metabase/api/session.clj
+msgid "Invalid Google Auth token."
+msgstr "Geçersiz Google Auth jetonu."
+
+#: src/metabase/api/session.clj
+msgid "Email is not verified."
+msgstr "E-posta teyit edilmedi."
+
+#. Use some wacky status code (428 - Precondition Required) so we will know when to so the error screen specific
+#. to this situation
+#: src/metabase/api/session.clj
+msgid "You''ll need an administrator to create a Metabase account before you can use Google to log in."
+msgstr "Giriş yapmak için Google'ı kullanabilmeniz için önce bir Metabase hesabı oluşturmak üzere bir yöneticiye ihtiyacınız olacak."
+
+#: src/metabase/api/session.clj
+msgid "Successfully authenticated Google Auth token for: {0} {1}"
+msgstr "Google Auth jetonu başarıyla doğrulandı: {0} {1}"
+
+#: src/metabase/api/table.clj
+msgid "Table ''{0}'' is now visible. Resyncing."
+msgstr "''{0}'' tablosu artık görünür durumda. Yeniden eşleniyor."
+
+#: src/metabase/api/table.clj
+msgid "Auto bin"
+msgstr "Otomatik sepetle"
+
+#: src/metabase/api/table.clj
+msgid "Don''t bin"
+msgstr "Sepetleme"
+
+#: src/metabase/api/table.clj
+msgid "Day"
+msgstr "Gün"
+
+#. note the order of these options corresponds to the order they will be shown to the user in the UI
+#: src/metabase/api/table.clj
+msgid "Minute"
+msgstr "Dakika"
+
+#: src/metabase/api/table.clj
+msgid "Hour"
+msgstr "Saat"
+
+#: src/metabase/api/table.clj
+msgid "Quarter"
+msgstr "Çeyrek"
+
+#: src/metabase/api/table.clj
+msgid "Minute of Hour"
+msgstr "Saat Dakikası"
+
+#: src/metabase/api/table.clj
+msgid "Hour of Day"
+msgstr "Günün Saati"
+
+#: src/metabase/api/table.clj
+msgid "Day of Week"
+msgstr "Haftanın Günü"
+
+#: src/metabase/api/table.clj
+msgid "Day of Month"
+msgstr "Ayın Günü"
+
+#: src/metabase/api/table.clj
+msgid "Day of Year"
+msgstr "Yılın Günü"
+
+#: src/metabase/api/table.clj
+msgid "Week of Year"
+msgstr "Yılın Haftası"
+
+#: src/metabase/api/table.clj
+msgid "Month of Year"
+msgstr "Yılın Ayı"
+
+#: src/metabase/api/table.clj
+msgid "Quarter of Year"
+msgstr "Yılın Çeyreği"
+
+#: src/metabase/api/table.clj
+msgid "10 bins"
+msgstr "10 sepet"
+
+#: src/metabase/api/table.clj
+msgid "50 bins"
+msgstr "50 sepet"
+
+#: src/metabase/api/table.clj
+msgid "100 bins"
+msgstr "100 sepet"
+
+#: src/metabase/api/table.clj
+msgid "Bin every 0.1 degrees"
+msgstr "Her 0.1 derecede sepetle"
+
+#: src/metabase/api/table.clj
+msgid "Bin every 1 degree"
+msgstr "Her 1 derecede sepetle"
+
+#: src/metabase/api/table.clj
+msgid "Bin every 10 degrees"
+msgstr "Her 10 derecede sepetle"
+
+#: src/metabase/api/table.clj
+msgid "Bin every 20 degrees"
+msgstr "Her 20 derecede sepetle"
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid " segment"
+msgstr "␣parça"
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid " metric"
+msgstr "␣ölçüt"
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid " field"
+msgstr "␣alan"
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid "Applying heuristic %s to %s."
+msgstr "Sezgisel %s %s için uygulanıyor."
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid "Dimensions bindings:n%s"
+msgstr "Boyut bağlamaları:n%s"
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid "Using definitions:nMetrics:n%snFilters:n%s"
+msgstr "Tanımları kullan:nMetrics:n%snFilters:n%s"
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid "A closer look at "
+msgstr "Daha yakından bak␣"
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid "Show more about this"
+msgstr "Bu konuda daha fazlasını göster"
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid "Can't create dashboard for %s"
+msgstr "%s için gösterge panosu oluşturulamıyor"
+
+#: src/metabase/automagic_dashboards/core.clj
+msgid " question"
+msgstr "␣soru"
+
+#: src/metabase/automagic_dashboards/populate.clj
+msgid "Adding %s cards to dashboard %s:n%s"
+msgstr "%s kartı %sn%s gösterge panosuna ekleniyor"
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "0 <= score <= %s"
+msgstr "0 <= puan <=%s"
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "1 <= width <= %s"
+msgstr "0 <= puan <= %s"
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "Valid metrics references"
+msgstr "Geçerli ölçüt referansları"
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "Valid filters references"
+msgstr "Geçerli süzgeç referansları"
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "Valid group references"
+msgstr "Geçerli grup referansları"
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "Valid order_by references"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "Valid dashboard filters references"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "Valid dimension references"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "Valid card dimension references"
+msgstr ""
+
+#: src/metabase/automagic_dashboards/rules.clj
+msgid "Error parsing %s:n%s"
+msgstr ""
+
+#: src/metabase/cmd/reset_password.clj
+msgid "No user found with email address ''{0}''. "
+msgstr ""
+
+#: src/metabase/cmd/reset_password.clj
+msgid "Please check the spelling and try again."
+msgstr ""
+
+#: src/metabase/cmd/reset_password.clj
+msgid "Resetting password for {0}..."
+msgstr ""
+
+#: src/metabase/cmd/reset_password.clj
+msgid "OK [[[{0}]]]"
+msgstr ""
+
+#: src/metabase/cmd/reset_password.clj
+msgid "FAIL [[[{0}]]]"
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Hmm, we couldn''t connect to the database."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Make sure your host and port settings are correct"
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "We couldn''t connect to the ssh tunnel host."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Check the username, password."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Check the hostname and port."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Looks like the database name is incorrect."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "It looks like your host is invalid."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Please double-check it and try again."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Looks like your password is incorrect."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Looks like you forgot to enter your password."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Looks like your username is incorrect."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Looks like the username or password is incorrect."
+msgstr ""
+
+#. ## CONFIG
+#: src/metabase/driver.clj
+msgid "Connection timezone to use when executing queries. Defaults to system timezone."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Registered driver {0} {1}"
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "No -init-driver function found for ''{0}''"
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Unable to parse date string ''{0}'' for database engine ''{1}''"
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Don''t know how to map class ''{0}'' to a Field base_type, falling back to :type/*."
+msgstr ""
+
+#: src/metabase/driver.clj
+msgid "Failed to connect to database: {0}"
+msgstr ""
+
+#: src/metabase/driver/sparksql.clj
+msgid "Error: metabase.driver.FixedHiveDriver is registered, but JDBC does not seem to be using it."
+msgstr ""
+
+#: src/metabase/driver/sparksql.clj
+msgid "Found metabase.driver.FixedHiveDriver."
+msgstr ""
+
+#: src/metabase/driver/sparksql.clj
+msgid "Successfully registered metabase.driver.FixedHiveDriver with JDBC."
+msgstr ""
+
+#: src/metabase/feature_extraction/costs.clj
+msgid "Cap resorce expanditure for all x-rays. (exact, approximate, or extended)"
+msgstr ""
+
+#: src/metabase/feature_extraction/costs.clj
+msgid "Should x-raying be available at all?"
+msgstr ""
+
+#. Define a setting which captures our Slack api token
+#: src/metabase/integrations/slack.clj
+msgid "Slack API bearer token obtained from https://api.slack.com/web#authentication"
+msgstr ""
+
+#: src/metabase/middleware.clj
+msgid "Base-64 encoded public key for this site's SSL certificate."
+msgstr ""
+
+#: src/metabase/middleware.clj
+msgid "Specify this to enable HTTP Public Key Pinning."
+msgstr ""
+
+#: src/metabase/middleware.clj
+msgid "See {0} for more information."
+msgstr ""
+
+#: src/metabase/models/card.clj
+msgid "Cannot calculate permissions due to circular references."
+msgstr ""
+
+#: src/metabase/models/card.clj
+msgid "This means a question is either using itself as a source or one or more questions are using each other as sources."
+msgstr ""
+
+#: src/metabase/models/card.clj
+msgid "Invalid query type: {0}"
+msgstr ""
+
+#: src/metabase/models/card.clj
+msgid "`card` is nil or empty. Cannot calculate permissions."
+msgstr ""
+
+#: src/metabase/models/collection.clj src/metabase/models/label.clj
+msgid "Name already taken"
+msgstr ""
+
+#: src/metabase/models/collection.clj
+msgid "A collection with this name already exists"
+msgstr ""
+
+#: src/metabase/models/collection.clj
+msgid "Invalid color"
+msgstr ""
+
+#: src/metabase/models/collection.clj
+msgid "must be a valid 6-character hex color code"
+msgstr ""
+
+#: src/metabase/models/collection.clj
+msgid "Collection name cannot be blank!"
+msgstr ""
+
+#: src/metabase/models/collection.clj
+msgid "cannot be blank"
+msgstr ""
+
+#: src/metabase/models/collection_revision.clj
+msgid "You cannot update a CollectionRevision!"
+msgstr ""
+
+#: src/metabase/models/field_values.clj
+msgid "Field {0} was previously automatically set to show a list widget, but now has {1} values."
+msgstr ""
+
+#: src/metabase/models/field_values.clj
+msgid "Switching Field to use a search widget instead."
+msgstr ""
+
+#: src/metabase/models/field_values.clj
+msgid "Storing updated FieldValues for Field {0}..."
+msgstr ""
+
+#: src/metabase/models/field_values.clj
+msgid "Storing FieldValues for Field {0}..."
+msgstr ""
+
+#: src/metabase/models/humanization.clj
+msgid "Metabase can attempt to transform your table and field names into more sensible, human-readable versions, e.g. \"somehorriblename\" becomes \"Some Horrible Name\"."
+msgstr ""
+
+#: src/metabase/models/humanization.clj
+msgid "This doesn’t work all that well if the names are in a language other than English, however."
+msgstr ""
+
+#: src/metabase/models/humanization.clj
+msgid "Do you want us to take a guess?"
+msgstr ""
+
+#: src/metabase/models/label.clj
+msgid "A label with this name already exists"
+msgstr ""
+
+#: src/metabase/models/permissions.clj
+msgid "You cannot create or revoke permissions for the 'Admin' group."
+msgstr ""
+
+#: src/metabase/models/permissions.clj
+msgid "Invalid permissions object path: ''{0}''."
+msgstr ""
+
+#: src/metabase/models/permissions.clj
+msgid "You cannot update a permissions entry!"
+msgstr ""
+
+#: src/metabase/models/permissions.clj
+msgid "Delete it and create a new one."
+msgstr ""
+
+#: src/metabase/models/permissions.clj
+msgid "Looks like someone else edited the permissions and your data is out of date."
+msgstr ""
+
+#: src/metabase/models/permissions.clj
+msgid "Please fetch new data and try again."
+msgstr ""
+
+#: src/metabase/models/permissions_group.clj
+msgid "Created magic permissions group ''{0}'' (ID = {1})"
+msgstr ""
+
+#: src/metabase/models/permissions_group.clj
+msgid "A group with that name already exists."
+msgstr ""
+
+#: src/metabase/models/permissions_group.clj
+msgid "You cannot edit or delete the ''{0}'' permissions group!"
+msgstr ""
+
+#: src/metabase/models/permissions_group_membership.clj
+msgid "You cannot add or remove users to/from the 'MetaBot' group."
+msgstr ""
+
+#: src/metabase/models/permissions_group_membership.clj
+msgid "You cannot add or remove users to/from the 'All Users' group."
+msgstr ""
+
+#: src/metabase/models/permissions_group_membership.clj
+msgid "You cannot remove the last member of the 'Admin' group!"
+msgstr ""
+
+#: src/metabase/models/permissions_revision.clj
+msgid "You cannot update a PermissionsRevision!"
+msgstr ""
+
+#: src/metabase/models/query_execution.clj
+msgid "You cannot update a QueryExecution!"
+msgstr ""
+
+#: src/metabase/models/revision.clj
+msgid "You cannot update a Revision!"
+msgstr ""
+
+#: src/metabase/models/setting.clj
+msgid "Setting {0} does not exist.nFound: {1}"
+msgstr ""
+
+#: src/metabase/models/setting.clj
+msgid "Invalid value for string: must be either \"true\" or \"false\" (case-insensitive)."
+msgstr ""
+
+#: src/metabase/plugins.clj
+msgid "Loading plugins in directory {0}..."
+msgstr ""
+
+#: src/metabase/plugins.clj
+msgid "Loading plugin {0}... "
+msgstr ""
+
+#: src/metabase/plugins.clj
+msgid "It looks like you have some external dependencies in your Metabase plugins directory."
+msgstr ""
+
+#: src/metabase/plugins.clj
+msgid "With Java 9 or higher, Metabase cannot automatically add them to your classpath."
+msgstr ""
+
+#: src/metabase/plugins.clj
+msgid "Instead, you should include them at launch with the -cp option. For example:"
+msgstr ""
+
+#: src/metabase/plugins.clj
+msgid "See https://metabase.com/docs/latest/operations-guide/start.html#java-versions for more details."
+msgstr ""
+
+#: src/metabase/plugins.clj
+msgid "(If you're already running Metabase this way, you can ignore this message.)"
+msgstr ""
+
+#: src/metabase/public_settings/metastore.clj
+msgid "Unable to validate token."
+msgstr ""
+
+#: src/metabase/public_settings/metastore.clj
+msgid "Error fetching token status:"
+msgstr ""
+
+#: src/metabase/public_settings/metastore.clj
+msgid "There was an error checking whether this token was valid."
+msgstr ""
+
+#: src/metabase/public_settings/metastore.clj
+msgid "Token validation timed out."
+msgstr ""
+
+#: src/metabase/public_settings/metastore.clj
+msgid "Invalid token: token isn't in the right format."
+msgstr ""
+
+#: src/metabase/public_settings/metastore.clj
+msgid "Checking with the MetaStore to see whether {0} is valid..."
+msgstr ""
+
+#: src/metabase/public_settings/metastore.clj
+msgid "Token for premium embedding. Go to the MetaStore to get yours!"
+msgstr ""
+
+#: src/metabase/public_settings/metastore.clj
+msgid "Token is valid."
+msgstr ""
+
+#: src/metabase/public_settings/metastore.clj
+msgid "Error setting premium embedding token"
+msgstr ""
+
+#: src/metabase/query_processor/middleware/fetch_source_query.clj
+msgid "Trimming trailing comment from card with id {0}"
+msgstr ""
+
+#: src/metabase/query_processor/middleware/parameters/sql.clj
+msgid "Found ''{0}'' with no terminating ''{1}'' in query ''{2}''"
+msgstr ""
+
+#: src/metabase/query_processor/middleware/parameters/sql.clj
+msgid "Unable to substitute ''{0}'': param not specified.nFound: {1}"
+msgstr ""
+
+#: src/metabase/util/embed.clj
+msgid "Secret key used to sign JSON Web Tokens for requests to `/api/embed` endpoints."
+msgstr ""
+
+#: src/metabase/util/schema.clj
+msgid "Valid entity type (keyword or string)"
+msgstr ""
+
+#: src/metabase/util/schema.clj
+msgid "value must be a valid entity type (keyword or string)."
+msgstr ""
 
